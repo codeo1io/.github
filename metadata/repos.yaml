@@ -1,0 +1,10 @@
+version: 1
+repos:
+  - owner: codeo1io
+    name: magic-context
+    added: 2026-08-10
+    onboarding_status: onboarded
+    discovery_channel: collab
+    private: false
+    node_id: R_kgDOS-ymrA
+    database_id: 1273800364
