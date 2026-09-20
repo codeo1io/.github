@@ -28,3 +28,7 @@ branch_protection:
 # Report-only. The sync NEVER flips visibility; drift is printed for manual review.
 visibility:
   expect_private: true
+  # Forks of public upstreams cannot be private on a personal account (needs
+  # GitHub Team), so public forks are treated as CONFORMANT, not drift. Only
+  # original (non-fork) public repos are flagged for manual review.
+  expect_public_forks: true

@@ -54,7 +54,7 @@ def gh_json(*args: str, input: str | None = None, allow_fail: bool = False):
 def list_repos(owner: str) -> list[dict]:
     return gh_json(
         "repo", "list", owner, "--limit", "300",
-        "--json", "name,isPrivate,isArchived,defaultBranchRef,viewerPermission",
+        "--json", "name,isPrivate,isArchived,isFork,defaultBranchRef,viewerPermission",
     ) or []
 
 
@@ -121,6 +121,9 @@ def main() -> int:
     merge_want = {k: bool(cfg["merge"][k]) for k in MERGE_KEYS}
     prot_want = protection_body(cfg)
     expect_private = bool(cfg["visibility"]["expect_private"])
+    # Forks of public upstreams are structurally public on a personal account;
+    # when true they are treated as conformant instead of visibility drift.
+    expect_public_forks = bool(cfg["visibility"].get("expect_public_forks", True))
 
     errors = 0
     fixed = drifted = 0
@@ -169,10 +172,16 @@ def main() -> int:
 
         # --- visibility (report-only) ---
         if bool(full.get("private", True)) != expect_private:
-            reports.append(
-                f"{name}: VISIBILITY DRIFT (report-only) private={full.get('private')} "
-                f"expect {expect_private} — review manually, never auto-flipped"
-            )
+            if bool(repo.get("isFork")) and expect_public_forks:
+                # Forks of public upstreams cannot be private on a personal
+                # plan (GitHub Team required). Public forks are conformant —
+                # not drift, and never worth a daily nag line.
+                pass
+            else:
+                reports.append(
+                    f"{name}: VISIBILITY DRIFT (report-only) private={full.get('private')} "
+                    f"expect {expect_private} — review manually, never auto-flipped"
+                )
 
         # --- branch protection (opt-in) ---
         if name in protected:
