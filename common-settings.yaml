@@ -1,0 +1,30 @@
+# codeo1io fleet-wide repository settings (settings-as-code).
+# Source of truth for every repo under the codeo1io account.
+# Applied daily 08:30 UTC by cron job "repo-settings-sync" ->
+# ~/.hermes/scripts/repo-settings-sync.sh -> scripts/sync_repo_settings.py.
+# Manual run: python3 scripts/sync_repo_settings.py --dry-run   (report only)
+#             python3 scripts/sync_repo_settings.py --apply     (fix drift)
+
+merge:
+  allow_squash_merge: true      # squash-only fleet convention
+  allow_merge_commit: false
+  allow_rebase_merge: false
+  allow_auto_merge: true        # requires branch protection to take effect; harmless otherwise
+  delete_branch_on_merge: true
+
+# Branch protection is OPT-IN per repo via protection-opt-in.txt (one name per line).
+# Deliberately NOT applied fleet-wide: enforcing on repos without CI context names,
+# or on hermes-conductor (its promote flow ff-pushes main by SHA), would wedge flows.
+branch_protection:
+  enforce_admins: false         # solo owner; ff-push promote flows (conductor release-promote) must keep working
+  required_status_checks:
+    strict: false               # up-to-date enforcement would stale-loop the green-pr-merger (two green PRs -> second goes stale on merge)
+    contexts: []                # add per-repo CI context names here when a repo gains a named gate
+  required_pull_request_reviews: null   # solo merges; requiring reviews would deadlock
+  restrictions: null
+  allow_force_pushes: false
+  allow_deletions: false
+
+# Report-only. The sync NEVER flips visibility; drift is printed for manual review.
+visibility:
+  expect_private: true

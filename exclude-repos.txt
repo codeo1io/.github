@@ -1,0 +1,2 @@
+# Repos completely skipped by the settings sync (one per line).
+# Use only for archived or special-case repos; everything else gets merge settings.

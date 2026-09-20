@@ -1,0 +1,51 @@
+# TEMPLATE — path-filtered deploy router with per-app GitHub Environment approval gates.
+#
+# Copy to <repo>/.github/workflows/deploy.yaml, fill in the app filters below, and
+# create a matching GitHub Environment (repo Settings -> Environments) per app with
+# required reviewers + scoped secrets. Only the app whose files changed deploys.
+# BEFORE FIRST USE: pin dorny/paths-filter and actions/checkout to full commit SHAs.
+#
+# Fleet rule: keep runs-on: ubuntu-latest (repo defaults); no self-hosted runners,
+# no LAN hosts, no local paths in anything adopted from this template.
+
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      apps: ${{ steps.filter.outputs.changes }}
+    steps:
+      - uses: actions/checkout@v4   # pin to a full SHA when adopting
+      - id: filter
+        uses: dorny/paths-filter@v3   # pin to a full SHA when adopting
+        outputs:
+          changes: changes
+        filters: |
+          dashboard:
+            - 'apps/dashboard/**'
+          gateway:
+            - 'apps/gateway/**'
+
+  deploy:
+    needs: changes
+    if: ${{ needs.changes.outputs.apps != '[]' && needs.changes.outputs.apps != '' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        app: ${{ fromJSON(needs.changes.outputs.apps) }}
+    runs-on: ubuntu-latest
+    environment: ${{ matrix.app }}   # approval gate + scoped secrets live on the Environment
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy
+        run: echo "Deploy ${{ matrix.app }} (wire the real deploy here)"

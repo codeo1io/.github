@@ -1,0 +1,12 @@
+# Repos that get branch protection from common-settings.yaml (one per line).
+# Requirements to add a repo here: default branch = main, solo-merge workflow,
+# and no direct-push promote flow on main (hermes-conductor is permanently excluded).
+stonks
+chadgpt
+magic-mcp
+dashboard
+hermes-autonomy
+hermes-agent
+hermes-infra
+fleet-status
+renovate-config
