@@ -28,9 +28,12 @@ MERGE_KEYS = (
     "allow_squash_merge",
     "allow_merge_commit",
     "allow_rebase_merge",
-    "allow_auto_merge",
     "delete_branch_on_merge",
 )
+# allow_auto_merge is deliberately NOT drift-checked: on the free plan GitHub
+# accepts the PATCH but silently keeps it false wherever branch protection
+# cannot exist (private repos). Squash/delete/rebase flags are the durable
+# invariants; auto-merge is a plan-gated convenience, not a fleet rule.
 
 
 def gh(*args: str, input: str | None = None) -> subprocess.CompletedProcess:
@@ -173,21 +176,26 @@ def main() -> int:
 
         # --- branch protection (opt-in) ---
         if name in protected:
-            cur_prot = gh_json("api", f"repos/{slug}/branches/{branch}/protection", allow_fail=True)
-            pdiff = protection_drift(cur_prot, prot_want)
-            if pdiff:
-                drifted += 1
-                if args.apply:
-                    r = gh("api", "--method", "PUT", f"repos/{slug}/branches/{branch}/protection",
-                           "--input", "-", input=json.dumps(prot_want))
-                    if r.returncode != 0:
-                        errors += 1
-                        reports.append(f"{name}: ERROR protecting {branch}: {r.stderr.strip()[:200]}")
-                        continue
-                    fixed += 1
-                    reports.append(f"{name}: FIXED branch protection on {branch} ({'; '.join(pdiff)})")
-                else:
-                    reports.append(f"{name}: DRIFT branch protection on {branch} ({'; '.join(pdiff)})")
+            if full.get("private"):
+                # Free plan: branch protection on private repos returns 403
+                # "Upgrade to GitHub Pro" — soft skip, not an error.
+                reports.append(f"{name}: SKIP branch protection (private repo, free plan)")
+            else:
+                cur_prot = gh_json("api", f"repos/{slug}/branches/{branch}/protection", allow_fail=True)
+                pdiff = protection_drift(cur_prot, prot_want)
+                if pdiff:
+                    drifted += 1
+                    if args.apply:
+                        r = gh("api", "--method", "PUT", f"repos/{slug}/branches/{branch}/protection",
+                               "--input", "-", input=json.dumps(prot_want))
+                        if r.returncode != 0:
+                            errors += 1
+                            reports.append(f"{name}: ERROR protecting {branch}: {r.stderr.strip()[:200]}")
+                            continue
+                        fixed += 1
+                        reports.append(f"{name}: FIXED branch protection on {branch} ({'; '.join(pdiff)})")
+                    else:
+                        reports.append(f"{name}: DRIFT branch protection on {branch} ({'; '.join(pdiff)})")
 
     print(f"[{mode}] repos={len(repos)} excluded={len(excludes)} drift_found={drifted} "
           f"{'fixed=' + str(fixed) if args.apply else ''} errors={errors}")

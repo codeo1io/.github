@@ -9,7 +9,7 @@ merge:
   allow_squash_merge: true      # squash-only fleet convention
   allow_merge_commit: false
   allow_rebase_merge: false
-  allow_auto_merge: true        # requires branch protection to take effect; harmless otherwise
+  allow_auto_merge: true        # plan-gated UI nicety: only takes effect where branch protection exists (public repos on the free plan); accepted-but-ignored elsewhere. NOT drift-checked (see scripts/sync_repo_settings.py).
   delete_branch_on_merge: true
 
 # Branch protection is OPT-IN per repo via protection-opt-in.txt (one name per line).

@@ -8,7 +8,10 @@ repo daily, instead of per-repo manual clicking.
 
 - `common-settings.yaml` — fleet merge settings (squash-only, delete branch on
   merge, auto-merge), opt-in branch protection template, report-only visibility
-  expectation.
+  expectation. `allow_auto_merge` is plan-gated: GitHub only persists it where
+  branch protection exists (public repos on the free plan), so the sync does
+  not drift-check it — squash-only, no-rebase, no-merge-commit, and
+  delete-branch are the enforced invariants.
 - `protection-opt-in.txt` — repos that receive branch protection (one per line).
   Requirements: default branch `main`, solo-merge workflow, no direct-push
   promote flow. `hermes-conductor` is permanently excluded (its promote flow
