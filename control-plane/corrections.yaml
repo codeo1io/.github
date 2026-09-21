@@ -1,0 +1,27 @@
+# Fleet corrections ledger — fro-bot/.github corrections.yaml pattern.
+# Lifecycle: record → reconfirm (before reconfirm_due) → retire | supersede.
+# reconfirm_due dates are alarmable: fleet-status flags any entry whose due
+# date passes without a recorded reconfirmation.
+version: 1
+entries:
+  - id: kanban-canon-v2
+    what: Kanban OWNERS canon v2 — ground truth ~/.hermes/kanban/logs/<task>.log; dead-assignee wedge recovery = reassign default+ready+reset consecutive_failures
+    recorded: 2026-09-17
+    recorded_by: fleet-adoption
+    source: ~/.hermes/kanban/attachments/t_acd6a2e8/OWNERS.md
+    reconfirm_due: 2026-12-17
+    status: active
+  - id: settings-sync-plan-limit
+    what: GitHub free plan silently refuses allow_auto_merge + branch protection on private repos; auto-merge stripped from drift set, protection opt-in file governs
+    recorded: 2026-09-20
+    recorded_by: fleet-adoption
+    source: codeo1io/.github common-settings.yaml
+    reconfirm_due: 2026-12-20
+    status: active
+  - id: secret-scanning-sticky-disabled
+    what: magic-hermes + openai-embedding-proxy revert secret_scanning enablement (account-level); gitleaks sentinel covers them
+    recorded: 2026-09-21
+    recorded_by: fleet-adoption
+    source: gh api security_and_analysis (PATCH reverts to disabled)
+    reconfirm_due: 2026-12-21
+    status: active

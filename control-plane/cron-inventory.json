@@ -1,0 +1,542 @@
+[
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "hermes-gpt MCP watchdog",
+    "schedule": {
+      "display": "every 5m",
+      "kind": "interval",
+      "minutes": 5
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "jarvis-watchdog",
+    "schedule": {
+      "display": "every 5m",
+      "kind": "interval",
+      "minutes": 5
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "pi+opencode+omo CLI & plugin pin updater",
+    "schedule": {
+      "display": "every day at 09:00",
+      "expr": "0 9 * * *",
+      "kind": "cron"
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "autonomous-steward-discovery (recreated)",
+    "schedule": {
+      "display": "every 360m",
+      "kind": "interval",
+      "minutes": 360
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "hermes-self-improvement-review (recreated)",
+    "schedule": {
+      "display": "every day at 04:30",
+      "expr": "30 4 * * *",
+      "kind": "cron"
+    }
+  },
+  {
+    "deliver": "bot-chat",
+    "enabled": true,
+    "name": "autonomy-proposal-digest",
+    "schedule": {
+      "display": "every day at 08:00",
+      "expr": "0 8 * * *",
+      "kind": "cron"
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "autonomy-deep-strategy-scan (recreated)",
+    "schedule": {
+      "display": "every sunday at 03:30",
+      "expr": "30 3 * * 0",
+      "kind": "cron"
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "autonomy-monthly-retrospective (recreated)",
+    "schedule": {
+      "display": "0 5 1 * *",
+      "expr": "0 5 1 * *",
+      "kind": "cron"
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": false,
+    "name": "boundary-v9-terminal-watch",
+    "schedule": {
+      "display": "every 5m",
+      "kind": "interval",
+      "minutes": 5
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": false,
+    "name": "v1.8 burn-in watcher",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": false,
+    "name": "v1.8 stage promoter",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": false,
+    "name": "gh-runner-stall-watchdog",
+    "schedule": {
+      "display": "every 5m",
+      "kind": "interval",
+      "minutes": 5
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": false,
+    "name": "infra-commit-boundary-watch-v2",
+    "schedule": {
+      "display": "every 20m",
+      "kind": "interval",
+      "minutes": 20
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "infra-mandate-enforcer-v2",
+    "schedule": {
+      "display": "every 20m",
+      "kind": "interval",
+      "minutes": 20
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": false,
+    "name": "v1.8 stage-ladder completion watcher",
+    "schedule": {
+      "display": "every 20m",
+      "kind": "interval",
+      "minutes": 20
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "autonomy-reliability-agentic-active",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "autonomy-reliability-reconcile-active",
+    "schedule": {
+      "display": "every 5m",
+      "kind": "interval",
+      "minutes": 5
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "ven-deletion-audit-watch",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "conductor-track-watchdog",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "autonomy-adoption-tick",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "fold-family-soak-watch",
+    "schedule": {
+      "display": "every 360m",
+      "kind": "interval",
+      "minutes": 360
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "convergence-scoreboard",
+    "schedule": {
+      "display": "every day at 06:00",
+      "expr": "0 6 * * *",
+      "kind": "cron"
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "gateway-db-gc",
+    "schedule": {
+      "display": "every day at 06:10",
+      "expr": "10 6 * * *",
+      "kind": "cron"
+    }
+  },
+  {
+    "deliver": "origin",
+    "enabled": true,
+    "name": "repo-config-guard",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
+    }
+  },
+  {
+    "deliver": "origin",
+    "enabled": false,
+    "name": "perfect-operation status watcher",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
+    }
+  },
+  {
+    "deliver": "origin",
+    "enabled": true,
+    "name": "fix-driver health watch (item 20)",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "pi-daemon reaper (fix-queue item 19)",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  {
+    "deliver": "api_server:f15ad3bdc691",
+    "enabled": true,
+    "name": "spool-server-respawn-watchdog",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
+    }
+  },
+  {
+    "deliver": "origin",
+    "enabled": true,
+    "name": "fix-queue work driver safe",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "autonomy-ecosystem-research-daily-active",
+    "schedule": {
+      "display": "every day at 02:15",
+      "expr": "15 2 * * *",
+      "kind": "cron"
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "autonomy-ecosystem-research-weekly-active",
+    "schedule": {
+      "display": "every sunday at 02:45",
+      "expr": "45 2 * * 0",
+      "kind": "cron"
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": false,
+    "name": "autonomy-fork-maintenance",
+    "schedule": {
+      "display": "every 360m",
+      "kind": "interval",
+      "minutes": 360
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "autonomy-fork-maintenance-active",
+    "schedule": {
+      "display": "every 360m",
+      "kind": "interval",
+      "minutes": 360
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": false,
+    "name": "dashboard-access-repair",
+    "schedule": {
+      "display": "0 0 1 1 *",
+      "expr": "0 0 1 1 *",
+      "kind": "cron"
+    }
+  },
+  {
+    "deliver": "origin",
+    "enabled": true,
+    "name": "discord-backfill-drain",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  {
+    "deliver": "origin",
+    "enabled": true,
+    "name": "disk-pressure-watchdog",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "autonomy-retention-active",
+    "schedule": {
+      "display": "daily at 04:05",
+      "expr": "5 4 * * *",
+      "kind": "cron"
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "autonomy-roadmap-sync-daily-active",
+    "schedule": {
+      "display": "30 1 * * *",
+      "expr": "30 1 * * *",
+      "kind": "cron"
+    }
+  },
+  {
+    "deliver": "origin",
+    "enabled": true,
+    "name": "fleet-health-watchdog",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "magic-hermes engine watchdog",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "outcome-loop-monitor",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "reland-r65-gatekeeper",
+    "schedule": {
+      "display": "every 20m",
+      "kind": "interval",
+      "minutes": 20
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "reland-r65-terminal-watch",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "conductor-auto-promote",
+    "schedule": {
+      "display": "every 20m",
+      "kind": "interval",
+      "minutes": 20
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "pr33-merge-watch",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "infra-pr34-merge-watcher",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "gh-autoprune",
+    "schedule": {
+      "display": "every 360m",
+      "kind": "interval",
+      "minutes": 360
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "autonomy-green-pr-merger",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "ci-time-watchdog",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  {
+    "deliver": "origin",
+    "enabled": true,
+    "name": "ci-health-digest",
+    "schedule": {
+      "display": "every day 09:00",
+      "expr": "0 9 * * *",
+      "kind": "cron"
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "repo-settings-sync",
+    "schedule": {
+      "display": "every day at 08:30",
+      "expr": "30 8 * * *",
+      "kind": "cron"
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "autonomy-outcome-remeasure-active",
+    "schedule": {
+      "display": "every 360m",
+      "kind": "interval",
+      "minutes": 360
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "autonomy-schedules-register-active",
+    "schedule": {
+      "display": "every 360m",
+      "kind": "interval",
+      "minutes": 360
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "control-plane-sync",
+    "schedule": {
+      "display": "40 8 * * *",
+      "expr": "40 8 * * *",
+      "kind": "cron"
+    }
+  }
+]
