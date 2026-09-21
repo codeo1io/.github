@@ -67,6 +67,11 @@ paths = [
   # removed from HEAD in 9a19fe1f) trips discord-client-id rules; zero real
   # token shapes verified 2026-09-21. Allowlisting the path quiets history scans.
   '''exprted\.jsonl''',
+  # History-only masked placeholders (verified 2026-09-21): Algolia public
+  # search-only key in docusaurus.config.ts ('8fda2...07' masked) and removed
+  # 2025 MoA example key ('sk-_yo..._rpg', file deleted from HEAD). No live secrets.
+  '''docusaurus\.config\.ts$''',
+  '''mixture_of_agents_tool\.py$''',
 ]
 commits = []
 # Repo-env templates with placeholder values are fine
