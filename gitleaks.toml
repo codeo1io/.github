@@ -83,5 +83,9 @@ regexes = [
   '''(?i)public[_-]?client[_-]?secret|SECRET_(?:HEADER|ENV|SUFFIX)\s*=''',
   '''(?i)PLACEHOLDER''',
   '''\.\.\.''',
+  # Redacted stub literals verified across all history variants
+  # (2026-09-21: every commit of both files carries only these).
+  '''8fda2\.\.\.[0-9a-f]*7''',
+  '''sk-_yo\.\.\._rpg''',
 ]
 
