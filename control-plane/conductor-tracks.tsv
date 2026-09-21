@@ -53,3 +53,4 @@ hermes-timeout-fix	/home/agent/.hermes/conductor-gateway/hermes-timeout-fix.db	/
 hermes-conductor-cycle4-successor	/home/agent/.hermes/conductor-gateway/hermes-conductor-cycle4-successor.db	/work/projects/hermes-conductor	/home/agent/.hermes/conductor-gateway/conductor.toml	(successor of prop_18ce1ad01bcd4d0c cycle-4, PR #215 reland)
 hermes-intent-routing	/home/agent/.hermes/conductor-gateway/hermes-intent-routing.db	/work/projects/hermes-conductor	/home/agent/.hermes/conductor-gateway/conductor.toml	-
 hermes-reconcile-wait-budget	/home/agent/.hermes/conductor-gateway/hermes-reconcile-wait-budget.db	/work/projects/hermes-conductor	/home/agent/.hermes/conductor-gateway/conductor.toml	(intent 26d942 reconcile-wait follow-up)
+hermes-plan-doc-handoff	/home/agent/.hermes/conductor-gateway/hermes-plan-doc-handoff.db	/work/projects/hermes-conductor	/home/agent/.hermes/conductor-gateway/conductor.toml	(plan phase must commit plan doc / context_refs)

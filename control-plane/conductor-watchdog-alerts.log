@@ -12684,3 +12684,53 @@
 2026-09-21T01:14:52Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 74m without end marker (last: progress 2026-09-21T00:00:32Z item74 runaway guard fixed + both-ways proven (51-unit live DB stable, synthetic stable); shipping follow-up commit) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
 2026-09-21T01:14:56Z fix-driver-watch: driver has no fire-completion bookkeeping in 256m (last_run_at=2026-09-20T20:58:50.975266+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
 2026-09-21T01:20:01Z conductor-watchdog[autonomy-prop_af3398202b85483d]: shared conductor checkout is on 'fix/round2-runaway-guard' (not main) — NOT relaunching supervisors from it (item 58 v39 incident family); restore main or install the checkout guard
+2026-09-21T05:26:12Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T05:36:36Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T05:47:40Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T05:47:40Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T05:58:44Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T05:58:44Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T05:23:10Z conductor-auto-promote: promote of 6ea904f failed rc=3 — promoter log tail: timeout after 40min without a quiet boundary — giving up
+2026-09-21T06:09:52Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 53m without end marker (last: progress 2026-09-21T05:16:10Z 76 PR224-merged-6ea904f-promoting-next) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-21T06:09:54Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T06:09:54Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T06:21:08Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T06:21:09Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T06:32:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T06:32:20Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T06:43:25Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T06:43:25Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T06:54:34Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T06:54:34Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T06:24:12Z conductor-auto-promote: promote of 6ea904f failed rc=3 — promoter log tail: timeout after 40min without a quiet boundary — giving up
+2026-09-21T07:05:39Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T07:05:39Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T07:16:42Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 49m without end marker (last: progress 2026-09-21T06:27:25Z 76-promote-running-in-bg-same-sha-as-auto-promote-waiter) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-21T07:16:42Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T07:16:42Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T07:16:43Z fix-driver-watch: driver has no fire-completion bookkeeping in 90m (last_run_at=2026-09-21T05:46:35.367044+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-09-21T07:27:57Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 60m without end marker (last: progress 2026-09-21T06:27:25Z 76-promote-running-in-bg-same-sha-as-auto-promote-waiter) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-21T07:27:57Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T07:27:57Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T07:27:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 101m (last_run_at=2026-09-21T05:46:35.367044+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-09-21T07:39:00Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 71m without end marker (last: progress 2026-09-21T06:27:25Z 76-promote-running-in-bg-same-sha-as-auto-promote-waiter) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-21T07:39:01Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T07:39:01Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T07:39:01Z fix-driver-watch: driver has no fire-completion bookkeeping in 112m (last_run_at=2026-09-21T05:46:35.367044+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-09-21T07:50:04Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 82m without end marker (last: progress 2026-09-21T06:27:25Z 76-promote-running-in-bg-same-sha-as-auto-promote-waiter) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-21T07:50:05Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T07:50:05Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T07:50:05Z fix-driver-watch: driver has no fire-completion bookkeeping in 123m (last_run_at=2026-09-21T05:46:35.367044+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-09-21T08:01:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T08:01:20Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T07:24:44Z conductor-auto-promote: promote of 6ea904f failed rc=3 — promoter log tail: timeout after 40min without a quiet boundary — giving up
+2026-09-21T08:12:26Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T08:12:26Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T08:18:37Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-21T08:17:16.350989+00:00 — operator attention needed
+2026-09-21T08:23:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T08:23:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T08:28:51Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-21T08:28:41.370769+00:00 — operator attention needed
+2026-09-21T08:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-21T08:28:41.370769+00:00 — operator attention needed
+2026-09-21T08:35:03Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T08:35:03Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-09-21T08:39:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-21T08:38:10.119519+00:00 — operator attention needed
