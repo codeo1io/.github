@@ -1,0 +1,55 @@
+# gitleaks configuration — codeo1io fleet private-leak sentinel
+# Full option list: https://github.com/gitleaks/gitleaks
+title = "codeo1io fleet private-leak sentinel"
+
+[extend]
+# Extends the default ruleset (API keys, tokens, AWS, etc.) — we add fleet-specific
+# rules on top rather than replacing it.
+useDefault = true
+
+[[rules]]
+id = "hermes-hass-token"
+description = "Home Assistant long-lived access token"
+regex = '''\b(hass_token|HASS_TOKEN)\s*[:=]\s*["']?[A-Za-z0-9._\-]{20,}'''
+tags = ["homeassistant", "hermes"]
+keywords = ["hass_token", "HASS_TOKEN"]
+
+[[rules]]
+id = "wyoming-groq-key"
+description = "Groq API key"
+regex = '''\bgsk_[A-Za-z0-9]{20,}'''
+tags = ["groq"]
+
+[[rules]]
+id = "hermes-env-file-inline"
+description = "Inline .env secret assignment (non-example)"
+regex = '''^\s*[A-Z0-9_]*(TOKEN|SECRET|PASSWORD|API_KEY|PRIVATE_KEY)\s*=\s*["']?[A-Za-z0-9+/=_\-]{16,}["']?\s*$'''
+path = '''(?i)\.env$|env\.local|\.secrets'''
+tags = ["env"]
+
+[[rules]]
+id = "github-app-private-key"
+description = "GitHub App private key (PEM body)"
+regex = '''-----BEGIN RSA PRIVATE KEY-----'''
+tags = ["github-app", "pem"]
+
+[allowlist]
+description = "Known-safe paths and test fixtures"
+paths = [
+  '''(?i)\.(lock|md|snap|png|jpg|jpeg|gif|webp)$''',
+  '''gitleaks\.toml''',
+  '''(?i)test/fixtures/''',
+  '''(?i)tests?/.*fixtures?''',
+  '''node_modules/''',
+  '''web/dist/''',
+  '''dist/''',
+]
+commits = []
+# Repo-env templates with placeholder values are fine
+regexes = [
+  '''xxx+''',
+  '''CHANGE_ME''',
+  '''<your[_-]?(token|key|secret)?>''',
+  '''\$\{[A-Z_]+\}''',
+  '''ghp_xxxxxxxxxxxxxxxxxxxx''',
+]
