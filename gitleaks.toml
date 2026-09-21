@@ -63,6 +63,15 @@ paths = [
   # they are the redaction engine itself; the sentinel would otherwise flag
   # the exact code that protects the fleet.
   '''agent/redact\.py$''',
+  # hermes-gpt redaction-fixture tests (verified 2026-09-21): root-level
+  # test files (not under tests/, hence not covered above) that deliberately
+  # embed dummy PEM blocks — test_ui_security.py exercises redact_browser,
+  # test_operator_policy.py exercises redact_output incl. the fail-closed
+  # unterminated-BEGIN case. All 4 sentinel findings were attributed to
+  # ancestor commit 26ed7b4c0 (2026-08-31, upstream lineage); zero real
+  # secrets (short synthetic bodies: b3BlbnNzaC1rZXk… / MIIabc).
+  '''test_ui_security\.py$''',
+  '''test_operator_policy\.py$''',
   # Vendored upstream history: an accidental session export (exprted.jsonl,
   # removed from HEAD in 9a19fe1f) trips discord-client-id rules; zero real
   # token shapes verified 2026-09-21. Allowlisting the path quiets history scans.
