@@ -4,7 +4,9 @@
 fro-bot/.github knowledge-wiki pattern: scheduled lint fixes purely mechanical
 findings (missing frontmatter keys, index drift) in place; judgment calls are
 reported for an issue. Exit 0 = clean or self-healed; exit 1 = findings needing
-judgment. Run from a repo root that has docs/solutions/.
+judgment. Repos default to the fleet roots and are overridable via argv or
+SOLUTIONS_LINT_REPOS (colon-separated) — paths resolve against the repo root
+being linted, never the caller's CWD.
 """
 import os
 import re
@@ -16,8 +18,12 @@ DATE_RE = re.compile(r'^\d{4}-\d{2}-\d{2}$')
 JUDGMENT = []  # findings that need a human/agent issue
 
 
-def lint_file(path: str) -> list[str]:
-    """Return list of self-healed actions taken (mutates the file)."""
+def lint_file(path: str, repo: str) -> list[str]:
+    """Return list of self-healed actions taken (mutates the file).
+
+    `repo` (the repo root being linted) anchors every relative computation so
+    results are identical regardless of the caller's working directory.
+    """
     with open(path) as fh:
         text = fh.read()
 
@@ -31,9 +37,10 @@ def lint_file(path: str) -> list[str]:
 
     keys = {ln.split(':', 1)[0].strip() for ln in fm.splitlines() if ':' in ln and not ln.startswith((' ', '-', '\t'))}
     missing = [k for k in REQUIRED_KEYS if k not in keys]
-    # category is derivable from the file's directory (mechanical self-heal)
+    # category is derivable from the file's directory (mechanical self-heal);
+    # relpath anchors to the repo root being linted, not the caller's CWD
     if 'category' in missing:
-        rel = os.path.relpath(path, os.path.join(repo_root_unused := '.', 'docs', 'solutions'))
+        rel = os.path.relpath(path, os.path.join(repo, 'docs', 'solutions'))
         cat = os.path.dirname(rel).replace(os.sep, '/')
         if cat and '/' not in cat:
             fm += f'\ncategory: solutions/{cat}'
@@ -64,7 +71,7 @@ def lint_repo(repo: str) -> int:
     for dirpath, _dirs, files in os.walk(root):
         for name in files:
             if name.endswith('.md'):
-                healed += lint_file(os.path.join(dirpath, name))
+                healed += lint_file(os.path.join(dirpath, name), repo)
 
     # index drift: every .md should appear in the nearest README/index if one exists
     index_path = os.path.join(root, 'README.md')
@@ -86,7 +93,11 @@ def lint_repo(repo: str) -> int:
 
 
 if __name__ == '__main__':
-    repos = sys.argv[1:] or ['/work/projects/hermes-conductor', '/work/projects/hermes-gpt']
+    default_repos = os.environ.get(
+        'SOLUTIONS_LINT_REPOS',
+        '/work/projects/hermes-conductor:/work/projects/hermes-gpt',
+    )
+    repos = sys.argv[1:] or default_repos.split(':')
     rc = 0
     for repo in repos:
         rc |= lint_repo(repo)

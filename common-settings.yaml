@@ -9,7 +9,9 @@ merge:
   allow_squash_merge: true      # squash-only fleet convention
   allow_merge_commit: false
   allow_rebase_merge: false
-  allow_auto_merge: true        # plan-gated UI nicety: only takes effect where branch protection exists (public repos on the free plan); accepted-but-ignored elsewhere. NOT drift-checked (see scripts/sync_repo_settings.py).
+  # allow_auto_merge REMOVED 2026-09-21: plan-gated (GitHub only persists it
+  # where branch protection exists) and never drift-checkable by the sync —
+  # dead config. Re-add only when a plan upgrade makes it enforceable.
   delete_branch_on_merge: true
 
 # Branch protection is OPT-IN per repo via protection-opt-in.txt (one name per line).

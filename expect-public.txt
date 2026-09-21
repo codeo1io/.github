@@ -1,0 +1,8 @@
+# Repos acknowledged as INTENTIONALLY public (one per line) — silences the
+# report-only VISIBILITY DRIFT line for listed originals. Forks of public
+# upstreams are already treated as conformant without listing. The sync still
+# NEVER flips visibility; anything listed here that should not be public is a
+# manual review item.
+.github
+magic-hermes
+openai-embedding-proxy

@@ -2,7 +2,7 @@
 # Requirements to add a repo here: default branch = main, solo-merge workflow,
 # and no direct-push promote flow on main (hermes-conductor is permanently excluded).
 stonks
-chadgpt
+ChadGPT
 magic-mcp
 dashboard
 hermes-autonomy
