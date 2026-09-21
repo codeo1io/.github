@@ -1,0 +1,54 @@
+# Private-leak sentinel — reusable gitleaks scan for codeo1io repos.
+# Call from a repo's own workflow:
+#
+#   jobs:
+#     private-leak:
+#       uses: codeo1io/.github/.github/workflows/private-leak-sentinel.yaml@main
+#
+# No inputs, no secrets required. Fails the job on any finding.
+name: private-leak-sentinel
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: [self-hosted, codeo1io]
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+          fetch-depth: 0  # full history — the point is catching old leaks too
+
+      - name: Fetch sentinel config
+        run: |
+          mkdir -p .gitleaks-fleet
+          curl -fsSL -o .gitleaks-fleet/gitleaks.toml \
+            https://raw.githubusercontent.com/codeo1io/.github/main/gitleaks.toml
+
+      - name: Run gitleaks
+        run: |
+          set -euo pipefail
+          if ! command -v gitleaks >/dev/null 2>&1; then
+            echo "::error::gitleaks not installed on runner"
+            exit 2
+          fi
+          gitleaks git . \
+            --config .gitleaks-fleet/gitleaks.toml \
+            --redact \
+            --report-format sarif \
+            --report-path gitleaks-report.sarif \
+            --exit-code 1
+          echo "scan clean"
+
+      - name: Upload report on failure
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: gitleaks-report
+          path: gitleaks-report.sarif
+          retention-days: 7
