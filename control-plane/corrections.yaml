@@ -19,9 +19,10 @@ entries:
     reconfirm_due: 2026-12-20
     status: active
   - id: secret-scanning-sticky-disabled
-    what: magic-hermes + openai-embedding-proxy revert secret_scanning enablement (account-level); gitleaks sentinel covers them
+    what: magic-hermes + openai-embedding-proxy revert secret_scanning enablement (account-level); leak-scanning cover is NOT uniform — magic-hermes runs the gitleaks sentinel (reusable workflow @main, verified live 2026-09-21) but openai-embedding-proxy has NO sentinel workflow and NO secret scanning (.github/workflows contains only ci.yml). Cross-repo sentinel adoption tracked as roadmap rm-016 deferred half.
     recorded: 2026-09-21
     recorded_by: fleet-adoption
-    source: gh api security_and_analysis (PATCH reverts to disabled)
+    amended: "2026-09-21 claim corrected after live audit (gh api repos/codeo1io/openai-embedding-proxy/contents/.github/workflows -> ci.yml only, no sentinel/gitleaks reference); conductor run 92e960046f14 cycle-2 B3"
+    source: gh api security_and_analysis (PATCH reverts to disabled) + gh api contents .github/workflows per repo
     reconfirm_due: 2026-12-21
     status: active
