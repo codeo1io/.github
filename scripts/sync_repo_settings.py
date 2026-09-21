@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Sync codeo1io fleet repo settings from common-settings.yaml (settings-as-code).
 
-Fleet-wide: merge settings (squash-only, delete-branch-on-merge, auto-merge).
+Fleet-wide: merge settings (squash-only, delete-branch-on-merge).
 Opt-in (protection-opt-in.txt): branch protection — no force pushes, up-to-date
 branches required before merge, admins NOT enforced so solo ff-push promote
 flows (conductor release-promote) keep working.
@@ -24,6 +24,9 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# A stuck gh/network call must never hang the 08:30 cron (rm-017).
+GH_TIMEOUT = 60.0
+
 MERGE_KEYS = (
     "allow_squash_merge",
     "allow_merge_commit",
@@ -37,9 +40,18 @@ MERGE_KEYS = (
 
 
 def gh(*args: str, input: str | None = None) -> subprocess.CompletedProcess:
-    return subprocess.run(
-        ["gh", *args], capture_output=True, text=True, input=input
-    )
+    try:
+        return subprocess.run(
+            ["gh", *args], capture_output=True, text=True, input=input,
+            timeout=GH_TIMEOUT,
+        )
+    except subprocess.TimeoutExpired:
+        # Uniform with gh failures: rc != 0 flows through the existing
+        # allow_fail / FATAL paths instead of hanging the daily cron.
+        return subprocess.CompletedProcess(
+            ["gh", *args], returncode=124, stdout="",
+            stderr=f"gh {' '.join(args)} timed out after {GH_TIMEOUT:.0f}s",
+        )
 
 
 def gh_json(*args: str, input: str | None = None, allow_fail: bool = False):
@@ -54,18 +66,35 @@ def gh_json(*args: str, input: str | None = None, allow_fail: bool = False):
 def list_repos(owner: str) -> list[dict]:
     return gh_json(
         "repo", "list", owner, "--limit", "300",
-        "--json", "name,isPrivate,isArchived,isFork,defaultBranchRef,viewerPermission",
+        "--json", "name,isPrivate,isArchived,isFork,defaultBranchRef",
     ) or []
 
 
 def read_list(path: Path) -> set[str]:
     if not path.exists():
         return set()
-    return {
-        line.strip()
-        for line in path.read_text().splitlines()
-        if line.strip() and not line.strip().startswith("#")
-    }
+    out: set[str] = set()
+    for line in path.read_text().splitlines():
+        # repo names cannot contain '#': anything after one is a comment
+        entry = line.split("#", 1)[0].strip()
+        if entry:
+            out.add(entry)
+    return out
+
+
+def casefold_set(entries: set[str]) -> set[str]:
+    """Casefolded view for membership tests: GitHub repo names are
+    case-insensitive and the canonical casing can change on rename
+    (e.g. chadgpt -> ChadGPT); a case-sensitive `in` silently dropped
+    renamed repos from protection handling."""
+    return {e.casefold() for e in entries}
+
+
+def unmatched_entries(entries: set[str], fleet: set[str]) -> list[str]:
+    """List entries matching no fleet repo (case-insensitive), sorted —
+    catches renames, deletions, and typos in the opt-in/exclude/ack lists."""
+    fleet_cf = casefold_set(fleet)
+    return sorted(e for e in entries if e.casefold() not in fleet_cf)
 
 
 def protection_body(cfg: dict) -> dict:
@@ -109,8 +138,9 @@ def protection_drift(current: dict | None, desired: dict) -> list[str]:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--dry-run", action="store_true", help="report only (the default without --apply)")
-    ap.add_argument("--apply", action="store_true", help="fix drift (default: dry-run report)")
+    mode_group = ap.add_mutually_exclusive_group()
+    mode_group.add_argument("--dry-run", action="store_true", help="report only (the default without --apply)")
+    mode_group.add_argument("--apply", action="store_true", help="fix drift (default: dry-run report)")
     ap.add_argument("--owner", default="codeo1io")
     args = ap.parse_args()
     mode = "APPLY" if args.apply else "DRY-RUN"
@@ -118,6 +148,10 @@ def main() -> int:
     cfg = yaml.safe_load((ROOT / "common-settings.yaml").read_text())
     excludes = read_list(ROOT / "exclude-repos.txt")
     protected = read_list(ROOT / "protection-opt-in.txt")
+    expect_public = read_list(ROOT / "expect-public.txt")
+    excludes_cf = casefold_set(excludes)
+    protected_cf = casefold_set(protected)
+    expect_public_cf = casefold_set(expect_public)
     merge_want = {k: bool(cfg["merge"][k]) for k in MERGE_KEYS}
     prot_want = protection_body(cfg)
     expect_private = bool(cfg["visibility"]["expect_private"])
@@ -129,14 +163,21 @@ def main() -> int:
     fixed = drifted = 0
     reports: list[str] = []
 
-    repos = list_repos(args.owner)
+    try:
+        repos = list_repos(args.owner)
+    except RuntimeError as exc:
+        print(f"FATAL: listing repos for {args.owner} failed: {exc}")
+        return 1
     if not repos:
         print("FATAL: repo list empty or gh failed")
         return 1
+    if len(repos) >= 300:
+        print(f"WARN: repo list hit the gh --limit 300 cap ({len(repos)} repos) — "
+              f"newer repos may be missing from this run; raise the limit")
 
     for repo in sorted(repos, key=lambda r: r["name"]):
         name = repo["name"]
-        if name in excludes:
+        if name.casefold() in excludes_cf:
             continue
         if repo.get("isArchived"):
             reports.append(f"{name}: SKIP (archived)")
@@ -145,9 +186,10 @@ def main() -> int:
         branch = (repo.get("defaultBranchRef") or {}).get("name") or "main"
 
         # --- merge settings (fleet-wide) ---
-        cur_merge = {k: bool(repo.get(k, False)) for k in MERGE_KEYS}
         # gh repo list does not return merge flags; fetch full repo object
-        full = gh_json("api", f"repos/{slug}")
+        # allow_fail: one bad repo must not abort the whole fleet pass (rm-011 parity
+        # with the list_repos FATAL handling; the None branch below is live).
+        full = gh_json("api", f"repos/{slug}", allow_fail=True)
         if full is None:
             errors += 1
             reports.append(f"{name}: ERROR fetching repo")
@@ -172,10 +214,11 @@ def main() -> int:
 
         # --- visibility (report-only) ---
         if bool(full.get("private", True)) != expect_private:
-            if bool(repo.get("isFork")) and expect_public_forks:
+            if (bool(repo.get("isFork")) and expect_public_forks) or name.casefold() in expect_public_cf:
                 # Forks of public upstreams cannot be private on a personal
-                # plan (GitHub Team required). Public forks are conformant —
-                # not drift, and never worth a daily nag line.
+                # plan (GitHub Team required), and expect-public.txt lists
+                # originals acknowledged as intentionally public — conformant,
+                # not drift, never worth a daily nag line.
                 pass
             else:
                 reports.append(
@@ -184,7 +227,7 @@ def main() -> int:
                 )
 
         # --- branch protection (opt-in) ---
-        if name in protected:
+        if name.casefold() in protected_cf:
             if full.get("private"):
                 # Free plan: branch protection on private repos returns 403
                 # "Upgrade to GitHub Pro" — soft skip, not an error.
@@ -208,6 +251,9 @@ def main() -> int:
 
     print(f"[{mode}] repos={len(repos)} excluded={len(excludes)} drift_found={drifted} "
           f"{'fixed=' + str(fixed) if args.apply else ''} errors={errors}")
+    for label, entries in (("opt-in", protected), ("exclude", excludes), ("expect-public", expect_public)):
+        for entry in unmatched_entries(entries, {r["name"] for r in repos}):
+            print(f"  WARN unmatched {label} entry: {entry} (no such repo — rename, deletion, or typo)")
     for line in reports:
         print(f"  {line}")
     if errors:
