@@ -30,7 +30,7 @@ jobs:
         run: |
           mkdir -p .gitleaks-fleet
           curl -fsSL -o .gitleaks-fleet/gitleaks.toml \
-            https://raw.githubusercontent.com/codeo1io/.github/main/gitleaks.toml
+            "https://raw.githubusercontent.com/codeo1io/.github/main/gitleaks.toml?t=${GITHUB_SHA}"
 
       - name: Run gitleaks
         run: |
