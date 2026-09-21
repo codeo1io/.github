@@ -1,0 +1,27 @@
+# generated 2026-09-21T02:53:08Z
+ChadGPT
+agent
+agent-reach-harness-integration
+agenttrace
+autopilot
+autorepair
+dashboard
+discord-turbo
+glmplus
+hermes-agent
+hermes-agent-2
+hermes-autonomy
+hermes-chat-journal
+hermes-config
+hermes-control-ui
+hermes-curator-evolver
+hermes-gpt
+hermes-infra
+magic-context
+magic-hermes
+magic-mcp
+openai-embedding-proxy
+stonks
+stonks-2
+systematic
+testing-framework-installer
