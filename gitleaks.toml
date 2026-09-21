@@ -33,6 +33,18 @@ description = "GitHub App private key (PEM body)"
 regex = '''-----BEGIN RSA PRIVATE KEY-----'''
 tags = ["github-app", "pem"]
 
+# Override of the stock 'generic-api-key' rule. The stock regex fires on
+# comments, import lists, and docstrings — 363 of 419 findings on hermes-agent,
+# zero real secrets (triaged 2026-09-21). Narrowed to assignment-shaped matches
+# with an entropy floor; every other default rule runs unchanged.
+[[rules]]
+id = "generic-api-key"
+description = "Generic API Key (fleet-narrowed)"
+regex = '''(?i)(?:api[_-]?key|token|secret|password|passwd|credential)[a-z0-9_]*\s*[:=]\s*["'][A-Za-z0-9+/=_.\-]{16,}["']'''
+entropy = 3.5
+keywords = ["key", "token", "secret", "password", "passwd", "credential"]
+tags = ["key", "generic"]
+
 [allowlist]
 description = "Known-safe paths and test fixtures"
 paths = [
@@ -40,9 +52,21 @@ paths = [
   '''gitleaks\.toml''',
   '''(?i)test/fixtures/''',
   '''(?i)tests?/.*fixtures?''',
+  '''(?i)(tests?|e2e|evals)/.*''',
+  '''(?i)\.(test|spec)\.[a-z]+$''',
+  '''(?i)conftest\.py$''',
+  '''(?i)native/.*/vendor/''',
   '''node_modules/''',
   '''web/dist/''',
   '''dist/''',
+  # agent/redact.py and its tests deliberately contain secret-shaped strings —
+  # they are the redaction engine itself; the sentinel would otherwise flag
+  # the exact code that protects the fleet.
+  '''agent/redact\.py$''',
+  # Vendored upstream history: an accidental session export (exprted.jsonl,
+  # removed from HEAD in 9a19fe1f) trips discord-client-id rules; zero real
+  # token shapes verified 2026-09-21. Allowlisting the path quiets history scans.
+  '''exprted\.jsonl''',
 ]
 commits = []
 # Repo-env templates with placeholder values are fine
