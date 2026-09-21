@@ -76,4 +76,12 @@ regexes = [
   '''<your[_-]?(token|key|secret)?>''',
   '''\$\{[A-Z_]+\}''',
   '''ghp_xxxxxxxxxxxxxxxxxxxx''',
+  # OAuth client secrets of native/PKCE apps are public by design (Google
+  # installed-app flow), as are env/header NAME constants and redacted
+  # "ab12...yz" stubs. The last 7 findings on the 2026-09-21 hermes-agent
+  # full-history scan were exactly these - triaged benign one by one.
+  '''(?i)public[_-]?client[_-]?secret|SECRET_(?:HEADER|ENV|SUFFIX)\s*=''',
+  '''(?i)PLACEHOLDER''',
+  '''\.\.\.''',
 ]
+
