@@ -1,0 +1,25 @@
+# Verified claims — assertions about fleet state that MUST hold.
+# fleet-status `claims` check evaluates each and fails on any false claim.
+# fro-bot/.github "Status Truth" pattern: publicly made claims get mechanically
+# verified against live state; counts-only summaries, no secrets.
+version: 1
+claims:
+  - id: runners-registered
+    claim: "25+ GitHub runner registrations exist on this box"
+    check: "runners_count >= 25"
+
+  - id: cron-no-dead-jobs
+    claim: "No enabled Hermes cron job has a null next_run_at"
+    check: "enabled_null_next_run == 0"
+
+  - id: conductor-deployed-at-main
+    claim: "Deployed hermes-conductor release matches the checkout HEAD"
+    check: "conductor_release_sha_matches is True"
+
+  - id: voice-pipeline-live
+    claim: "Voice WebSocket receiver is accepting connections on 127.0.0.1:7860"
+    check: "voice_ws_listening is True"
+
+  - id: file-pairs-identical
+    claim: "jarvis repo fast_paths.py and ws_receiver.py are byte-identical to the live plugin copies"
+    check: "file_pair_mismatches == 0"
