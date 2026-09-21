@@ -16,7 +16,9 @@ permissions:
 
 jobs:
   scan:
-    runs-on: [self-hosted, codeo1io]
+    # Plain self-hosted: the box's runners are registered per-repo with only
+    # the default 'self-hosted' label — no extra org label exists.
+    runs-on: self-hosted
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
