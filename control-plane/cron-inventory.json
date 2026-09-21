@@ -528,5 +528,15 @@
       "kind": "interval",
       "minutes": 360
     }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "control-plane-sync",
+    "schedule": {
+      "display": "40 8 * * *",
+      "expr": "40 8 * * *",
+      "kind": "cron"
+    }
   }
 ]
