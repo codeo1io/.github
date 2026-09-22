@@ -22,9 +22,9 @@
 # NEW commits in the event (push payloads cap at 20); schedule/workflow_dispatch
 # runs scan full history. Legacy-leak coverage rides on the weekly schedule.
 #
-# PROMOTE RIDER (execute at the commit gate): bump the config-ref default
-# below from the pre-cycle-4 main tip to this batch's commit SHA so callers
-# pick up the hardened gitleaks.toml.
+# PROMOTE RIDER (executed at the cycle-4 commit gate): config-ref default
+# below points at the batch commit that shipped this hardened config
+# (d04d86d), so callers without an explicit config-ref pick it up.
 name: private-leak-sentinel
 
 on:
@@ -33,11 +33,11 @@ on:
       config-ref:
         description: >-
           codeo1io/.github git ref holding the fleet gitleaks.toml. Default is
-          the last pre-cycle-4 main tip; the .github self-scan caller
-          (leak-sentinel-self.yaml) passes github.sha so every push is scanned
-          with exactly the config it ships.
+          the cycle-4 batch commit that shipped the hardened config; the
+          .github self-scan caller (leak-sentinel-self.yaml) passes github.sha
+          so every push is scanned with exactly the config it ships.
         type: string
-        default: "7d47ab484a937c5742ddcb3b69399495e8342beb"  # pre-cycle-4 main tip; bump at promote
+        default: "d04d86d604dcd538444ab072c41523f7552fc108"  # cycle-4 batch commit (hardened gitleaks.toml)
 
 permissions:
   contents: read
