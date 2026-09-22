@@ -165,7 +165,7 @@ reader (pre-existing; harmless to the cron, worth hardening alongside rm-001).
 
 ### Sentinel supply-chain hardening + tool refresh
 - id: `rm-018` | track: reliability | priority: 88.0 | status: candidate
-- signals: research 2026-09-21: sentinel pins actions/checkout@v5.0.0 (SHA 08c6903) vs latest v7.0.1 (2026-07-20) and actions/upload-artifact@v4.6.2 vs latest v7.0.1 (2026-04-10); template majors covered by rm-008 (stranded); callers invoke the reusable workflow as @main (magic-hermes verified live) and the workflow fetches gitleaks.toml at runtime from unpinned main via unauthenticated raw.githubusercontent (private-leak-sentinel.yaml:33) — one weakening commit to this repo silently degrades fleet-wide leak scanning with no trace in caller repos; host gitleaks 8.28.0 vs upstream v8.30.1 (2026-03-21)
+- signals: research 2026-09-21: sentinel pins actions/checkout@v5.0.0 (SHA 08c6903) vs latest v7.0.1 (2026-07-20) and actions/upload-artifact@v4.6.2 vs latest v7.0.1 (2026-04-10); template majors covered by rm-008 (stranded); callers invoke the reusable workflow as @main (magic-hermes verified live) and the workflow fetches gitleaks.toml at runtime from unpinned main via unauthenticated raw.githubusercontent (private-leak-sentinel.yaml:33) — one weakening commit to this repo silently degrades fleet-wide leak scanning with no trace in caller repos; host gitleaks 8.28.0 vs upstream v8.30.1 (2026-03-21); cycle-4 compound 2026-09-22: the fetch/velocity half is CLOSED by rm-036 D2 (config consumed via SHA-pinned self-checkout — a weakening commit to gitleaks.toml no longer ships to callers until the pin is deliberately bumped); residuals: callers still invoke the reusable workflow as @main (SHA-pinning a cross-repo reusable workflow trades supply-chain auditability for config-rollout velocity — needs a deliberate fleet policy decision, possibly Dependabot-managed per rm-039), and the useDefault same-id override semantics revalidation now rides the pinned action's bundled gitleaks rather than a host install
 - acceptance: callers pin the reusable workflow by full SHA; gitleaks.toml vendored into callers or fetched at a pinned SHA with checksum verification; workflow_dispatch trigger added for on-demand rescans; host gitleaks upgraded and the useDefault same-id override semantics of gitleaks.toml revalidated on 8.30.x
 - evidence: caller workflow ymls show @<40-hex>; a planted-token fixture repo still fails the scan post-upgrade; `gitleaks version` -> 8.30.x with sentinel green on magic-hermes
 
@@ -196,7 +196,7 @@ reader (pre-existing; harmless to the cron, worth hardening alongside rm-001).
 <!-- cycle-2 compound (2026-09-21, conductor run 92e960046f14 attempt 972800c7; items rm-023/rm-024 sourced from implement-phase evidence per lessons L9/L15) -->
 
 ### sync: apply the live merge-settings drift on repo `agent`
-- id: `rm-023` | track: reliability | priority: 75.0 | status: candidate
+- id: `rm-023` | track: reliability | priority: 75.0 | status: done (cycle-4 2026-09-22: self-healed at the 08:30 cron as the cycle-3 compound note predicted — live --dry-run drift_found=0 across 46 repos; daily log 2026-09-22T08:31:15Z 'RESULT: OK (all drift fixed)' rc=0, `agent` absent from drift rows)
 - signals: implement/full_tests live dry-run 2026-09-21: 'agent: DRIFT merge settings (allow_merge_commit=True->False, allow_rebase_merge=True->False, delete_branch_on_merge=False->True)' — the only remaining drift_found=1 across 44 repos; repo created mid-run (fleet 43->44, L6); deliberately NOT --applied by the cycle-2 batch (mutating GitHub state was out of batch scope)
 - acceptance: python3 scripts/sync_repo_settings.py --apply -> rc=0; follow-up --dry-run -> drift_found=0; `agent` repo merge flags match common-settings.yaml
 - evidence: live --dry-run output before/after; gh api repos/codeo1io/agent merge fields
@@ -288,7 +288,7 @@ status lines persist across daily renders.
 - evidence: git log --oneline shows the batch commits on main; git branch --list 'conductor/run-92e960046f14' empty; pytest -q tests/ passes on main checkout
 
 ### Public-repo runner exposure: stop fork-PR jobs on the fleet self-hosted runner
-- id: `rm-026` | track: reliability | priority: 97.0 | status: candidate
+- id: `rm-026` | track: reliability | priority: 97.0 | status: done (resolved in reality 2026-09-22, cycle-4 prioritize live verification: sentinel reusable workflow runs-on ubuntu-latest since the 7d47ab4 migration with no caller-side runner label; openai-embedding-proxy ci.yml runs BOTH jobs on ubuntu-latest — the sole self-hosted mention is a debug comment documenting the March 2026 hardening; fleet code search shows self-hosted labels only on private repos magic-hermes + autorepair, exactly this item's design clause "private repos keep self-hosted paths unchanged")
 - signals: research C1 — magic-hermes/.github/workflows/private-leak-sentinel.yml triggers on unscoped `pull_request` and delegates to codeo1io/.github sentinel `runs-on: self-hosted` (private-leak-sentinel.yaml:21); openai-embedding-proxy/.github/workflows/ci.yml: pull_request (L5) feeding two `runs-on: self-hosted` jobs (L18, L29); both repos PUBLIC (live sync dry-run visibility); docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/about-self-hosted-runners advises against self-hosted runners on public repos
 - acceptance: PR-triggered workflows in the 2 public repos execute on GitHub-hosted runners (sentinel gains an ubuntu-latest + pinned-gitleaks-install path; openai-embedding-proxy ci swaps its two self-hosted jobs or gates pull_request to same-repo branches); private repos keep self-hosted paths unchanged
 - evidence: gh api of both caller workflow files post-change shows runs-on: ubuntu-latest on PR event paths; a completed run log shows a GitHub-hosted runner; workflow grep shows no self-hosted label reachable from pull_request in public repos
@@ -318,8 +318,8 @@ status lines persist across daily renders.
 - evidence: files present on main; gh api repos/codeo1io/<repo-without-own-template>/contents/PULL_REQUEST_TEMPLATE.md resolves via the .github default (or 404 documented as GitHub-side resolution, with the file presence cited)
 
 ### Sentinel supply chain: pin config ref, refresh scanner, narrow the .md blanket allowlist
-- id: `rm-031` | track: reliability | priority: 87.0 | status: candidate
-- signals: research C6, extends rm-018 — sentinel fetches gitleaks.toml from @main unpinned (private-leak-sentinel.yaml:28-32, post-328c910 cache-bust); host/runner gitleaks 8.28.0 vs upstream v8.30.1 (2026-03-21); gitleaks.toml:51 blanket-excludes all .md files; per-repo .gitleaksignore is the native newer mechanism
+- id: `rm-031` | track: reliability | priority: 87.0 | status: done by subsumption, ship-gated (cycle-4 compound 2026-09-22 + review fix 2026-09-22: rm-036 D2 delivered the pinned-ref config fetch (input default 7d47ab48, stronger than the acceptance's "latest tag" default) and pinned the gitleaks invocation — action commit-pinned PLUS binary version pinned via GITLEAKS_VERSION 8.30.1 in the step env, added at review-fix (cycle-4 review P2: gitleaks-action's installer fetches unchecked releases/latest when the env is unset) — clause 2 satisfied literally; rm-037 D1 removed the .md blanket outright rather than narrowing it (stronger than targeted .gitleaksignore entries: .md prose now SCANNED by the quoted/unquoted generic pair). Live-run evidence clauses (sentinel run reports 8.30.x) complete at the commit gate. Residual: per-repo .gitleaksignore adoption for the hermes-agent (964) / hermes-gpt (234) synthetic corpora — next-cycle candidate)
+- signals: research C6, extends rm-018 — sentinel fetches gitleaks.toml from @main unpinned (private-leak-sentinel.yaml:28-32, post-328c910 cache-bust); host/runner gitleaks 8.28.0 vs upstream v8.30.1 (2026-03-21); gitleaks.toml:51 blanket-excludes all .md files; per-repo .gitleaksignore is the native newer mechanism; cycle-4 assess 2026-09-22: the ubuntu-latest migration (7d47ab4) added a runtime gitleaks install from unpinned releases/latest with no checksum (private-leak-sentinel.yaml:33-38) — rm-036's action-based rewrite subsumes the install and fetch halves; live caller runs 10-25s, minutes concern evidence-closed (cycle-4 research)
 - acceptance: config fetched at a pinned ref (workflow_dispatch input, default latest tag); gitleaks version pinned/recorded in the workflow (install step or runner upgrade policy documented); .md blanket exclusion replaced by targeted .gitleaksignore entries with the allowlist rationale documented
 - evidence: workflow file shows pinned ref + version; a sentinel run reports gitleaks 8.30.x; git diff gitleaks.toml shows the narrowed allowlist; a scan over a fixture .md secret still fails
 
@@ -331,7 +331,7 @@ status lines persist across daily renders.
 
 ### Cron wrapper hardening: branch safety, ordered host-key check, failure propagation
 - id: `rm-033` | track: reliability | priority: 84.0 | status: candidate
-- signals: assess — repo-settings-sync wrapper runs `git reset --hard origin/main` regardless of entry branch (clobbers parked-branch worktrees), performs the SSH fetch BEFORE check_known_hosts.py, and ends `exit 0` masking every failure; rm-005 covers propagation only
+- signals: assess — repo-settings-sync wrapper runs `git reset --hard origin/main` regardless of entry branch (clobbers parked-branch worktrees), performs the SSH fetch BEFORE check_known_hosts.py, and ends `exit 0` masking every failure; rm-005 covers propagation only; cycle-4 assess 2026-09-22: README.md:60-61 documents the fetch-before-check ordering as design — a pinned-key compromise is exercised (SSH fetch -> reset --hard -> synced scripts run with gh credentials) before the detector fires, making the reorder first-class hardening, not cosmetics
 - acceptance: wrappers trap-restore the entry branch on nonzero exit (B2 pattern), invoke check_known_hosts.py BEFORE any network fetch, and propagate the real rc (single exit path); shim tests lock all three properties
 - evidence: shim tests (fetch-failure -> entry branch restored; checker-failure -> nonzero wrapper rc); live wrapper run on a parked branch leaves HEAD unchanged
 
@@ -368,5 +368,87 @@ preset, scorecard). Owner-gated: rm-015. Self-heals at the 08:30 cron: rm-023.
 Push-gate residuals: rm-014 + rm-025 stranded-branch deletions.
 
 *End of cycle-3 addendum.*
+
+<!-- cycle-4 roadmap addendum (2026-09-22, conductor run 21dc18aaada0 attempt 4201ff543741453da6fc9498c539f0a2; items rm-036..rm-041 sourced from cycle-4 assess attempt 6191211ecc9f + research attempt 9532066976; sanctioned ledger extension per render-marker contract) -->
+
+### Migrate sentinel internals to the official SHA-pinned gitleaks-action
+- id: `rm-036` | track: reliability | priority: 87.0 | status: done in-tree, ship-gated (cycle-4 D2 2026-09-22: private-leak-sentinel.yaml rewritten on gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e — v3.0.0 tag verified commit-typed via gh api git/ref/tags, so the tag pin IS a commit pin; gitleaks.toml consumed via a second SHA-pinned actions/checkout@3d3c42e5 (v7.0.1) of codeo1io/.github at an explicit config-ref input (default 7d47ab48, self-scan caller passes github.sha) — no runtime raw fetch, no cache-bust, no curl install; both workflow checkouts persist-credentials: false. DEVIATION from acceptance: workflow_dispatch rescan clause NOT implemented — leak-sentinel-self.yaml's weekly full-history schedule covers this repo's rescans; adding dispatch to a reusable workflow is a next-cycle rider. Magic-hermes live-green + live-run gitleaks-version clauses complete at the commit gate + caller refresh; promote-time rider: bump config-ref default to the batch commit SHA)
+- signals: research RC-1 2026-09-22, extends rm-018/rm-031 — gitleaks/gitleaks-action v3.0.0 (2026-05-30) requires no license for personal accounts (README L43/L75) and natively supports GITLEAKS_CONFIG (L79), SARIF artifact upload (L80), job summary (L81); one SHA-pinned action replaces the curl-install + releases/latest trust + raw.githubusercontent config fetch + hand-rolled report plumbing; docs confirm reusable-workflow refs may be SHAs; assess 2026-09-22 rated the unpinned install P2
+- acceptance: private-leak-sentinel.yaml uses gitleaks/gitleaks-action@<40-hex SHA>; gitleaks.toml consumed via pinned self-checkout of codeo1io/.github (no runtime network config fetch — cache-bust/rerun hole closed structurally); sentinel green on magic-hermes after migration; workflow_dispatch rescans retained
+- evidence: workflow yml shows the pinned action and no curl/raw fetch; live run log reports gitleaks 8.30.x; planted-token fixture repo still fails the scan
+
+### Sentinel detection integrity: retire blanket tree allowlists, restore unquoted-value coverage
+- id: `rm-037` | track: reliability | priority: 90.0 | status: done (cycle-4 D1 2026-09-22: blanket tests?/e2e/evals tree + conftest.py + *.test/spec.* + .md exemptions all retired, replaced by a documented narrow-exemptions policy (fixture dirs by convention, vendored/build artifacts, per-file triaged entries with evidence comments, per-repo .gitleaksignore named as the sanctioned FP sink); generic-api-key-unquoted rule added — prefix-worded \b-anchored key (rejects _startup_api_key_override / request_pressure_tokens), base64/hex alnum-start value (rejects _windows_gateway_resume / plan.approx_tokens / ++latestSwitchToken), line-anchored (rejects prose) — 0 source FPs verified on a 9-line FP corpus AND live full-history corpora hermes-gpt 38,355 commits + hermes-agent 44,422 commits; fleet triage: hermes-agent 964 + hermes-gpt 234 findings ALL in synthetic test/docs paths, 0 source, 0 actionable; tests/test_gitleaks_config.py 11 tests including the live-binary acceptance proof — a planted secret inside tests/ FAILS the scan; .github self-scan 29 commits 0 findings under the hardened config)
+- signals: cycle-4 assess P1/P2 2026-09-22 — gitleaks.toml:55 blanket-allows every tests?/e2e/evals tree fleet-wide (plus conftest.py:57, *.test/spec.*:56) so real secrets in test fixtures are invisible to the fleet's only automated scanner (the compensating control for 8 public repos with native scanning disabled per dry-run 2026-09-22); gitleaks.toml:43 narrowed generic-api-key requires quote-wrapped values — unquoted `api_key: abc...` in YAML/TOML escapes the generic rule (regression vs stock gitleaks); rm-031 covers only the .md blanket (gitleaks.toml:51)
+- acceptance: blanket tree exemptions replaced by targeted per-file triage (pattern proven at gitleaks.toml:62-71) and/or .gitleaksignore fingerprints; a generic-rule variant covers unquoted assignment values; fleet-triage runs on magic-hermes + hermes-agent report 0 actionable findings after narrowing
+- evidence: gitleaks.toml diff shows the narrowed allowlist; fixture scan with a secret in a test file FAILS; scan transcripts on both repos clean; gitleaks self-scan of this repo still 0 findings
+
+### Sentinel self-scan + fleet adoption: close the owner-repo blind spot
+- id: `rm-038` | track: reliability | priority: 84.0 | status: candidate
+- signals: cycle-4 assess P2 + research RC-2 2026-09-22 — SECURITY.md:21-23 claims the sentinel "runs gitleaks ... on pushes and pull requests" for this repo, but private-leak-sentinel.yaml:11-12 is workflow_call-only and no caller exists in .github: the config-owning repo is never auto-scanned (manual scan 2026-09-22 clean, 29 commits); openai-embedding-proxy is public with native scanning disabled and zero sentinel (rm-016 residual: cross-repo adoption deferred); caller pattern proven live in magic-hermes (push/PR/daily, 10-25s runs); cycle-4 compound 2026-09-22: IN-REPO HALF LANDED (D3) — leak-sentinel-self.yaml caller (push main / pull_request / weekly schedule, config-ref: github.sha so a push is always scanned with exactly the gitleaks.toml it ships), SECURITY.md rewritten to actual coverage (self-scan + magic-hermes named, adoption gap + rm-016/rm-038 pointer kept), corrections.yaml amended (audit-line convention, single amended string); residuals: live green run (ship-gated at commit gate) + openai-embedding-proxy adoption (rm-016 overlap, unlocked by rm-036 landing)
+- acceptance: a sentinel caller workflow (push/PR) lands in codeo1io/.github and runs green; openai-embedding-proxy gains the caller (post rm-036); SECURITY.md wording matches actual coverage; corrections.yaml inventory reflects the added caller
+- evidence: gh api repos/codeo1io/.github/actions/runs shows green sentinel runs; SECURITY.md reviewed against reality; corrections.yaml diff
+
+### Native Dependabot version updates for github-actions pins
+- id: `rm-039` | track: customer-experience | priority: 78.0 | status: candidate
+- signals: research RC-3 2026-09-22, alternative to rm-034 (Renovate install state unverifiable with the sync PAT — 403 on /user/installations) — Dependabot github-actions ecosystem is native (no app install), free (docs: standard runners free for Dependabot), and updates full-SHA pins; in-fleet precedent: hermes-agent .github/dependabot.yml is fleet-authored with explicit policy text ("Dependabot opens a PR with the new SHA and release notes; pins are moved deliberately, after review"); template pins verified current live (checkout v7.0.1, paths-filter v4.0.3) and this mechanism keeps them so
+- acceptance: canonical dependabot.yml (github-actions ecosystem, weekly, scoped) shipped as a template and adopted in codeo1io/.github; README documents the convention; a Dependabot PR observed on a drifted pin or a no-drift API check
+- evidence: dependabot.yml tracked in .github + template; gh api confirms config; PR or no-drift evidence
+
+### Control-plane toolchain-freshness record (versions.json)
+- id: `rm-040` | track: reliability | priority: 70.0 | status: candidate
+- signals: research RC-4 2026-09-22, extends rm-019 — standing drift facts are one-off evidence strings (host gh 2.83.2 vs upstream v2.101.0 = 19 releases; runner gitleaks vs v8.30.1; action pins vs latest); control-plane-sync.sh already mirrors inventory-shaped data to origin/data; a bounded versions record makes drift self-evidencing daily
+- acceptance: the mirror path emits versions.json (gh version, gitleaks latest vs deployed, template action pins vs upstream latest, size-bounded) to the data branch; shim test locks the emitter; a cron run lands the file
+- evidence: dry sync run lists versions.json; origin/data tree shows it; shim test green
+
+### Sync/docs micro-corrections
+- id: `rm-041` | track: customer-experience | priority: 55.0 | status: done (cycle-4 D4 2026-09-22: sync_repo_settings.py RPR drift message derives want from desired['required_pull_request_reviews'] instead of hardcoded False — verified live, dry-run RESULT: OK, 15 sync tests green; README.md test count 29 -> 42 derived from live pytest output)
+- signals: cycle-4 assess P3 2026-09-22 — sync_repo_settings.py:189 RPR drift message hardcodes "want False" (inverts meaning if desired RPR is ever non-null; latent, desired currently null); README.md:69 cites "(29)" tests vs 31 in-tree (Layout staleness itself is rm-021's scope, not duplicated)
+- acceptance: drift message derives from the actual desired value; README test count matches live pytest output
+- evidence: grep shows the parameterized message; pytest count == README count
+
+### Cycle-4 roadmap note (2026-09-22, post-assess, post-research)
+
+Assess (attempt 6191211ecc9f, 11 findings at 7d5a132) and research (attempt
+9532066976, ce-ideate, all sources live-fetched 2026-09-22) fed this addendum.
+Status promotion: rm-023 done (08:30-cron self-heal confirmed: drift_found=0
+across 46 repos, daily log 2026-09-22T08:31:15Z rc=0). New signals appended
+to rm-031 (unpinned releases/latest install, new in 7d47ab4) and rm-033
+(README documents fetch-before-check as design; escalation chain reaches gh
+credentials). Rejected this cycle with rationale: minutes-quota guardrail
+(live sentinel runs 10-25s, public repos free, 2,000 free min/month ≈ 2400x
+current use — revisit only before a big-history PRIVATE adopter); competitor
+migration (safe-settings, terraform-provider-github, prow all active but
+still org/app/state-bound — personal-account fit unchanged since cycle-1);
+OSSF Scorecard priority (rm-035 stays candidate; research defers it below the
+sentinel items for a solo-maintained fleet). Next-cycle candidates in
+priority order: rm-037, rm-028, rm-036, rm-038 + rm-033 (rm-036 unblocks
+rm-038's embedding-proxy half), rm-039, rm-040, rm-041. Owner-gated: rm-015,
+rm-016 apply-half. Push-gate residuals: rm-014 + rm-025 stranded-branch
+deletions.
+
+Cycle-4 compound update (2026-09-22, pre-review, attempt a5550cd77f17): Batch D
+landed in the stewardship worktree (uncommitted, commit-gated) — rm-037 DONE,
+rm-036 DONE IN-TREE ship-gated (workflow_dispatch deviation documented on the
+item), rm-031 DONE BY SUBSUMPTION (D2 fetch-pinning + D1 .md-blanket removal),
+rm-041 DONE, rm-026 DONE (resolved in reality; live runner-topology audit),
+rm-023 DONE (roadmap phase, cron self-heal). rm-038 half-landed (in-repo D3;
+residual = live green run + embedding-proxy adoption, rm-016 overlap); rm-018
+kept candidate with narrowed residuals (caller @main pinning policy, bundled-
+gitleaks revalidation). Suite 42/42; fleet triage 0 source findings across 4
+corpora; digest validation:v1:d0028a9d (13 surfaces, base 7d47ab48).
+Next-cycle candidates REVISED in priority order: rm-028 + rm-029 (fleet
+workflow-permissions pair, top open reliability items, cross-repo — now
+unblocked as the sentinel surface stabilized), rm-039 (Dependabot github-actions
+updates — directly maintains the new action/config SHA pins), per-repo
+.gitleaksignore adoption for hermes-agent (964 synthetic findings) and
+hermes-gpt (234), rm-033 (host-scope known-hosts ordering), rm-019 (cron-wired
+mirror consolidation), rm-040. Riders for the commit gate: bump rm-036's
+config-ref default from 7d47ab48 to the batch commit SHA; refresh the
+magic-hermes caller workflow; verify the first live sentinel + self-scan runs.
+Owner-gated: rm-015, rm-016 apply-half. Push-gate residuals: rm-014 + rm-025
+stranded-branch deletions.
+
+*End of cycle-4 addendum.*
 
 <!-- managed by hermes-roadmap render; do not edit by hand -->
