@@ -66,7 +66,7 @@ is logged to `~/.hermes/repo-settings-sync.log`.
     python3 scripts/sync_repo_settings.py --dry-run
     python3 scripts/sync_repo_settings.py --apply
     python3 scripts/check_known_hosts.py
-    python3 -m pytest tests/        # hermetic unit + control-plane shim tests (29)
+    python3 -m pytest tests/        # 42 tests: hermetic unit + control-plane shims + gitleaks-config (2 of the latter are live-binary integrations, skipif-guarded)
 
 ## Inert until Renovate is installed
 

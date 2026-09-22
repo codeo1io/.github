@@ -163,3 +163,62 @@ The implement record claimed "21 repos listed"; live ground truth was 44
 (`gh repo list --json` count and GraphQL repositories.totalCount agree). The
 code was right; the evidence string was wrong. Derive every number you cite
 from a command output, never from a recollection of scrolling.
+
+---
+
+# Cycle 4 lessons (2026-09-22, pre-review evidence: Batch D implement + targeted/full test outcomes)
+
+## L22 — A "clean" scan proves nothing unless the invocation demonstrably ran
+The first hermes-agent fleet scan reported "clean, 537 commits". The command had
+an unquoted empty `$WT` variable, so gitleaks ran with a wrong `--config` path
+(and would have failed loudly, not quietly, on a missing one). A clean result
+without proof the tool ran is a false negative wearing a green badge. Prevention:
+every scan verdict must be accompanied by invocation proof — commit count,
+config path echo, or exit-code capture — and a suspiciously fast/empty "clean"
+is a bug report, not a pass. (evidence: authoritative rescan: 44,422 commits,
+964 findings; the 537 figure came from the failed invocation's stderr)
+
+## L23 — Secret-scanner generic rules over CODE corpora need an identifier-proof shape
+The stock-derived generic-api-key regex fired 29 times on hermes-gpt source
+files: `token = _windows_gateway_resume` (value looks base64), compound YAML
+keys (`export_token:`), and JS `++latestSwitchToken` (prefix + is
+base64-charset-legal). The working shape: key must have the secret word as its
+last word-segment before the separator (`_startup_api_key_override` excluded,
+`export_token:` caught), value must start alphanumeric and stay base64/hex.
+Both classes were found in LIVE corpora, not invented. Prevention: any new
+generic rule ships with (a) an FP corpus of real-looking benign lines and
+(b) a TP corpus, both asserted in tests. (evidence: tests/test_gitleaks_config.py;
+9-line FP / 6-line TP corpora from hermes-gpt + hermes-agent)
+
+## L24 — Blanket exemptions are how scanners go blind; exempt narrowly, at a named scope
+`(?i)(tests?|e2e|evals)/.*` fleet-wide meant any secret committed under tests/
+was invisible to the fleet's ONLY automated scanner — and test fixtures are
+exactly where real-looking credentials accumulate. The fix inverts the default:
+no tree is exempt by category; exemptions are per-path with a triage comment,
+synthetic-secret test/docs hits go to per-repo `.gitleaksignore` (the scanner's
+native mechanism, fingerprint-stable), and the fleet config itself carries a
+test that plants a secret inside tests/ and asserts DETECTION. Prevention: an
+allowlist entry must name its subject (path or fingerprint) and carry its
+rationale; a category-shaped allowlist is a standing finding.
+
+## L25 — "No bare action refs" greps are false-negative factories; match the ref shape exactly
+`grep 'uses:.*@[a-zA-Z]'` looks like a pin check but matched our own SHA pins
+(any SHA starting with a letter) and, piped through `grep -v '# '`, silently
+dropped every pinned line carrying a trailing version comment — reporting "all
+pinned" from a check that couldn't see the difference. Correct matcher: extract
+the `uses:` value and require `owner/repo[@path]@<exactly 40 hex>` or a local
+`./` workflow path. Prevention: pin lints assert the ALLOWED shape, never
+grep-for-the-disallowed substring; test the lint against a letter-leading SHA.
+(evidence: cycle-4 targeted_tests, strict matcher found 7/7 clean where the
+loose one was structurally blind)
+
+## L26 — Delivery loss after completed work: verify-and-deliver, never redo
+Six consecutive implement attempts were voided by provider 429s AFTER the work
+was done — the envelope arrived failed/phase_result-absent. The correct response
+to a re-issued attempt is: re-verify the worktree state matches the claimed
+result (git status/diff digest), complete any unit genuinely still open, and
+deliver the SAME PhaseResult to the NEW spool path. Redoing finished work or
+re-litigating decisions multiplies drift risk on every retry. Prevention: end
+each attempt with the result materialized on disk (spool JSON written and
+validated) before the final message, so a lost message costs one turn, not the
+work. (evidence: attempts faf49621..fd940430, all delivering the same tree)

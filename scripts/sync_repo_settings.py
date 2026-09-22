@@ -185,8 +185,11 @@ def protection_drift(current: dict | None, desired: dict) -> list[str]:
         if cur is not None and cur != want:
             drift.append(f"protection.{k}={cur} want {want}")
     has_rpr = current.get("required_pull_request_reviews") is not None
-    if has_rpr != (desired["required_pull_request_reviews"] is not None):
-        drift.append(f"protection.required_pull_request_reviews configured={has_rpr} want False")
+    want_rpr = desired["required_pull_request_reviews"] is not None
+    if has_rpr != want_rpr:
+        # 'want' derives from the desired config (cycle-4 rm-041): the old
+        # hardcoded 'want False' misreported any future opt-in as drift-against-False.
+        drift.append(f"protection.required_pull_request_reviews configured={has_rpr} want {want_rpr}")
     return drift
 
 

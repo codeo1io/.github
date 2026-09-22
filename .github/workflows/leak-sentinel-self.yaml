@@ -1,0 +1,24 @@
+# Self-scan caller (cycle-4 rm-038 / batch D3): makes this repository — the
+# fleet's leak-config owner — a live consumer of its own sentinel. Before this
+# workflow the reusable sentinel had no caller in .github itself, so the one
+# repo that defines detection policy was never auto-scanned (the SECURITY.md
+# push/PR coverage claim was aspirational). config-ref passes github.sha so a
+# push is always scanned with exactly the gitleaks.toml it ships; a config
+# change that silences detection has to survive review in the same diff.
+name: leak-sentinel-self
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "23 4 * * 1"  # weekly re-scan of full history, Mon 04:23 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  self-scan:
+    uses: ./.github/workflows/private-leak-sentinel.yaml
+    with:
+      config-ref: ${{ github.sha }}
