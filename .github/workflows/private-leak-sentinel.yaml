@@ -16,11 +16,7 @@ permissions:
 
 jobs:
   scan:
-    # Plain self-hosted: the box's runners are registered per-repo with only
-    # the default 'self-hosted' label — no extra org label exists.
-    runs-on: self-hosted
-    # Full-history gitleaks on the self-hosted box takes ~10-11 min under load
-    # (measured 2026-09-22); a 10-min timeout cancels the scan mid-flight every run.
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
@@ -34,13 +30,17 @@ jobs:
           curl -fsSL -o .gitleaks-fleet/gitleaks.toml \
             "https://raw.githubusercontent.com/codeo1io/.github/main/gitleaks.toml?t=${GITHUB_SHA}"
 
+      - name: Install gitleaks
+        run: |
+          set -euo pipefail
+          GL_V="$(curl -fsSL https://api.github.com/repos/gitleaks/gitleaks/releases/latest | python3 -c 'import json,sys; print(json.load(sys.stdin)["tag_name"].lstrip("v"))')"
+          curl -fsSL "https://github.com/gitleaks/gitleaks/releases/download/v${GL_V}/gitleaks_${GL_V}_linux_x64.tar.gz" \
+            | tar -xz -C /usr/local/bin gitleaks
+          gitleaks version
+
       - name: Run gitleaks
         run: |
           set -euo pipefail
-          if ! command -v gitleaks >/dev/null 2>&1; then
-            echo "::error::gitleaks not installed on runner"
-            exit 2
-          fi
           gitleaks git . \
             --config .gitleaks-fleet/gitleaks.toml \
             --redact \
