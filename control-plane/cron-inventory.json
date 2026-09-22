@@ -538,5 +538,25 @@
       "expr": "40 8 * * *",
       "kind": "cron"
     }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "green-pr-merge hermes-gpt",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
+    }
+  },
+  {
+    "deliver": "local",
+    "enabled": true,
+    "name": "fork-divergence-audit",
+    "schedule": {
+      "display": "every day at 07:00",
+      "expr": "0 7 * * *",
+      "kind": "cron"
+    }
   }
 ]
