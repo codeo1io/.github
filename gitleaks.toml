@@ -84,8 +84,14 @@ description = "Known-safe paths and test fixtures"
 paths = [
   '''(?i)\.(lock|snap|png|jpg|jpeg|gif|webp)$''',
   '''gitleaks\.toml''',
-  '''(?i)test/fixtures/''',
-  '''(?i)tests?/.*fixtures?''',
+  # Fixture DIRECTORIES, any directory component named fixtures/ or fixture/ —
+  # never files whose NAME contains "fixture" under a tests/ tree. Cycle-5
+  # assess (rm-037 reopen): the previous `(?i)tests?/.*fixtures?` exempted
+  # wholesale any tests/ path containing "fixture" — a planted ghp_-shaped
+  # token in tests/unit/test_fixture_loader.py produced ZERO findings under
+  # the fleet config (live-binary A/B, gitleaks 8.28.0/8.30.1). Anchored to
+  # directory components only; filename-shaped escapes are gone.
+  '''(?i)(^|/)fixtures?/''',
   '''(?i)native/.*/vendor/''',
   '''node_modules/''',
   '''web/dist/''',
@@ -114,9 +120,14 @@ paths = [
   '''mixture_of_agents_tool\.py$''',
 ]
 commits = []
-# Repo-env templates with placeholder values are fine
+# Repo-env templates with placeholder values are fine. These regexes match
+# the CAPTURED SECRET VALUE (verified live, gitleaks 8.28.0/8.30.1), so they
+# are anchored to placeholder SHAPES — a value merely CONTAINING "xxx" or
+# "..." is NOT exempt (cycle-5 rm-037 reopen: `xxx+` suppressed a live
+# q8Kw2xxx…-shaped value; bare `\.{3}` would suppress any dotted value).
 regexes = [
-  '''xxx+''',
+  # all-x placeholder values (xxxxx …) only
+  '''^x{3,}$''',
   '''CHANGE_ME''',
   '''<your[_-]?(token|key|secret)?>''',
   '''\$\{[A-Z_]+\}''',
@@ -127,7 +138,9 @@ regexes = [
   # full-history scan were exactly these - triaged benign one by one.
   '''(?i)public[_-]?client[_-]?secret|SECRET_(?:HEADER|ENV|SUFFIX)\s*=''',
   '''(?i)PLACEHOLDER''',
-  '''\.\.\.''',
+  # redacted "ab12...yz" stubs: word-prefix + ellipsis + word-suffix shape,
+  # not any dotted value
+  '''[a-z0-9]{3,}\.{3}[a-z0-9]{2,}''',
   # Redacted stub literals verified across all history variants
   # (2026-09-21: every commit of both files carries only these).
   '''8fda2\.\.\.[0-9a-f]*7''',

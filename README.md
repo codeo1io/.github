@@ -61,12 +61,26 @@ Cron job `repo-settings-sync` (daily 08:30 UTC, native hermes cron) runs
 `origin/main`, runs the known-hosts drift check, then applies the sync. Output
 is logged to `~/.hermes/repo-settings-sync.log`.
 
+Cron job `control-plane-sync` (daily 08:40 UTC) runs
+`~/.hermes/scripts/control-plane-sync.sh`, a thin wrapper that execs
+`scripts/sync_data_branch.py` from this checkout — so the repo file IS the
+production code. It mirrors a bounded tail of operational state (tracks,
+watchdog alerts capped at 5,000 lines, both kanban OWNERS references, cron +
+runner inventories, and `corrections.yaml` from the main tree) to the public
+`data` branch, single-flight flock'd, restoring its entry branch on failure.
+`scripts/verify_deployed_artifacts.py` cross-checks the deployed wrapper and
+`MANIFEST.sha256` against this repo (exit 0 clean / 1 drift / 2 not a
+deployed host) — the deployed manifest does not yet pin the two cron-wired
+entrypoints, so it currently reports drift on the host until the host-side
+pins land.
+
 ## Manual use
 
     python3 scripts/sync_repo_settings.py --dry-run
     python3 scripts/sync_repo_settings.py --apply
     python3 scripts/check_known_hosts.py
-    python3 -m pytest tests/        # 42 tests: hermetic unit + control-plane shims + gitleaks-config (2 of the latter are live-binary integrations, skipif-guarded)
+    python3 scripts/verify_deployed_artifacts.py   # rc 0 clean / 1 drift / 2 not a deployed host
+    python3 -m pytest tests/        # 55 tests: hermetic unit + control-plane mirror + deployed-artifact checks + gitleaks-config (5 of the latter are live-binary integrations, skipif-guarded)
 
 ## Inert until Renovate is installed
 
