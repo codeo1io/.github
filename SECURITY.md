@@ -38,6 +38,15 @@ public issue for anything secret- or credential-related.
 
 ## Mirrored operational data
 
-The `data` branch mirrors a bounded tail of operational state (cron schedule
-inventory, runner names, watchdog alerts) for continuity. Schedules and names
+This repository is public — and so are `main` and the `data` branch the daily
+mirror pushes to. The `data` branch carries a bounded tail of operational
+state: cron schedule inventory, runner names, conductor tracks, kanban
+OWNERS canon references, the corrections ledger, and the last 5,000 lines of
+watchdog alerts (`scripts/sync_data_branch.py`, executed daily at 08:40 UTC
+by the deployed cron wrapper; single-flight flock, branch restore on
+failure, bounded subprocess timeouts). Schedules, names, and alert summaries
 only — no scripts, tokens, or credential material are mirrored, by design.
+Because the mirror is world-readable, anything fleet-internal that must not
+be public belongs nowhere under `control-plane/` in the first place
+(legacy public-main exposure of frozen control-plane copies is tracked as
+roadmap rm-015).

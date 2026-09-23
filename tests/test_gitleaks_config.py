@@ -12,6 +12,12 @@ Locks the detection-integrity properties the private-leak sentinel depends on:
   assignments while rejecting the identifier-shaped code assignments observed
   in the 2026-09-22 fleet triage (hermes-gpt / hermes-agent corpora), and the
   quoted rule must require quote-wrapped values;
+- allowlist escapes (cycle-5 rm-037 reopen): the fixture path exemption is
+  directory-component anchored (files NAMED *fixture* under tests/ are
+  scanned — a planted ghp_-shaped token in tests/unit/test_fixture_loader.py
+  previously produced ZERO findings), and value suppression is shape-anchored
+  (all-x placeholders and "prefix...suffix" redaction stubs only — values
+  merely containing ``xxx`` are findings);
 - integration (requires a local ``gitleaks`` binary): a synthetic secret in a
   scratch repository IS detected — including inside a ``tests/`` tree, which
   is the exact blind spot the retired blanket created — and a clean tree is not.
@@ -279,3 +285,136 @@ def test_integration_clean_tree_passes(tmp_path: Path) -> None:
         f"clean fixture tree flagged (rc={rc}); report: "
         f"{report.read_text() if report.exists() else 'none'}"
     )
+
+
+# --------------------------------------------------------------------------
+# Cycle-5 rm-037 reopen: allowlist escape regression (path + value)
+# --------------------------------------------------------------------------
+
+
+def _allowlist_regexes(cfg: dict) -> list[str]:
+    return list(cfg.get("allowlist", {}).get("regexes", []))
+
+
+def test_fixture_path_allowlist_is_directory_anchored_only() -> None:
+    """The fixture exemption covers DIRECTORIES named fixtures/fixture only.
+
+    The retired `(?i)tests?/.*fixtures?` matched any tests/ path containing
+    "fixture" — including tests/unit/test_fixture_loader.py, where a planted
+    ghp_-shaped token produced zero findings under the fleet config (cycle-5
+    assess, live-binary A/B on gitleaks 8.28.0 and 8.30.1).
+    """
+    cfg = load_config()
+    patterns = [re.compile(p) for p in _allowlist_paths(cfg)]
+    for exempt in (
+        "tests/fixtures/dummy_home.py",
+        "test/fixture/data.env",
+        "fixtures/secrets.txt",
+    ):
+        assert any(p.search(exempt) for p in patterns), (
+            f"{exempt} must stay exempt — fixture-directory convention"
+        )
+    for scanned in (
+        "tests/unit/test_fixture_loader.py",
+        "tests/test_fixtures.py",
+        "src/test_fixture_loader.py",
+    ):
+        assert not any(p.search(scanned) for p in patterns), (
+            f"{scanned} must NOT be path-exempt — filename-shaped escape"
+        )
+
+
+def test_value_suppression_is_shape_anchored() -> None:
+    """Value allowlist entries match placeholder SHAPES, not substrings."""
+    cfg = load_config()
+    forms = _allowlist_regexes(cfg)
+    assert "xxx+" not in forms, "unanchored xxx+ suppression must stay retired"
+    assert r"\.\.\." not in forms, "bare ... suppression must stay retired"
+    compiled = [re.compile(r) for r in forms]
+    # placeholders stay exempt
+    assert any(rx.search("xxxxx") for rx in compiled), "all-x placeholder must stay exempt"
+    assert any(rx.search("8fda2...07") for rx in compiled), "redaction stub must stay exempt"
+    # values merely CONTAINING the markers are findings (proven miss class)
+    xxx_bearing = "q8Kw2" + "x" * 3 + "Xp7Qv5Nt8Lb3"
+    assert not any(rx.search(xxx_bearing) for rx in compiled), (
+        "xxx-bearing value must not be suppressed"
+    )
+    assert not any(rx.search("notredacted_at_all") for rx in compiled)
+
+
+@pytest.mark.skipif(_gitleaks_bin() is None, reason="no gitleaks binary on PATH")
+def test_integration_planted_token_in_fixture_named_test_file_detected(tmp_path: Path) -> None:
+    """A planted ghp_-shaped token in tests/unit/test_fixture_loader.py IS
+    detected — the exact escape the retired path allowlist created."""
+    bin_path = _gitleaks_bin()
+    repo = tmp_path / "escape-repo"
+    repo.mkdir()
+    _git(repo, "init", "-q")
+    _git(repo, "config", "user.email", "sentinel-selftest@example.invalid")
+    _git(repo, "config", "user.name", "sentinel-selftest")
+    token = "ghp_" + "Zr4k9Wm2" + "Xp7Qv5Nt" + "8Lb39cQw" + "1Er4Ty6Ui8OpAsDfGh"
+    (repo / "tests" / "unit").mkdir(parents=True)
+    (repo / "tests" / "unit" / "test_fixture_loader.py").write_text(
+        'TOKEN = "%s"  # fixture loader auth\n' % token
+    )
+    _git(repo, "add", "-A")
+    _git(repo, "commit", "-qm", "fixture: planted token in fixture-named test file")
+
+    report = tmp_path / "report.json"
+    rc = _run_gitleaks(bin_path, repo, report)
+    assert rc == 1, (
+        "planted token inside a fixture-NAMED test file went undetected — "
+        "path-allowlist escape regression (rm-037)"
+    )
+    import json
+
+    findings = json.loads(report.read_text())
+    assert findings, "rc=1 but empty report"
+
+
+@pytest.mark.skipif(_gitleaks_bin() is None, reason="no gitleaks binary on PATH")
+def test_integration_fixture_directory_still_exempt(tmp_path: Path) -> None:
+    """The same token inside a real fixture DIRECTORY stays exempt."""
+    bin_path = _gitleaks_bin()
+    repo = tmp_path / "fixture-dir-repo"
+    repo.mkdir()
+    _git(repo, "init", "-q")
+    _git(repo, "config", "user.email", "sentinel-selftest@example.invalid")
+    _git(repo, "config", "user.name", "sentinel-selftest")
+    token = "ghp_" + "Zr4k9Wm2" + "Xp7Qv5Nt" + "8Lb39cQw" + "1Er4Ty6Ui8OpAsDfGh"
+    (repo / "tests" / "fixtures").mkdir(parents=True)
+    (repo / "tests" / "fixtures" / "dummy_home.py").write_text(
+        'TOKEN = "%s"  # dummy secret home\n' % token
+    )
+    _git(repo, "add", "-A")
+    _git(repo, "commit", "-qm", "fixture: dummy secret home")
+
+    report = tmp_path / "report.json"
+    rc = _run_gitleaks(bin_path, repo, report)
+    assert rc == 0, "fixture-directory convention regressed to findings"
+
+
+@pytest.mark.skipif(_gitleaks_bin() is None, reason="no gitleaks binary on PATH")
+def test_integration_xxx_bearing_secret_value_detected(tmp_path: Path) -> None:
+    """A high-entropy secret whose VALUE contains xxx is a finding — the
+    retired `xxx+` entry suppressed exactly this shape (cycle-5 assess)."""
+    bin_path = _gitleaks_bin()
+    repo = tmp_path / "xxx-value-repo"
+    repo.mkdir()
+    _git(repo, "init", "-q")
+    _git(repo, "config", "user.email", "sentinel-selftest@example.invalid")
+    _git(repo, "config", "user.name", "sentinel-selftest")
+    secret = "q8Kw2" + "x" * 3 + "Xp7Qv5Nt8Lb3"
+    (repo / "cfg.yml").write_text('api_key: "%s"\n' % secret)
+    # placeholder control in the same repo: all-x value must stay clean
+    (repo / "template.env").write_text('API_KEY="xxxxxxxxxxxxxxxx"\n')
+    _git(repo, "add", "-A")
+    _git(repo, "commit", "-qm", "fixture: xxx-bearing value + placeholder")
+
+    report = tmp_path / "report.json"
+    rc = _run_gitleaks(bin_path, repo, report)
+    assert rc == 1, "xxx-bearing secret value went undetected — value suppression escape"
+    import json
+
+    findings = json.loads(report.read_text())
+    assert findings, "rc=1 but empty report"
