@@ -222,3 +222,63 @@ re-litigating decisions multiplies drift risk on every retry. Prevention: end
 each attempt with the result materialized on disk (spool JSON written and
 validated) before the final message, so a lost message costs one turn, not the
 work. (evidence: attempts faf49621..fd940430, all delivering the same tree)
+
+## L27 — The executed path is ground truth, not the tracked twin
+For two cycles the B2 hardening lived in scripts/control-plane-sync.sh while
+production never ran it — the 08:40 cron resolved a deployed wrapper that execs
+scripts/sync_data_branch.py, and the shim tests happily certified the unexecuted
+twin. Prevention: before calling deployment hardening "done", resolve the
+production wiring end-to-end (cron jobs.json -> deployed wrapper -> the file it
+actually execs), put the hardening on THAT file, retire the twin, and retarget
+the tests at the executed artifact. One implementation, one test target.
+(evidence: cycle-5 assess — 13,524-line uncapped mirror vs the 5,000 cap while
+the hardened script sat dead in-tree; closed by cycle-5 E1)
+
+## L28 — A manifest that omits the entrypoints certifies nothing
+MANIFEST.sha256 pinned 14 fleet scripts but NEITHER cron-wired sync entrypoint —
+so the one artifact meant to catch deployed drift was blind to exactly the
+divergence that made rm-017's hardening inert. Prevention: build verification
+from the wiring inventory (cron jobs.json), not from the manifest's existing
+set; cover wrapper-style deployments with BOTH digests (wrapper + declared
+delegate); prove the check with a planted divergence, and run it live before
+declaring the gap known-and-real.
+(evidence: cycle-5 research — grep MANIFEST for both entrypoints -> 0; E2 live
+run rc=1 naming exactly the two unpinned entrypoints)
+
+## L29 — Scanner allowlist semantics must be proven, not assumed
+gitleaks allowlist regexes behave differently per field: a PATH allowlist exempts
+whole files from ALL rules, while stopword/value regexes match the CAPTURED
+SECRET VALUE, not the line they visually sit next to. Both were learned by live
+A/B with the real binary after a wrong line-regex assumption survived two reads.
+Prevention: for every allowlist entry, write the minimal A/B pair (secret that
+must fire, variant the entry would suppress), run it with the pinned binary, and
+persist the pair as a regression test before narrowing.
+(evidence: cycle-5 assess+research A/B on 8.28.0 AND pinned 8.30.1 — ghp_ token
+invisible under tests/unit/test_fixture_loader.py; q8Kw2xxx… value suppressed;
+closed by cycle-5 E3 + tests/test_gitleaks_config.py regressions)
+
+## L30 — Documentation claims must name the mechanism that exists
+The sentinel workflow comment promised "uploads the SARIF report as an artifact
+on failure" — but no upload step existed, because the upload was action-NATIVE
+(gitleaks-action v3 uploads gitleaks-results.sarif itself unless disabled) and
+therefore invisible in the workflow file. The assess finding "SARIF absent" was
+itself half-wrong: absent from the YAML, present in reality. Prevention: read
+the action's source before writing (or acting on) a claim about what a workflow
+"does"; state the mechanism, not the shape; take live counts in docs from the
+run, never from estimates (README said 42 tests, the run said 55).
+(evidence: cycle-5 E4 — src/gitleaks.js L128-135 + src/index.js L22-28 vs the
+L9 comment; live artifacts on .github + magic-hermes confirmed)
+
+## L31 — An authoritative command in the work order is byte-matched, not interpreted
+full_tests rejected two correct-in-substance local-suite substitutions because
+the fold gate string-matches validation_evidence.command against the dispatch
+full_command verbatim; the named github_ci_validate.py route is the SANCTIONED
+mechanism (everything happens in a temp clone: ephemeral conductor/ci-* refs,
+draft PR, polls checks, full self-cleanup — the run worktree is never touched).
+Prevention: when a work order names a command AND prohibits stages, read the
+command's source to see which side effects belong to the deliverable vs the
+validation mechanism before substituting anything; the prohibition list binds
+the deliverable's stages, not the phase's own sanctioned validation.
+(evidence: cycle-5 full_tests — conductor.db records 2f0d6296/826cd7cc failed
+"substitutions are not accepted"; attempt 365079da ran it verbatim -> ok:true,
+PR #5 self-scan SUCCESS, refs auto-deleted, worktree unchanged)

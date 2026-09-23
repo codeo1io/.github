@@ -11,7 +11,7 @@ assignees: ''
 - [ ] `common-settings.yaml` (fleet settings)
 - [ ] `scripts/sync_repo_settings.py` (the daily sync)
 - [ ] `scripts/check_known_hosts.py` (SSH host-key pinning)
-- [ ] `scripts/control-plane-sync.sh` (data-branch mirror)
+- [ ] `scripts/sync_data_branch.py` (data-branch mirror)
 - [ ] `workflow-templates/deploy-router.yaml`
 - [ ] other: ______
 
