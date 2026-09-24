@@ -14,8 +14,8 @@ Fleet settings-as-code repo for the codeo1io account.
   wedge it. `enforce_admins` stays false for the same reason.
 - Visibility (`expect_private`) is report-only by design — the sync must never
   flip a repo public/private on its own.
-- No secrets in this repo, ever (HASS_TOKEN and friends stay in ~/.hermes/.env;
-  see docs/SECRETS.md conventions).
+- No secrets in this repo, ever (HASS_TOKEN and friends stay in ~/.hermes/.env on
+  the ops host, never in files, issues, logs, or CI — this repo is public).
 - Workflow templates must keep `runs-on: ubuntu-latest` and carry no local
   environment specifics (self-hosted runners, LAN hosts, /home/agent or
   /work/projects paths, fork remotes).

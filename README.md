@@ -80,7 +80,7 @@ pins land.
     python3 scripts/sync_repo_settings.py --apply
     python3 scripts/check_known_hosts.py
     python3 scripts/verify_deployed_artifacts.py   # rc 0 clean / 1 drift / 2 not a deployed host
-    python3 -m pytest tests/        # 55 tests: hermetic unit + control-plane mirror + deployed-artifact checks + gitleaks-config (5 of the latter are live-binary integrations, skipif-guarded)
+    python3 -m pytest tests/        # 66 tests: hermetic unit + control-plane mirror + deployed-artifact checks + gitleaks-config (5 of the latter are live-binary integrations, skipif-guarded)
 
 ## Inert until Renovate is installed
 

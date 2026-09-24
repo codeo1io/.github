@@ -28,12 +28,30 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "scripts" / "verify_deployed_artifacts.py"
 REAL_DELEGATE = ROOT / "scripts" / "sync_data_branch.py"
+REAL_AUX_DELEGATE = ROOT / "scripts" / "sync_repo_settings.py"
+REAL_AUX_DELEGATE_2 = ROOT / "scripts" / "check_known_hosts.py"
 
 WRAPPER_BODY = (
     "#!/bin/sh\n"
     "# deployed cron wrapper (fixture)\n"
     "cd /work/projects/.github\n"
     "exec python3 scripts/sync_data_branch.py\n"
+)
+
+# real shape: the deployed repo-settings wrapper names TWO of our scripts
+AUX_WRAPPER_BODY = (
+    "#!/bin/sh\n"
+    "# deployed repo-settings wrapper (fixture)\n"
+    'REPO="/work/projects/.github"\n'
+    '  if ! python3 "$REPO/scripts/check_known_hosts.py"; then echo drift; fi\n'
+    '  python3 "$REPO/scripts/sync_repo_settings.py" --apply\n'
+)
+
+# fleet noise: references OTHER repos' scripts/ trees — must be ignored
+FOREIGN_WRAPPER_BODY = (
+    "#!/bin/sh\n"
+    "cd /work/projects/somewhere-else\n"
+    "exec bash scripts/check.sh\n"
 )
 
 
@@ -141,3 +159,107 @@ def test_absent_deployed_artifacts_skip_with_rc2(tmp_path: Path) -> None:
     )
     assert res.returncode == 2, "absent deployed artifacts must skip (rc 2)"
     assert "absent" in res.stdout
+
+
+# --- cycle-7 F1a: half-deployed pair is drift, never a silent skip ----------
+
+
+def test_wrapper_present_manifest_missing_is_drift(tmp_path: Path) -> None:
+    # THE cycle-7 P2: a deployed wrapper whose manifest vanished graded rc 2
+    # ("not a deployed host") and silently disabled verification.
+    wrapper, manifest = _make_deployed(tmp_path)
+    manifest.unlink()
+    res = _run(wrapper, manifest)
+    assert res.returncode == 1, "wrapper-without-manifest must be DRIFT (rc 1), not skip"
+    assert "MANIFEST.sha256" in res.stderr and "missing" in res.stderr
+    assert "unverifiable" in res.stderr
+
+
+def test_manifest_present_wrapper_missing_is_drift(tmp_path: Path) -> None:
+    wrapper, manifest = _make_deployed(tmp_path)
+    wrapper.unlink()
+    res = _run(wrapper, manifest)
+    assert res.returncode == 1, "manifest-without-wrapper must be DRIFT (rc 1), not skip"
+    assert "configured wrapper missing" in res.stderr
+
+
+# --- cycle-7 F1a: auxiliary delegating wrappers (repo-settings chain) -------
+
+
+def test_auxiliary_wrapper_chain_verifies(tmp_path: Path) -> None:
+    wrapper, manifest = _make_deployed(tmp_path)
+    aux = wrapper.parent / "repo-settings-sync.sh"
+    aux.write_text(AUX_WRAPPER_BODY)
+    manifest.write_text(
+        manifest.read_text()
+        + f"{_sha(aux)}  repo-settings-sync.sh\n"
+        + f"{_sha(REAL_AUX_DELEGATE_2)}  check_known_hosts.py\n"
+        + f"{_sha(REAL_AUX_DELEGATE)}  sync_repo_settings.py\n"
+    )
+    res = _run(wrapper, manifest)
+    assert res.returncode == 0, res.stderr
+
+
+def test_auxiliary_wrapper_unpinned_is_drift(tmp_path: Path) -> None:
+    wrapper, manifest = _make_deployed(tmp_path)
+    aux = wrapper.parent / "repo-settings-sync.sh"
+    aux.write_text(AUX_WRAPPER_BODY)  # delegating wrapper present, NOT pinned
+    res = _run(wrapper, manifest)
+    assert res.returncode == 1, "an unpinned delegating wrapper must be drift"
+    assert "repo-settings-sync.sh: not pinned" in res.stderr
+    assert "sync_repo_settings.py: not pinned" in res.stderr
+    assert "check_known_hosts.py: not pinned" in res.stderr
+
+
+def test_auxiliary_delegate_digest_checked_against_repo_copy(tmp_path: Path) -> None:
+    wrapper, manifest = _make_deployed(tmp_path)
+    aux = wrapper.parent / "repo-settings-sync.sh"
+    aux.write_text(AUX_WRAPPER_BODY)
+    manifest.write_text(
+        manifest.read_text()
+        + f"{_sha(aux)}  repo-settings-sync.sh\n"
+        + f"{_sha(REAL_AUX_DELEGATE_2)}  check_known_hosts.py\n"
+        + f"{'0' * 64}  sync_repo_settings.py\n"  # plausible digest, wrong
+    )
+    res = _run(wrapper, manifest)
+    assert res.returncode == 1, "auxiliary delegate digest must be checked"
+    assert "sync_repo_settings.py: digest mismatch" in res.stderr
+
+
+def test_foreign_repo_delegations_are_out_of_scope(tmp_path: Path) -> None:
+    """The deployed dir hosts dozens of fleet scripts referencing OTHER
+    repos' scripts/ trees — discovery must resolve delegations into THIS
+    repo only, or the live host run drowns in spurious drift (caught while
+    pinning the real manifest, cycle-7 F2)."""
+    wrapper, manifest = _make_deployed(tmp_path)
+    # pure-foreign wrapper: entirely ignored, pinned or not
+    foreign = wrapper.parent / "fleet-noise.sh"
+    foreign.write_text(FOREIGN_WRAPPER_BODY)
+    res = _run(wrapper, manifest)
+    assert res.returncode == 0, res.stderr
+    assert "fleet-noise.sh" not in res.stderr
+    assert "check.sh" not in res.stderr
+
+    # mixed wrapper: only OUR delegate joins the contract
+    mixed = wrapper.parent / "mixed-wrapper.sh"
+    mixed.write_text(
+        "#!/bin/sh\n"
+        "cd /somewhere\n"
+        "bash scripts/other_repo_helper.sh\n"
+        "exec python3 scripts/sync_repo_settings.py --apply\n"
+    )
+    manifest.write_text(
+        manifest.read_text()
+        + f"{_sha(mixed)}  mixed-wrapper.sh\n"
+        + f"{_sha(REAL_AUX_DELEGATE)}  sync_repo_settings.py\n"
+    )
+    res = _run(wrapper, manifest)
+    assert res.returncode == 0, res.stderr
+    assert "other_repo_helper.sh" not in res.stderr
+
+
+def test_non_delegating_script_is_not_required_to_be_pinned(tmp_path: Path) -> None:
+    wrapper, manifest = _make_deployed(tmp_path)
+    (wrapper.parent / "plain-fleet-script.sh").write_text("#!/bin/sh\necho fleet\n")
+    res = _run(wrapper, manifest)
+    assert res.returncode == 0, res.stderr
