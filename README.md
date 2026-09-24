@@ -66,13 +66,16 @@ Cron job `control-plane-sync` (daily 08:40 UTC) runs
 `scripts/sync_data_branch.py` from this checkout — so the repo file IS the
 production code. It mirrors a bounded tail of operational state (tracks,
 watchdog alerts capped at 5,000 lines, both kanban OWNERS references, cron +
-runner inventories, and `corrections.yaml` from the main tree) to the public
+runner inventories, and `corrections.yaml` + `claims.yaml` from the main
+`tree) to the public
 `data` branch, single-flight flock'd, restoring its entry branch on failure.
 `scripts/verify_deployed_artifacts.py` cross-checks the deployed wrapper and
 `MANIFEST.sha256` against this repo (exit 0 clean / 1 drift / 2 not a
-deployed host) — the deployed manifest does not yet pin the two cron-wired
-entrypoints, so it currently reports drift on the host until the host-side
-pins land.
+deployed host; half-deployed pairs grade drift rc=1). All five cron-wired
+entrypoints are pinned (cycle-7 F2) and the live verifier is rc=0; delegate
+pins track the canonical checkout the crons exec, so landing repo changes
+makes them stale by design — re-pin and re-confirm rc=0 after any
+host-affecting merge (rm-042 rider).
 
 ## Manual use
 
@@ -80,7 +83,7 @@ pins land.
     python3 scripts/sync_repo_settings.py --apply
     python3 scripts/check_known_hosts.py
     python3 scripts/verify_deployed_artifacts.py   # rc 0 clean / 1 drift / 2 not a deployed host
-    python3 -m pytest tests/        # 55 tests: hermetic unit + control-plane mirror + deployed-artifact checks + gitleaks-config (5 of the latter are live-binary integrations, skipif-guarded)
+    python3 -m pytest tests/        # 68 tests: hermetic unit + control-plane mirror + deployed-artifact checks + gitleaks-config (5 of the latter are live-binary integrations, skipif-guarded)
 
 ## Inert until Renovate is installed
 

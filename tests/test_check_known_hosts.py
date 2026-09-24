@@ -154,3 +154,20 @@ def test_no_temp_file_leak(tmp_path, monkeypatch, keys):
     ckh.known_fingerprints("github.com")
     ckh.known_fingerprints("github.com")
     assert list(leak_dir.iterdir()) == []
+
+
+def test_known_hosts_path_env_override(tmp_path, monkeypatch):
+    # Cycle-7 F1f: CHECK_KNOWN_HOSTS must retarget the checker without code
+    # edits (parity with CONTROL_PLANE_*/VERIFY_* siblings).
+    import importlib
+
+    alt = tmp_path / "kh-env"
+    alt.write_text("")
+    monkeypatch.setenv("CHECK_KNOWN_HOSTS", str(alt))
+    module = importlib.reload(ckh)
+    try:
+        assert module.KNOWN_HOSTS == str(alt)
+    finally:
+        monkeypatch.delenv("CHECK_KNOWN_HOSTS")
+        importlib.reload(ckh)  # restore the default for later tests
+    assert ckh.KNOWN_HOSTS == "/home/agent/.ssh/known_hosts"

@@ -223,3 +223,41 @@ def test_main_apply_reports_security_drift_and_never_mutates_it(tmp_path, monkey
     assert not [ln for ln in out.splitlines() if ln.lstrip().startswith("privrepo")]
     # the report-only guarantee: no PATCH/PUT anywhere in this run
     assert not any("--method" in " ".join(a) for a in calls), calls
+
+
+def test_drift_found_counts_unique_repos(tmp_path, monkeypatch, capsys):
+    # Cycle-7 F1e: one repo drifting BOTH merge settings and branch
+    # protection used to be counted twice (drift_found=2) — drift_found
+    # must be the number of drifted REPOS.
+    monkeypatch.setattr(srs, "ROOT", tmp_path)
+    (tmp_path / "common-settings.yaml").write_text(_MIN_CFG)
+    (tmp_path / "expect-public.txt").write_text("pubrepo\n")
+    (tmp_path / "protection-opt-in.txt").write_text("pubrepo\n")
+    (tmp_path / "exclude-repos.txt").write_text("")
+    monkeypatch.setattr(srs, "list_repos", lambda owner: [
+        {"name": "pubrepo", "isPrivate": False, "isArchived": False,
+         "isFork": False, "defaultBranchRef": {"name": "main"}},
+    ])
+
+    def fake_gh_json(*args, **kwargs):
+        if args[:2] == ("api", "repos/codeo1io/pubrepo"):
+            # merge drift: squash off (want on)
+            return {"private": False, "isFork": False,
+                    "allow_squash_merge": False, "allow_merge_commit": False,
+                    "allow_rebase_merge": False, "delete_branch_on_merge": True}
+        if args[:2] == ("api", "repos/codeo1io/pubrepo/branches/main/protection"):
+            # protection drift: strict=True (want False)
+            return {"enforce_admins": {"enabled": False},
+                    "required_status_checks": {"strict": True, "contexts": []},
+                    "required_pull_request_reviews": None,
+                    "restrictions": None,
+                    "allow_force_pushes": False, "allow_deletions": False}
+        raise AssertionError(f"unexpected gh_json call: {args}")
+
+    monkeypatch.setattr(srs, "gh_json", fake_gh_json)
+    monkeypatch.setattr(sys, "argv", ["sync_repo_settings.py", "--dry-run"])
+    rc = srs.main()
+    out = capsys.readouterr().out
+    assert rc == 0
+    assert "DRIFT merge settings" in out and "DRIFT branch protection" in out
+    assert "drift_found=1" in out, "one drifted repo must count once, not twice"
