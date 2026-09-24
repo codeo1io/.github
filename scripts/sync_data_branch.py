@@ -84,9 +84,20 @@ def mirror_bounded(src: Path, dst: Path) -> None:
 
 
 def _restore(restore_branch: str) -> None:
+    # cycle-6 rm-045: the failed attempt may have left control-plane files
+    # staged (failure between `git add` and `git commit`); a branch-only
+    # restore kept that residue staged ON the restored branch — and staged
+    # edits could even block the switch itself. Clear index+tree first
+    # (best effort, current branch), switch, then reset again so the
+    # restored branch is exactly as found. Runs start from a clean canonical
+    # checkout (AGENTS hardening contract), so this only ever discards the
+    # mirror's own half-written state.
+    git("reset", "--hard", "HEAD")  # best effort: clear staged mirror edits
     res = git("checkout", restore_branch)
     if res.returncode == 0:
         print(f"restored checkout to {restore_branch}", file=sys.stderr)
+        if git("reset", "--hard", "HEAD").returncode != 0:
+            print("RESTORE WARNING: index reset failed on restored branch", file=sys.stderr)
     else:
         current = git("branch", "--show-current").stdout.strip() or "detached HEAD"
         print(f"RESTORE FAILED, still on {current}", file=sys.stderr)
@@ -110,6 +121,17 @@ def main() -> int:
         has_remote = (
             git("show-ref", "--verify", "--quiet", f"refs/remotes/origin/{DATA_BRANCH}").returncode == 0
         )
+        if not fetch_ok:
+            # cycle-6 rm-045: fetch_ok was assigned and never used — a failed
+            # fetch proceeded silently against the stale remote-tracking ref.
+            # The push still fails loudly on a diverged remote (non-FF), but
+            # the operator now SEES why the run worked from stale state.
+            print(
+                "control-plane-sync: WARNING: fetch origin/data failed — "
+                "proceeding against the last known remote-tracking ref; a "
+                "diverged remote will reject the push and restore the entry branch",
+                file=sys.stderr,
+            )
         if git("checkout", DATA_BRANCH).returncode != 0:
             if has_remote:
                 must(
@@ -154,7 +176,16 @@ def main() -> int:
         # amendments — no previous sync path copied it).
         corr = git("show", f"{CANONICAL_REF}:control-plane/corrections.yaml")
         if corr.returncode == 0:
-            Path("control-plane").joinpath("corrections.yaml").write_text(corr.stdout)
+            corr_dest = Path("control-plane").joinpath("corrections.yaml")
+            corr_dest.write_text(corr.stdout)
+            # rm-044 write-fidelity self-check: the mirrored copy must be
+            # exactly the canonical bytes — the data branch must never
+            # carry a stale or truncated corrections claim.
+            if corr_dest.read_text() != corr.stdout:
+                raise SyncError(
+                    "corrections parity: mirrored copy differs from the "
+                    f"canonical {CANONICAL_REF} copy"
+                )
         else:
             print(
                 f"control-plane-sync: no corrections.yaml on {CANONICAL_REF}; skipping",
@@ -162,21 +193,48 @@ def main() -> int:
             )
 
         # cron inventory (regenerated each run, ts-stamped)
+        # cycle-6 rm-019: production jobs.json is a top-level OBJECT
+        # {"jobs": [...], "updated_at": ...} (57 jobs live on the fleet
+        # host). The list-only comprehension below iterated that dict as a
+        # list, silently dropped every job, and mirrored {} for a day
+        # (since 9f94762, proven by the cycle-6 assess). Accept the object
+        # shape first, keep list tolerance for legacy sources, and fail
+        # CLOSED when a non-empty source yields an empty inventory.
+        raw_jobs: list = []
         jobs: dict = {}
         jobs_path = home / ".hermes" / "cron" / "jobs.json"
         if jobs_path.exists():
             try:
-                jobs = {
-                    job["id"]: {
-                        "name": job.get("name", job["id"]),
-                        "schedule": job.get("schedule", ""),
-                        "enabled": job.get("enabled", True),
-                    }
-                    for job in json.loads(jobs_path.read_text())
-                    if isinstance(job, dict) and "id" in job
-                }
+                raw = json.loads(jobs_path.read_text())
             except (json.JSONDecodeError, OSError) as exc:
-                print(f"control-plane-sync: cron inventory unavailable: {exc}", file=sys.stderr)
+                # a corrupt/unreadable source must fail the run — the old
+                # warn-and-continue path OVERWROTE the last known mirror
+                # with {}, the exact silent-loss class rm-044 guards
+                raise SyncError(f"cron jobs.json unreadable: {exc}") from exc
+            if isinstance(raw, dict):
+                candidate = raw.get("jobs", [])
+                raw_jobs = candidate if isinstance(candidate, list) else []
+            elif isinstance(raw, list):
+                raw_jobs = raw
+            jobs = {
+                job["id"]: {
+                    "name": job.get("name", job["id"]),
+                    "schedule": job.get("schedule", ""),
+                    "enabled": job.get("enabled", True),
+                }
+                for job in raw_jobs
+                if isinstance(job, dict) and "id" in job
+            }
+            # rm-044 content self-check: a non-empty source MUST yield a
+            # non-empty inventory. Its absence is what let the regression
+            # ship {} invisibly; any future shape/parsing bug now fails the
+            # run loudly (entry branch restored) instead.
+            if raw_jobs and not jobs:
+                raise SyncError(
+                    "cron-inventory integrity: non-empty jobs.json produced "
+                    "an empty inventory (shape/parsing regression) — refusing "
+                    "to mirror {}"
+                )
         Path("control-plane").joinpath("cron-inventory.json").write_text(
             f"# generated {ts}\n" + json.dumps(jobs, indent=2, sort_keys=True) + "\n"
         )
@@ -197,7 +255,10 @@ def main() -> int:
         must(git("add", "control-plane"), "add control-plane")
         if git("diff", "--staged", "--quiet").returncode == 0:
             print("no control-plane changes")
-            must(git("checkout", MAIN_BRANCH), f"checkout {MAIN_BRANCH}")
+            # cycle-6 rm-045: success restores the ENTRY branch, not
+            # unconditionally main — a manual run from any branch must
+            # find its checkout where it left it
+            must(git("checkout", restore), f"checkout {restore}")
             return 0
 
         names = must(
@@ -213,7 +274,8 @@ def main() -> int:
         )
         must(git("push", "origin", DATA_BRANCH), f"push origin {DATA_BRANCH}")
         print(f"pushed control-plane mirror {ts} ({len(names)} files)")
-        must(git("checkout", MAIN_BRANCH), f"checkout {MAIN_BRANCH}")
+        # cycle-6 rm-045: entry branch, not unconditionally main (see above)
+        must(git("checkout", restore), f"checkout {restore}")
         return 0
     except (SyncError, OSError) as exc:
         print(f"control-plane-sync: FAILED: {exc}", file=sys.stderr)
