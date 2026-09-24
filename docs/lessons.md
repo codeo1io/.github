@@ -282,3 +282,54 @@ the deliverable's stages, not the phase's own sanctioned validation.
 (evidence: cycle-5 full_tests — conductor.db records 2f0d6296/826cd7cc failed
 "substitutions are not accepted"; attempt 365079da ran it verbatim -> ok:true,
 PR #5 self-scan SUCCESS, refs auto-deleted, worktree unchanged)
+
+---
+
+# Cycle 7 lessons (2026-09-25, pre-review evidence: batch F implement + targeted/full test outcomes)
+
+## L32 — Hermetic fixtures prove semantics; only a live run proves SCOPE
+The first auxiliary-wrapper discovery draft matched any `scripts/*.py|sh` reference
+in deployed wrappers — hermetic tests (tmp dir, fixture files only) passed while the
+contract would have swept ~24 unrelated fleet wrappers (other repos' scripts/ trees)
+into THIS repo's pin contract, drowning the live verify in spurious drift. A live host
+run BEFORE pinning showed the over-match in one line of output; the fix (count only
+delegations that resolve under this repo's scripts/) then got a regression test.
+Prevention: when a verifier's contract derives from a real directory, run it against
+the real directory once before declaring or pinning the contract — fixtures lock the
+behavior, the live run bounds the blast radius.
+(evidence: implement attempt c44bb0aa116a — live sweep listing 24 foreign names
+pre-fix; tests/test_verify_deployed_artifacts.py::test_foreign_repo_delegations_are_out_of_scope
+post-fix; deployed MANIFEST went 14→19 entries, not 38)
+
+## L33 — Pin deployed delegates against the copies that EXECUTE; landing makes the pin stale by design
+The deployed MANIFEST pins were taken against the canonical checkout (what the crons
+actually exec), not the run worktree — so the moment batch F lands and the daily cron
+resets canonical to the new content, the three delegate digests go stale and verify
+reports drift. That is not a defect: it is the check WORKING. Prevention: any batch
+that edits cron-executed scripts carries an explicit post-landing re-pin step at its
+commit gate (re-derive digests from canonical, re-prove rc=0); record the rider in the
+same breath as the pin, or the next cycle re-learns why verify is red.
+(evidence: rm-042 rider — pins written 2026-09-25 with canonical digests
+f27cb1ae/c92b47b6/fc215b57; roadmap compound note names the re-pin as final closure)
+
+## L34 — On a PUBLIC mirror branch, stage the exact copy-set — never the directory
+`git add control-plane` staged whatever untracked files an operator had dropped there
+onto the public data branch; the fix stages exactly the files this run wrote
+(allowlist) — same shape as L13's bounded-mirror rule but for staging. Same batch,
+same class: success-path branch switching must restore the ENTRY branch symmetrically
+with the failure path (a hardcoded main restore strands a future entry from a
+different branch), and bounded tails belong to a streaming read (deque maxlen), not
+readlines().
+(evidence: sync_data_branch.py allowlist + restore + mirror_bounded, locked by
+tests/test_control_plane_shims.py operator-file-never-staged / success-restores-entry-branch)
+
+## L35 — A half-deployed verification pair is DRIFT, not "not a deployed host"
+verify_deployed_artifacts graded wrapper-present+manifest-missing as rc=2 (skip) —
+which silently DISABLES the drift detector exactly when drift appears (a manifest pin
+removed = invisible). Both half-pairs now grade rc=1; rc=2 means only "neither wrapper
+nor manifest exists here". This generalizes L28: build each check's skip semantics
+from the wiring inventory, and audit every "skip" grade for the case where half the
+pair is present — a skip condition that can be reached by REMOVING one half is a
+self-disabling check.
+(evidence: assess P2 at verify_deployed_artifacts.py:79 (rc=2 conflation); closed by
+batch F1a with 6 locking tests incl. both half-pair directions)

@@ -47,6 +47,11 @@ CORRECTIONS_MAIN = (
     "  - id: fixture-amended\n"
     "    what: amended entry (canonical main-tree copy)\n"
 )
+CLAIMS_MAIN = (
+    "# fixture claims ledger\nversion: 1\nclaims:\n"
+    "  - id: fixture-claim\n"
+    "    what: canonical main-tree claims copy (cycle-7 F1h parity)\n"
+)
 
 
 # --------------------------------------------------------------------------
@@ -73,6 +78,7 @@ def _make_origin(tmp_path: Path) -> Path:
     (seed / "README.md").write_text("# fixture fleet repo\n")
     (seed / "control-plane").mkdir()
     (seed / "control-plane" / "corrections.yaml").write_text(CORRECTIONS_MAIN)
+    (seed / "control-plane" / "claims.yaml").write_text(CLAIMS_MAIN)
     _git(seed, "add", "-A")
     _git(seed, "commit", "-qm", "seed")
     _git(seed, "push", "-q", str(origin), "main")
@@ -181,6 +187,10 @@ def test_mirror_pushes_full_copy_set_then_no_op(tmp_path: Path) -> None:
     # corrections mirrored from the canonical MAIN tree, not stale data content
     assert _origin_show(origin, "data", "control-plane/corrections.yaml") == (
         CORRECTIONS_MAIN
+    )
+    # claims.yaml: same parity class (cycle-7 F1h) — mirrored from main
+    assert _origin_show(origin, "data", "control-plane/claims.yaml") == (
+        CLAIMS_MAIN
     )
     watchdog = _origin_show(
         origin, "data", "control-plane/conductor-watchdog-alerts.log"
@@ -292,3 +302,49 @@ def test_git_timeout_fails_loudly_instead_of_hanging(tmp_path: Path) -> None:
     assert "timed out after 0s" in r.stderr
     # even the restore attempt timed out — the run must say so, not hang
     assert "RESTORE FAILED" in r.stderr
+
+
+def test_success_restores_entry_branch(tmp_path: Path) -> None:
+    """Cycle-7 F1c: the SUCCESS path used to hard-checkout main, stranding a
+    run entered from a feature branch there (only the failure trap restored)."""
+    origin = _make_origin(tmp_path)
+    repo = _make_repo(origin, tmp_path)
+    home = _fake_home(tmp_path)
+    frozen = _frozen_clock(tmp_path)
+
+    _git(repo, "checkout", "-q", "-b", "feature")
+    r = _run(_env(repo, home, frozen), repo)
+    assert r.returncode == 0, r.stderr
+    assert "pushed control-plane mirror" in r.stdout
+    assert _branch(repo) == "feature", "success must restore the ENTRY branch"
+
+    # and the no-op path restores it too
+    r2 = _run(_env(repo, home, frozen), repo)
+    assert r2.returncode == 0, r2.stderr
+    assert "no control-plane changes" in r2.stdout
+    assert _branch(repo) == "feature"
+
+
+def test_untracked_operator_file_is_never_staged(tmp_path: Path) -> None:
+    """Cycle-7 F1b: staging is allowlisted — `git add control-plane` used to
+    sweep ANY untracked operator file onto the PUBLIC data branch."""
+    origin = _make_origin(tmp_path)
+    repo = _make_repo(origin, tmp_path)
+    home = _fake_home(tmp_path)
+    frozen = _frozen_clock(tmp_path)
+
+    # an operator leaves a scratch file inside the mirrored directory
+    scratch = repo / "control-plane" / "operator-note.txt"
+    scratch.write_text("operator scratch — must never reach the data branch\n")
+
+    r = _run(_env(repo, home, frozen), repo)
+    assert r.returncode == 0, r.stderr
+    assert "pushed control-plane mirror" in r.stdout
+
+    data_tree = _git(origin, "ls-tree", "-r", "--name-only", "data").stdout
+    assert "control-plane/conductor-tracks.tsv" in data_tree, "copy-set must land"
+    assert "operator-note.txt" not in data_tree, "scratch must NOT be committed"
+    # the file survives untracked in the working tree, never swept away
+    assert scratch.exists()
+    tracked = _git(repo, "ls-files", "--", "control-plane").stdout
+    assert "control-plane/operator-note.txt" not in tracked

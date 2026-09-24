@@ -9,22 +9,30 @@ live here. The cycle-2 B2 hardened twin (scripts/control-plane-sync.sh) was
 never deployed and is retired by the same batch; its properties were ported:
 
   * flock single-flight  — a concurrent run exits 0 immediately
-  * entry-branch restore — any failure restores the branch we started on
+  * entry-branch restore — any exit (success or failure) restores the
+                           branch we started on; only a restore failure
+                           is louder than the run itself
   * bounded watchdog     — the mirrored alert log is tailed to
                            CONTROL_PLANE_WATCHDOG_MAX_LINES (default 5000);
-                           the source log stays the record
+                           the source log stays the record, and the tail is
+                           streamed through a bounded deque (never fully
+                           materialized)
   * stage-before-diff    — untracked files count as changes (a bare
                            `git diff --quiet` was blind to a fresh data
-                           branch)
+                           branch), but staging is ALLOWLISTED to the exact
+                           copy-set written this run — `git add control-plane`
+                           would sweep any untracked operator file onto the
+                           PUBLIC data branch (cycle-7 assess)
   * bounded subprocesses — every git call gets a timeout; expiry
                            synthesizes rc=124 and fails the run loudly
                            instead of hanging the cron slot
 
-Copy-set (parity with the retired twin + cycle-5 closure): conductor-tracks,
+Copy-set (parity with the retired twin + cycle-5/7 closure): conductor-tracks,
 watchdog alerts (bounded), kanban OWNERS for t_acd6a2e8 AND t_851e7951,
-generated cron/runners inventories, and control-plane/corrections.yaml
-mirrored from the canonical main-tree copy (origin/main) so the data branch
-can never carry a stale corrections claim again.
+generated cron/runners inventories, and control-plane/corrections.yaml AND
+control-plane/claims.yaml mirrored from the canonical main-tree copy
+(origin/main) so the data branch can never carry a stale correction or
+claim again (cycle-7 F1h: claims.yaml is the same class as corrections).
 
 Env overrides (used by tests/test_control_plane_shims.py):
 CONTROL_PLANE_REPO, CONTROL_PLANE_LOCK, CONTROL_PLANE_WATCHDOG_MAX_LINES,
@@ -38,6 +46,7 @@ import os
 import shutil
 import subprocess
 import sys
+from collections import deque
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -77,10 +86,15 @@ def must(res: subprocess.CompletedProcess, label: str) -> str:
 
 
 def mirror_bounded(src: Path, dst: Path) -> None:
-    """Copy the last WATCHDOG_MAX_LINES lines of src to dst; source is the record."""
+    """Copy the last WATCHDOG_MAX_LINES lines of src to dst; source is the record.
+
+    Streams through a bounded deque — the source alert log grows without
+    bound on the ops host and must never be fully materialized in memory
+    just to keep a tail (cycle-7 assess: readlines() loaded the whole log).
+    """
     with open(src, "r", errors="replace") as fh:
-        lines = fh.readlines()
-    dst.write_text("".join(lines[-WATCHDOG_MAX_LINES:]))
+        tail = deque(fh, maxlen=WATCHDOG_MAX_LINES)
+    dst.write_text("".join(tail))
 
 
 def _restore(restore_branch: str) -> None:
@@ -106,7 +120,7 @@ def main() -> int:
         entry = must(git("branch", "--show-current"), "branch --show-current").strip()
         restore = entry if entry and entry != DATA_BRANCH else MAIN_BRANCH
         # fetch failure tolerated (first boot: no remote data ref yet)
-        fetch_ok = git("fetch", "origin", DATA_BRANCH).returncode == 0
+        git("fetch", "origin", DATA_BRANCH)
         has_remote = (
             git("show-ref", "--verify", "--quiet", f"refs/remotes/origin/{DATA_BRANCH}").returncode == 0
         )
@@ -125,6 +139,12 @@ def main() -> int:
         os.makedirs("control-plane", exist_ok=True)
         home = Path.home()
         ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        # allowlist: EXACTLY the files written this run get staged (cycle-7
+        # F1b) — anything else found under control-plane/ stays untracked
+        mirrored: list[str] = [
+            "control-plane/conductor-tracks.tsv",
+            "control-plane/conductor-watchdog-alerts.log",
+        ]
 
         shutil.copyfile(
             home / ".hermes" / "conductor-tracks.tsv",
@@ -141,6 +161,7 @@ def main() -> int:
                 shutil.copyfile(
                     src, f"control-plane/kanban-{tid}-OWNERS.md"
                 )
+                mirrored.append(f"control-plane/kanban-{tid}-OWNERS.md")
             else:
                 # optional today, parity copy: warn, never wedge the mirror
                 print(
@@ -148,18 +169,21 @@ def main() -> int:
                     file=sys.stderr,
                 )
 
-        # corrections.yaml: canonical copy is tracked on main; mirror it onto
-        # data so the branch can never retain a stale corrections claim
-        # (the cycle-5 assess found the data copy predating the B3/D4
-        # amendments — no previous sync path copied it).
-        corr = git("show", f"{CANONICAL_REF}:control-plane/corrections.yaml")
-        if corr.returncode == 0:
-            Path("control-plane").joinpath("corrections.yaml").write_text(corr.stdout)
-        else:
-            print(
-                f"control-plane-sync: no corrections.yaml on {CANONICAL_REF}; skipping",
-                file=sys.stderr,
-            )
+        # corrections.yaml + claims.yaml: canonical copies are tracked on
+        # main; mirror them onto data so the branch can never retain a stale
+        # correction/claim (the cycle-5 assess found the data corrections
+        # copy predating the B3/D4 amendments — no previous sync path copied
+        # it; cycle-7 F1h closes the identical claims.yaml gap).
+        for ledger in ("corrections.yaml", "claims.yaml"):
+            res = git("show", f"{CANONICAL_REF}:control-plane/{ledger}")
+            if res.returncode == 0:
+                Path("control-plane").joinpath(ledger).write_text(res.stdout)
+                mirrored.append(f"control-plane/{ledger}")
+            else:
+                print(
+                    f"control-plane-sync: no {ledger} on {CANONICAL_REF}; skipping",
+                    file=sys.stderr,
+                )
 
         # cron inventory (regenerated each run, ts-stamped)
         jobs: dict = {}
@@ -180,6 +204,7 @@ def main() -> int:
         Path("control-plane").joinpath("cron-inventory.json").write_text(
             f"# generated {ts}\n" + json.dumps(jobs, indent=2, sort_keys=True) + "\n"
         )
+        mirrored.append("control-plane/cron-inventory.json")
 
         # runners inventory (regenerated each run, ts-stamped)
         runners_root = home / "runners"
@@ -191,13 +216,16 @@ def main() -> int:
         Path("control-plane").joinpath("runners.txt").write_text(
             f"# generated {ts}\n" + ("\n".join(runner_names) + "\n" if runner_names else "")
         )
+        mirrored.append("control-plane/runners.txt")
 
-        # stage FIRST, then test the STAGED diff: untracked files count
-        # (`git diff --quiet` alone was blind to a fresh data branch)
-        must(git("add", "control-plane"), "add control-plane")
+        # stage FIRST (allowlisted to the copy-set), then test the STAGED
+        # diff: untracked files count as changes — but ONLY the ones we
+        # wrote. A blanket `git add control-plane` would commit any
+        # untracked operator file onto the PUBLIC data branch.
+        must(git("add", "--", *mirrored), "add control-plane copy-set")
         if git("diff", "--staged", "--quiet").returncode == 0:
             print("no control-plane changes")
-            must(git("checkout", MAIN_BRANCH), f"checkout {MAIN_BRANCH}")
+            must(git("checkout", restore), f"checkout {restore}")
             return 0
 
         names = must(
@@ -213,7 +241,7 @@ def main() -> int:
         )
         must(git("push", "origin", DATA_BRANCH), f"push origin {DATA_BRANCH}")
         print(f"pushed control-plane mirror {ts} ({len(names)} files)")
-        must(git("checkout", MAIN_BRANCH), f"checkout {MAIN_BRANCH}")
+        must(git("checkout", restore), f"checkout {restore}")
         return 0
     except (SyncError, OSError) as exc:
         print(f"control-plane-sync: FAILED: {exc}", file=sys.stderr)

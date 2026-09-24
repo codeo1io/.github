@@ -16,8 +16,8 @@ public issue for anything secret- or credential-related.
 ## What this repo does about secrets
 
 - **Never commit secrets.** All credentials live in the environment of the
-  machines that run the sync (see `docs/SECRETS.md` conventions referenced in
-  AGENTS.md), never in this repository.
+  machines that run the sync (`~/.hermes/.env` on the ops host; see the
+  secrets rule in AGENTS.md), never in this repository.
 - **Automated scanning.** The [`private-leak-sentinel`](.github/workflows/private-leak-sentinel.yaml)
   reusable workflow runs [gitleaks](https://github.com/gitleaks/gitleaks) via
   SHA-pinned `gitleaks-action` with the fleet [`gitleaks.toml`](gitleaks.toml)

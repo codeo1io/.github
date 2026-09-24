@@ -11,6 +11,9 @@ hatch) — an unpinned fallback host would silently bypass this check.
 
 Catches silent host-key rotation drift and MITM. Run daily (wired into the
 repo-settings-sync cron) and manually after any connectivity incident.
+
+The known_hosts path defaults to the ops host's ~/.ssh/known_hosts and can
+be overridden with CHECK_KNOWN_HOSTS (tests and alternate deployments).
 """
 from __future__ import annotations
 
@@ -21,7 +24,9 @@ import sys
 import tempfile
 import urllib.request
 
-KNOWN_HOSTS = "/home/agent/.ssh/known_hosts"
+# Ops-host default; overridable for tests / alternate deployments (cycle-7 F1f:
+# the hardcoded /home/agent path made the checker unrunnable anywhere else).
+KNOWN_HOSTS = os.environ.get("CHECK_KNOWN_HOSTS", "/home/agent/.ssh/known_hosts")
 # Non-default ports are written/matched in known_hosts as "[host]:port".
 HOSTS = ["github.com", "[ssh.github.com]:443"]
 

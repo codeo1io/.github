@@ -217,7 +217,10 @@ def main() -> int:
     expect_public_forks = bool(cfg["visibility"].get("expect_public_forks", True))
 
     errors = 0
-    fixed = drifted = security_drift = 0
+    fixed = security_drift = 0
+    # drifted counts UNIQUE repos (a repo drifting both merge settings and
+    # branch protection is one drifted repo, not two — cycle-7 F1e)
+    drifted: set[str] = set()
     reports: list[str] = []
 
     try:
@@ -251,7 +254,7 @@ def main() -> int:
         cur_merge = {k: bool(full.get(k, False)) for k in MERGE_KEYS}
         mdiff = [k for k in MERGE_KEYS if cur_merge[k] != merge_want[k]]
         if mdiff:
-            drifted += 1
+            drifted.add(name)
             detail = ", ".join(f"{k}={cur_merge[k]}->{merge_want[k]}" for k in mdiff)
             if args.apply:
                 fields = []
@@ -298,7 +301,7 @@ def main() -> int:
                 cur_prot = gh_json("api", f"repos/{slug}/branches/{branch}/protection", allow_fail=True)
                 pdiff = protection_drift(cur_prot, prot_want)
                 if pdiff:
-                    drifted += 1
+                    drifted.add(name)
                     if args.apply:
                         r = gh("api", "--method", "PUT", f"repos/{slug}/branches/{branch}/protection",
                                "--input", "-", input=json.dumps(prot_want))
@@ -311,7 +314,7 @@ def main() -> int:
                     else:
                         reports.append(f"{name}: DRIFT branch protection on {branch} ({'; '.join(pdiff)})")
 
-    print(f"[{mode}] repos={len(repos)} excluded={len(excludes)} drift_found={drifted} "
+    print(f"[{mode}] repos={len(repos)} excluded={len(excludes)} drift_found={len(drifted)} "
           f"{'fixed=' + str(fixed) if args.apply else ''} errors={errors}"
           + (f" security_report_only={security_drift}" if security_drift else ""))
     for label, entries in (("opt-in", protected), ("exclude", excludes), ("expect-public", expect_public)):
