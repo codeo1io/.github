@@ -418,3 +418,62 @@ def test_integration_xxx_bearing_secret_value_detected(tmp_path: Path) -> None:
 
     findings = json.loads(report.read_text())
     assert findings, "rc=1 but empty report"
+
+
+# --------------------------------------------------------------------------
+# Cycle-6 batch F2 (rm-037 reopen): full-path anchoring of every paths[]
+# exemption — no directory-name-suffix escapes
+# --------------------------------------------------------------------------
+
+
+def test_every_allowlist_path_is_fully_anchored() -> None:
+    """gitleaks matches paths[] against the FULL path with an unanchored
+    regex, so a bare `dist/` exempted any directory whose name merely ends
+    in dist (cycle-6 live A/B on 8.30.1: identical api_key file flagged in
+    src/, silent in xdist/). Every entry must pin a path BOUNDARY at its
+    start — (^|/) directly or behind a leading (?i) flag — so exemptions
+    scope to real directory/filename components only."""
+    paths = _allowlist_paths(load_config())
+    assert paths, "allowlist.paths vanished"
+    for entry in paths:
+        assert re.match(r"^(?:\(\?i\))?\(\^\|/\)", entry), (
+            f"unanchored allowlist path {entry!r}: full-path matching would "
+            "also exempt name-suffixed paths (xdist/, mynode_modules/)"
+        )
+
+
+@pytest.mark.skipif(_gitleaks_bin() is None, reason="no gitleaks binary on PATH")
+def test_integration_dist_named_directory_is_scanned(tmp_path: Path) -> None:
+    """The cycle-6 A/B as a permanent regression lock: the identical secret
+    file is detected in src/ (control) AND in xdist/ (name merely ENDING in
+    dist — the pre-F2 escape), while the genuine vendored web/dist/ build
+    output stays exempt."""
+    bin_path = _gitleaks_bin()
+    repo = tmp_path / "ab-repo"
+    repo.mkdir()
+    _git(repo, "init", "-q")
+    _git(repo, "config", "user.email", "sentinel-selftest@example.invalid")
+    _git(repo, "config", "user.name", "sentinel-selftest")
+    secret = assembled_secret()
+    for rel in ("src/keep.py", "xdist/keep.py", "web/dist/keep.py"):
+        target = repo / rel
+        target.parent.mkdir(parents=True)
+        target.write_text('api_key = "%s"\n' % secret)
+    _git(repo, "add", "-A")
+    _git(repo, "commit", "-qm", "fixture: identical secret in src/, xdist/, web/dist/")
+
+    report = tmp_path / "ab-report.json"
+    rc = _run_gitleaks(bin_path, repo, report)
+    assert rc == 1, f"expected findings (rc={rc})"
+
+    import json
+
+    findings = json.loads(report.read_text())
+    hit = {f.get("File", "") for f in findings}
+    assert any("xdist/" in f for f in hit), (
+        f"xdist/ escape regressed (unanchored dist/ allowlist?): {sorted(hit)}"
+    )
+    assert any("src/" in f for f in hit), "control location not flagged"
+    assert not any("web/dist/" in f for f in hit), (
+        "vendored web/dist/ must stay exempt — anchoring over-tightened"
+    )
