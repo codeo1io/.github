@@ -16,6 +16,12 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Least privilege for adopters: without this key, workflows silently inherit
+# the account-wide default workflow permissions instead of what the jobs
+# actually need (this template only reads the repo to filter and deploy).
+permissions:
+  contents: read
+
 concurrency:
   group: deploy-${{ github.ref }}
   cancel-in-progress: false
