@@ -57,6 +57,7 @@ CANONICAL_REF = os.environ.get("CONTROL_PLANE_CANONICAL_REF", "origin/main")
 LOCK_FILE = os.environ.get("CONTROL_PLANE_LOCK", "/tmp/control-plane-sync.lock")
 WATCHDOG_MAX_LINES = int(os.environ.get("CONTROL_PLANE_WATCHDOG_MAX_LINES", "5000"))
 GIT_TIMEOUT = int(os.environ.get("CONTROL_PLANE_GIT_TIMEOUT", "60"))
+VERIFY_MAX_LINES = int(os.environ.get("CONTROL_PLANE_VERIFY_MAX_LINES", "200"))
 KANBAN_OWNERS = ("t_acd6a2e8", "t_851e7951")
 
 
@@ -97,6 +98,40 @@ def mirror_bounded(src: Path, dst: Path) -> None:
     dst.write_text("".join(tail))
 
 
+def run_deployed_verify() -> tuple[int, str]:
+    """Report-only deployed-artifact check (cycle-8 rm-048).
+
+    Runs BEFORE the data branch is checked out so the digest comparison
+    sees the ENTRY-branch (canonical) copies of the scripts the crons exec
+    — comparing after the switch would grade the data-branch seed. Any
+    outcome is journaled, never a wedged mirror.
+    """
+    script = Path(__file__).resolve().parent / "verify_deployed_artifacts.py"
+    try:
+        res = subprocess.run(
+            [sys.executable, str(script)],
+            capture_output=True,
+            text=True,
+            timeout=GIT_TIMEOUT,
+        )
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        return -1, f"verify-unavailable({exc})"
+    drift_names = sorted(
+        {
+            line.split("DRIFT:", 1)[1].split(":", 1)[0].strip()
+            for line in (res.stdout + res.stderr).splitlines()
+            if line.startswith("DRIFT:")
+        }
+    )
+    if drift_names:
+        return res.returncode, "drift=" + ",".join(drift_names)
+    if res.returncode == 0:
+        return 0, "clean"
+    if res.returncode == 2:
+        return 2, "not-a-deployed-host"
+    return res.returncode, "unrecognized"
+
+
 def _restore(restore_branch: str) -> None:
     res = git("checkout", restore_branch)
     if res.returncode == 0:
@@ -119,6 +154,10 @@ def main() -> int:
     try:
         entry = must(git("branch", "--show-current"), "branch --show-current").strip()
         restore = entry if entry and entry != DATA_BRANCH else MAIN_BRANCH
+        # deployed-artifact trust check (cycle-8 rm-048): run while the
+        # worktree still holds the entry (canonical) branch — see
+        # run_deployed_verify for why the pre-checkout timing matters
+        verify_rc, verify_note = run_deployed_verify()
         # fetch failure tolerated (first boot: no remote data ref yet)
         git("fetch", "origin", DATA_BRANCH)
         has_remote = (
@@ -185,24 +224,51 @@ def main() -> int:
                     file=sys.stderr,
                 )
 
-        # cron inventory (regenerated each run, ts-stamped)
-        jobs: dict = {}
+        # cron inventory (regenerated each run, ts-stamped). The host's
+        # ~/.hermes/cron/jobs.json is a top-level dict {"jobs": [...]} — a
+        # legacy host (or hand-edited file) may carry the bare list shape;
+        # accept BOTH. The canary makes the cycle-6/8 silent-empty mirror
+        # impossible: a missing/unreadable/shapeless/empty jobs source
+        # aborts the run LOUDLY instead of publishing an empty public
+        # inventory (rm-046; the parse bug iterated the dict's string keys
+        # and produced {} daily from 9f94762 onward).
         jobs_path = home / ".hermes" / "cron" / "jobs.json"
-        if jobs_path.exists():
-            try:
-                jobs = {
-                    job["id"]: {
-                        "name": job.get("name", job["id"]),
-                        "schedule": job.get("schedule", ""),
-                        "enabled": job.get("enabled", True),
-                    }
-                    for job in json.loads(jobs_path.read_text())
-                    if isinstance(job, dict) and "id" in job
-                }
-            except (json.JSONDecodeError, OSError) as exc:
-                print(f"control-plane-sync: cron inventory unavailable: {exc}", file=sys.stderr)
+        if not jobs_path.exists():
+            raise SyncError(
+                "cron-inventory canary: ~/.hermes/cron/jobs.json is missing "
+                "— refusing to publish an empty cron-inventory.json "
+                "(cycle-8 rm-046)"
+            )
+        try:
+            payload = json.loads(jobs_path.read_text())
+        except (json.JSONDecodeError, OSError) as exc:
+            raise SyncError(f"cron-inventory canary: jobs.json unreadable: {exc}")
+        job_list = payload.get("jobs") if isinstance(payload, dict) else payload
+        if not isinstance(job_list, list):
+            raise SyncError(
+                'cron-inventory canary: jobs.json is neither {"jobs": [...]} '
+                "nor a bare list — refusing to publish an empty "
+                "cron-inventory.json"
+            )
+        jobs = {
+            job["id"]: {
+                "name": job.get("name", job["id"]),
+                "schedule": job.get("schedule", ""),
+                "enabled": job.get("enabled", True),
+            }
+            for job in job_list
+            if isinstance(job, dict) and "id" in job
+        }
+        if not jobs:
+            raise SyncError(
+                "cron-inventory canary: parsed 0 jobs from jobs.json — "
+                "refusing to publish an empty cron-inventory.json (the "
+                "silent-empty regression class of cycle-6/8)"
+            )
         Path("control-plane").joinpath("cron-inventory.json").write_text(
-            f"# generated {ts}\n" + json.dumps(jobs, indent=2, sort_keys=True) + "\n"
+            f"# generated {ts}\n# {len(jobs)} jobs\n"
+            + json.dumps(jobs, indent=2, sort_keys=True)
+            + "\n"
         )
         mirrored.append("control-plane/cron-inventory.json")
 
@@ -217,6 +283,22 @@ def main() -> int:
             f"# generated {ts}\n" + ("\n".join(runner_names) + "\n" if runner_names else "")
         )
         mirrored.append("control-plane/runners.txt")
+
+        # manifest-verify journal (cycle-8 rm-048): the daily run proves the
+        # deployed-artifact contract and records every STATE CHANGE (clean
+        # -> drift -> clean) on the public data branch, so a red trust chain
+        # is visible to anyone reading origin/data. Deduped on (rc, note) —
+        # an unchanged state must not create a diff or the no-op fast path
+        # dies and every run commits noise. Report-only by design.
+        journal = Path("control-plane") / "manifest-verify.log"
+        journal_lines = journal.read_text().splitlines() if journal.exists() else []
+        if not journal_lines or not journal_lines[-1].endswith(
+            f"rc={verify_rc} {verify_note}"
+        ):
+            journal_lines.append(f"{ts} rc={verify_rc} {verify_note}")
+            print(f"control-plane-sync: manifest-verify {verify_rc} {verify_note}")
+        journal.write_text("\n".join(journal_lines[-VERIFY_MAX_LINES:]) + "\n")
+        mirrored.append("control-plane/manifest-verify.log")
 
         # stage FIRST (allowlisted to the copy-set), then test the STAGED
         # diff: untracked files count as changes — but ONLY the ones we

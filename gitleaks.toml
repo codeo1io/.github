@@ -94,8 +94,13 @@ paths = [
   '''(?i)(^|/)fixtures?/''',
   '''(?i)native/.*/vendor/''',
   '''node_modules/''',
-  '''web/dist/''',
-  '''dist/''',
+  # cycle-8 rm-047: unanchored `dist/`/`web/dist/` exempted ANY directory
+  # merely ending in those names (live A/B, gitleaks 8.28.0: a planted
+  # github-pat detected in src/, silently exempt in mydist/). Anchored to a
+  # real path-component boundary — true build-output dirs stay exempt,
+  # dist-suffixed look-alikes are scanned.
+  '''(^|/)web/dist/''',
+  '''(^|/)dist/''',
   # agent/redact.py and its tests deliberately contain secret-shaped strings —
   # they are the redaction engine itself; the sentinel would otherwise flag
   # the exact code that protects the fleet.
