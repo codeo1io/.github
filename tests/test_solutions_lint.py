@@ -68,3 +68,33 @@ def test_judgment_findings_exit_nonzero(tmp_path):
 
     assert r.returncode == 1
     assert "JUDGMENT" in r.stdout and "root_cause" in r.stdout
+
+
+def test_judgment_scoped_per_repo_no_cross_contamination(tmp_path):
+    """cycle-8 rm-022: JUDGMENT used to be module-level — a multi-repo run
+    re-printed every earlier repo's findings during each later pass."""
+    repos = []
+    for name in ("fleetrepo-a", "fleetrepo-b"):
+        repo = tmp_path / name
+        sol = repo / "docs" / "solutions" / "netcat"
+        sol.mkdir(parents=True)
+        (sol / "needs-human.md").write_text(
+            VALID_FM.replace("root_cause: widget misaligned\n", ""),
+            encoding="utf-8")
+        repos.append(repo)
+
+    # ONE process, BOTH repos — the shape the engine's cron loop uses
+    r = subprocess.run(
+        [sys.executable, os.path.abspath(SCRIPT), *[str(p) for p in repos]],
+        capture_output=True, text=True, cwd=str(tmp_path),
+    )
+
+    assert r.returncode == 1
+    judgments = [ln for ln in r.stdout.splitlines() if ln.startswith("JUDGMENT:")]
+    # exactly one finding line per repo — the module-level accumulator
+    # re-printed fleetrepo-a's finding during fleetrepo-b's pass
+    assert len(judgments) == 2, (
+        f"expected exactly one JUDGMENT per repo, got {len(judgments)}:\n{r.stdout}"
+    )
+    assert sum("fleetrepo-a" in ln for ln in judgments) == 1
+    assert sum("fleetrepo-b" in ln for ln in judgments) == 1

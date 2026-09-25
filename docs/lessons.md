@@ -333,3 +333,56 @@ pair is present — a skip condition that can be reached by REMOVING one half is
 self-disabling check.
 (evidence: assess P2 at verify_deployed_artifacts.py:79 (rc=2 conflation); closed by
 batch F1a with 6 locking tests incl. both half-pair directions)
+
+# Cycle 8 lessons (2026-09-26, pre-review evidence: batch G implement + targeted/full test outcomes)
+
+## L36 — A fix-claim must cite the commit that landed it; live artifacts outrank docstrings
+sync_data_branch.py's own docstring said the dict-shaped jobs.json had been handled
+"until fixed" (cycle-6) — but `git log --all -S 'get("jobs"'` proves no commit ever
+unwrapped `["jobs"]`, and the public origin/data mirror had been publishing `{}`
+daily for two days. The in-file claim, the suite (green), and reality all disagreed;
+reality won because the assessor checked the LIVE mirror and full history instead of
+the comment. Prevention: a fix claim in code/docs carries its landing commit (or
+issue) inline, and reviewers verify fix-claims against live artifacts + `-S` history
+sweeps, never against the claim's own neighborhood.
+(evidence: assess attempt fbba2dfbf5b5 P1 at scripts/sync_data_branch.py:199;
+origin/data:control-plane/cron-inventory.json = {} daily since 9f94762 2026-09-24;
+closed by batch G1, live parse now yields 57 jobs)
+
+## L37 — Tests that never see production's input shape certify the bug as green
+The 68-test suite stayed green through every day of the empty mirror because
+`_fake_home` never created a jobs.json at all — the fixture and production were BOTH
+blind in the same way, so the empty inventory the tests asserted was exactly the one
+production published. Fix shape: fixtures must mirror the REAL host artifact
+(dict-shaped, ≥2 jobs), accept the legacy shape too, and generated inventories carry
+their record count in a header (`# N jobs`) so emptiness is visible and canary-able
+at a glance. Generalizes the cycle-6 #10848 fixture-gap warning into a rule.
+(evidence: grep 'jobs.json' tests/test_control_plane_shims.py → 0 fixture hits
+pre-fix; batch G1 both-shape fixture + count-header canary, 5 new tests, 68→77)
+
+## L38 — Path allowlists anchor to component boundaries or they exempt every suffix match
+gitleaks.toml's `'''dist/'''` (and its sibling `'''web/dist/'''`) matched ANY directory
+whose name merely ends in "dist" — live A/B on 8.28.0: identical planted token
+detected in src/, silently exempt in mydist/. Anchoring `(^|/)dist/` keeps true
+build-output dirs exempt while scanning look-alikes. Prevention: every allowlist path
+in a SHARED config gets an anchor test, and the exemption decision (what stays
+exempt, and why) is recorded in the test itself — config drift then has a failing
+test, not a silent hole. Also caught here: the second unanchored entry hid behind the
+first known one — audit the WHOLE allowlist block, not the reported line.
+(evidence: assess F5/research re-proof + stewardship catch of :97; batch G2 anchored
+both, static + 2 live-binary tests, cloud re-validated on 8.30.1 via PR #13)
+
+## L39 — A rider remembered only by humans is not enforcement; recurring checks ride the paths that already execute
+The deployed trust chain went red (3 delegate digests stale, rc=1) for ≥36h with no
+signal, because verifying MANIFEST was a rider written in the ledger — nothing
+scheduled it, no script ran it. The fix adds the verify INSIDE the 08:40-cron-executed
+script itself (pre-switch subprocess, report-only, state-deduped public journal),
+needing zero host edits and no new wiring: the enforcement now rides the exact path
+that already executes daily. This generalizes L33: post-landing re-pins go stale by
+design, so the only durable closure is a check that runs itself. Prevention: when a
+one-shot rider exists, ask "what will run this tomorrow?" — if the answer is
+"nothing", the fix is a recurring check on an existing execution path, not another
+ledger line.
+(evidence: assess F3/F4 — no cron/wrapper touches MANIFEST, mtime 09-24 19:51 vs
+landing 21:22; batch G3 verify+journal in sync_data_branch.py, locked by 3 tests;
+first live journal line expected at the first post-landing daily run)

@@ -15,10 +15,9 @@ from datetime import datetime, timezone
 
 REQUIRED_KEYS = ['module', 'date', 'category', 'problem_type', 'symptoms', 'root_cause']
 DATE_RE = re.compile(r'^\d{4}-\d{2}-\d{2}$')
-JUDGMENT = []  # findings that need a human/agent issue
 
 
-def lint_file(path: str, repo: str) -> list[str]:
+def lint_file(path: str, repo: str, judgment: list[str]) -> list[str]:
     """Return list of self-healed actions taken (mutates the file).
 
     `repo` (the repo root being linted) anchors every relative computation so
@@ -30,7 +29,7 @@ def lint_file(path: str, repo: str) -> list[str]:
     # split frontmatter
     m = re.match(r'^---\n(.*?)\n---\n', text, re.S)
     if not m:
-        JUDGMENT.append(f'{path}: no frontmatter block (needs authoring, cannot self-heal)')
+        judgment.append(f'{path}: no frontmatter block (needs authoring, cannot self-heal)')
         return []
     fm, body = m.group(1), text[m.end():]
     healed = []
@@ -47,12 +46,12 @@ def lint_file(path: str, repo: str) -> list[str]:
             missing.remove('category')
             healed.append(f'{path}: added category: solutions/{cat} (derived from directory)')
     if missing:
-        JUDGMENT.append(f'{path}: missing frontmatter keys {missing} (content needed — cannot invent)')
+        judgment.append(f'{path}: missing frontmatter keys {missing} (content needed — cannot invent)')
 
     for ln in fm.splitlines():
         dm = re.match(r'^(date):\s*(\S+)$', ln)
         if dm and not DATE_RE.match(dm.group(2)):
-            JUDGMENT.append(f'{path}: date "{dm.group(2)}" not YYYY-MM-DD')
+            judgment.append(f'{path}: date "{dm.group(2)}" not YYYY-MM-DD')
 
     new_text = f'---\n{fm}\n---\n{body}'
     if new_text != text:
@@ -68,10 +67,14 @@ def lint_repo(repo: str) -> int:
         print(f'{repo}: no docs/solutions/ — skip')
         return 0
     healed: list[str] = []
+    # per-repo scope (cycle-8 rm-022): module-level JUDGMENT accumulated every
+    # repo's findings in one process, re-printing earlier repos' judgments on
+    # each later pass — a multi-repo run double-counted and mis-attributed
+    judgment: list[str] = []
     for dirpath, _dirs, files in os.walk(root):
         for name in files:
             if name.endswith('.md'):
-                healed += lint_file(os.path.join(dirpath, name), repo)
+                healed += lint_file(os.path.join(dirpath, name), repo, judgment)
 
     # index drift: every .md should appear in the nearest README/index if one exists
     index_path = os.path.join(root, 'README.md')
@@ -83,13 +86,13 @@ def lint_repo(repo: str) -> int:
                 if name.endswith('.md') and name != 'README.md':
                     rel = os.path.relpath(os.path.join(dirpath, name), root)
                     if rel not in index and name not in index:
-                        JUDGMENT.append(f'{repo}: {rel} not referenced in docs/solutions/README.md')
+                        judgment.append(f'{repo}: {rel} not referenced in docs/solutions/README.md')
 
     for h in healed:
         print(f'healed: {h}')
-    for j in JUDGMENT:
+    for j in judgment:
         print(f'JUDGMENT: {j}')
-    return 1 if JUDGMENT else 0
+    return 1 if judgment else 0
 
 
 if __name__ == '__main__':
