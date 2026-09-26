@@ -1,2 +1,517 @@
-# generated 2026-09-25T08:40:13Z
-{}
+# generated 2026-09-26T08:40:42Z
+# 57 jobs
+{
+  "06139865d5e8": {
+    "enabled": true,
+    "name": "disk-pressure-watchdog",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  "0b90b83c3012": {
+    "enabled": true,
+    "name": "convergence-scoreboard",
+    "schedule": {
+      "display": "every day at 06:00",
+      "expr": "0 6 * * *",
+      "kind": "cron"
+    }
+  },
+  "0f00397711e3": {
+    "enabled": true,
+    "name": "autonomy-adoption-tick",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  "12e78e372cda": {
+    "enabled": true,
+    "name": "repo-config-guard",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
+    }
+  },
+  "151234d520a0": {
+    "enabled": true,
+    "name": "autonomy-monthly-retrospective (recreated)",
+    "schedule": {
+      "display": "0 5 1 * *",
+      "expr": "0 5 1 * *",
+      "kind": "cron"
+    }
+  },
+  "15cb1c293376": {
+    "enabled": true,
+    "name": "repo-settings-sync",
+    "schedule": {
+      "display": "every day at 08:30",
+      "expr": "30 8 * * *",
+      "kind": "cron"
+    }
+  },
+  "1717e8211eec": {
+    "enabled": true,
+    "name": "pi+opencode+omo CLI & plugin pin updater",
+    "schedule": {
+      "display": "every day at 09:00",
+      "expr": "0 9 * * *",
+      "kind": "cron"
+    }
+  },
+  "1898fcaf9387": {
+    "enabled": false,
+    "name": "dashboard-access-repair",
+    "schedule": {
+      "display": "0 0 1 1 *",
+      "expr": "0 0 1 1 *",
+      "kind": "cron"
+    }
+  },
+  "189f2ac35fbc": {
+    "enabled": true,
+    "name": "ci-health-digest",
+    "schedule": {
+      "display": "every day 09:00",
+      "expr": "0 9 * * *",
+      "kind": "cron"
+    }
+  },
+  "1b681a5f1863": {
+    "enabled": false,
+    "name": "boundary-v9-terminal-watch",
+    "schedule": {
+      "display": "every 5m",
+      "kind": "interval",
+      "minutes": 5
+    }
+  },
+  "2fe402f35f63": {
+    "enabled": true,
+    "name": "gh-autoprune",
+    "schedule": {
+      "display": "every 360m",
+      "kind": "interval",
+      "minutes": 360
+    }
+  },
+  "34afa0792c2d": {
+    "enabled": true,
+    "name": "green-pr-merge hermes-gpt",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
+    }
+  },
+  "416985a5f808": {
+    "enabled": true,
+    "name": "hermes-self-improvement-review (recreated)",
+    "schedule": {
+      "display": "every day at 04:30",
+      "expr": "30 4 * * *",
+      "kind": "cron"
+    }
+  },
+  "469ed56c3815": {
+    "enabled": true,
+    "name": "autonomy-reliability-reconcile-active",
+    "schedule": {
+      "display": "every 5m",
+      "kind": "interval",
+      "minutes": 5
+    }
+  },
+  "492f412709e0": {
+    "enabled": true,
+    "name": "autonomy-schedules-register-active",
+    "schedule": {
+      "display": "every 360m",
+      "kind": "interval",
+      "minutes": 360
+    }
+  },
+  "52e4d96deaa8": {
+    "enabled": true,
+    "name": "spool-server-respawn-watchdog",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
+    }
+  },
+  "588a07ae076e": {
+    "enabled": true,
+    "name": "fleet-health-watchdog",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  "595f340b1636": {
+    "enabled": false,
+    "name": "autonomy-fork-maintenance",
+    "schedule": {
+      "display": "every 360m",
+      "kind": "interval",
+      "minutes": 360
+    }
+  },
+  "5c5214622927": {
+    "enabled": true,
+    "name": "autonomous-steward-discovery (recreated)",
+    "schedule": {
+      "display": "every 360m",
+      "kind": "interval",
+      "minutes": 360
+    }
+  },
+  "602ec848e383": {
+    "enabled": false,
+    "name": "infra-commit-boundary-watch-v2",
+    "schedule": {
+      "display": "every 20m",
+      "kind": "interval",
+      "minutes": 20
+    }
+  },
+  "63577dc18518": {
+    "enabled": true,
+    "name": "reland-r65-gatekeeper",
+    "schedule": {
+      "display": "every 20m",
+      "kind": "interval",
+      "minutes": 20
+    }
+  },
+  "64b9e8a6f7d0": {
+    "enabled": true,
+    "name": "kanban-fixture-debris-sentinel",
+    "schedule": {
+      "display": "every 5m",
+      "kind": "interval",
+      "minutes": 5
+    }
+  },
+  "6c6307341e5a": {
+    "enabled": true,
+    "name": "ci-time-watchdog",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  "6e0bce2f7f7c": {
+    "enabled": true,
+    "name": "control-plane-sync",
+    "schedule": {
+      "display": "40 8 * * *",
+      "expr": "40 8 * * *",
+      "kind": "cron"
+    }
+  },
+  "6efb35c775b8": {
+    "enabled": true,
+    "name": "pr33-merge-watch",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  "749de71df140": {
+    "enabled": false,
+    "name": "gh-runner-stall-watchdog",
+    "schedule": {
+      "display": "every 5m",
+      "kind": "interval",
+      "minutes": 5
+    }
+  },
+  "87b92274d24d": {
+    "enabled": true,
+    "name": "autonomy-ecosystem-research-daily-active",
+    "schedule": {
+      "display": "every day at 02:15",
+      "expr": "15 2 * * *",
+      "kind": "cron"
+    }
+  },
+  "9165051f6a49": {
+    "enabled": true,
+    "name": "autonomy-reliability-agentic-active",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  "9286b6b0a5db": {
+    "enabled": false,
+    "name": "perfect-operation status watcher",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
+    }
+  },
+  "9acfb691823d": {
+    "enabled": false,
+    "name": "v1.8 stage promoter",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
+    }
+  },
+  "9ba9066e9d8d": {
+    "enabled": false,
+    "name": "v1.8 burn-in watcher",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
+    }
+  },
+  "a1bd8113a106": {
+    "enabled": true,
+    "name": "hermes-gpt MCP watchdog",
+    "schedule": {
+      "display": "every 5m",
+      "kind": "interval",
+      "minutes": 5
+    }
+  },
+  "a747bb443951": {
+    "enabled": true,
+    "name": "conductor-auto-promote",
+    "schedule": {
+      "display": "every 20m",
+      "kind": "interval",
+      "minutes": 20
+    }
+  },
+  "af64214ae727": {
+    "enabled": true,
+    "name": "autonomy-proposal-digest",
+    "schedule": {
+      "display": "every day at 08:00",
+      "expr": "0 8 * * *",
+      "kind": "cron"
+    }
+  },
+  "af8a292d3f55": {
+    "enabled": true,
+    "name": "reland-r65-terminal-watch",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
+    }
+  },
+  "afb7033250d3": {
+    "enabled": true,
+    "name": "pi-daemon reaper (fix-queue item 19)",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  "b94fa05730d4": {
+    "enabled": true,
+    "name": "autonomy-roadmap-sync-daily-active",
+    "schedule": {
+      "display": "30 1 * * *",
+      "expr": "30 1 * * *",
+      "kind": "cron"
+    }
+  },
+  "bd9ac6752b9d": {
+    "enabled": true,
+    "name": "discord-backfill-drain",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  "c0240882d804": {
+    "enabled": true,
+    "name": "infra-mandate-enforcer-v2",
+    "schedule": {
+      "display": "every 20m",
+      "kind": "interval",
+      "minutes": 20
+    }
+  },
+  "c2105c87f0b5": {
+    "enabled": true,
+    "name": "autonomy-fork-maintenance-active",
+    "schedule": {
+      "display": "every 360m",
+      "kind": "interval",
+      "minutes": 360
+    }
+  },
+  "c811531dfe03": {
+    "enabled": true,
+    "name": "autonomy-deep-strategy-scan (recreated)",
+    "schedule": {
+      "display": "every sunday at 03:30",
+      "expr": "30 3 * * 0",
+      "kind": "cron"
+    }
+  },
+  "c834209a5856": {
+    "enabled": true,
+    "name": "fork-divergence-audit",
+    "schedule": {
+      "display": "every day at 07:00",
+      "expr": "0 7 * * *",
+      "kind": "cron"
+    }
+  },
+  "cd69dbd4c2b8": {
+    "enabled": true,
+    "name": "jarvis-watchdog",
+    "schedule": {
+      "display": "every 5m",
+      "kind": "interval",
+      "minutes": 5
+    }
+  },
+  "d2f8251b93a9": {
+    "enabled": true,
+    "name": "ven-deletion-audit-watch",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  "d32ca255c740": {
+    "enabled": true,
+    "name": "conductor-track-watchdog",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  "d4d88d7b54a0": {
+    "enabled": true,
+    "name": "magic-hermes engine watchdog",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  "d63b0ca24b6f": {
+    "enabled": true,
+    "name": "autonomy-green-pr-merger",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  "dc44096b0059": {
+    "enabled": true,
+    "name": "fix-driver health watch (item 20)",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  "e1f07c71d184": {
+    "enabled": true,
+    "name": "infra-pr34-merge-watcher",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  "e27a40be1634": {
+    "enabled": true,
+    "name": "autonomy-retention-active",
+    "schedule": {
+      "display": "daily at 04:05",
+      "expr": "5 4 * * *",
+      "kind": "cron"
+    }
+  },
+  "e409464d74b4": {
+    "enabled": true,
+    "name": "fix-queue work driver safe",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  "e47992fb6de8": {
+    "enabled": false,
+    "name": "v1.8 stage-ladder completion watcher",
+    "schedule": {
+      "display": "every 20m",
+      "kind": "interval",
+      "minutes": 20
+    }
+  },
+  "eadcf8bc6412": {
+    "enabled": true,
+    "name": "gateway-db-gc",
+    "schedule": {
+      "display": "every day at 06:10",
+      "expr": "10 6 * * *",
+      "kind": "cron"
+    }
+  },
+  "ee8385a26887": {
+    "enabled": true,
+    "name": "fold-family-soak-watch",
+    "schedule": {
+      "display": "every 360m",
+      "kind": "interval",
+      "minutes": 360
+    }
+  },
+  "f56ce6c17354": {
+    "enabled": true,
+    "name": "autonomy-ecosystem-research-weekly-active",
+    "schedule": {
+      "display": "every sunday at 02:45",
+      "expr": "45 2 * * 0",
+      "kind": "cron"
+    }
+  },
+  "f9dfdc52d91f": {
+    "enabled": true,
+    "name": "outcome-loop-monitor",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
+    }
+  },
+  "fefedca6eb1d": {
+    "enabled": true,
+    "name": "autonomy-outcome-remeasure-active",
+    "schedule": {
+      "display": "every 360m",
+      "kind": "interval",
+      "minutes": 360
+    }
+  }
+}
