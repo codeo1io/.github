@@ -418,3 +418,96 @@ def test_integration_xxx_bearing_secret_value_detected(tmp_path: Path) -> None:
 
     findings = json.loads(report.read_text())
     assert findings, "rc=1 but empty report"
+
+
+# --------------------------------------------------------------------------
+# Cycle-8 rm-047: dist/ allowlist anchoring
+# --------------------------------------------------------------------------
+
+
+def test_dist_allowlist_entries_are_component_anchored() -> None:
+    """The dist exemptions must match real path-component boundaries only.
+
+    The retired unanchored ``dist/`` / ``web/dist/`` entries matched ANY
+    directory whose path merely ends in those names: a planted github-pat
+    was detected in src/ but silently exempt in mydist/ (cycle-8 assess,
+    live A/B on gitleaks 8.28.0 with this fleet config).
+    """
+    cfg = load_config()
+    patterns = [re.compile(p) for p in _allowlist_paths(cfg)]
+    # true build-output directories stay exempt
+    for exempt in ("dist/app.js", "web/dist/app.js", "packages/x/dist/app.js",
+                   "xweb/dist/app.js"):
+        assert any(p.search(exempt) for p in patterns), (
+            f"{exempt} must stay exempt — build-output convention"
+        )
+    # dist-suffixed look-alikes must NOT be exempt
+    for scanned in (
+        "mydist/token.txt",
+        "source/dist-built/token.txt",
+        "vendored/dist-cdn/token.txt",
+    ):
+        hits = [p.pattern for p in patterns if p.search(scanned)]
+        assert not hits, (
+            f"allowlist pattern(s) {hits} exempt {scanned} — dist-suffixed "
+            "directories must be scanned (rm-047)"
+        )
+
+
+@pytest.mark.skipif(_gitleaks_bin() is None, reason="no gitleaks binary on PATH")
+def test_integration_token_in_dist_suffixed_dir_detected(tmp_path: Path) -> None:
+    """A planted token in mydist/ IS detected — the exact shape the
+    unanchored allowlist silently exempted (cycle-8 assess A/B, now locked)."""
+    bin_path = _gitleaks_bin()
+    repo = tmp_path / "dist-suffix-repo"
+    repo.mkdir()
+    _git(repo, "init", "-q")
+    _git(repo, "config", "user.email", "sentinel-selftest@example.invalid")
+    _git(repo, "config", "user.name", "sentinel-selftest")
+    token = "ghp_" + "Zr4k9Wm2" + "Xp7Qv5Nt" + "8Lb39cQw" + "1Er4Ty6Ui8OpAsDfGh"
+    (repo / "src").mkdir()
+    (repo / "src" / "token.txt").write_text(token + "\n")
+    (repo / "mydist").mkdir()
+    (repo / "mydist" / "token.txt").write_text(token + "\n")
+    _git(repo, "add", "-A")
+    _git(repo, "commit", "-qm", "fixture: identical token in src/ and mydist/")
+
+    report = tmp_path / "report.json"
+    rc = _run_gitleaks(bin_path, repo, report)
+    assert rc == 1, (
+        "token in a dist-SUFFIXED directory went undetected — allowlist "
+        "anchoring regression (rm-047)"
+    )
+    import json
+
+    findings = json.loads(report.read_text())
+    flagged = {f.get("File") for f in findings}
+    assert "mydist/token.txt" in flagged, (
+        f"mydist escape regression; flagged: {sorted(flagged)}"
+    )
+
+
+@pytest.mark.skipif(_gitleaks_bin() is None, reason="no gitleaks binary on PATH")
+def test_integration_true_dist_dirs_still_exempt(tmp_path: Path) -> None:
+    """The same token inside true dist/ and web/dist/ build-output dirs
+    stays exempt — the convention itself must not regress."""
+    bin_path = _gitleaks_bin()
+    repo = tmp_path / "dist-true-repo"
+    repo.mkdir()
+    _git(repo, "init", "-q")
+    _git(repo, "config", "user.email", "sentinel-selftest@example.invalid")
+    _git(repo, "config", "user.name", "sentinel-selftest")
+    token = "ghp_" + "Zr4k9Wm2" + "Xp7Qv5Nt" + "8Lb39cQw" + "1Er4Ty6Ui8OpAsDfGh"
+    (repo / "dist").mkdir()
+    (repo / "dist" / "token.txt").write_text(token + "\n")
+    (repo / "web" / "dist").mkdir(parents=True)
+    (repo / "web" / "dist" / "token.txt").write_text(token + "\n")
+    _git(repo, "add", "-A")
+    _git(repo, "commit", "-qm", "fixture: token in true dist dirs")
+
+    report = tmp_path / "report.json"
+    rc = _run_gitleaks(bin_path, repo, report)
+    assert rc == 0, (
+        f"true dist/ + web/dist/ lost their exemption (rc={rc}); report: "
+        f"{report.read_text() if report.exists() else 'none'}"
+    )

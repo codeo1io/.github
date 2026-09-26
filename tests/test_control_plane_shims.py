@@ -29,6 +29,8 @@ harness, never the script.
 from __future__ import annotations
 
 import fcntl
+import hashlib
+import json
 import os
 import subprocess
 import sys
@@ -109,6 +111,34 @@ def _fake_home(tmp_path: Path) -> Path:
         own = home / ".hermes" / "kanban" / "attachments" / tid / "OWNERS.md"
         own.parent.mkdir(parents=True, exist_ok=True)
         own.write_text(f"# {tid} owners\n@fixture-bot\n")
+    # realistic cron jobs.json (cycle-8 rm-046): the host file is a top-level
+    # dict {"jobs": [...]} with 57 entries — the fixture must exercise the
+    # REAL shape or the suite certifies whatever an empty mirror produces
+    # (the exact gap that let the cycle-6/8 silent-empty regression pass)
+    (home / ".hermes" / "cron").mkdir(parents=True)
+    (home / ".hermes" / "cron" / "jobs.json").write_text(
+        json.dumps(
+            {
+                "jobs": [
+                    {
+                        "id": "control-plane-sync",
+                        "name": "mirror fleet state",
+                        "schedule": {"expr": "40 8 * * *"},
+                        "enabled": True,
+                        "script": "~/.hermes/scripts/control-plane-sync.sh",
+                    },
+                    {
+                        "id": "repo-settings-sync",
+                        "name": "sync repo settings",
+                        "schedule": {"expr": "30 8 * * *"},
+                        "enabled": True,
+                        "script": "~/.hermes/scripts/repo-settings-sync.sh",
+                    },
+                ],
+                "updated_at": "2026-09-21T00:00:00Z",
+            }
+        )
+    )
     return home
 
 
@@ -199,6 +229,19 @@ def test_mirror_pushes_full_copy_set_then_no_op(tmp_path: Path) -> None:
     assert _origin_show(origin, "data", "control-plane/runners.txt") == (
         f"# generated {FROZEN_TS}\n"
     )
+    # cron inventory mirrors the FULL fixture job set, count header included
+    # (cycle-8 rm-046: an empty inventory can never pass this assertion again)
+    cron = _origin_show(origin, "data", "control-plane/cron-inventory.json")
+    assert f"# generated {FROZEN_TS}\n# 2 jobs\n" in cron
+    assert "control-plane-sync" in cron and "repo-settings-sync" in cron
+    # manifest-verify journal (cycle-8 rm-048): hermetic HOME has no deployed
+    # pair -> rc=2 journaled exactly once; the state dedupe is what keeps the
+    # second run below a true no-op
+    verify_lines = _origin_show(
+        origin, "data", "control-plane/manifest-verify.log"
+    ).splitlines()
+    assert len(verify_lines) == 1
+    assert "rc=2 not-a-deployed-host" in verify_lines[0]
 
     # second run: byte-identical mirror (frozen clock) -> no-op
     r2 = _run(_env(repo, home, frozen), repo)
@@ -348,3 +391,139 @@ def test_untracked_operator_file_is_never_staged(tmp_path: Path) -> None:
     assert scratch.exists()
     tracked = _git(repo, "ls-files", "--", "control-plane").stdout
     assert "control-plane/operator-note.txt" not in tracked
+
+
+def test_cron_inventory_accepts_legacy_list_shape(tmp_path: Path) -> None:
+    """cycle-8 rm-046: a bare-list jobs.json (legacy / hand-edited shape)
+    still mirrors its full job set — the parse must tolerate BOTH shapes."""
+    origin = _make_origin(tmp_path)
+    repo = _make_repo(origin, tmp_path)
+    home = _fake_home(tmp_path)
+    frozen = _frozen_clock(tmp_path)
+    (home / ".hermes" / "cron" / "jobs.json").write_text(
+        '[{"id": "legacy-job", "name": "legacy", "schedule": "0 4 * * *",'
+        ' "enabled": false, "script": "~/.hermes/scripts/legacy.sh"}]'
+    )
+
+    r = _run(_env(repo, home, frozen), repo)
+    assert r.returncode == 0, f"first run failed:\n{r.stderr}"
+
+    cron = _origin_show(origin, "data", "control-plane/cron-inventory.json")
+    assert "# 1 jobs" in cron and "legacy-job" in cron
+
+
+def test_shapeless_jobs_json_fails_loudly_not_published(tmp_path: Path) -> None:
+    """cycle-8 rm-046 canary: a shapeless/empty jobs source aborts the run
+    loudly and publishes NOTHING — the silent-empty public mirror ({} daily
+    on origin/data since 9f94762) is now structurally impossible."""
+    origin = _make_origin(tmp_path)
+    repo = _make_repo(origin, tmp_path)
+    home = _fake_home(tmp_path)
+    frozen = _frozen_clock(tmp_path)
+    (home / ".hermes" / "cron" / "jobs.json").write_text('{"updated_at": "x"}')
+
+    _git(repo, "checkout", "-q", "-b", "feature")
+    r = _run(_env(repo, home, frozen), repo)
+    assert r.returncode == 1
+    assert "cron-inventory canary" in r.stderr
+    assert _branch(repo) == "feature", "canary failure must restore entry branch"
+    refs = _git(origin, "show-ref").stdout
+    assert "refs/heads/data" not in refs, "canary failure must not publish"
+
+
+def test_missing_jobs_json_fails_loudly(tmp_path: Path) -> None:
+    """cycle-8 rm-046 canary: a MISSING jobs.json aborts loudly — the old
+    code published an empty {} inventory to the public branch instead."""
+    origin = _make_origin(tmp_path)
+    repo = _make_repo(origin, tmp_path)
+    home = _fake_home(tmp_path)
+    frozen = _frozen_clock(tmp_path)
+    (home / ".hermes" / "cron" / "jobs.json").unlink()
+
+    r = _run(_env(repo, home, frozen), repo)
+    assert r.returncode == 1
+    assert "cron-inventory canary" in r.stderr
+    assert "jobs.json is missing" in r.stderr
+    assert _branch(repo) == "main"
+
+
+def test_deployed_verify_drift_journaled_report_only(tmp_path: Path) -> None:
+    """cycle-8 rm-048: the daily run verifies the deployed manifest against
+    the entry-branch (canonical) scripts and journals drift names onto the
+    public data branch — report-only (a red trust chain is VISIBLE, the
+    mirror never wedges) and state-deduped (steady drift = no noise commit)."""
+    origin = _make_origin(tmp_path)
+    repo = _make_repo(origin, tmp_path)
+    home = _fake_home(tmp_path)
+    frozen = _frozen_clock(tmp_path)
+
+    scripts = home / ".hermes" / "scripts"
+    scripts.mkdir(parents=True)
+    wrapper = scripts / "control-plane-sync.sh"
+    wrapper.write_text("#!/bin/sh\nexec python3 scripts/sync_data_branch.py\n")
+    # manifest pins digests that can never match the real (entry-branch)
+    # scripts — deterministic two-name drift
+    manifest = scripts / "MANIFEST.sha256"
+    manifest.write_text(
+        f"{'0' * 64}  control-plane-sync.sh\n"
+        f"{'0' * 64}  sync_data_branch.py\n"
+    )
+
+    env = _env(
+        repo, home, frozen,
+        VERIFY_WRAPPER=str(wrapper),
+        VERIFY_MANIFEST=str(manifest),
+    )
+    r1 = _run(env, repo)
+    assert r1.returncode == 0, f"drift must not wedge the mirror:\n{r1.stderr}"
+    assert "manifest-verify 1 drift=" in r1.stdout
+
+    journal = _origin_show(
+        origin, "data", "control-plane/manifest-verify.log"
+    ).splitlines()
+    assert len(journal) == 1
+    assert "rc=1 drift=control-plane-sync.sh,sync_data_branch.py" in journal[0]
+
+    # a steady drift state is deduped: the second identical run is a no-op
+    r2 = _run(env, repo)
+    assert r2.returncode == 0, r2.stderr
+    assert "no control-plane changes" in r2.stdout
+
+
+def test_deployed_verify_clean_state_journaled(tmp_path: Path) -> None:
+    """cycle-8 rm-048: a GREEN contract (manifest pinning the TRUE digests)
+    journals rc=0 clean — the daily visible proof the trust chain holds."""
+    origin = _make_origin(tmp_path)
+    repo = _make_repo(origin, tmp_path)
+    home = _fake_home(tmp_path)
+    frozen = _frozen_clock(tmp_path)
+
+    scripts = home / ".hermes" / "scripts"
+    scripts.mkdir(parents=True)
+    wrapper = scripts / "control-plane-sync.sh"
+    wrapper.write_text("#!/bin/sh\nexec python3 scripts/sync_data_branch.py\n")
+
+    def sha(path: Path) -> str:
+        return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+    manifest = scripts / "MANIFEST.sha256"
+    manifest.write_text(
+        f"{sha(wrapper)}  control-plane-sync.sh\n"
+        f"{sha(ROOT / 'scripts' / 'sync_data_branch.py')}  sync_data_branch.py\n"
+    )
+
+    r = _run(
+        _env(
+            repo, home, frozen,
+            VERIFY_WRAPPER=str(wrapper),
+            VERIFY_MANIFEST=str(manifest),
+        ),
+        repo,
+    )
+    assert r.returncode == 0, f"run failed:\n{r.stderr}"
+    assert "manifest-verify 0 clean" in r.stdout
+
+    journal = _origin_show(
+        origin, "data", "control-plane/manifest-verify.log"
+    ).splitlines()
+    assert len(journal) == 1 and "rc=0 clean" in journal[0]

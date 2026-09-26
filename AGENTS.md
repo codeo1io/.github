@@ -38,6 +38,19 @@ Fleet settings-as-code repo for the codeo1io account.
   `control-plane/corrections.yaml` + `control-plane/claims.yaml` mirrored
   from the canonical main-tree copies. The data branch must never carry a
   stale corrections or claims entry.
+- The cron-inventory mirror is canary-guarded (cycle-8 rm-046): a missing,
+  unreadable, shapeless, or EMPTY `~/.hermes/cron/jobs.json` aborts the run
+  loudly instead of publishing an empty public inventory, and the generated
+  file carries a `# N jobs` count header. `jobs.json` is dict-shaped
+  (top-level `"jobs"`) with the bare-list shape still accepted; the test
+  fixture must keep a realistic jobs.json (`_fake_home` in
+  tests/test_control_plane_shims.py) or the suite certifies an empty mirror.
+- The daily run also verifies the deployed-artifact contract (cycle-8
+  rm-048) BEFORE switching to the data branch and journals every state
+  change (`rc=0/1/2 + drift names`) to `control-plane/manifest-verify.log`
+  on the public data branch — report-only by design (a red trust chain must
+  be VISIBLE, never a wedged mirror), deduped on state so steady states
+  stay no-ops (`CONTROL_PLANE_VERIFY_MAX_LINES`, default 200).
 - `scripts/verify_deployed_artifacts.py` checks the deployed wrapper +
   manifest against this repo (rc 0 clean / 1 drift / 2 not a deployed host;
   a half-deployed pair — one side present, one missing — is drift rc=1, and
