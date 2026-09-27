@@ -27,9 +27,18 @@
 # NEW commits in the event (push payloads cap at 20); schedule/workflow_dispatch
 # runs scan full history. Legacy-leak coverage rides on the weekly schedule.
 #
-# PROMOTE RIDER (executed at the cycle-4 commit gate): config-ref default
-# below points at the batch commit that shipped this hardened config
-# (d04d86d), so callers without an explicit config-ref pick it up.
+# PROMOTE RIDER (cycle-6 rm-043 / batch F4): the config-ref default moves
+# d04d86d -> 659c726 (cycle-6 entry HEAD). d04d86d still carried the
+# PRE-cycle-5 config (md5 5a0773a0…) while the hardened config landed at
+# cf3a0fe (md5 d427a41e…, byte-carried by 659c726) — so two of three fleet
+# callers pinning this reusable workflow at mutable @main have been
+# scanning with the stale config for two cycles. This bump finally delivers
+# the hardened config to them with zero caller edits. Parity is enforced by
+# tests/test_sentinel_config_ref.py: the default must be a full SHA that
+# exists AND whose gitleaks.toml equals HEAD's. That test is DELIBERATELY
+# gate-forcing: whenever gitleaks.toml changes, this default must be
+# re-bumped to the landing commit in the same batch — the promote gate
+# executes that rider.
 name: private-leak-sentinel
 
 on:
@@ -38,11 +47,14 @@ on:
       config-ref:
         description: >-
           codeo1io/.github git ref holding the fleet gitleaks.toml. Default is
-          the cycle-4 batch commit that shipped the hardened config; the
-          .github self-scan caller (leak-sentinel-self.yaml) passes github.sha
-          so every push is scanned with exactly the config it ships.
+          the cycle-6 entry-HEAD commit 659c726 (gitleaks.toml byte-identical
+          to the cycle-4 pin); the .github self-scan caller
+          (leak-sentinel-self.yaml) passes github.sha so every push is scanned
+          with exactly the config it ships. tests/test_sentinel_config_ref.py
+          enforces default-refs-HEAD parity — bump this default in the same
+          batch as any gitleaks.toml change.
         type: string
-        default: "d04d86d604dcd538444ab072c41523f7552fc108"  # cycle-4 batch commit (hardened gitleaks.toml)
+        default: "659c726b8c6af73ed28c085f71f356c9b88a101f"  # cycle-6 entry HEAD; ships the hardened config (md5 d427a41e…, cf3a0fe lineage) the stale d04d86d pin lacked
 
 permissions:
   contents: read

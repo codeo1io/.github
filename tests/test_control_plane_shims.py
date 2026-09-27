@@ -29,6 +29,7 @@ harness, never the script.
 from __future__ import annotations
 
 import fcntl
+import json
 import os
 import subprocess
 import sys
@@ -95,6 +96,35 @@ def _fake_home(tmp_path: Path) -> Path:
     (home / ".hermes" / "kanban" / "attachments").mkdir(parents=True)
     (home / ".hermes" / "conductor-tracks.tsv").write_text(
         "track_id\trepo\tintent\n42\tacme\tmaintain\n"
+    )
+    # cycle-6 rm-019: PRODUCTION-shaped cron inventory source. The fleet
+    # host writes a top-level OBJECT {"jobs": [...], "updated_at": ...}
+    # (57 jobs live); this fixture previously created NO jobs.json at all,
+    # so the suite locked in the empty-mirror behavior the cycle-6 assess
+    # proved live ({} mirrored since 9f94762). last_status exercises the
+    # field projection (mirror keeps id/name/schedule/enabled only).
+    (home / ".hermes" / "cron").mkdir(parents=True)
+    (home / ".hermes" / "cron" / "jobs.json").write_text(
+        json.dumps(
+            {
+                "jobs": [
+                    {
+                        "id": "cron-a",
+                        "name": "repo settings sync",
+                        "schedule": "40 8 * * *",
+                        "enabled": True,
+                        "last_status": "ok",
+                    },
+                    {
+                        "id": "cron-b",
+                        "name": "watchdog",
+                        "schedule": "*/5 * * * *",
+                        "enabled": False,
+                    },
+                ],
+                "updated_at": FROZEN_TS,
+            }
+        )
     )
     (home / ".hermes" / "conductor-watchdog-alerts.log").write_text(
         "\n".join(WATCHDOG_LINES) + "\n"
@@ -189,6 +219,28 @@ def test_mirror_pushes_full_copy_set_then_no_op(tmp_path: Path) -> None:
     assert _origin_show(origin, "data", "control-plane/runners.txt") == (
         f"# generated {FROZEN_TS}\n"
     )
+    # cycle-6 rm-019: the production-shaped (dict) jobs.json source MUST
+    # mirror a populated inventory — this is the assertion whose absence
+    # let the {} regression pass the whole suite for a cycle
+    inv_raw = _origin_show(origin, "data", "control-plane/cron-inventory.json")
+    assert inv_raw.startswith(f"# generated {FROZEN_TS}\n"), inv_raw[:60]
+    inventory = json.loads(
+        "\n".join(
+            line for line in inv_raw.splitlines() if not line.startswith("#")
+        )
+    )
+    assert inventory == {
+        "cron-a": {
+            "name": "repo settings sync",
+            "schedule": "40 8 * * *",
+            "enabled": True,
+        },
+        "cron-b": {
+            "name": "watchdog",
+            "schedule": "*/5 * * * *",
+            "enabled": False,
+        },
+    }, "dict-shaped jobs.json must mirror a populated, projected inventory"
 
     # second run: byte-identical mirror (frozen clock) -> no-op
     r2 = _run(_env(repo, home, frozen), repo)
@@ -292,3 +344,150 @@ def test_git_timeout_fails_loudly_instead_of_hanging(tmp_path: Path) -> None:
     assert "timed out after 0s" in r.stderr
     # even the restore attempt timed out — the run must say so, not hang
     assert "RESTORE FAILED" in r.stderr
+
+
+# --------------------------------------------------------------------------
+# Cycle-6 batch F additions (rm-019 shape tolerance + rm-044 self-check +
+# rm-045 success-path restore / index hygiene / fetch visibility)
+# --------------------------------------------------------------------------
+
+
+def test_legacy_list_shaped_jobs_still_mirror(tmp_path: Path) -> None:
+    """rm-019: the pre-E1 list-shaped sources keep mirroring (tolerance,
+    not a flip) — both documented shapes populate the inventory."""
+    origin = _make_origin(tmp_path)
+    repo = _make_repo(origin, tmp_path)
+    home = _fake_home(tmp_path)
+    jobs_path = home / ".hermes" / "cron" / "jobs.json"
+    jobs_path.write_text(
+        json.dumps(
+            [
+                {"id": "cron-a", "name": "repo settings sync",
+                 "schedule": "40 8 * * *", "enabled": True},
+                {"id": "cron-b", "name": "watchdog",
+                 "schedule": "*/5 * * * *", "enabled": False},
+            ]
+        )
+    )
+    frozen = _frozen_clock(tmp_path)
+
+    r = _run(_env(repo, home, frozen), repo)
+    assert r.returncode == 0, r.stderr
+    inv = json.loads(
+        "\n".join(
+            line
+            for line in _origin_show(
+                origin, "data", "control-plane/cron-inventory.json"
+            ).splitlines()
+            if not line.startswith("#")
+        )
+    )
+    assert set(inv) == {"cron-a", "cron-b"}, "list-shaped source emptied the mirror"
+
+
+def test_shape_regression_fails_closed_instead_of_empty_mirror(tmp_path: Path) -> None:
+    """rm-044 self-check: entries without ids = non-empty source, empty
+    inventory — the run must FAIL loudly and restore the entry branch,
+    never stage/push {}. This is the exact class that shipped the cycle-6
+    {} regression invisibly."""
+    origin = _make_origin(tmp_path)
+    repo = _make_repo(origin, tmp_path)
+    home = _fake_home(tmp_path)
+    (home / ".hermes" / "cron" / "jobs.json").write_text(
+        json.dumps({"jobs": [{"name": "idless-job", "schedule": "@daily"}]})
+    )
+    frozen = _frozen_clock(tmp_path)
+
+    _git(repo, "checkout", "-q", "-b", "feature")
+    r = _run(_env(repo, home, frozen), repo)
+    assert r.returncode != 0, "empty-mirror outcome must fail, not succeed"
+    assert "cron-inventory integrity" in r.stderr
+    assert "FAILED" in r.stderr
+    assert _branch(repo) == "feature", "fail-closed must restore the entry branch"
+    # nothing was pushed: no data branch may exist on the remote
+    assert (
+        _git(origin, "rev-parse", "--verify", "data", check=False).returncode != 0
+    ), "fail-closed run must not push any mirror state"
+
+
+def test_corrupt_jobs_json_fails_closed(tmp_path: Path) -> None:
+    """rm-044: a corrupt source must fail the run — the old warn-and-
+    continue path OVERWROTE the last known mirror with {}."""
+    origin = _make_origin(tmp_path)
+    repo = _make_repo(origin, tmp_path)
+    home = _fake_home(tmp_path)
+    (home / ".hermes" / "cron" / "jobs.json").write_text("{not json at all")
+    frozen = _frozen_clock(tmp_path)
+
+    _git(repo, "checkout", "-q", "-b", "feature")
+    r = _run(_env(repo, home, frozen), repo)
+    assert r.returncode != 0
+    assert "jobs.json unreadable" in r.stderr
+    assert _branch(repo) == "feature"
+
+
+def test_success_from_feature_branch_restores_feature(tmp_path: Path) -> None:
+    """rm-045: BOTH success paths (push, then no-op) restore the ENTRY
+    branch — a manual run from any branch finds its checkout where it
+    left it, instead of being dumped on main."""
+    origin = _make_origin(tmp_path)
+    repo = _make_repo(origin, tmp_path)
+    home = _fake_home(tmp_path)
+    frozen = _frozen_clock(tmp_path)
+
+    _git(repo, "checkout", "-q", "-b", "feature")
+    r1 = _run(_env(repo, home, frozen), repo)
+    assert r1.returncode == 0, r1.stderr
+    assert "pushed control-plane mirror" in r1.stdout
+    assert _branch(repo) == "feature", "push success must restore the entry branch"
+
+    r2 = _run(_env(repo, home, frozen), repo)
+    assert r2.returncode == 0, r2.stderr
+    assert "no control-plane changes" in r2.stdout
+    assert _branch(repo) == "feature", "no-op success must restore the entry branch"
+
+
+def test_failed_commit_leaves_no_staged_residue(tmp_path: Path) -> None:
+    """rm-045: a failure between `git add` and `git commit` must restore
+    the entry branch WITH a clean index — the old branch-only restore left
+    the half-staged mirror edits staged on the restored branch."""
+    origin = _make_origin(tmp_path)
+    repo = _make_repo(origin, tmp_path)
+    home = _fake_home(tmp_path)
+    frozen = _frozen_clock(tmp_path)
+
+    _git(repo, "checkout", "-q", "-b", "feature")
+    hook = repo / ".git" / "hooks" / "pre-commit"
+    hook.write_text("#!/bin/sh\nexit 1\n")
+    hook.chmod(0o755)
+
+    r = _run(_env(repo, home, frozen), repo)
+    assert r.returncode != 0, "rejected commit must fail the run"
+    assert "FAILED" in r.stderr
+    assert "restored checkout to feature" in r.stderr
+    assert _branch(repo) == "feature"
+    staged = _git(repo, "diff", "--cached", "--name-only").stdout
+    assert staged == "", f"restore left staged residue: {staged!r}"
+    dirty = _git(repo, "status", "--porcelain").stdout
+    assert dirty == "", f"restore left working-tree residue: {dirty!r}"
+
+
+def test_fetch_failure_is_visible_and_fails_loud(tmp_path: Path) -> None:
+    """rm-045: fetch_ok used to be a dead variable — a failed fetch was
+    silent. It must now WARN; the run then proceeds against the stale
+    tracking ref and fails loudly at the push (broken remote)."""
+    origin = _make_origin(tmp_path)
+    repo = _make_repo(origin, tmp_path)
+    home = _fake_home(tmp_path)
+    frozen = _frozen_clock(tmp_path)
+
+    _git(repo, "checkout", "-q", "-b", "feature")
+    _git(
+        repo, "remote", "set-url", "origin",
+        str(tmp_path / "nonexistent-remote.git"),
+    )
+    r = _run(_env(repo, home, frozen), repo)
+    assert r.returncode != 0, "push to a broken remote must fail the run"
+    assert "WARNING: fetch origin/data failed" in r.stderr
+    assert "FAILED" in r.stderr
+    assert _branch(repo) == "feature"

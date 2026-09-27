@@ -82,8 +82,8 @@ description = "Known-safe paths and test fixtures"
 # (fingerprint lines `commit:file:rule:id:line`, auto-read from repo root),
 # NOT in this fleet-wide file.
 paths = [
-  '''(?i)\.(lock|snap|png|jpg|jpeg|gif|webp)$''',
-  '''gitleaks\.toml''',
+  '''(?i)(^|/)[^/]*\.(lock|snap|png|jpg|jpeg|gif|webp)$''',
+  '''(^|/)gitleaks\.toml$''',
   # Fixture DIRECTORIES, any directory component named fixtures/ or fixture/ —
   # never files whose NAME contains "fixture" under a tests/ tree. Cycle-5
   # assess (rm-037 reopen): the previous `(?i)tests?/.*fixtures?` exempted
@@ -92,14 +92,20 @@ paths = [
   # the fleet config (live-binary A/B, gitleaks 8.28.0/8.30.1). Anchored to
   # directory components only; filename-shaped escapes are gone.
   '''(?i)(^|/)fixtures?/''',
-  '''(?i)native/.*/vendor/''',
-  '''node_modules/''',
-  '''web/dist/''',
-  '''dist/''',
+  '''(?i)(^|/)native/.*/vendor/''',
+  '''(^|/)node_modules/''',
+  # Cycle-6 rm-037 reopen: `dist/` and `web/dist/` were BARE substrings —
+  # gitleaks matches paths[] against the FULL path unanchored, so `dist/`
+  # exempted ANY directory whose name merely ENDS in dist (live A/B on
+  # 8.30.1: identical api_key file flagged in src/, silent in xdist/).
+  # Anchored to full directory boundaries: vendored build outputs only,
+  # at any depth (top level via ^, nested via /).
+  '''(^|/)web/dist/''',
+  '''(^|/)dist/''',
   # agent/redact.py and its tests deliberately contain secret-shaped strings —
   # they are the redaction engine itself; the sentinel would otherwise flag
   # the exact code that protects the fleet.
-  '''agent/redact\.py$''',
+  '''(^|/)agent/redact\.py$''',
   # hermes-gpt redaction-fixture tests (verified 2026-09-21): root-level
   # test files that deliberately
   # embed dummy PEM blocks — test_ui_security.py exercises redact_browser,
@@ -107,17 +113,17 @@ paths = [
   # unterminated-BEGIN case. All 4 sentinel findings were attributed to
   # ancestor commit 26ed7b4c0 (2026-08-31, upstream lineage); zero real
   # secrets (short synthetic bodies: b3BlbnNzaC1rZXk… / MIIabc).
-  '''test_ui_security\.py$''',
-  '''test_operator_policy\.py$''',
+  '''(^|/)test_ui_security\.py$''',
+  '''(^|/)test_operator_policy\.py$''',
   # Vendored upstream history: an accidental session export (exprted.jsonl,
   # removed from HEAD in 9a19fe1f) trips discord-client-id rules; zero real
   # token shapes verified 2026-09-21. Allowlisting the path quiets history scans.
-  '''exprted\.jsonl''',
+  '''(^|/)exprted\.jsonl$''',
   # History-only masked placeholders (verified 2026-09-21): Algolia public
   # search-only key in docusaurus.config.ts ('8fda2...07' masked) and removed
   # 2025 MoA example key ('sk-_yo..._rpg', file deleted from HEAD). No live secrets.
-  '''docusaurus\.config\.ts$''',
-  '''mixture_of_agents_tool\.py$''',
+  '''(^|/)docusaurus\.config\.ts$''',
+  '''(^|/)mixture_of_agents_tool\.py$''',
 ]
 commits = []
 # Repo-env templates with placeholder values are fine. These regexes match
@@ -125,6 +131,11 @@ commits = []
 # are anchored to placeholder SHAPES — a value merely CONTAINING "xxx" or
 # "..." is NOT exempt (cycle-5 rm-037 reopen: `xxx+` suppressed a live
 # q8Kw2xxx…-shaped value; bare `\.{3}` would suppress any dotted value).
+# Cycle-6 rm-043 (batch F4): regexTarget pinned to `secret` — these regexes
+# match the CAPTURED SECRET VALUE (gitleaks 8.30 default, verified live in
+# cycle-5). Made explicit so a future default flip to `match` cannot quietly
+# turn these value-shape anchors into line-shape suppressions.
+regexTarget = "secret"
 regexes = [
   # all-x placeholder values (xxxxx …) only
   '''^x{3,}$''',
