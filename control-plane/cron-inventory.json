@@ -1,5 +1,5 @@
-# generated 2026-09-27T08:40:12Z
-# 57 jobs
+# generated 2026-09-28T08:40:12Z
+# 58 jobs
 {
   "06139865d5e8": {
     "enabled": true,
@@ -386,6 +386,15 @@
       "display": "every 5m",
       "kind": "interval",
       "minutes": 5
+    }
+  },
+  "d1c3751fb37a": {
+    "enabled": true,
+    "name": "item125 spool-script keeper (retire after PR 274 deploys)",
+    "schedule": {
+      "display": "every 2m",
+      "kind": "interval",
+      "minutes": 2
     }
   },
   "d2f8251b93a9": {
