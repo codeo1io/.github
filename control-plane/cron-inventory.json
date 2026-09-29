@@ -1,5 +1,5 @@
-# generated 2026-09-28T08:40:12Z
-# 58 jobs
+# generated 2026-09-29T08:40:12Z
+# 62 jobs
 {
   "06139865d5e8": {
     "enabled": true,
@@ -17,6 +17,15 @@
       "display": "every day at 06:00",
       "expr": "0 6 * * *",
       "kind": "cron"
+    }
+  },
+  "0e203084675e": {
+    "enabled": true,
+    "name": "autonomy-roadmap-sync-continuous",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
     }
   },
   "0f00397711e3": {
@@ -163,6 +172,15 @@
       "minutes": 360
     }
   },
+  "596d302e78eb": {
+    "enabled": true,
+    "name": "autonomy-fork-maintenance-continuous",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
   "5c5214622927": {
     "enabled": true,
     "name": "autonomous-steward-discovery (recreated)",
@@ -260,6 +278,15 @@
       "display": "every 15m",
       "kind": "interval",
       "minutes": 15
+    }
+  },
+  "97d5ecc738fa": {
+    "enabled": true,
+    "name": "autonomy-github-sync-active",
+    "schedule": {
+      "display": "every 5m",
+      "kind": "interval",
+      "minutes": 5
     }
   },
   "9acfb691823d": {
@@ -382,6 +409,15 @@
   "cd69dbd4c2b8": {
     "enabled": true,
     "name": "jarvis-watchdog",
+    "schedule": {
+      "display": "every 5m",
+      "kind": "interval",
+      "minutes": 5
+    }
+  },
+  "d14739cb234a": {
+    "enabled": true,
+    "name": "autonomy-execution-tick-active",
     "schedule": {
       "display": "every 5m",
       "kind": "interval",
