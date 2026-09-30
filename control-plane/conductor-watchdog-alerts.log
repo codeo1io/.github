@@ -1,276 +1,3 @@
-2026-09-10T08:21:58Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:21:58Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:21:58Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:21:58Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:21:58Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:21:58Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:21:58Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:21:58Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:21:58Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:21:58Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:21:58Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:21:58Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:57Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-10T08:21:57.489250+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260910-083257.log
-2026-09-10T08:32:58Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T08:32:48.820682+00:00 — operator attention needed
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T08:32:59.022541+00:00 — operator attention needed
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:32:59Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:02Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-10T08:32:58.586935+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260910-084302.log
-2026-09-10T08:43:03Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T08:43:01.345829+00:00 — operator attention needed
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T08:43:01.295663+00:00 — operator attention needed
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:43:04Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:07Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-10T08:43:03.463524+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260910-085307.log
-2026-09-10T08:53:08Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T08:53:06.880399+00:00 — operator attention needed
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T08:53:06.890753+00:00 — operator attention needed
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T08:53:09Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:10Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-10T08:53:08.429429+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260910-090310.log
-2026-09-10T09:03:11Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T09:03:07.683394+00:00 — operator attention needed
-2026-09-10T09:03:11Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T09:03:07.678307+00:00 — operator attention needed
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:03:12Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:16Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-10T09:03:11.265264+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260910-091316.log
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T09:13:14.964175+00:00 — operator attention needed
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T09:13:15.010399+00:00 — operator attention needed
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:13:18Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:17Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-10T09:13:17.677845+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260910-092417.log
-2026-09-10T09:24:18Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T09:24:10.722086+00:00 — operator attention needed
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T09:24:10.689662+00:00 — operator attention needed
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:24:19Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:18Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-10T09:24:18.518344+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260910-093518.log
-2026-09-10T09:35:19Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T09:35:14.408181+00:00 — operator attention needed
-2026-09-10T09:35:19Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T09:35:14.371793+00:00 — operator attention needed
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:35:20Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:28Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-10T09:35:19.255081+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260910-094528.log
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T09:45:20.058868+00:00 — operator attention needed
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T09:45:19.811728+00:00 — operator attention needed
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3694/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:45:29Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3696/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:31Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-10T09:45:28.986523+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260910-095631.log
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T09:56:31.081548+00:00 — operator attention needed
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-10T09:56:31.088579+00:00 — operator attention needed
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3383/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3405/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3417/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3421/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3470/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
-2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3471/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
 2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_preflight_clean_current_t0/runtime/campaigns/prop_test1/conductor.db) — check track registry
 2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_gate_keeps_proposal_0/runtime/campaigns/prop_test1/conductor.db) — check track registry
 2026-09-10T09:56:32Z conductor-watchdog[autonomy-prop_test1]: db missing (/tmp/pytest-of-agent/pytest-3473/test_tick_reverts_approval_whe0/runtime/campaigns/prop_test1/conductor.db) — check track registry
@@ -4998,3 +4725,276 @@ outcome-loop monitor: supervisor DEAD for run 8e48e148c2774a1cb89e43c87b957a14 �
 2026-09-29T08:36:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
 2026-09-29T08:36:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T08:35:19.740737+00:00 — operator attention needed
 2026-09-29T08:38:21Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 452a011e532ffbf7ac673a4df246cda9d70bd2b2 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-09-29T08:47:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T08:47:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T08:38:39.636667+00:00 — operator attention needed
+2026-09-29T08:58:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T08:58:18Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T08:48:48.163449+00:00 — operator attention needed
+2026-09-29T09:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T08:59:08.781332+00:00 — operator attention needed
+2026-09-29T09:09:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T09:09:17Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T09:09:17.803520+00:00 — operator attention needed
+2026-09-29T09:20:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T09:20:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T09:19:09.278656+00:00 — operator attention needed
+2026-09-29T09:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T09:28:43.000250+00:00 — operator attention needed
+2026-09-29T09:31:13Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T09:31:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T09:28:43.000250+00:00 — operator attention needed
+2026-09-29T09:42:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T09:42:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T09:39:00.418241+00:00 — operator attention needed
+2026-09-29T09:53:12Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 46m without end marker (last: progress 2026-09-29T09:07:11Z 148-PR89-merged-1b1879b-repin-6701c35-landed-treadmill-continues) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-29T09:53:13Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T09:53:13Z fix-driver-watch: driver has no fire-completion bookkeeping in 121m (last_run_at=2026-09-29T07:51:55.156086+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-09-29T09:53:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T09:49:32.205552+00:00 — operator attention needed
+2026-09-29T10:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T09:49:32.205552+00:00 — operator attention needed
+2026-09-29T10:04:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T10:00:30.654327+00:00 — operator attention needed
+2026-09-29T10:15:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T10:11:13.092699+00:00 — operator attention needed
+2026-09-29T10:26:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T10:22:47.435361+00:00 — operator attention needed
+2026-09-29T10:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T10:22:47.435361+00:00 — operator attention needed
+2026-09-29T10:37:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T10:33:28.820056+00:00 — operator attention needed
+2026-09-29T10:48:21Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T10:43:15.991873+00:00 — operator attention needed
+2026-09-29T10:59:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T10:53:35.588859+00:00 — operator attention needed
+2026-09-29T11:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T10:53:35.588859+00:00 — operator attention needed
+2026-09-29T11:10:22Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T11:03:48.748012+00:00 — operator attention needed
+2026-09-29T11:21:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T11:13:49.541967+00:00 — operator attention needed
+2026-09-29T11:30:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T11:24:14.392423+00:00 — operator attention needed
+2026-09-29T11:32:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T11:24:14.392423+00:00 — operator attention needed
+2026-09-29T11:43:17Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T11:37:29.681304+00:00 — operator attention needed
+2026-09-29T11:54:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T11:51:32.798541+00:00 — operator attention needed
+2026-09-29T12:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T11:51:32.798541+00:00 — operator attention needed
+2026-09-29T12:05:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T12:02:22.086399+00:00 — operator attention needed
+2026-09-29T12:16:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T12:12:41.580690+00:00 — operator attention needed
+2026-09-29T12:25:17Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T12:22:33.543369+00:00 — operator attention needed
+2026-09-29T12:27:21Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T12:22:33.543369+00:00 — operator attention needed
+2026-09-29T12:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T12:22:33.543369+00:00 — operator attention needed
+2026-09-29T12:38:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T12:37:27.737802+00:00 — operator attention needed
+2026-09-29T12:49:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T12:44:16.451053+00:00 — operator attention needed
+2026-09-29T13:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T12:54:31.290151+00:00 — operator attention needed
+2026-09-29T13:00:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T12:54:31.290151+00:00 — operator attention needed
+2026-09-29T13:11:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T13:04:57.963099+00:00 — operator attention needed
+2026-09-29T13:22:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T13:15:02.760855+00:00 — operator attention needed
+2026-09-29T13:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T13:25:34.698535+00:00 — operator attention needed
+2026-09-29T13:30:40Z failed-unit-janitor: healed maestro-deterministic-f51c3862b33f0fec33bb.service (stale foreign transient residue cleared after 1048s)
+2026-09-29T13:33:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T13:25:34.698535+00:00 — operator attention needed
+2026-09-29T13:44:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T13:36:34.647063+00:00 — operator attention needed
+2026-09-29T13:53:29Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted ca093599f9210e31fb916465b3b4840dba6d3521 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-09-29T13:55:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T13:53:53.021685+00:00 — operator attention needed
+2026-09-29T14:00:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T13:53:53.021685+00:00 — operator attention needed
+2026-09-29T14:06:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T13:53:53.021685+00:00 — operator attention needed
+2026-09-29T14:17:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T14:07:46.628041+00:00 — operator attention needed
+2026-09-29T14:28:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T14:20:13.511587+00:00 — operator attention needed
+2026-09-29T14:30:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T14:20:13.511587+00:00 — operator attention needed
+2026-09-29T14:39:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T14:30:23.856610+00:00 — operator attention needed
+2026-09-29T14:50:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T14:40:23.587543+00:00 — operator attention needed
+2026-09-29T15:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T14:51:01.493882+00:00 — operator attention needed
+2026-09-29T15:01:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T14:51:01.493882+00:00 — operator attention needed
+2026-09-29T15:12:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T15:02:12.286249+00:00 — operator attention needed
+2026-09-29T15:23:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T15:22:26.253569+00:00 — operator attention needed
+2026-09-29T15:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T15:22:26.253569+00:00 — operator attention needed
+2026-09-29T15:34:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T15:33:04.446043+00:00 — operator attention needed
+2026-09-29T15:45:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T15:43:29.675480+00:00 — operator attention needed
+2026-09-29T15:56:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T15:53:44.566651+00:00 — operator attention needed
+2026-09-29T16:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T15:53:44.566651+00:00 — operator attention needed
+2026-09-29T16:07:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T16:04:21.125470+00:00 — operator attention needed
+2026-09-29T16:18:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T16:14:53.483834+00:00 — operator attention needed
+2026-09-29T16:29:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T16:25:31.927697+00:00 — operator attention needed
+2026-09-29T16:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T16:25:31.927697+00:00 — operator attention needed
+2026-09-29T16:40:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T16:36:31.656690+00:00 — operator attention needed
+2026-09-29T16:51:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T16:46:22.398501+00:00 — operator attention needed
+2026-09-29T17:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T16:56:23.264887+00:00 — operator attention needed
+2026-09-29T17:02:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T16:56:23.264887+00:00 — operator attention needed
+2026-09-29T17:13:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T17:06:45.233856+00:00 — operator attention needed
+2026-09-29T17:24:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T17:17:58.437523+00:00 — operator attention needed
+2026-09-29T17:30:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T17:29:09.485665+00:00 — operator attention needed
+2026-09-29T17:35:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T17:29:09.485665+00:00 — operator attention needed
+2026-09-29T17:46:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T17:40:08.529222+00:00 — operator attention needed
+2026-09-29T17:57:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T17:51:34.243475+00:00 — operator attention needed
+2026-09-29T18:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T17:51:34.243475+00:00 — operator attention needed
+2026-09-29T18:08:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T18:02:34.488142+00:00 — operator attention needed
+2026-09-29T18:19:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T18:12:54.247288+00:00 — operator attention needed
+2026-09-29T18:30:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T18:22:28.048324+00:00 — operator attention needed
+2026-09-29T18:30:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T18:22:28.048324+00:00 — operator attention needed
+2026-09-29T18:41:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T18:32:28.357010+00:00 — operator attention needed
+2026-09-29T18:52:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T18:42:28.128181+00:00 — operator attention needed
+2026-09-29T19:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T18:53:07.791991+00:00 — operator attention needed
+2026-09-29T19:03:18Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T18:53:07.791991+00:00 — operator attention needed
+2026-09-29T19:14:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T19:05:13.298968+00:00 — operator attention needed
+2026-09-29T19:25:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T19:15:54.521506+00:00 — operator attention needed
+2026-09-29T19:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T19:25:54.061460+00:00 — operator attention needed
+2026-09-29T19:31:16Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 425abb790371e61b315a0764f9c04b54f5f66365 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-09-29T19:36:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T19:31:37.024621+00:00 — operator attention needed
+2026-09-29T19:47:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T19:41:38.047621+00:00 — operator attention needed
+2026-09-29T19:58:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T19:52:24.104695+00:00 — operator attention needed
+2026-09-29T20:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T19:52:24.104695+00:00 — operator attention needed
+2026-09-29T20:09:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T20:02:48.100334+00:00 — operator attention needed
+2026-09-29T20:20:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T20:20:21Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T20:13:02.721055+00:00 — operator attention needed
+2026-09-29T20:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T20:23:26.776941+00:00 — operator attention needed
+2026-09-29T20:31:22Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T20:31:25Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T20:23:26.776941+00:00 — operator attention needed
+2026-09-29T20:42:15Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T20:42:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T20:34:56.317573+00:00 — operator attention needed
+2026-09-29T20:53:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T20:45:53.075586+00:00 — operator attention needed
+2026-09-29T21:00:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T20:45:53.075586+00:00 — operator attention needed
+2026-09-29T21:04:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T21:01:22.579006+00:00 — operator attention needed
+2026-09-29T21:15:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T21:12:08.129074+00:00 — operator attention needed
+2026-09-29T21:26:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T21:23:15.891997+00:00 — operator attention needed
+2026-09-29T21:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T21:23:15.891997+00:00 — operator attention needed
+2026-09-29T21:37:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T21:23:15.891997+00:00 — operator attention needed
+2026-09-29T21:48:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T21:23:15.891997+00:00 — operator attention needed
+2026-09-29T21:59:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T21:59:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T21:48:34.397754+00:00 — operator attention needed
+2026-09-29T22:00:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T21:59:44.195199+00:00 — operator attention needed
+2026-09-29T22:10:13Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T22:10:17Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T22:10:05.000445+00:00 — operator attention needed
+2026-09-29T22:21:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T22:21:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T22:20:49.928929+00:00 — operator attention needed
+2026-09-29T22:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T22:20:49.928929+00:00 — operator attention needed
+2026-09-29T22:32:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T22:32:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T22:31:26.203001+00:00 — operator attention needed
+2026-09-29T22:38:19Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 81ee83e88d56cf489b4205543d8f510ba76d67a8 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-09-29T22:43:11Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 49m without end marker (last: start 2026-09-29T21:54:01Z 153) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-29T22:43:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T22:43:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T22:38:41.979452+00:00 — operator attention needed
+2026-09-29T22:54:11Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 60m without end marker (last: start 2026-09-29T21:54:01Z 153) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-29T22:54:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T22:54:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T22:48:45.743490+00:00 — operator attention needed
+2026-09-29T23:00:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T22:59:13.070636+00:00 — operator attention needed
+2026-09-29T23:05:11Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 71m without end marker (last: start 2026-09-29T21:54:01Z 153) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-29T23:05:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T23:05:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T22:59:13.070636+00:00 — operator attention needed
+2026-09-29T23:16:11Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 82m without end marker (last: start 2026-09-29T21:54:01Z 153) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-29T23:16:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T23:16:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T23:09:33.962744+00:00 — operator attention needed
+2026-09-29T23:27:11Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 93m without end marker (last: start 2026-09-29T21:54:01Z 153) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-29T23:27:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T23:27:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T23:19:18.512472+00:00 — operator attention needed
+2026-09-29T23:30:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T23:29:15.018963+00:00 — operator attention needed
+2026-09-29T23:38:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T23:38:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T23:29:15.018963+00:00 — operator attention needed
+2026-09-29T23:49:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-29T23:49:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T23:39:41.193570+00:00 — operator attention needed
+2026-09-30T00:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T23:49:48.933467+00:00 — operator attention needed
+2026-09-30T00:00:14Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T00:00:18Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-29T23:49:48.933467+00:00 — operator attention needed
+2026-09-30T00:11:11Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T00:11:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T00:11:14.187631+00:00 — operator attention needed
+2026-09-30T00:22:12Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 46m without end marker (last: start 2026-09-29T23:35:26Z 153) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-30T00:22:13Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T00:22:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T00:21:41.283351+00:00 — operator attention needed
+2026-09-30T00:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T00:21:41.283351+00:00 — operator attention needed
+2026-09-30T00:33:11Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 57m without end marker (last: start 2026-09-29T23:35:26Z 153) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-30T00:33:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T00:33:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T00:21:41.283351+00:00 — operator attention needed
+2026-09-30T00:44:12Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 68m without end marker (last: start 2026-09-29T23:35:26Z 153) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-30T00:44:13Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T00:44:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T00:34:07.551486+00:00 — operator attention needed
+2026-09-30T00:55:11Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 79m without end marker (last: start 2026-09-29T23:35:26Z 153) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-30T00:55:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T00:55:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T00:45:14.685862+00:00 — operator attention needed
+2026-09-30T01:00:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T00:56:24.502229+00:00 — operator attention needed
+2026-09-30T01:06:11Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 90m without end marker (last: start 2026-09-29T23:35:26Z 153) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-30T01:06:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T01:06:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T00:56:24.502229+00:00 — operator attention needed
+2026-09-30T01:17:13Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T01:17:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T01:07:40.716780+00:00 — operator attention needed
+2026-09-30T01:26:21Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted a0420d82ca92d6df3925de0fa939b1b803b294e4 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-09-30T01:28:17Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T01:28:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T01:26:41.567960+00:00 — operator attention needed
+2026-09-30T01:30:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T01:26:41.567960+00:00 — operator attention needed
+2026-09-30T01:39:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T01:39:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T01:36:25.723995+00:00 — operator attention needed
+2026-09-30T01:50:11Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T01:50:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T01:46:42.199661+00:00 — operator attention needed
+2026-09-30T02:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T01:56:36.994500+00:00 — operator attention needed
+2026-09-30T02:01:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T02:01:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T01:56:36.994500+00:00 — operator attention needed
+2026-09-30T02:12:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T02:12:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T02:06:52.005529+00:00 — operator attention needed
+2026-09-30T02:23:14Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T02:23:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T02:17:05.049123+00:00 — operator attention needed
+2026-09-30T02:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T02:26:59.451953+00:00 — operator attention needed
+2026-09-30T02:34:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T02:34:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T02:26:59.451953+00:00 — operator attention needed
+2026-09-30T02:45:11Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 50m without end marker (last: start 2026-09-30T01:54:19Z 153-maestro-deploy-ledger-writer) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-30T02:45:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T02:45:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T02:37:37.454697+00:00 — operator attention needed
+2026-09-30T02:56:11Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 61m without end marker (last: start 2026-09-30T01:54:19Z 153-maestro-deploy-ledger-writer) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-30T02:56:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T02:56:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T02:47:59.903712+00:00 — operator attention needed
+2026-09-30T03:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T02:57:59.005035+00:00 — operator attention needed
+2026-09-30T03:07:12Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 72m without end marker (last: start 2026-09-30T01:54:19Z 153-maestro-deploy-ledger-writer) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-30T03:07:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T03:07:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T02:57:59.005035+00:00 — operator attention needed
+2026-09-30T03:18:11Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 83m without end marker (last: start 2026-09-30T01:54:19Z 153-maestro-deploy-ledger-writer) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-30T03:18:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T03:18:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T03:08:03.931129+00:00 — operator attention needed
+2026-09-30T03:29:12Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 94m without end marker (last: start 2026-09-30T01:54:19Z 153-maestro-deploy-ledger-writer) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-30T03:29:13Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T03:29:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T03:28:48.837067+00:00 — operator attention needed
+2026-09-30T03:30:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T03:28:48.837067+00:00 — operator attention needed
+2026-09-30T03:40:12Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 105m without end marker (last: start 2026-09-30T01:54:19Z 153-maestro-deploy-ledger-writer) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-30T03:40:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T03:40:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T03:39:12.627880+00:00 — operator attention needed
+2026-09-30T03:51:11Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 116m without end marker (last: start 2026-09-30T01:54:19Z 153-maestro-deploy-ledger-writer) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-30T03:51:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T03:51:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T03:49:30.656324+00:00 — operator attention needed
+2026-09-30T04:00:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T03:59:46.894715+00:00 — operator attention needed
+2026-09-30T04:02:11Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 127m without end marker (last: start 2026-09-30T01:54:19Z 153-maestro-deploy-ledger-writer) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-09-30T04:02:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T04:02:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T03:59:46.894715+00:00 — operator attention needed
+2026-09-30T04:13:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T04:13:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T04:09:57.406450+00:00 — operator attention needed
+2026-09-30T04:24:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T04:24:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T04:19:36.361696+00:00 — operator attention needed
+2026-09-30T04:30:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T04:29:15.483993+00:00 — operator attention needed
+2026-09-30T04:35:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T04:35:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T04:29:15.483993+00:00 — operator attention needed
+2026-09-30T04:46:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T04:46:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T04:40:13.991458+00:00 — operator attention needed
+2026-09-30T04:57:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T04:57:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T04:50:07.589314+00:00 — operator attention needed
+2026-09-30T05:00:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T04:59:49.505962+00:00 — operator attention needed
+2026-09-30T05:08:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T05:08:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T04:59:49.505962+00:00 — operator attention needed
+2026-09-30T05:19:13Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T05:19:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T05:10:06.089225+00:00 — operator attention needed
+2026-09-30T05:30:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T05:30:01.946583+00:00 — operator attention needed
+2026-09-30T05:30:13Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T05:30:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T05:30:10.133167+00:00 — operator attention needed
+2026-09-30T05:38:28Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 5cc1a09e7d140eea01c0dc9267910ebc0ad1d812 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-09-30T05:41:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T05:41:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T05:38:44.575207+00:00 — operator attention needed
+2026-09-30T05:52:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T05:52:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T05:48:15.874436+00:00 — operator attention needed
+2026-09-30T06:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T05:58:12.581312+00:00 — operator attention needed
+2026-09-30T06:03:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T06:03:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T05:58:12.581312+00:00 — operator attention needed
+2026-09-30T06:14:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T06:14:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T06:08:09.822504+00:00 — operator attention needed
+2026-09-30T06:25:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T06:25:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T06:18:14.043867+00:00 — operator attention needed
+2026-09-30T06:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T06:28:20.309864+00:00 — operator attention needed
+2026-09-30T06:36:13Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T06:36:18Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T06:28:20.309864+00:00 — operator attention needed
+2026-09-30T06:41:19Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 993f77bdd2e18c1660f55e80d4acf337e99c34c1 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-09-30T06:47:13Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T06:47:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T06:41:35.597233+00:00 — operator attention needed
+2026-09-30T06:58:17Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T06:58:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T06:51:26.737347+00:00 — operator attention needed
+2026-09-30T07:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T06:51:26.737347+00:00 — operator attention needed
+2026-09-30T07:09:14Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T07:09:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T07:02:01.529416+00:00 — operator attention needed
+2026-09-30T07:20:17Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T07:20:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T07:11:52.537010+00:00 — operator attention needed
+2026-09-30T07:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T07:21:50.151174+00:00 — operator attention needed
+2026-09-30T07:31:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T07:31:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T07:21:50.151174+00:00 — operator attention needed
+2026-09-30T07:42:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T07:42:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T07:32:45.155794+00:00 — operator attention needed
+2026-09-30T07:53:13Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T07:53:17Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T07:43:10.543536+00:00 — operator attention needed
+2026-09-30T08:00:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T07:54:39.594335+00:00 — operator attention needed
+2026-09-30T08:04:13Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-09-30T08:04:21Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T07:54:39.594335+00:00 — operator attention needed
+2026-09-30T08:15:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T08:05:27.911479+00:00 — operator attention needed
+2026-09-30T08:26:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T08:25:16.790572+00:00 — operator attention needed
+2026-09-30T08:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T08:25:16.790572+00:00 — operator attention needed
+2026-09-30T08:37:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-09-30T08:34:49.652536+00:00 — operator attention needed

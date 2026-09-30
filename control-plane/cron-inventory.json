@@ -1,6 +1,24 @@
-# generated 2026-09-29T08:40:12Z
-# 62 jobs
+# generated 2026-09-30T08:40:12Z
+# 71 jobs
 {
+  "05c1b0e4b268": {
+    "enabled": false,
+    "name": "temporary glmplus zero-error live probe",
+    "schedule": {
+      "display": "every 525600m",
+      "kind": "interval",
+      "minutes": 525600
+    }
+  },
+  "05d35654f609": {
+    "enabled": false,
+    "name": "temporary glmplus socket probe",
+    "schedule": {
+      "display": "every 525600m",
+      "kind": "interval",
+      "minutes": 525600
+    }
+  },
   "06139865d5e8": {
     "enabled": true,
     "name": "disk-pressure-watchdog",
@@ -21,7 +39,7 @@
   },
   "0e203084675e": {
     "enabled": true,
-    "name": "autonomy-roadmap-sync-continuous",
+    "name": "autonomy-roadmap-sync-daily-active",
     "schedule": {
       "display": "every 30m",
       "kind": "interval",
@@ -48,7 +66,7 @@
   },
   "151234d520a0": {
     "enabled": true,
-    "name": "autonomy-monthly-retrospective (recreated)",
+    "name": "autonomy-monthly-retrospective-active",
     "schedule": {
       "display": "0 5 1 * *",
       "expr": "0 5 1 * *",
@@ -100,6 +118,15 @@
       "minutes": 5
     }
   },
+  "2f3d13baf9cb": {
+    "enabled": false,
+    "name": "temporary zero-error probe 1",
+    "schedule": {
+      "display": "every 525600m",
+      "kind": "interval",
+      "minutes": 525600
+    }
+  },
   "2fe402f35f63": {
     "enabled": true,
     "name": "gh-autoprune",
@@ -120,7 +147,7 @@
   },
   "416985a5f808": {
     "enabled": true,
-    "name": "hermes-self-improvement-review (recreated)",
+    "name": "hermes-self-improvement-review-active",
     "schedule": {
       "display": "every day at 04:30",
       "expr": "30 4 * * *",
@@ -140,9 +167,18 @@
     "enabled": true,
     "name": "autonomy-schedules-register-active",
     "schedule": {
-      "display": "every 360m",
+      "display": "every 30m",
       "kind": "interval",
-      "minutes": 360
+      "minutes": 30
+    }
+  },
+  "4c02b582c444": {
+    "enabled": false,
+    "name": "temporary glmplus e2e probe",
+    "schedule": {
+      "display": "every 525600m",
+      "kind": "interval",
+      "minutes": 525600
     }
   },
   "52e4d96deaa8": {
@@ -174,7 +210,7 @@
   },
   "596d302e78eb": {
     "enabled": true,
-    "name": "autonomy-fork-maintenance-continuous",
+    "name": "autonomy-fork-maintenance-active",
     "schedule": {
       "display": "every 30m",
       "kind": "interval",
@@ -183,7 +219,7 @@
   },
   "5c5214622927": {
     "enabled": true,
-    "name": "autonomous-steward-discovery (recreated)",
+    "name": "autonomous-steward-discovery-active",
     "schedule": {
       "display": "every 360m",
       "kind": "interval",
@@ -253,6 +289,15 @@
       "minutes": 5
     }
   },
+  "80ee2bb0e30f": {
+    "enabled": false,
+    "name": "temporary zero-error probe 3",
+    "schedule": {
+      "display": "every 525600m",
+      "kind": "interval",
+      "minutes": 525600
+    }
+  },
   "87b92274d24d": {
     "enabled": true,
     "name": "autonomy-ecosystem-research-daily-active",
@@ -307,6 +352,15 @@
       "minutes": 15
     }
   },
+  "a0522ffba229": {
+    "enabled": false,
+    "name": "temporary zero-error probe 2",
+    "schedule": {
+      "display": "every 525600m",
+      "kind": "interval",
+      "minutes": 525600
+    }
+  },
   "a1bd8113a106": {
     "enabled": true,
     "name": "hermes-gpt MCP watchdog",
@@ -327,7 +381,7 @@
   },
   "af64214ae727": {
     "enabled": true,
-    "name": "autonomy-proposal-digest",
+    "name": "autonomy-proposal-synthesis-active",
     "schedule": {
       "display": "every day at 08:00",
       "expr": "0 8 * * *",
@@ -353,8 +407,8 @@
     }
   },
   "b94fa05730d4": {
-    "enabled": true,
-    "name": "autonomy-roadmap-sync-daily-active",
+    "enabled": false,
+    "name": "autonomy-roadmap-sync-daily-active-superseded-b94fa057",
     "schedule": {
       "display": "30 1 * * *",
       "expr": "30 1 * * *",
@@ -380,8 +434,8 @@
     }
   },
   "c2105c87f0b5": {
-    "enabled": true,
-    "name": "autonomy-fork-maintenance-active",
+    "enabled": false,
+    "name": "autonomy-fork-maintenance-active-superseded-c2105c87",
     "schedule": {
       "display": "every 360m",
       "kind": "interval",
@@ -390,7 +444,7 @@
   },
   "c811531dfe03": {
     "enabled": true,
-    "name": "autonomy-deep-strategy-scan (recreated)",
+    "name": "autonomy-deep-strategy-scan-active",
     "schedule": {
       "display": "every sunday at 03:30",
       "expr": "30 3 * * 0",
@@ -449,6 +503,15 @@
       "display": "every 10m",
       "kind": "interval",
       "minutes": 10
+    }
+  },
+  "d48a26b69a4b": {
+    "enabled": false,
+    "name": "temporary socket path probe",
+    "schedule": {
+      "display": "every 525600m",
+      "kind": "interval",
+      "minutes": 525600
     }
   },
   "d4d88d7b54a0": {
@@ -514,6 +577,15 @@
       "minutes": 20
     }
   },
+  "e47e290a395a": {
+    "enabled": false,
+    "name": "temporary zero-error probe 1",
+    "schedule": {
+      "display": "every 525600m",
+      "kind": "interval",
+      "minutes": 525600
+    }
+  },
   "eadcf8bc6412": {
     "enabled": true,
     "name": "gateway-db-gc",
@@ -548,6 +620,15 @@
       "display": "every 10m",
       "kind": "interval",
       "minutes": 10
+    }
+  },
+  "fdbef5ba9fcf": {
+    "enabled": true,
+    "name": "temporary zero-error probe 2",
+    "schedule": {
+      "display": "every 525600m",
+      "kind": "interval",
+      "minutes": 525600
     }
   },
   "fefedca6eb1d": {
