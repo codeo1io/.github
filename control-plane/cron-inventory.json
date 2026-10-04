@@ -1,6 +1,15 @@
-# generated 2026-10-03T08:40:06Z
-# 63 jobs
+# generated 2026-10-04T08:40:41Z
+# 65 jobs
 {
+  "04999fd7525c": {
+    "enabled": true,
+    "name": "deploy-checkout-sync",
+    "schedule": {
+      "display": "every 120m",
+      "kind": "interval",
+      "minutes": 120
+    }
+  },
   "06139865d5e8": {
     "enabled": true,
     "name": "disk-pressure-watchdog",
@@ -458,6 +467,15 @@
       "display": "every 10m",
       "kind": "interval",
       "minutes": 10
+    }
+  },
+  "d422ec4b24b8": {
+    "enabled": true,
+    "name": "maintenance-health-monitor",
+    "schedule": {
+      "display": "every 60m",
+      "kind": "interval",
+      "minutes": 60
     }
   },
   "d4d88d7b54a0": {
