@@ -1,26 +1,16 @@
-# generated 2026-10-04T08:40:41Z
+# generated 2026-10-05T08:40:04Z
 ChadGPT
 agent
 agent-reach-harness-integration
-agenttrace
-dashboard
 discord-turbo
 fleet-status
 glmplus
-hermes-agent
-hermes-agent-2
 hermes-autonomy
 hermes-chat-journal
 hermes-config
 hermes-control-ui
-hermes-curator-evolver
-hermes-gpt
-hermes-gpt-2
 hermes-infra
-magic-context
-magic-hermes
 magic-mcp
-openai-embedding-proxy
 stonks
 stonks-2
 systematic

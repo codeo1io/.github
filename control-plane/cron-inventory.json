@@ -1,5 +1,5 @@
-# generated 2026-10-04T08:40:41Z
-# 65 jobs
+# generated 2026-10-05T08:40:04Z
+# 67 jobs
 {
   "04999fd7525c": {
     "enabled": true,
@@ -125,6 +125,15 @@
       "display": "every 15m",
       "kind": "interval",
       "minutes": 15
+    }
+  },
+  "3a9350ba7e17": {
+    "enabled": true,
+    "name": "autonomy-portfolio-review-active",
+    "schedule": {
+      "display": "daily at 08:00",
+      "expr": "0 8 * * *",
+      "kind": "cron"
     }
   },
   "416985a5f808": {
@@ -335,7 +344,7 @@
     }
   },
   "af64214ae727": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-proposal-synthesis-active",
     "schedule": {
       "display": "every day at 08:00",
@@ -431,6 +440,15 @@
       "display": "every 5m",
       "kind": "interval",
       "minutes": 5
+    }
+  },
+  "cd6ef4c02342": {
+    "enabled": true,
+    "name": "vetted-proposals-digest",
+    "schedule": {
+      "display": "every 15m",
+      "kind": "interval",
+      "minutes": 15
     }
   },
   "d14739cb234a": {
