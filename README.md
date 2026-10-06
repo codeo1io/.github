@@ -58,8 +58,11 @@ repo daily, instead of per-repo manual clicking.
 
 Cron job `repo-settings-sync` (daily 08:30 UTC, native hermes cron) runs
 `~/.hermes/scripts/repo-settings-sync.sh`, which self-updates this repo to
-`origin/main`, runs the known-hosts drift check, then applies the sync. Output
-is logged to `~/.hermes/repo-settings-sync.log`.
+`origin/main`, runs the known-hosts drift check, then applies the sync. The
+wrapper propagates the sync's exit code (a failed settings sync fails the
+cron — never a permanent rc=0), while a pinned host-key drift ALERT stays
+report-only: printed loudly, never driving the exit code (rm-005). Output is
+logged to `~/.hermes/repo-settings-sync.log`.
 
 Cron job `control-plane-sync` (daily 08:40 UTC) runs
 `~/.hermes/scripts/control-plane-sync.sh`, a thin wrapper that execs
@@ -67,15 +70,27 @@ Cron job `control-plane-sync` (daily 08:40 UTC) runs
 production code. It mirrors a bounded tail of operational state (tracks,
 watchdog alerts capped at 5,000 lines, both kanban OWNERS references, cron +
 runner inventories, and `corrections.yaml` + `claims.yaml` from the main
-`tree) to the public
-`data` branch, single-flight flock'd, restoring its entry branch on failure.
+tree) to the public
+`data` branch, single-flight flock'd, restoring its entry branch on any exit
+(failure, success, or no-op). The generated cron inventory carries a
+`# N jobs` count header, and the sync aborts nonzero rather than publishing
+an empty public inventory when `~/.hermes/cron/jobs.json` is missing,
+shapeless, or empty (rm-046).
 `scripts/verify_deployed_artifacts.py` cross-checks the deployed wrapper and
 `MANIFEST.sha256` against this repo (exit 0 clean / 1 drift / 2 not a
-deployed host; half-deployed pairs grade drift rc=1). All five cron-wired
-entrypoints are pinned (cycle-7 F2) and the live verifier is rc=0; delegate
-pins track the canonical checkout the crons exec, so landing repo changes
-makes them stale by design — re-pin and re-confirm rc=0 after any
-host-affecting merge (rm-042 rider).
+deployed host; half-deployed pairs grade drift rc=1). Before the mirror
+switch, the same daily run executes `scripts/verify_deployed_artifacts.py`
+against canonical and journals every state change (rc 0/1/2 + drift names,
+deduped) to `control-plane/manifest-verify.log` on the public `data` branch
+(rm-048): a red line there means deployed artifacts have drifted and the
+delegate pins need re-pinning. All five cron-wired entrypoints are pinned;
+delegate pins track the canonical checkout the crons exec, so landing repo
+changes makes them stale by design — re-pin and re-confirm rc=0 after any
+host-affecting merge (rm-042 rider, owner-gated).
+
+Per-item roadmap evidence and campaign history live in
+`docs/roadmap-ledger.md`; the rendered `ROADMAP.md` is a live-status view
+that may lag shipped code.
 
 ## Manual use
 

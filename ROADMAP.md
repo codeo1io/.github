@@ -123,4 +123,26 @@
 - `rm-034` Renovate shared default preset — superseded
 - `rm-035` OSSF Scorecard on the public repos — superseded
 
+<!-- cycle-9 roadmap extension (2026-10-06, conductor run ad24fffa0e244337b97efff32648b3da; status flips + evidence appends sourced from cycle-9 brainstorm attempt edb5a3be; FULL EVIDENCE in docs/roadmap-ledger.md § Cycle-9 — this block is the render-volatile pointer layer, per render-marker contract) -->
+
+## Cycle-9 status reconciliation (2026-10-06)
+
+Status flips — one-line pointers; full per-clause evidence in `docs/roadmap-ledger.md` § Cycle-9:
+
+- `rm-045` — done: landed cbf7bf1, merged 43d8097 (cycle-8); live-verified 68/68 with all ten subfixes present at HEAD.
+- `rm-046` — done: clauses 1–3 landed in merge 661c70a (dict-tolerant parse, `# N jobs` count header, loud canary, both-shape fixture, locking tests); clause 4 met live — `origin/data:control-plane/cron-inventory.json` non-empty with count header on every daily run since 2026-10-04 (`# 68 jobs` at 2026-10-06T08:40:36Z).
+- `rm-047` — done: both gitleaks.toml allowlist entries anchored (`(^|/)web/dist/`, `(^|/)dist/`) in merge 661c70a; locked by static + live-binary tests; cloud-validated (leak-sentinel-self SUCCESS, PR #13).
+- `rm-036` — done: all five flagged scripts have test files at HEAD; suite 77/77 at cycle-8 final validation.
+- `rm-005` — done: host half landed cycles 5–7 (wrapper propagates the sync rc; host-key ALERT report-only); README half lands in this cycle-9 batch (plan unit U4-E4); original item text recovered in the ledger seed.
+- `rm-022` — reopened (status: candidate): render 865477f closed it "superseded", but only the JUDGMENT-scoping half landed (cycle-8 G4); the cron-wiring residual stays open.
+- `rm-042` / `rm-048` — evidence append (owner-gated): the deployed-artifact trust chain is RED in production since 2026-09-26 — `origin/data:control-plane/manifest-verify.log` holds one deduped line `2026-09-26T08:40:42Z rc=1 drift=check_known_hosts.py,control-plane-sync.sh,repo-settings-sync.sh,sync_data_branch.py,sync_repo_settings.py` (no later line = state unchanged; the journal line itself proves rm-048's repo half works). OWNER-GATED: re-pin the five delegate digests in `~/.hermes/scripts/MANIFEST.sha256` and re-prove rc=0.
+
+### Preserve sanctioned ledger extensions across roadmap renders
+- id: `rm-052` | track: reliability | priority: 80.0 | status: candidate (owner-gated)
+- signals: render 865477f rewrote ROADMAP.md from the gateway DB (−673/+84) and destroyed the sanctioned cycle-8 ledger extension, all cycle addenda, per-item signals/evidence, and every pre-rm-016 item (incl. then-open rm-005); later renders churn only the dependents line; sanctioned hand extensions survive zero renders; two writers own one file and the render wins.
+- acceptance: the roadmap-sync render either preserves sanctioned extension blocks + addenda byte-exact or ingests status flips/evidence into the gateway DB so renders carry them; a landed cycle extension survives ≥1 render cycle verbatim; `docs/roadmap-ledger.md` remains untouched by renders.
+- evidence: render diff 865477f vs the +103 cycle-8 rider at 661c70a; ROADMAP.md git log; cycle-9 notes. Full text: `docs/roadmap-ledger.md` § Cycle-9.
+
+Full per-clause evidence and the recovered campaign history (cycles 1–8, verbatim from `ROADMAP.md` at 661c70a) live in `docs/roadmap-ledger.md` — render-safe by construction: the roadmap render rewrites only `ROADMAP.md`.
+
 <!-- managed by hermes-roadmap render; do not edit by hand -->
