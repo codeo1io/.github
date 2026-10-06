@@ -1,254 +1,3 @@
-2026-09-11T06:45:28Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T06:45:25.520951+00:00 — operator attention needed
-2026-09-11T06:55:43Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-11T06:45:27.655669+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260911-065543.log
-2026-09-11T06:55:44Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T06:55:43.213832+00:00 — operator attention needed
-2026-09-11T06:55:44Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T06:55:43.251866+00:00 — operator attention needed
-2026-09-11T07:06:44Z conductor-watchdog[infra-deploy]: relaunch storm (2 in 30m, campaign still due) — NOT relaunching again, operator attention needed
-2026-09-11T07:06:45Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:06:44.222736+00:00 — operator attention needed
-2026-09-11T07:06:45Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:06:44.226246+00:00 — operator attention needed
-2026-09-11T07:16:48Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-11T06:55:44.675347+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260911-071648.log
-2026-09-11T07:16:49Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:16:44.720779+00:00 — operator attention needed
-2026-09-11T07:16:50Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:16:43.665702+00:00 — operator attention needed
-2026-09-11T07:26:52Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-11T07:20:22.083817+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260911-072652.log
-2026-09-11T07:26:53Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:26:45.949183+00:00 — operator attention needed
-2026-09-11T07:26:54Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:26:48.386508+00:00 — operator attention needed
-2026-09-11T07:29:06Z conductor-watchdog[infra-deploy]: relaunch storm (2 in 30m, campaign still due) — NOT relaunching again, operator attention needed
-2026-09-11T07:29:07Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:28:57.449822+00:00 — operator attention needed
-2026-09-11T07:29:07Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:29:07.492984+00:00 — operator attention needed
-2026-09-11T07:29:08Z conductor-watchdog[infra-deploy]: campaign breaker OPEN (consecutive_failures pending) — conductor refuses to mint; operator reset via 'conductor maintenance-reset' needed, NOT a relaunch (mark=2026-09-09T14:01:11.997346+00:00)
-2026-09-11T07:29:09Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:29:07.569351+00:00 — operator attention needed
-2026-09-11T07:29:09Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:29:07.526117+00:00 — operator attention needed
-2026-09-11T07:29:11Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:29:07.569351+00:00 — operator attention needed
-2026-09-11T07:29:11Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:29:07.526117+00:00 — operator attention needed
-2026-09-11T07:37:56Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:37:50.398488+00:00 — operator attention needed
-2026-09-11T07:37:56Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:37:49.096080+00:00 — operator attention needed
-2026-09-11T07:42:13Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:42:07.382614+00:00 — operator attention needed
-2026-09-11T07:42:13Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:42:07.371465+00:00 — operator attention needed
-2026-09-11T07:47:59Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:47:58.925048+00:00 — operator attention needed
-2026-09-11T07:48:00Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:47:58.925769+00:00 — operator attention needed
-2026-09-11T07:58:05Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:58:03.229389+00:00 — operator attention needed
-2026-09-11T07:58:05Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T07:58:03.363879+00:00 — operator attention needed
-2026-09-11T08:09:06Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T08:09:04.834346+00:00 — operator attention needed
-2026-09-11T08:09:06Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T08:09:04.659234+00:00 — operator attention needed
-2026-09-11T08:20:07Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T08:20:04.109838+00:00 — operator attention needed
-2026-09-11T08:20:07Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T08:20:04.093729+00:00 — operator attention needed
-2026-09-11T08:31:08Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T08:31:05.940561+00:00 — operator attention needed
-2026-09-11T08:31:08Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T08:31:05.620952+00:00 — operator attention needed
-2026-09-11T08:42:11Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T08:42:05.961709+00:00 — operator attention needed
-2026-09-11T08:42:12Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T08:42:05.981696+00:00 — operator attention needed
-2026-09-11T08:53:12Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T08:53:03.941037+00:00 — operator attention needed
-2026-09-11T08:53:12Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T08:53:04.018345+00:00 — operator attention needed
-2026-09-11T09:03:17Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T09:03:13.219976+00:00 — operator attention needed
-2026-09-11T09:03:17Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T09:03:13.168928+00:00 — operator attention needed
-2026-09-11T09:13:30Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T09:13:20.810881+00:00 — operator attention needed
-2026-09-11T09:13:30Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T09:13:20.659440+00:00 — operator attention needed
-2026-09-11T09:23:56Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T09:23:54.335332+00:00 — operator attention needed
-2026-09-11T09:23:56Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T09:23:54.295970+00:00 — operator attention needed
-2026-09-11T09:34:07Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T09:34:00.075018+00:00 — operator attention needed
-2026-09-11T09:34:08Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T09:34:00.013907+00:00 — operator attention needed
-2026-09-11T09:44:22Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T09:44:20.530827+00:00 — operator attention needed
-2026-09-11T09:44:22Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T09:44:20.499697+00:00 — operator attention needed
-2026-09-11T09:54:31Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T09:54:22.471207+00:00 — operator attention needed
-2026-09-11T09:54:31Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T09:54:22.459997+00:00 — operator attention needed
-2026-09-11T10:04:49Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T10:04:40.936229+00:00 — operator attention needed
-2026-09-11T10:04:49Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T10:04:41.010216+00:00 — operator attention needed
-2026-09-11T10:15:10Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T10:15:01.788325+00:00 — operator attention needed
-2026-09-11T10:15:10Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T10:15:02.510153+00:00 — operator attention needed
-2026-09-11T10:26:11Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T10:25:08.288201+00:00 — operator attention needed
-2026-09-11T10:26:11Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T10:25:29.270102+00:00 — operator attention needed
-2026-09-11T10:36:25Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T10:35:03.439105+00:00 — operator attention needed
-2026-09-11T10:36:25Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T10:35:47.938141+00:00 — operator attention needed
-2026-09-11T10:46:37Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T10:46:25.068883+00:00 — operator attention needed
-2026-09-11T10:46:37Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T10:45:22.077721+00:00 — operator attention needed
-2026-09-11T10:57:40Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T10:56:58.781748+00:00 — operator attention needed
-2026-09-11T10:57:40Z conductor-watchdog[autonomy-prop_f90b99ea2e694b30]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T10:57:40.201873+00:00 — operator attention needed
-2026-09-11T11:07:55Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T11:06:45.404983+00:00 — operator attention needed
-2026-09-11T11:18:06Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T11:17:43.380821+00:00 — operator attention needed
-2026-09-11T11:28:12Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T11:27:33.836808+00:00 — operator attention needed
-2026-09-11T11:39:13Z conductor-watchdog[autonomy-prop_b436dee5a9b34b34]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-11T11:38:30.498203+00:00 — operator attention needed
-2026-09-11T15:13:13Z fix-driver-watch: driver has no fire-completion bookkeeping in 361m (last_run_at=2026-09-11T09:11:55.260611+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-11T15:23:14Z fix-driver-watch: driver has no fire-completion bookkeeping in 371m (last_run_at=2026-09-11T09:11:55.260611+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-11T15:33:15Z fix-driver-watch: driver has no fire-completion bookkeeping in 381m (last_run_at=2026-09-11T09:11:55.260611+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-11T15:43:16Z fix-driver-watch: driver has no fire-completion bookkeeping in 391m (last_run_at=2026-09-11T09:11:55.260611+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-11T15:53:21Z fix-driver-watch: driver has no fire-completion bookkeeping in 401m (last_run_at=2026-09-11T09:11:55.260611+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-11T16:03:22Z fix-driver-watch: driver has no fire-completion bookkeeping in 411m (last_run_at=2026-09-11T09:11:55.260611+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-11T16:23:27Z fix-driver-watch: monitoring cron job 9286b6b0a5db PAUSED/DISABLED (since 2026-09-11T16:16:35.488515+00:00) — a silent pause is how the 03:58Z watcher outage hid for 9h
-2026-09-11T16:33:38Z fix-driver-watch: monitoring cron job 9286b6b0a5db PAUSED/DISABLED (since 2026-09-11T16:16:35.488515+00:00) — a silent pause is how the 03:58Z watcher outage hid for 9h
-2026-09-11T16:43:40Z fix-driver-watch: monitoring cron job 9286b6b0a5db PAUSED/DISABLED (since 2026-09-11T16:16:35.488515+00:00) — a silent pause is how the 03:58Z watcher outage hid for 9h
-2026-09-11T16:53:41Z fix-driver-watch: monitoring cron job 9286b6b0a5db PAUSED/DISABLED (since 2026-09-11T16:16:35.488515+00:00) — a silent pause is how the 03:58Z watcher outage hid for 9h
-2026-09-11T17:03:42Z fix-driver-watch: monitoring cron job 9286b6b0a5db PAUSED/DISABLED (since 2026-09-11T16:16:35.488515+00:00) — a silent pause is how the 03:58Z watcher outage hid for 9h
-2026-09-11T17:13:45Z fix-driver-watch: monitoring cron job 9286b6b0a5db PAUSED/DISABLED (since 2026-09-11T16:16:35.488515+00:00) — a silent pause is how the 03:58Z watcher outage hid for 9h
-2026-09-11T17:23:46Z fix-driver-watch: monitoring cron job 9286b6b0a5db PAUSED/DISABLED (since 2026-09-11T16:16:35.488515+00:00) — a silent pause is how the 03:58Z watcher outage hid for 9h
-2026-09-11T17:33:50Z fix-driver-watch: monitoring cron job 9286b6b0a5db PAUSED/DISABLED (since 2026-09-11T16:16:35.488515+00:00) — a silent pause is how the 03:58Z watcher outage hid for 9h
-2026-09-11T17:43:55Z fix-driver-watch: monitoring cron job 9286b6b0a5db PAUSED/DISABLED (since 2026-09-11T16:16:35.488515+00:00) — a silent pause is how the 03:58Z watcher outage hid for 9h
-2026-09-11T17:53:56Z fix-driver-watch: monitoring cron job 9286b6b0a5db PAUSED/DISABLED (since 2026-09-11T16:16:35.488515+00:00) — a silent pause is how the 03:58Z watcher outage hid for 9h
-2026-09-11T18:03:57Z fix-driver-watch: monitoring cron job 9286b6b0a5db PAUSED/DISABLED (since 2026-09-11T16:16:35.488515+00:00) — a silent pause is how the 03:58Z watcher outage hid for 9h
-2026-09-11T22:26:08Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-11T22:36:14Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-11T22:46:21Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-11T22:56:26Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-11T23:06:28Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-11T23:16:31Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T09:37:02Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T09:47:34Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T09:58:14Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T10:08:43Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T10:19:31Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T10:29:47Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T10:40:20Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T10:42:34Z conductor-watchdog[autonomy-prop_d1eca943f4134393]: run f4af776d408a47beb80d0e6841df6b08 TERMINAL status=failed — cycle finished (updated 2026-09-12T10:41:39.127482+00:00)
-2026-09-12T10:50:54Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T11:01:32Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T11:12:10Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T11:14:10Z conductor-watchdog[autonomy-prop_fd0dc8cb7c0c4e96]: campaign breaker OPEN (consecutive_failures pending) — conductor refuses to mint; operator reset via 'conductor maintenance-reset' needed, NOT a relaunch (mark=2026-09-12T11:02:30.517967+00:00)
-2026-09-12T11:14:11Z conductor-watchdog[autonomy-prop_de42de398a5e437b]: run 957745bbb9c04fbfbef2d697fa95e117 TERMINAL status=failed — cycle finished (updated 2026-09-12T11:14:10.468887+00:00)
-2026-09-12T11:22:36Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T11:24:38Z conductor-watchdog[autonomy-prop_de42de398a5e437b]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-12T11:24:10.468887+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_de42de398a5e437b-relaunch-20260912-112438.log
-2026-09-12T11:24:39Z conductor-watchdog[autonomy-prop_1aef8b81a7d14aa3]: campaign breaker OPEN (consecutive_failures pending) — conductor refuses to mint; operator reset via 'conductor maintenance-reset' needed, NOT a relaunch (mark=2026-09-12T11:22:46.080355+00:00)
-2026-09-12T11:32:38Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T11:42:59Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T11:45:04Z conductor-watchdog[infra-deploy]: supervisor dead (run status=running) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260912-114504.log
-2026-09-12T11:45:05Z conductor-watchdog[autonomy-prop_9a7a25b233ca4eff]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_9a7a25b233ca4eff-relaunch-20260912-114505.log
-2026-09-12T11:45:05Z conductor-watchdog[autonomy-prop_3d4c276ce8d54f16]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_3d4c276ce8d54f16-relaunch-20260912-114505.log
-2026-09-12T11:45:06Z conductor-watchdog[autonomy-prop_5281b2215ee24a51]: campaign breaker OPEN (consecutive_failures pending) — conductor refuses to mint; operator reset via 'conductor maintenance-reset' needed, NOT a relaunch (mark=2026-09-08T04:52:34.873399+00:00)
-2026-09-12T11:45:06Z conductor-watchdog[autonomy-prop_c8b40cc58d164e8e]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_c8b40cc58d164e8e-relaunch-20260912-114506.log
-2026-09-12T11:54:01Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T12:04:13Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T12:14:56Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T12:14:56Z fix-driver-watch: driver has no fire-completion bookkeeping in 163m (last_run_at=2026-09-12T09:31:01.472218+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-12T12:25:34Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T12:25:34Z fix-driver-watch: driver has no fire-completion bookkeeping in 174m (last_run_at=2026-09-12T09:31:01.472218+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-12T12:37:57Z conductor-watchdog[autonomy-prop_ea9254392bf942aa]: campaign breaker OPEN (consecutive_failures pending) — conductor refuses to mint; operator reset via 'conductor maintenance-reset' needed, NOT a relaunch (mark=2026-09-12T12:30:55.928770+00:00)
-2026-09-12T13:19:12Z conductor-watchdog[autonomy-prop_d1eca943f4134393]: campaign breaker OPEN (consecutive_failures pending) — conductor refuses to mint; operator reset via 'conductor maintenance-reset' needed, NOT a relaunch (mark=2026-09-12T13:14:03.739594+00:00)
-2026-09-12T16:19:47Z fix-driver-watch: monitoring cron job d32ca255c740 PAUSED/DISABLED (since 2026-09-12T16:15:45.110628+00:00) — a silent pause is how the 03:58Z watcher outage hid for 9h
-2026-09-12T17:27:50Z fix-driver-watch: monitoring cron job 9286b6b0a5db PAUSED/DISABLED (since 2026-09-12T16:51:12.498528+00:00) — a silent pause is how the 03:58Z watcher outage hid for 9h
-2026-09-12T17:27:50Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T17:38:31Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T17:48:45Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T17:59:10Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T18:09:35Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T18:19:58Z fix-driver-watch: monitoring cron job 088b0d5ed805 PAUSED/DISABLED (since 2026-09-12T18:18:35.594959+00:00) — a silent pause is how the 03:58Z watcher outage hid for 9h
-2026-09-12T18:19:59Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T18:30:47Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T18:41:31Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T18:51:54Z fix-driver-watch: cron job 088b0d5ed805 last_status=error — driver/status machinery failing, needs eyes
-2026-09-12T23:53:14Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 50m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-12T23:53:14Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 1433m ago, no claim in 1433m — scheduler wedge, not a fire problem
-2026-09-12T23:53:14Z fix-driver-watch: driver has no fire-completion bookkeeping in 1433m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T00:03:26Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 60m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T00:13:35Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 70m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T00:23:52Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 80m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T00:34:05Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 91m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T00:44:15Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 101m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T00:54:17Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 111m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T00:54:18Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 54m ago, no claim in 54m — scheduler wedge, not a fire problem
-2026-09-13T01:04:25Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 121m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T01:04:26Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 64m ago, no claim in 64m — scheduler wedge, not a fire problem
-2026-09-13T01:14:54Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 131m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T01:14:54Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 74m ago, no claim in 74m — scheduler wedge, not a fire problem
-2026-09-13T01:24:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 142m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T01:24:57Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 84m ago, no claim in 84m — scheduler wedge, not a fire problem
-2026-09-13T01:34:59Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 152m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T01:34:59Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 94m ago, no claim in 94m — scheduler wedge, not a fire problem
-2026-09-13T01:34:59Z fix-driver-watch: driver has no fire-completion bookkeeping in 94m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T01:45:04Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 162m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T01:45:05Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 105m ago, no claim in 105m — scheduler wedge, not a fire problem
-2026-09-13T01:45:05Z fix-driver-watch: driver has no fire-completion bookkeeping in 105m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T01:55:46Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 172m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T01:55:47Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 115m ago, no claim in 115m — scheduler wedge, not a fire problem
-2026-09-13T01:55:47Z fix-driver-watch: driver has no fire-completion bookkeeping in 115m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T02:06:15Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 183m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T02:06:16Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 126m ago, no claim in 126m — scheduler wedge, not a fire problem
-2026-09-13T02:06:16Z fix-driver-watch: driver has no fire-completion bookkeeping in 126m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T02:16:32Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 193m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T02:16:32Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 136m ago, no claim in 136m — scheduler wedge, not a fire problem
-2026-09-13T02:16:32Z fix-driver-watch: driver has no fire-completion bookkeeping in 136m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T02:27:03Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 204m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T02:27:03Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 147m ago, no claim in 147m — scheduler wedge, not a fire problem
-2026-09-13T02:27:03Z fix-driver-watch: driver has no fire-completion bookkeeping in 147m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T02:37:14Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 214m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T02:37:14Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 157m ago, no claim in 157m — scheduler wedge, not a fire problem
-2026-09-13T02:37:14Z fix-driver-watch: driver has no fire-completion bookkeeping in 157m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T02:47:17Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 224m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T02:47:17Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 167m ago, no claim in 167m — scheduler wedge, not a fire problem
-2026-09-13T02:47:17Z fix-driver-watch: driver has no fire-completion bookkeeping in 167m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T02:57:42Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 234m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T02:57:42Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 177m ago, no claim in 177m — scheduler wedge, not a fire problem
-2026-09-13T02:57:42Z fix-driver-watch: driver has no fire-completion bookkeeping in 177m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T03:07:47Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 244m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T03:07:47Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 187m ago, no claim in 187m — scheduler wedge, not a fire problem
-2026-09-13T03:07:48Z fix-driver-watch: driver has no fire-completion bookkeeping in 187m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T03:18:16Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 255m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T03:18:16Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 198m ago, no claim in 198m — scheduler wedge, not a fire problem
-2026-09-13T03:18:16Z fix-driver-watch: driver has no fire-completion bookkeeping in 198m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T03:28:40Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 265m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T03:28:41Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 208m ago, no claim in 208m — scheduler wedge, not a fire problem
-2026-09-13T03:28:41Z fix-driver-watch: driver has no fire-completion bookkeeping in 208m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T03:39:27Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 276m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T03:39:27Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 219m ago, no claim in 219m — scheduler wedge, not a fire problem
-2026-09-13T03:39:27Z fix-driver-watch: driver has no fire-completion bookkeeping in 219m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T03:49:30Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 286m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T03:49:30Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 229m ago, no claim in 229m — scheduler wedge, not a fire problem
-2026-09-13T03:49:30Z fix-driver-watch: driver has no fire-completion bookkeeping in 229m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T03:59:57Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 297m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T03:59:57Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 239m ago, no claim in 239m — scheduler wedge, not a fire problem
-2026-09-13T03:59:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 239m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T04:10:23Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 307m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T04:10:23Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 250m ago, no claim in 250m — scheduler wedge, not a fire problem
-2026-09-13T04:10:24Z fix-driver-watch: driver has no fire-completion bookkeeping in 250m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T04:20:34Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 317m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T04:20:35Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 260m ago, no claim in 260m — scheduler wedge, not a fire problem
-2026-09-13T04:20:35Z fix-driver-watch: driver has no fire-completion bookkeeping in 260m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T04:31:25Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 328m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T04:31:25Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 271m ago, no claim in 271m — scheduler wedge, not a fire problem
-2026-09-13T04:31:25Z fix-driver-watch: driver has no fire-completion bookkeeping in 271m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T04:42:15Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 339m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T04:42:15Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 282m ago, no claim in 282m — scheduler wedge, not a fire problem
-2026-09-13T04:42:15Z fix-driver-watch: driver has no fire-completion bookkeeping in 282m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T04:52:36Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 349m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T04:52:36Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 292m ago, no claim in 292m — scheduler wedge, not a fire problem
-2026-09-13T04:52:36Z fix-driver-watch: driver has no fire-completion bookkeeping in 292m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T05:03:02Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 360m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T05:03:03Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 303m ago, no claim in 303m — scheduler wedge, not a fire problem
-2026-09-13T05:03:03Z fix-driver-watch: driver has no fire-completion bookkeeping in 303m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T05:13:14Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 370m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T05:13:14Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 313m ago, no claim in 313m — scheduler wedge, not a fire problem
-2026-09-13T05:13:14Z fix-driver-watch: driver has no fire-completion bookkeeping in 313m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T05:24:23Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 381m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T05:24:24Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 324m ago, no claim in 324m — scheduler wedge, not a fire problem
-2026-09-13T05:24:24Z fix-driver-watch: driver has no fire-completion bookkeeping in 324m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T05:34:29Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 391m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T05:34:30Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 334m ago, no claim in 334m — scheduler wedge, not a fire problem
-2026-09-13T05:34:30Z fix-driver-watch: driver has no fire-completion bookkeeping in 334m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T05:44:36Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 401m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T05:44:36Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 344m ago, no claim in 344m — scheduler wedge, not a fire problem
-2026-09-13T05:44:36Z fix-driver-watch: driver has no fire-completion bookkeeping in 344m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T05:54:48Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 411m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T05:54:49Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 354m ago, no claim in 354m — scheduler wedge, not a fire problem
-2026-09-13T05:54:49Z fix-driver-watch: driver has no fire-completion bookkeeping in 354m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T06:04:57Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 422m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T06:04:58Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 364m ago, no claim in 364m — scheduler wedge, not a fire problem
-2026-09-13T06:04:58Z fix-driver-watch: driver has no fire-completion bookkeeping in 364m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T06:15:13Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 432m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T06:15:13Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 375m ago, no claim in 375m — scheduler wedge, not a fire problem
-2026-09-13T06:15:13Z fix-driver-watch: driver has no fire-completion bookkeeping in 375m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T06:25:42Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 442m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T06:25:42Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 385m ago, no claim in 385m — scheduler wedge, not a fire problem
-2026-09-13T06:25:42Z fix-driver-watch: driver has no fire-completion bookkeeping in 385m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T06:35:48Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 452m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T06:35:49Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 395m ago, no claim in 395m — scheduler wedge, not a fire problem
-2026-09-13T06:35:49Z fix-driver-watch: driver has no fire-completion bookkeeping in 395m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T06:45:53Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 462m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T06:45:53Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 405m ago, no claim in 405m — scheduler wedge, not a fire problem
-2026-09-13T06:45:53Z fix-driver-watch: driver has no fire-completion bookkeeping in 405m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T06:56:06Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 473m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T06:56:06Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 416m ago, no claim in 416m — scheduler wedge, not a fire problem
-2026-09-13T06:56:06Z fix-driver-watch: driver has no fire-completion bookkeeping in 416m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T07:06:27Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 483m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T07:06:28Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 426m ago, no claim in 426m — scheduler wedge, not a fire problem
-2026-09-13T07:06:28Z fix-driver-watch: driver has no fire-completion bookkeeping in 426m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-13T07:16:33Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 493m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-13T07:16:33Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 436m ago, no claim in 436m — scheduler wedge, not a fire problem
-2026-09-13T07:16:33Z fix-driver-watch: driver has no fire-completion bookkeeping in 436m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
 2026-09-13T07:26:48Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 503m without end marker (last: progress 2026-09-12T23:02:55Z item25-881d259-adopted-campaign-worker-commit-ci-watching) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
 2026-09-13T07:26:48Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 446m ago, no claim in 446m — scheduler wedge, not a fire problem
 2026-09-13T07:26:48Z fix-driver-watch: driver has no fire-completion bookkeeping in 446m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
@@ -4998,3 +4747,254 @@ outcome-loop monitor: supervisor DEAD for run 8e48e148c2774a1cb89e43c87b957a14 �
 2026-10-05T08:24:35Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted d45916f4a02f1249eb144e181edb3ea4a94e513d but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
 2026-10-05T08:29:11Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T08:25:37.415725+00:00 — operator attention needed
 2026-10-05T08:30:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T08:25:37.415725+00:00 — operator attention needed
+2026-10-05T08:40:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T08:25:37.415725+00:00 — operator attention needed
+2026-10-05T08:51:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T08:25:37.415725+00:00 — operator attention needed
+2026-10-05T09:00:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T08:25:37.415725+00:00 — operator attention needed
+2026-10-05T09:02:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T08:25:37.415725+00:00 — operator attention needed
+2026-10-05T09:13:26Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T09:05:20.513931+00:00 — operator attention needed
+2026-10-05T09:24:28Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T09:05:20.513931+00:00 — operator attention needed
+2026-10-05T09:30:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T09:05:20.513931+00:00 — operator attention needed
+2026-10-05T09:35:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T09:05:20.513931+00:00 — operator attention needed
+2026-10-05T09:46:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T09:05:20.513931+00:00 — operator attention needed
+2026-10-05T09:57:18Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T09:05:20.513931+00:00 — operator attention needed
+2026-10-05T10:00:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T09:05:20.513931+00:00 — operator attention needed
+2026-10-05T10:08:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T10:07:02.491982+00:00 — operator attention needed
+2026-10-05T10:09:16Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted cb82f492ea024a72e526f655dd1347ae7eeced00 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-05T10:19:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T10:10:34.120078+00:00 — operator attention needed
+2026-10-05T10:30:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T10:10:34.120078+00:00 — operator attention needed
+2026-10-05T10:30:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T10:10:34.120078+00:00 — operator attention needed
+2026-10-05T10:41:27Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T10:10:34.120078+00:00 — operator attention needed
+2026-10-05T10:52:22Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T10:10:34.120078+00:00 — operator attention needed
+2026-10-05T11:00:12Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T10:10:34.120078+00:00 — operator attention needed
+2026-10-05T11:03:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T10:10:34.120078+00:00 — operator attention needed
+2026-10-05T11:14:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T11:08:14.372060+00:00 — operator attention needed
+2026-10-05T11:25:03Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 46m without end marker (last: start 2026-10-05T10:38:08Z 208) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-05T11:25:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T11:08:14.372060+00:00 — operator attention needed
+2026-10-05T11:30:11Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T11:08:14.372060+00:00 — operator attention needed
+2026-10-05T11:36:05Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 57m without end marker (last: start 2026-10-05T10:38:08Z 208) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-05T11:36:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T11:08:14.372060+00:00 — operator attention needed
+2026-10-05T11:47:04Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 68m without end marker (last: start 2026-10-05T10:38:08Z 208) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-05T11:47:11Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T11:08:14.372060+00:00 — operator attention needed
+2026-10-05T11:58:04Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 79m without end marker (last: start 2026-10-05T10:38:08Z 208) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-05T11:58:10Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T11:57:29.359828+00:00 — operator attention needed
+2026-10-05T12:00:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T11:57:29.359828+00:00 — operator attention needed
+2026-10-05T12:09:11Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T11:57:29.359828+00:00 — operator attention needed
+2026-10-05T12:20:11Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T11:57:29.359828+00:00 — operator attention needed
+2026-10-05T12:30:11Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T11:57:29.359828+00:00 — operator attention needed
+2026-10-05T12:31:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T11:57:29.359828+00:00 — operator attention needed
+2026-10-05T12:36:11Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 5a13a8665e7c577152ebb1089d38788c18f0d4dd but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-05T12:42:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T12:37:24.857354+00:00 — operator attention needed
+2026-10-05T12:53:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T12:37:24.857354+00:00 — operator attention needed
+2026-10-05T13:00:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T12:37:24.857354+00:00 — operator attention needed
+2026-10-05T13:04:17Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T12:37:24.857354+00:00 — operator attention needed
+2026-10-05T13:15:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T12:37:24.857354+00:00 — operator attention needed
+2026-10-05T13:26:22Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T13:20:15.793528+00:00 — operator attention needed
+2026-10-05T13:30:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T13:20:15.793528+00:00 — operator attention needed
+2026-10-05T13:37:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T13:20:15.793528+00:00 — operator attention needed
+2026-10-05T13:48:34Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T13:20:15.793528+00:00 — operator attention needed
+2026-10-05T13:59:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T13:20:15.793528+00:00 — operator attention needed
+2026-10-05T14:00:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T13:20:15.793528+00:00 — operator attention needed
+2026-10-05T14:10:28Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T14:06:30.798680+00:00 — operator attention needed
+2026-10-05T14:21:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T14:06:30.798680+00:00 — operator attention needed
+2026-10-05T14:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T14:06:30.798680+00:00 — operator attention needed
+2026-10-05T14:32:24Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T14:06:30.798680+00:00 — operator attention needed
+2026-10-05T14:43:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T14:43:10.245483+00:00 — operator attention needed
+2026-10-05T14:53:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-05T14:54:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T14:43:10.245483+00:00 — operator attention needed
+2026-10-05T15:00:12Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T14:43:10.245483+00:00 — operator attention needed
+2026-10-05T15:04:18Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-05T15:05:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T14:43:10.245483+00:00 — operator attention needed
+2026-10-05T15:15:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-05T15:16:38Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T14:43:10.245483+00:00 — operator attention needed
+2026-10-05T15:27:21Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T15:18:49.096119+00:00 — operator attention needed
+2026-10-05T15:30:10Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T15:18:49.096119+00:00 — operator attention needed
+2026-10-05T15:38:28Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T15:18:49.096119+00:00 — operator attention needed
+2026-10-05T15:51:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T15:18:49.096119+00:00 — operator attention needed
+2026-10-05T16:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T15:18:49.096119+00:00 — operator attention needed
+2026-10-05T16:02:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T16:00:43.574346+00:00 — operator attention needed
+2026-10-05T16:10:17Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 55m without end marker (last: start 2026-10-05T15:14:47Z item208-merge-train-270-275-289) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-05T16:13:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T16:00:43.574346+00:00 — operator attention needed
+2026-10-05T16:24:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T16:00:43.574346+00:00 — operator attention needed
+2026-10-05T16:30:12Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T16:00:43.574346+00:00 — operator attention needed
+2026-10-05T16:35:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T16:00:43.574346+00:00 — operator attention needed
+2026-10-05T16:46:32Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T16:36:25.518530+00:00 — operator attention needed
+2026-10-05T16:57:22Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T16:36:25.518530+00:00 — operator attention needed
+2026-10-05T17:00:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T16:36:25.518530+00:00 — operator attention needed
+2026-10-05T17:08:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T16:36:25.518530+00:00 — operator attention needed
+2026-10-05T17:19:21Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T17:15:37.506868+00:00 — operator attention needed
+2026-10-05T17:30:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T17:15:37.506868+00:00 — operator attention needed
+2026-10-05T17:30:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T17:15:37.506868+00:00 — operator attention needed
+2026-10-05T17:38:18Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-05T17:41:25Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T17:15:37.506868+00:00 — operator attention needed
+2026-10-05T17:49:17Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 53m without end marker (last: start 2026-10-05T16:55:47Z 208-continuation) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-05T17:49:18Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-05T17:52:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T17:51:20.410629+00:00 — operator attention needed
+2026-10-05T18:00:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T17:51:20.410629+00:00 — operator attention needed
+2026-10-05T18:00:30Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 64m without end marker (last: start 2026-10-05T16:55:47Z 208-continuation) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-05T18:00:31Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-05T18:03:25Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T17:51:20.410629+00:00 — operator attention needed
+2026-10-05T18:11:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-05T18:14:23Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T17:51:20.410629+00:00 — operator attention needed
+2026-10-05T18:25:21Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T17:51:20.410629+00:00 — operator attention needed
+2026-10-05T18:30:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T18:29:53.921751+00:00 — operator attention needed
+2026-10-05T18:36:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T18:30:29.080092+00:00 — operator attention needed
+2026-10-05T18:47:24Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T18:30:29.080092+00:00 — operator attention needed
+2026-10-05T18:58:25Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T18:30:29.080092+00:00 — operator attention needed
+2026-10-05T19:00:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T18:30:29.080092+00:00 — operator attention needed
+2026-10-05T19:09:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T19:09:07.373012+00:00 — operator attention needed
+2026-10-05T19:20:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T19:09:45.865594+00:00 — operator attention needed
+2026-10-05T19:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T19:09:45.865594+00:00 — operator attention needed
+2026-10-05T19:31:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T19:09:45.865594+00:00 — operator attention needed
+2026-10-05T19:42:25Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T19:09:45.865594+00:00 — operator attention needed
+2026-10-05T19:53:21Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T19:53:02.554834+00:00 — operator attention needed
+2026-10-05T20:00:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T19:53:02.554834+00:00 — operator attention needed
+2026-10-05T20:04:28Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T19:53:02.554834+00:00 — operator attention needed
+2026-10-05T20:15:21Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T19:53:02.554834+00:00 — operator attention needed
+2026-10-05T20:26:21Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T19:53:02.554834+00:00 — operator attention needed
+2026-10-05T20:30:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T20:29:55.982822+00:00 — operator attention needed
+2026-10-05T20:37:26Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T20:30:31.506968+00:00 — operator attention needed
+2026-10-05T20:48:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T20:30:31.506968+00:00 — operator attention needed
+2026-10-05T20:59:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T20:30:31.506968+00:00 — operator attention needed
+2026-10-05T21:00:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T20:30:31.506968+00:00 — operator attention needed
+2026-10-05T21:10:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T21:06:49.059052+00:00 — operator attention needed
+2026-10-05T21:21:24Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T21:06:49.059052+00:00 — operator attention needed
+2026-10-05T21:29:18Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-05T21:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T21:06:49.059052+00:00 — operator attention needed
+2026-10-05T21:32:22Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T21:06:49.059052+00:00 — operator attention needed
+2026-10-05T21:40:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-05T21:43:22Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T21:42:28.535667+00:00 — operator attention needed
+2026-10-05T21:51:21Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-05T21:54:27Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T21:42:28.535667+00:00 — operator attention needed
+2026-10-05T22:00:12Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T21:42:28.535667+00:00 — operator attention needed
+2026-10-05T22:02:28Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-05T22:05:32Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T21:42:28.535667+00:00 — operator attention needed
+2026-10-05T22:16:28Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T21:42:28.535667+00:00 — operator attention needed
+2026-10-05T22:27:25Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T21:42:28.535667+00:00 — operator attention needed
+2026-10-05T22:30:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T22:28:13.017607+00:00 — operator attention needed
+2026-10-05T22:38:45Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T22:28:13.017607+00:00 — operator attention needed
+2026-10-05T22:49:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T22:28:13.017607+00:00 — operator attention needed
+2026-10-05T23:00:11Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T22:28:13.017607+00:00 — operator attention needed
+2026-10-05T23:00:23Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T22:28:13.017607+00:00 — operator attention needed
+2026-10-05T23:11:23Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T22:28:13.017607+00:00 — operator attention needed
+2026-10-05T23:22:22Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T23:12:25.752707+00:00 — operator attention needed
+2026-10-05T23:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T23:12:25.752707+00:00 — operator attention needed
+2026-10-05T23:30:29Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-05T23:33:24Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T23:12:25.752707+00:00 — operator attention needed
+2026-10-05T23:41:22Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-05T23:44:24Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T23:12:25.752707+00:00 — operator attention needed
+2026-10-05T23:52:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-05T23:55:28Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T23:50:27.737170+00:00 — operator attention needed
+2026-10-06T00:00:21Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T23:50:27.737170+00:00 — operator attention needed
+2026-10-06T00:06:52Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T23:50:27.737170+00:00 — operator attention needed
+2026-10-06T00:17:41Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T23:50:27.737170+00:00 — operator attention needed
+2026-10-06T00:28:43Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-05T23:50:27.737170+00:00 — operator attention needed
+2026-10-06T00:30:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T00:29:31.790441+00:00 — operator attention needed
+2026-10-06T00:30:30Z failed-unit-janitor: FAILED-UNIT hermes-dashboard.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=start-limit-hit) — a real defect, needs a human
+2026-10-06T00:39:45Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T00:29:31.790441+00:00 — operator attention needed
+2026-10-06T00:47:36Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 47m without end marker (last: start 2026-10-05T23:59:53Z 208-merge-wave-continue) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T00:50:39Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T00:29:31.790441+00:00 — operator attention needed
+2026-10-06T00:58:32Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 58m without end marker (last: start 2026-10-05T23:59:53Z 208-merge-wave-continue) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T01:00:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T00:29:31.790441+00:00 — operator attention needed
+2026-10-06T01:01:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T00:29:31.790441+00:00 — operator attention needed
+2026-10-06T01:12:37Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T00:29:31.790441+00:00 — operator attention needed
+2026-10-06T01:23:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T01:13:48.671789+00:00 — operator attention needed
+2026-10-06T01:30:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T01:13:48.671789+00:00 — operator attention needed
+2026-10-06T01:34:35Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T01:13:48.671789+00:00 — operator attention needed
+2026-10-06T01:45:34Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T01:13:48.671789+00:00 — operator attention needed
+2026-10-06T01:56:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T01:52:10.866257+00:00 — operator attention needed
+2026-10-06T02:00:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T01:52:10.866257+00:00 — operator attention needed
+2026-10-06T02:07:34Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T01:52:10.866257+00:00 — operator attention needed
+2026-10-06T02:18:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T01:52:10.866257+00:00 — operator attention needed
+2026-10-06T02:29:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T02:29:09.520822+00:00 — operator attention needed
+2026-10-06T02:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T02:29:09.520822+00:00 — operator attention needed
+2026-10-06T02:37:31Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 47m without end marker (last: progress 2026-10-06T01:50:31Z 275-reruns-live: CI 37366469068 queued, nix+leak in_progress; main 7403d41b RED (dropped-semantics = #275's family); plan #275->#289 holds) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T02:40:32Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T02:29:09.520822+00:00 — operator attention needed
+2026-10-06T02:48:31Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 58m without end marker (last: progress 2026-10-06T01:50:31Z 275-reruns-live: CI 37366469068 queued, nix+leak in_progress; main 7403d41b RED (dropped-semantics = #275's family); plan #275->#289 holds) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T02:48:32Z fix-driver-watch: driver has no fire-completion bookkeeping in 99m (last_run_at=2026-10-06T01:09:00.004299+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-06T02:51:36Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T02:29:09.520822+00:00 — operator attention needed
+2026-10-06T03:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T02:29:09.520822+00:00 — operator attention needed
+2026-10-06T03:02:41Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T02:29:09.520822+00:00 — operator attention needed
+2026-10-06T03:13:32Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T03:05:20.118442+00:00 — operator attention needed
+2026-10-06T03:24:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T03:05:20.118442+00:00 — operator attention needed
+2026-10-06T03:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T03:05:20.118442+00:00 — operator attention needed
+2026-10-06T03:35:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T03:05:20.118442+00:00 — operator attention needed
+2026-10-06T03:43:34Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 46m without end marker (last: progress 2026-10-06T02:57:15Z 275 rerun: Run-tests failed 2 flake cells only (compute_host FIXED by f3f1b00; RoutingLeak absent); rerun --failed queued) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T03:43:36Z fix-driver-watch: driver has no fire-completion bookkeeping in 154m (last_run_at=2026-10-06T01:09:00.004299+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-06T03:46:34Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T03:39:47.200130+00:00 — operator attention needed
+2026-10-06T03:57:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T03:39:47.200130+00:00 — operator attention needed
+2026-10-06T04:00:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T03:39:47.200130+00:00 — operator attention needed
+2026-10-06T04:00:26Z failed-unit-janitor: healed tradegen-compact.service (stale foreign transient residue cleared after 2314s)
+2026-10-06T04:08:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T03:39:47.200130+00:00 — operator attention needed
+2026-10-06T04:16:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T04:19:35Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T04:15:38.182008+00:00 — operator attention needed
+2026-10-06T04:27:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T04:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T04:15:38.182008+00:00 — operator attention needed
+2026-10-06T04:30:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T04:15:38.182008+00:00 — operator attention needed
+2026-10-06T04:38:33Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 52m without end marker (last: progress 2026-10-06T03:46:18Z 275 rerun-of-failed in flight ~65m on Run tests; zero lanes failed so far; bg watcher pid 918680 armed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T04:38:34Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T04:41:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T04:15:38.182008+00:00 — operator attention needed
+2026-10-06T04:49:34Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T04:52:34Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T04:52:30.424927+00:00 — operator attention needed
+2026-10-06T05:00:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T04:52:30.424927+00:00 — operator attention needed
+2026-10-06T05:00:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T05:03:36Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T04:52:30.424927+00:00 — operator attention needed
+2026-10-06T05:11:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T05:14:34Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T04:52:30.424927+00:00 — operator attention needed
+2026-10-06T05:22:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T05:25:34Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T04:52:30.424927+00:00 — operator attention needed
+2026-10-06T05:30:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T05:28:44.663402+00:00 — operator attention needed
+2026-10-06T05:30:22Z failed-unit-janitor: healed run-u1662271.service (stale foreign transient residue cleared after 1270s)
+2026-10-06T05:30:22Z failed-unit-janitor: healed run-u1662293.service (stale foreign transient residue cleared after 1139s)
+2026-10-06T05:30:22Z failed-unit-janitor: healed run-u1662326.service (stale foreign transient residue cleared after 1127s)
+2026-10-06T05:33:40Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T05:36:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T05:28:44.663402+00:00 — operator attention needed
+2026-10-06T05:44:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T05:47:34Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T05:28:44.663402+00:00 — operator attention needed
+2026-10-06T05:55:34Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 49m without end marker (last: progress 2026-10-06T05:06:15Z item208: #270 merged; #275+#289 failed-job reruns launched (flake triage); waiting CI) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T05:55:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T05:58:34Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T05:28:44.663402+00:00 — operator attention needed
+2026-10-06T06:00:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T05:28:44.663402+00:00 — operator attention needed
+2026-10-06T06:06:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T06:09:46Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T06:06:29.840104+00:00 — operator attention needed
+2026-10-06T06:17:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T06:20:34Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T06:06:29.840104+00:00 — operator attention needed
+2026-10-06T06:28:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T06:30:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T06:06:29.840104+00:00 — operator attention needed
+2026-10-06T06:31:41Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T06:06:29.840104+00:00 — operator attention needed
+2026-10-06T06:39:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T06:42:36Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T06:42:21.892137+00:00 — operator attention needed
+2026-10-06T06:50:31Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 50m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T06:50:31Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T06:53:34Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T06:42:45.791506+00:00 — operator attention needed
+2026-10-06T07:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T06:42:45.791506+00:00 — operator attention needed
+2026-10-06T07:01:31Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 61m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T07:01:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T07:04:34Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T06:42:45.791506+00:00 — operator attention needed
+2026-10-06T07:12:33Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 72m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T07:12:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T07:15:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T06:42:45.791506+00:00 — operator attention needed
+2026-10-06T07:23:31Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 83m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T07:23:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T07:26:32Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T07:20:42.276229+00:00 — operator attention needed
+2026-10-06T07:30:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T07:20:42.276229+00:00 — operator attention needed
+2026-10-06T07:34:31Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 94m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T07:34:31Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T07:37:37Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T07:20:42.276229+00:00 — operator attention needed
+2026-10-06T07:45:32Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 105m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T07:45:34Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T07:48:38Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T07:20:42.276229+00:00 — operator attention needed
+2026-10-06T07:56:31Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 116m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T07:56:31Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T07:59:37Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T07:59:01.951103+00:00 — operator attention needed
+2026-10-06T08:00:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T07:59:01.951103+00:00 — operator attention needed
+2026-10-06T08:07:34Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 127m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T08:07:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T08:10:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T07:59:01.951103+00:00 — operator attention needed
+2026-10-06T08:18:37Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 139m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T08:18:38Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T08:21:38Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T07:59:01.951103+00:00 — operator attention needed
+2026-10-06T08:29:33Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 149m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-06T08:29:34Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-06T08:30:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T07:59:01.951103+00:00 — operator attention needed
+2026-10-06T08:32:32Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T07:59:01.951103+00:00 — operator attention needed
+2026-10-06T08:40:35Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 160m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually

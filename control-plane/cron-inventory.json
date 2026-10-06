@@ -1,5 +1,5 @@
-# generated 2026-10-05T08:40:04Z
-# 67 jobs
+# generated 2026-10-06T08:40:36Z
+# 68 jobs
 {
   "04999fd7525c": {
     "enabled": true,
@@ -332,6 +332,15 @@
       "display": "every 5m",
       "kind": "interval",
       "minutes": 5
+    }
+  },
+  "a72aa4b99458": {
+    "enabled": true,
+    "name": "subreddit-threads-watch",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
     }
   },
   "a747bb443951": {
