@@ -731,6 +731,111 @@ housekeeping (owner-gated): two stale conductor/run-* validation refs on origin
 
 ## Cycle-9 (2026-10-06)
 
-*(cycle-9 records pending: status flips with per-clause evidence (rm-045, rm-046,
-rm-047, rm-036, rm-005), the rm-022 reopen, rm-042/rm-048 evidence appends, the
-full rm-052 item, and the cycle note land in this section per the cycle-9 plan.)*
+*(Conductor run `ad24fffa0e244337b97efff32648b3da`, docs-truth reconciliation:
+README/ROADMAP vs shipped behavior. Units U1 (this file's seed) + U3 (the
+ROADMAP pointer block) landed in implement attempt 183133788b and were
+checkpointed by the engine as 813cfda; units U2 (this section) + U4 (the
+README Automation pass) landed in implement attempt b1cc8a26 on top. Docs-only
+batch: no code or test changes — the suite collects 77 and the README
+"77 tests" count stays exact.)*
+
+### Status flips (done, with per-clause evidence)
+
+- `rm-045` — done. Landed `cbf7bf1`, merged `43d8097` (2026-09-24); cycle-8
+  assess live-verified 68/68 with all ten subfixes present at HEAD. The
+  recovered item above (ledger :565) already records done; render 865477f
+  regressed it to in_progress — this flip reconciles the rendered view with
+  the ledger, no new evidence required. Evidence: `git log --oneline -1
+  43d8097`; recovered entry above.
+- `rm-046` — done. Clauses 1–3 landed in merge `661c70a` (dict-tolerant
+  `payload.get("jobs", payload)` parse, `# N jobs` count header, loud rc=1
+  canary on missing/shapeless/empty `jobs.json`, both-shape fixture, 5 locking
+  tests). Clause 4 ship gate met live: `origin/data:control-plane/
+  cron-inventory.json` non-empty with the count header on every daily run
+  since 2026-10-04 (`5b0590f`, `ef68ef9`, `57eae14`; `# 68 jobs` at
+  2026-10-06T08:40:36Z). Evidence: `git show origin/data:control-plane/
+  cron-inventory.json | head -2`; `git log --oneline -4 origin/data --
+  control-plane/cron-inventory.json`.
+- `rm-047` — done. Both gitleaks.toml allowlist entries anchored
+  (`(^|/)web/dist/`, `(^|/)dist/` — gitleaks.toml:102-103) in merge `661c70a`;
+  locked by 1 static + 2 live-binary tests; cloud-validated
+  (leak-sentinel-self SUCCESS, PR #13). Evidence: `grep -n 'dist/'
+  gitleaks.toml`.
+- `rm-036` — done. All five flagged scripts have test files at HEAD
+  (tests/test_check_known_hosts.py, tests/test_solutions_lint.py,
+  tests/test_sync_repo_settings.py, tests/test_verify_deployed_artifacts.py,
+  tests/test_control_plane_shims.py covering sync_data_branch.py); suite
+  77/77 at cycle-8 final validation. Evidence: `ls tests/`.
+- `rm-005` — done. Host half landed cycles 5–7: the deployed wrapper
+  (`~/.hermes/scripts/repo-settings-sync.sh`:4-6, 20-24) captures the sync's
+  exit code and exits with it while the host-key ALERT stays report-only, and
+  the PATH-shimmed failure-mode proof the recovered item listed as a residual
+  is recorded at ledger :63 (`PATH-shimmed gh exiting 2 -> wrapper rc=2`).
+  README half landed in this cycle-9 batch (README U4-E4 sentence — the
+  rc-contract sentence the seed's acceptance clause :62 said would land with
+  the commit-gate rider); the original item text was recovered verbatim via
+  this file's seed (:60). Evidence: `sed -n '4,6p;18,26p'
+  ~/.hermes/scripts/repo-settings-sync.sh`; README Automation section.
+
+### Reopen
+
+- `rm-022` — reopened (status: candidate, as the recovered item :208 records).
+  Render 865477f closed it "superseded" (rendered ROADMAP.md:111 at 1e8a49a);
+  truth: only the JUDGMENT-scoping half landed (cycle-8 batch G4 — JUDGMENT
+  scoped per lint_repo and threaded into lint_file, locked by the
+  one-process/two-repo test); the cron-wiring residual (wire the lint into
+  the daily settings-sync window) stays open. Evidence: recovered entry
+  :208; rendered ROADMAP line.
+
+### Evidence appends (production state; owner-gated residual)
+
+- `rm-042` / `rm-048` — the deployed-artifact trust chain is RED in production
+  since 2026-09-26: `origin/data:control-plane/manifest-verify.log` holds a
+  single deduped line `2026-09-26T08:40:42Z rc=1 drift=check_known_hosts.py,
+  control-plane-sync.sh,repo-settings-sync.sh,sync_data_branch.py,
+  sync_repo_settings.py` (all five cron-wired entrypoints drifted; no later
+  line through 2026-10-06 = state unchanged). The post-cycle-8 re-pin rider
+  (rm-042's closure rider; rm-048's follow-through) never executed, so the
+  pre-cycle-9 README claim "the live verifier is rc=0" was false in
+  production — replaced this cycle by the journal-contract sentence (README
+  U4-E3). OWNER-GATED residual: re-pin the five delegate digests in
+  `~/.hermes/scripts/MANIFEST.sha256` and re-prove rc=0. The journal line
+  itself proves rm-048's repo half works (journaling live via the 08:40 cron
+  path). Evidence: `git show origin/data:control-plane/manifest-verify.log |
+  tail -1`.
+
+### New item
+
+- id: `rm-052` | track: reliability | priority: 80.0 | status: candidate (owner-gated)
+- title: Preserve sanctioned ledger extensions across roadmap renders
+- signals: render 865477f (−673/+84) rewrote ROADMAP.md from the gateway DB
+  and destroyed the sanctioned cycle-8 ledger extension, all cycle addenda,
+  per-item signals/evidence, and every pre-rm-016 item (incl. then-open
+  rm-005); later renders (37f6f50, 1e8a49a) churn only the dependents line;
+  sanctioned hand extensions survive zero renders; two writers own one file
+  and the render wins.
+- acceptance: the roadmap-sync render either preserves sanctioned extension
+  blocks + addenda byte-exact or ingests status flips/evidence into the
+  gateway DB so renders carry them; a landed cycle extension survives ≥1
+  render cycle verbatim; `docs/roadmap-ledger.md` remains untouched by
+  renders.
+- evidence: render diff 865477f vs the +103 cycle-8 rider at 661c70a
+  (`git show 865477f --stat` — ROADMAP.md 84 insertions/673 deletions);
+  `git log --oneline -- ROADMAP.md`; this cycle-9 section.
+
+### Cycle-9 note
+
+This cycle reconciled repository documentation with shipped behavior after
+the cycle-8 merge: README's Automation section now states durable contracts
+(journal path + rc semantics + re-pin expectation, cron-inventory canary,
+any-exit branch restore, rm-005 rc/ALERT split, ledger pointer) instead of a
+green assertion the production journal contradicted; ROADMAP.md carries a
+short render-volatile pointer block; this ledger carries the durable record.
+Root cause of the doc drift: two writers own ROADMAP.md (the autonomy
+roadmap-sync render and sanctioned hand extensions) and the render wins —
+decision (plan KTD1): the campaign-history ledger relocates to this sibling
+file, which the render provably never touches (renders 865477f/37f6f50/
+1e8a49a each touch only ROADMAP.md), and rm-052 tracks the render-side fix.
+README count "77 tests" verified exact (collect-only; docs-only run — no
+suite execution, no code changes). The batch lands as one uncommitted diff
+(README.md, ROADMAP.md, docs/roadmap-ledger.md) for the commit gate.
