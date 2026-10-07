@@ -88,6 +88,15 @@ delegate pins track the canonical checkout the crons exec, so landing repo
 changes makes them stale by design — re-pin and re-confirm rc=0 after any
 host-affecting merge (rm-042 rider, owner-gated).
 
+Validation gates run by hermes-conductor (`github_ci_validate.py`, not a
+script in this repo) open a short-lived draft PR titled
+`Conductor CI validation <sha>` on ephemeral `conductor/ci-*` base and
+head refs, run the repo's `leak-sentinel-self` workflow as the only
+check, then close the PR and delete both refs automatically — everything
+happens in a temp clone, the run worktree is never touched, and no
+maintainer action is needed (PRs #5 and #7-#14 to date; evidence in
+`docs/roadmap-ledger.md` and `docs/lessons.md` L31).
+
 Per-item roadmap evidence and campaign history live in
 `docs/roadmap-ledger.md`; the rendered `ROADMAP.md` is a live-status view
 that may lag shipped code.
