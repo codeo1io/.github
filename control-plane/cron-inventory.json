@@ -1,5 +1,5 @@
-# generated 2026-10-06T08:40:36Z
-# 68 jobs
+# generated 2026-10-07T08:41:01Z
+# 69 jobs
 {
   "04999fd7525c": {
     "enabled": true,
@@ -172,6 +172,15 @@
       "minutes": 15
     }
   },
+  "56d3e3a3bbee": {
+    "enabled": true,
+    "name": "skill-integrity-watchdog",
+    "schedule": {
+      "display": "0 3 * * *",
+      "expr": "0 3 * * *",
+      "kind": "cron"
+    }
+  },
   "588a07ae076e": {
     "enabled": true,
     "name": "fleet-health-watchdog",
@@ -338,9 +347,9 @@
     "enabled": true,
     "name": "subreddit-threads-watch",
     "schedule": {
-      "display": "every 30m",
-      "kind": "interval",
-      "minutes": 30
+      "display": "0 */2 * * *",
+      "expr": "0 */2 * * *",
+      "kind": "cron"
     }
   },
   "a747bb443951": {
