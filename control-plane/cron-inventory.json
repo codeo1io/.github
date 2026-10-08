@@ -1,5 +1,5 @@
-# generated 2026-10-07T08:41:01Z
-# 69 jobs
+# generated 2026-10-08T08:40:39Z
+# 70 jobs
 {
   "04999fd7525c": {
     "enabled": true,
@@ -278,6 +278,15 @@
       "display": "every 5m",
       "kind": "interval",
       "minutes": 5
+    }
+  },
+  "85917cc74604": {
+    "enabled": false,
+    "name": "gw-restart-mh-0311",
+    "schedule": {
+      "display": "once at 2026-10-07 19:05",
+      "kind": "once",
+      "run_at": "2026-10-07T19:05:00+00:00"
     }
   },
   "87b92274d24d": {
