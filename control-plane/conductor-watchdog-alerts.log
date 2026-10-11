@@ -1,36 +1,3 @@
-2026-09-14T12:44:35Z fix-driver-watch: driver has no fire-completion bookkeeping in 764m (last_run_at=) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-14T12:47:57Z fix-driver-watch: watched cron job 088b0d5ed805 not found in jobs.json — id drift (job recreated/renamed); checks for it are blind, update the watcher
-2026-09-14T12:47:58Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T12:51:06Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T13:02:07Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T13:13:09Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T13:24:10Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T13:35:12Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T13:35:13Z fix-driver-watch: fork PR #176 STALE: open with no activity for 48h (updatedAt=2026-09-12T13:33:02Z) — silent-drop vector / duplicate-implementation magnet; review, merge, or close it (queue rule: check open PRs before implementing any item)
-2026-09-14T13:46:27Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T13:57:33Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T14:08:34Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T14:19:46Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T14:30:52Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T14:41:53Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T14:52:54Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T15:04:04Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T15:15:06Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T15:26:08Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T15:37:23Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T15:48:24Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T15:59:34Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T16:10:36Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T16:20:20Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T16:21:43Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T16:32:44Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T16:43:46Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T16:54:49Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T17:05:52Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T17:17:06Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T17:28:08Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T17:39:15Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T17:50:29Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
 2026-09-14T18:01:37Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
 2026-09-14T18:01:38Z fix-driver-watch: fork PR #177 STALE: open with no activity for 48h (updatedAt=2026-09-12T18:01:06Z) — silent-drop vector / duplicate-implementation magnet; review, merge, or close it (queue rule: check open PRs before implementing any item)
 2026-09-14T18:01:39Z fix-driver-watch: fork PR #130 STALE: open with no activity for 48h (updatedAt=2026-09-12T17:59:16Z) — silent-drop vector / duplicate-implementation magnet; review, merge, or close it (queue rule: check open PRs before implementing any item)
@@ -4998,3 +4965,36 @@ outcome-loop monitor: supervisor DEAD for run 8e48e148c2774a1cb89e43c87b957a14 �
 2026-10-09T23:38:35Z conductor-auto-promote: promote of b8feae9 failed rc=1 — promoter log tail: release dir exists for b8feae94e97c85792728605e8d184c1ab3fcf8d6 — refusing
 2026-10-09T23:38:38Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted b8feae94e97c85792728605e8d184c1ab3fcf8d6 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
 2026-10-10T02:05:47Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted e4f2ed66c72c39e1dc70a1e259e7f55f3fa2575f but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-10T09:47:23Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 62d9b0238f84201d20b36036a0f1027a129704b5 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-10T16:32:18Z fix-driver-watch: driver has no fire-completion bookkeeping in 94m (last_run_at=2026-10-10T14:57:37.613349+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-10T17:01:51Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 1225cda1395795e511e1639faa28f89c5b800315 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-10T19:52:54Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 041690b37e202f78e31db6b65455dc0b552d2962 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-10T20:30:57Z failed-unit-janitor: FAILED-UNIT conductor-targeted-f5cebbcf-803952c7.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-10-10T21:24:21Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 12c74be1fbef407bc359f8d8e41bdaf0943f6160 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-10T21:30:59Z failed-unit-janitor: FAILED-UNIT conductor-targeted-f5cebbcf-803952c7.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-10-10T21:30:59Z failed-unit-janitor: FAILED-UNIT conductor-targeted-f5cebbcf-a326fc8b.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-10-10T22:34:19Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 610063ed964f95dcc49c2cd8be5039238bbe6fda but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-10T23:34:09Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 8cd8e6325e4e9fb1dac5a13099bfbee21c13b6c8 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-11T00:00:31Z orphan-gateway-sweep: reaping pid 2034899 (age 3s, HERMES_HOME=/home/agent/.hermes/cache/scratch/tmp.IwuwfwqFUv/gone-root/hermes-pytest-tmproot-x1/.hermes) — no live owner process references /home/agent/.hermes/cache/scratch/tmp.IwuwfwqFUv/gone-root/hermes-pytest-tmproot-x1 (SIGTERM)
+2026-10-11T00:00:33Z orphan-gateway-sweep: pid 2034918 already gone — no live owner process references /home/agent/.hermes/cache/scratch/tmp.IwuwfwqFUv/live-root/hermes-pytest-tmproot-y2
+2026-10-11T00:31:38Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 4bfba8f276639aa8731d4d17fe6023931a518d60 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-11T03:44:04Z failed-unit-janitor: FAILED-UNIT auto-ship-lane.service — foreign persistent unit (fragment=/home/agent/.config/systemd/user/auto-ship-lane.service; active=failed sub=failed result=exit-code) — a lane's declared unit file
+2026-10-11T04:02:00Z failed-unit-janitor: FAILED-UNIT hermes-check-truth.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-10-11T05:49:07Z auto-ship-lane: ff-only to origin/main failed at 492f5b7c124a - manual look required
+2026-10-11T05:59:14Z auto-ship-lane: ff-only to origin/main failed at 492f5b7c124a - manual look required
+2026-10-11T06:09:14Z auto-ship-lane: ff-only to origin/main failed at 492f5b7c124a - manual look required
+2026-10-11T06:19:15Z auto-ship-lane: ff-only to origin/main failed at 492f5b7c124a - manual look required
+2026-10-11T06:29:16Z auto-ship-lane: ff-only to origin/main failed at 492f5b7c124a - manual look required
+2026-10-11T06:39:21Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T06:49:21Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T06:59:31Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T07:09:31Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T07:19:31Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T07:29:31Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T07:39:31Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T07:49:32Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T07:59:53Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T08:09:53Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T08:19:54Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T08:29:58Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T08:40:02Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
