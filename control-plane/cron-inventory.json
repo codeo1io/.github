@@ -1,5 +1,5 @@
-# generated 2026-10-11T08:40:54Z
-# 70 jobs
+# generated 2026-10-12T08:40:43Z
+# 71 jobs
 {
   "04999fd7525c": {
     "enabled": true,
@@ -152,6 +152,15 @@
       "display": "every 5m",
       "kind": "interval",
       "minutes": 5
+    }
+  },
+  "47d67a92dbb7": {
+    "enabled": true,
+    "name": "hermes-config-version",
+    "schedule": {
+      "display": "10 3 * * *",
+      "expr": "10 3 * * *",
+      "kind": "cron"
     }
   },
   "492f412709e0": {

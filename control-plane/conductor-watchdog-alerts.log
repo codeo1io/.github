@@ -1,123 +1,3 @@
-2026-09-14T18:01:37Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T18:01:38Z fix-driver-watch: fork PR #177 STALE: open with no activity for 48h (updatedAt=2026-09-12T18:01:06Z) — silent-drop vector / duplicate-implementation magnet; review, merge, or close it (queue rule: check open PRs before implementing any item)
-2026-09-14T18:01:39Z fix-driver-watch: fork PR #130 STALE: open with no activity for 48h (updatedAt=2026-09-12T17:59:16Z) — silent-drop vector / duplicate-implementation magnet; review, merge, or close it (queue rule: check open PRs before implementing any item)
-2026-09-14T18:11:54Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T18:23:05Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 46m without end marker (last: progress 2026-09-14T17:36:45Z item38-bothways) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-14T18:23:06Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T18:34:18Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 57m without end marker (last: progress 2026-09-14T17:36:45Z item38-bothways) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-14T18:34:18Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T18:34:18Z fix-driver-watch: driver has no fire-completion bookkeeping in 92m (last_run_at=2026-09-14T17:01:37.931723+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-14T18:45:25Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T18:45:27Z fix-driver-watch: fork PR #129 STALE: open with no activity for 48h (updatedAt=2026-09-12T18:44:33Z) — silent-drop vector / duplicate-implementation magnet; review, merge, or close it (queue rule: check open PRs before implementing any item)
-2026-09-14T18:56:38Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T19:07:40Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T19:18:42Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T19:29:50Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 49m without end marker (last: progress 2026-09-14T18:40:07Z item38-merged-promoting) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-14T19:29:50Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T19:29:50Z fix-driver-watch: driver has no fire-completion bookkeeping in 148m (last_run_at=2026-09-14T17:01:37.931723+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-14T19:40:59Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 60m without end marker (last: progress 2026-09-14T18:40:07Z item38-merged-promoting) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-14T19:41:00Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T19:41:00Z fix-driver-watch: driver has no fire-completion bookkeeping in 159m (last_run_at=2026-09-14T17:01:37.931723+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-14T19:52:15Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 72m without end marker (last: progress 2026-09-14T18:40:07Z item38-merged-promoting) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-14T19:52:16Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T19:52:16Z fix-driver-watch: driver has no fire-completion bookkeeping in 170m (last_run_at=2026-09-14T17:01:37.931723+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-14T20:03:22Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T20:14:24Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T20:25:33Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T20:31:15Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T20:36:34Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T20:47:44Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T20:58:49Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T21:05:58Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T21:09:59Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T21:21:01Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T22:54:56Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T22:54:56Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T23:20:15Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T23:20:16Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T23:31:50Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-14T23:31:51Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T00:02:10Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T00:02:10Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T00:13:37Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T00:13:37Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T00:25:30Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T00:25:31Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T01:05:46Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T01:05:47Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T01:17:10Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T01:17:11Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T01:34:58Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T01:34:58Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T01:51:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T01:51:19Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T02:02:52Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T02:02:52Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T02:14:55Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T02:14:55Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T02:27:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T02:27:21Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T02:46:59Z conductor-watchdog[infra-deploy]: supervisor dead (run status=running) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260915-024659.log
-2026-09-15T02:47:02Z conductor-watchdog[autonomy-prop_9a7a25b233ca4eff]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_9a7a25b233ca4eff-relaunch-20260915-024702.log
-2026-09-15T02:47:05Z conductor-watchdog[autonomy-prop_3d4c276ce8d54f16]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_3d4c276ce8d54f16-relaunch-20260915-024705.log
-2026-09-15T02:47:07Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_37126eeabea04b5b-relaunch-20260915-024707.log
-2026-09-15T02:47:09Z conductor-watchdog[autonomy-prop_5281b2215ee24a51]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_5281b2215ee24a51-relaunch-20260915-024709.log
-2026-09-15T02:47:11Z conductor-watchdog[autonomy-prop_c8b40cc58d164e8e]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_c8b40cc58d164e8e-relaunch-20260915-024710.log
-2026-09-15T02:47:12Z conductor-watchdog[autonomy-prop_27e34533a3db4593]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_27e34533a3db4593-relaunch-20260915-024712.log
-2026-09-15T02:47:13Z conductor-watchdog[autonomy-prop_bf959992e0304898]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_bf959992e0304898-relaunch-20260915-024713.log
-2026-09-15T02:47:16Z conductor-watchdog[autonomy-prop_82a9e8d9893d478b]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_82a9e8d9893d478b-relaunch-20260915-024715.log
-2026-09-15T02:47:18Z conductor-watchdog[autonomy-prop_1183135ab98843d6]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_1183135ab98843d6-relaunch-20260915-024717.log
-2026-09-15T02:47:20Z conductor-watchdog[autonomy-prop_01b52e00dbce46d6]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_01b52e00dbce46d6-relaunch-20260915-024720.log
-2026-09-15T02:47:43Z conductor-watchdog[autonomy-prop_a9630aba58334018]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_a9630aba58334018-relaunch-20260915-024743.log
-2026-09-15T02:51:25Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T02:51:26Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T03:01:56Z conductor-watchdog[infra-deploy]: supervisor dead (run status=running) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260915-030156.log
-2026-09-15T03:40:30Z gateway-drain-watchdog: systemctl --user restart hermes-gateway.service issued (class drain)
-2026-09-15T03:40:31Z gateway-drain-watchdog: gateway draining with no deferral activity for 4034s (> 300s, no marker, stopper gone) — gateway unit restarted (bounded)
-2026-09-15T03:47:59Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 54m without end marker (last: progress 2026-09-15T02:53:09Z item45-waiting-rerun-ci-311-inprogress) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-15T03:48:01Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T03:48:01Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T04:00:03Z conductor-watchdog[infra-deploy]: supervisor dead (run status=running) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260915-040003.log
-2026-09-15T04:00:04Z conductor-watchdog[autonomy-prop_9a7a25b233ca4eff]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_9a7a25b233ca4eff-relaunch-20260915-040004.log
-2026-09-15T04:00:05Z conductor-watchdog[autonomy-prop_3d4c276ce8d54f16]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_3d4c276ce8d54f16-relaunch-20260915-040005.log
-2026-09-15T04:00:05Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_37126eeabea04b5b-relaunch-20260915-040005.log
-2026-09-15T04:00:07Z conductor-watchdog[autonomy-prop_5281b2215ee24a51]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_5281b2215ee24a51-relaunch-20260915-040007.log
-2026-09-15T04:00:08Z conductor-watchdog[autonomy-prop_c8b40cc58d164e8e]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_c8b40cc58d164e8e-relaunch-20260915-040008.log
-2026-09-15T04:00:08Z conductor-watchdog[autonomy-prop_27e34533a3db4593]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_27e34533a3db4593-relaunch-20260915-040008.log
-2026-09-15T04:00:09Z conductor-watchdog[autonomy-prop_bf959992e0304898]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_bf959992e0304898-relaunch-20260915-040009.log
-2026-09-15T04:00:10Z conductor-watchdog[autonomy-prop_82a9e8d9893d478b]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_82a9e8d9893d478b-relaunch-20260915-040010.log
-2026-09-15T04:00:11Z conductor-watchdog[autonomy-prop_1183135ab98843d6]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_1183135ab98843d6-relaunch-20260915-040011.log
-2026-09-15T04:00:13Z conductor-watchdog[autonomy-prop_01b52e00dbce46d6]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_01b52e00dbce46d6-relaunch-20260915-040013.log
-2026-09-15T04:00:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_a9630aba58334018-relaunch-20260915-040020.log
-2026-09-15T04:02:05Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 68m without end marker (last: progress 2026-09-15T02:53:09Z item45-waiting-rerun-ci-311-inprogress) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-15T04:02:09Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T04:02:09Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T04:13:42Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 80m without end marker (last: progress 2026-09-15T02:53:09Z item45-waiting-rerun-ci-311-inprogress) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-15T04:13:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T04:13:46Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T04:30:06Z conductor-watchdog[infra-deploy]: supervisor dead (run status=running) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260915-043006.log
-2026-09-15T04:30:07Z conductor-watchdog[autonomy-prop_9a7a25b233ca4eff]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_9a7a25b233ca4eff-relaunch-20260915-043007.log
-2026-09-15T04:30:09Z conductor-watchdog[autonomy-prop_3d4c276ce8d54f16]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_3d4c276ce8d54f16-relaunch-20260915-043009.log
-2026-09-15T04:30:10Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_37126eeabea04b5b-relaunch-20260915-043010.log
-2026-09-15T04:30:12Z conductor-watchdog[autonomy-prop_5281b2215ee24a51]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_5281b2215ee24a51-relaunch-20260915-043012.log
-2026-09-15T04:30:12Z conductor-watchdog[autonomy-prop_c8b40cc58d164e8e]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_c8b40cc58d164e8e-relaunch-20260915-043012.log
-2026-09-15T04:30:13Z conductor-watchdog[autonomy-prop_27e34533a3db4593]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_27e34533a3db4593-relaunch-20260915-043013.log
-2026-09-15T04:30:14Z conductor-watchdog[autonomy-prop_bf959992e0304898]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_bf959992e0304898-relaunch-20260915-043014.log
-2026-09-15T04:30:15Z conductor-watchdog[autonomy-prop_82a9e8d9893d478b]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_82a9e8d9893d478b-relaunch-20260915-043015.log
-2026-09-15T04:30:16Z conductor-watchdog[autonomy-prop_1183135ab98843d6]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_1183135ab98843d6-relaunch-20260915-043016.log
-2026-09-15T04:30:17Z conductor-watchdog[autonomy-prop_01b52e00dbce46d6]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_01b52e00dbce46d6-relaunch-20260915-043017.log
-2026-09-15T04:30:32Z conductor-watchdog[autonomy-prop_a9630aba58334018]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_a9630aba58334018-relaunch-20260915-043032.log
-2026-09-15T04:31:32Z gateway-drain-watchdog: systemctl --user restart hermes-gateway.service issued (class marker)
-2026-09-15T04:31:32Z gateway-drain-watchdog: stale planned-stop marker (stopper_pid=2259534 dead, age 510s > TTL 60s, gateway_state=draining) — quarantined to /home/agent/.hermes/state/watchdog/gateway-planned-stop.quarantine.20260915T043051Z.json + gateway unit restarted
-2026-09-15T04:34:11Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T04:34:11Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T04:45:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T04:45:32Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T04:56:54Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T05:00:01Z conductor-watchdog[infra-deploy]: supervisor dead (run status=running) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260915-050001.log
-2026-09-15T05:00:02Z conductor-watchdog[autonomy-prop_9a7a25b233ca4eff]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_9a7a25b233ca4eff-relaunch-20260915-050002.log
-2026-09-15T05:00:03Z conductor-watchdog[autonomy-prop_3d4c276ce8d54f16]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_3d4c276ce8d54f16-relaunch-20260915-050003.log
-2026-09-15T05:00:05Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_37126eeabea04b5b-relaunch-20260915-050005.log
 2026-09-15T05:00:06Z conductor-watchdog[autonomy-prop_5281b2215ee24a51]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_5281b2215ee24a51-relaunch-20260915-050006.log
 2026-09-15T05:00:07Z conductor-watchdog[autonomy-prop_c8b40cc58d164e8e]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_c8b40cc58d164e8e-relaunch-20260915-050007.log
 2026-09-15T05:00:07Z conductor-watchdog[autonomy-prop_27e34533a3db4593]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_27e34533a3db4593-relaunch-20260915-050007.log
@@ -4998,3 +4878,123 @@ outcome-loop monitor: supervisor DEAD for run 8e48e148c2774a1cb89e43c87b957a14 �
 2026-10-11T08:19:54Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
 2026-10-11T08:29:58Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
 2026-10-11T08:40:02Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T08:50:01Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T09:00:01Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T09:10:09Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T09:20:11Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T09:30:02Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T09:40:02Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T09:50:11Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
+2026-10-11T10:00:14Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T10:10:12Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T10:20:12Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T10:30:16Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T10:40:13Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T10:50:13Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T11:00:13Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T11:10:16Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T11:20:22Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T11:30:16Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T11:40:16Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T11:50:19Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T12:00:20Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T12:10:18Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T12:20:19Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T12:30:18Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T12:40:21Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T12:50:21Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
+2026-10-11T13:00:21Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
+2026-10-11T13:10:24Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
+2026-10-11T13:20:24Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
+2026-10-11T13:30:25Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
+2026-10-11T13:40:26Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
+2026-10-11T13:50:31Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
+2026-10-11T14:00:32Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
+2026-10-11T14:10:32Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
+2026-10-11T14:20:33Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
+2026-10-11T14:30:33Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
+2026-10-11T14:40:33Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
+2026-10-11T14:43:51Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted f633e95d3d0f243add107dfef9019975ca9b8281 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-11T14:50:33Z auto-ship-lane: checkout DIRTY (1 paths) - manual look required
+2026-10-11T15:00:35Z auto-ship-lane: checkout DIRTY (1 paths) - manual look required
+2026-10-11T15:04:00Z failed-unit-janitor: FAILED-UNIT hermes-watchdog-sweep.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-10-11T15:10:34Z auto-ship-lane: checkout DIRTY (1 paths) - manual look required
+2026-10-11T18:24:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T18:35:38Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T18:46:40Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T18:57:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T19:08:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T19:19:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T19:30:37Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T19:41:40Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T19:52:54Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T20:03:39Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T20:14:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T20:25:38Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T20:31:32Z auto-ship-lane: ff-only to origin/main failed at 827c6fbca429 - manual look required
+2026-10-11T20:36:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T20:41:32Z auto-ship-lane: ff-only to origin/main failed at 827c6fbca429 - manual look required
+2026-10-11T20:47:38Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T20:51:36Z auto-ship-lane: ff-only to origin/main failed at 827c6fbca429 - manual look required
+2026-10-11T20:58:42Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T21:01:37Z auto-ship-lane: ff-only to origin/main failed at 827c6fbca429 - manual look required
+2026-10-11T21:09:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T21:11:36Z auto-ship-lane: ff-only to origin/main failed at 827c6fbca429 - manual look required
+2026-10-11T21:20:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T21:21:37Z auto-ship-lane: ff-only to origin/main failed at 827c6fbca429 - manual look required
+2026-10-11T21:31:39Z auto-ship-lane: ff-only to origin/main failed at 827c6fbca429 - manual look required
+2026-10-11T21:31:40Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T21:41:44Z auto-ship-lane: ff-only to origin/main failed at 827c6fbca429 - manual look required
+2026-10-11T21:42:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T21:51:44Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-11T21:53:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T22:01:56Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-11T22:04:37Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T22:12:00Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-11T22:15:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T22:22:12Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-11T22:26:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T22:32:13Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-11T22:37:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T22:42:13Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-11T22:48:35Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 159m (bound 150m) without end marker (last: progress 2026-10-11T20:09:28Z pr-merged-deployed-5fa857e-live-import-ok) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-11T22:48:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T22:52:16Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-11T22:59:36Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 170m (bound 150m) without end marker (last: progress 2026-10-11T20:09:28Z pr-merged-deployed-5fa857e-live-import-ok) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-11T22:59:37Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T23:02:23Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-11T23:10:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T23:12:32Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-11T23:21:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T23:22:32Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-11T23:32:39Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-11T23:32:48Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T23:42:33Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-11T23:43:38Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-11T23:52:47Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-11T23:54:53Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-12T00:02:35Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-12T00:05:38Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-12T00:12:44Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-12T00:16:40Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-12T00:22:39Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-12T00:28:02Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-12T00:32:50Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-12T00:39:00Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-12T00:42:47Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-12T00:49:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-12T00:52:53Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-12T01:03:01Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-12T01:12:54Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-12T01:22:57Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-12T01:32:56Z auto-ship-lane: ff-only to origin/main failed at e81f0aa5156b - manual look required
+2026-10-12T01:39:48Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 65182459e5d79a97e6ac541fac960b26b702fb0f but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-12T01:42:53Z auto-ship-lane: checkout DIRTY (1 paths) - manual look required
+2026-10-12T01:52:50Z auto-ship-lane: checkout DIRTY (1 paths) - manual look required
+2026-10-12T02:02:53Z auto-ship-lane: checkout DIRTY (1 paths) - manual look required
+2026-10-12T02:12:55Z auto-ship-lane: checkout DIRTY (1 paths) - manual look required
+2026-10-12T02:22:58Z auto-ship-lane: checkout DIRTY (1 paths) - manual look required
+2026-10-12T02:32:55Z auto-ship-lane: checkout DIRTY (1 paths) - manual look required
+2026-10-12T03:46:11Z failed-unit-janitor: FAILED-UNIT hermes-db-continuity-backup.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=timeout) — a real defect, needs a human
+2026-10-12T03:46:12Z failed-unit-janitor: FAILED-UNIT hermes-watchdog-sweep.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-10-12T03:58:00Z failed-unit-janitor: FAILED-UNIT hermes-db-continuity-backup.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=timeout) — a real defect, needs a human
