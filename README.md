@@ -94,8 +94,10 @@ script in this repo) open a short-lived draft PR titled
 head refs, run the repo's `leak-sentinel-self` workflow as the only
 check, then close the PR and delete both refs automatically — everything
 happens in a temp clone, the run worktree is never touched, and no
-maintainer action is needed (PRs #5 and #7-#14 to date; evidence in
-`docs/roadmap-ledger.md` and `docs/lessons.md` L31).
+maintainer action is needed (one such PR per validation gate — #5 and
+#7-#17 as of 2026-10-15, all closed with their refs deleted; the
+closed-PR list is the live count; evidence in `docs/roadmap-ledger.md`
+and `docs/lessons.md` L31).
 
 Per-item roadmap evidence and campaign history live in
 `docs/roadmap-ledger.md`; the rendered `ROADMAP.md` is a live-status view
