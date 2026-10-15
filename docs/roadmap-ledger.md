@@ -929,3 +929,72 @@ brainstorm).)*
   stayed RED. Owner-gated; tracked under rm-042/rm-048 (Cycle-9
   section above). Evidence: `gh api repos/codeo1io/.github/contents/
   control-plane/manifest-verify.log?ref=data` (decoded tail).
+
+## Cycle-11 (2026-10-15)
+
+*(Section appended 2026-10-15 (UTC) by conductor run
+`cbbfb3f45e664dc594c27178201466f0` — the README/ROADMAP docs
+reconciliation this section records. Same evidence-bounded discipline
+as § Cycle-10 above: re-derivable citations only; engine run records
+named engine-store-scoped, never as repo artifacts. The batch lands
+as the exact 3-file uncommitted diff for the commit gate, in two
+implement dispatches over engine checkpoints (engine-store-scoped:
+odd units U1/U3/U5 attempt 97c09129, even units U2/U4 attempt
+f4ea3adc).)*
+
+### Drift inventory (verified live 2026-10-15 at HEAD 2b48632)
+
+- **PR-series staleness.** README:97 said "#5 and #7-#14 to date"
+  while the closed validation-PR series stood at #5 and #7-#17 —
+  three behind, and self-staling by one PR per full_tests gate.
+  Evidence: `gh pr list --repo codeo1io/.github --state all --limit
+  30`; paragraph history `git show 1cf2775 -- README.md`.
+- **Render regression.** The gateway render's ROADMAP.md contradicts
+  this ledger at HEAD: rm-046 :17, rm-036 :22, rm-045 :44, rm-052
+  :74, rm-047 :84 rendered in_progress; rm-022 :116 rendered
+  superseded; rm-005 absent from the rendered view entirely — five
+  proven done-flips regressed plus rm-005 lost, against § Cycle-9
+  above. Evidence: `grep -n 'status: in_progress' ROADMAP.md`;
+  `grep -c 'rm-005' ROADMAP.md` -> 0 at 2b48632.
+- **rm-052 second destruction.** Render d8c1b2d (2026-10-09) deleted
+  the sanctioned cycle-9 extension (+6/-23) while ingesting rm-052
+  into the gateway DB without its signals line and owner-gated
+  annotation — the second destruction after 865477f (first). Full
+  record in § Cycle-10 above. Evidence: `git show d8c1b2d --stat`;
+  `git show d8c1b2d -- ROADMAP.md`.
+
+### Batch and decisions
+
+- Docs-only, exactly three paths — README.md, ROADMAP.md,
+  docs/roadmap-ledger.md — no executable surface touched; the suite
+  collects 77 before and after (README's claim stays exact).
+  Evidence: `git diff --numstat` at the batch; `python3 -m pytest
+  tests/ --collect-only -q` -> 77 tests collected.
+- README de-anchored rather than re-anchored (plan key decision;
+  rejected alternative: count-only patch): the series phrase now
+  reads "#5 and #7-#17 as of 2026-10-15" and states the repo's
+  closed-PR list is the live count — true as the series grows,
+  because the phrase tolerates this run's own full_tests minting
+  PR #18. Evidence: README:91-99 region at the batch.
+- ROADMAP carries one sanctioned cycle-11 pointer block immediately
+  before the managed render marker (final line), cycle-9 pattern,
+  pure insertion, no rendered item line edited — render-volatile by
+  contract; the next full render may delete it (rm-052 tracked
+  risk). Evidence: `git diff --numstat -- ROADMAP.md` (deletions 0).
+- Ledger gains § Cycle-10 (retrospective, above) and this section,
+  append-only; renders never touch this file (authority contract at
+  the ledger head).
+
+### Owner-gated residuals (recorded, not executed)
+
+- gateway ingestion (rm-052 durable fix — render-side preservation
+  or gateway-DB ingestion of sanctioned extensions)
+- re-pin rider — trust chain red since 2026-09-26, latest rc=1
+  2026-10-15 (rm-042/rm-048; re-pin the five delegate digests and
+  re-prove rc=0). Evidence: `gh api repos/codeo1io/.github/contents/
+  control-plane/manifest-verify.log?ref=data` (decoded tail).
+- stale refs conductor/run-12a4e0ab6833 + conductor/run-92e960046f14.
+  Evidence: `git ls-remote origin`.
+- scanner-side ephemeral-PR ignore rule (the closed validation-PR
+  series is benign and self-cleaned; the repo's closed-PR list is
+  the live count)

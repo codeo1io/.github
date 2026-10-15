@@ -128,4 +128,31 @@
 - `rm-034` Renovate shared default preset — superseded
 - `rm-035` OSSF Scorecard on the public repos — superseded
 
+<!-- cycle-11 roadmap extension (2026-10-15, conductor run cbbfb3f45e664dc594c27178201466f0; status flips + evidence appends sourced from cycle-11 brainstorm attempt 3ad3f45a; FULL EVIDENCE in docs/roadmap-ledger.md § Cycle-9 and § Cycle-11 — render-volatile pointer layer, per render-marker contract; render d8c1b2d (2026-10-09) destroyed the cycle-9 block, the second such destruction — rm-052) -->
+
+## Cycle-11 status reconciliation (2026-10-15)
+
+One-line pointers; full per-clause evidence in `docs/roadmap-ledger.md`
+(§ Cycle-9 first proved these; § Cycle-11 re-establishes them after render
+d8c1b2d deleted the cycle-9 block):
+
+- `rm-045` — done (cycle-9; render regressed it).
+- `rm-046` — done (cycle-9; render regressed it).
+- `rm-047` — done (cycle-9; render regressed it).
+- `rm-036` — done (cycle-9; render regressed it).
+- `rm-005` — done (cycle-9; absent from the rendered view entirely).
+- `rm-022` — reopened (status: candidate); only the JUDGMENT-scoping half
+  landed; the cron-wiring residual stays open.
+- `rm-042` / `rm-048` — evidence append (owner-gated): the deployed-artifact
+  trust chain is RED in production since 2026-09-26 (latest rc=1 journal
+  line 2026-10-15); re-pin the five delegate digests and re-prove rc=0.
+- `rm-052` — evidence append: render d8c1b2d (2026-10-09) destroyed the
+  sanctioned cycle-9 extension while ingesting this item into the gateway DB
+  (signals line and owner-gated annotation stripped) — the second
+  destruction (first: 865477f); the durable fix is gateway-side ingestion
+  (owner-gated).
+
+`docs/roadmap-ledger.md` is the record of truth; the rendered statuses above
+this block come from the gateway DB and lag these flips.
+
 <!-- managed by hermes-roadmap render; do not edit by hand -->
