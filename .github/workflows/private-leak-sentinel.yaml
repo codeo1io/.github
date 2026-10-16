@@ -54,6 +54,10 @@ on:
 
 permissions:
   contents: read
+  # ScanPullRequest lists PR commits via the pulls API — without this scope the
+  # job token is clamped below caller grants and PR-event scans die with
+  # "Resource not accessible by integration" (caller must also grant it).
+  pull-requests: read
 
 jobs:
   scan:
