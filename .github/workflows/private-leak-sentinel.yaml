@@ -35,6 +35,14 @@ name: private-leak-sentinel
 on:
   workflow_call:
     inputs:
+      runner-labels:
+        description: >-
+          JSON array of runner labels for the scan job. Default keeps GitHub
+          hosted runners (free on public repos). PRIVATE callers must pass
+          self-hosted labels, e.g. '["self-hosted", "Linux"]' — hosted minutes
+          are billed on private repos (2026-10-16 doctrine).
+        type: string
+        default: '["ubuntu-latest"]'
       config-ref:
         description: >-
           codeo1io/.github git ref holding the fleet gitleaks.toml. Default is
@@ -49,7 +57,7 @@ permissions:
 
 jobs:
   scan:
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON(inputs.runner-labels) }}
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
