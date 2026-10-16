@@ -77,6 +77,14 @@ jobs:
           path: sentinel-config
           persist-credentials: false
 
+      - name: Clear stale gitleaks download (persistent RUNNER_TEMP on self-hosted)
+        # gitleaks-action downloads to a fixed $RUNNER_TEMP/gitleaks.tmp and
+        # refuses to overwrite: on self-hosted runners whose service TMPDIR
+        # persists across jobs, a leftover from a prior run kills the install
+        # ("Destination file path ... already exists", 2026-10-16). No-op on
+        # hosted runners (fresh VM per job).
+        run: rm -f "${RUNNER_TEMP}/gitleaks.tmp"
+
       - uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e # v3.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
