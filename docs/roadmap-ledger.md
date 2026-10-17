@@ -998,3 +998,54 @@ f4ea3adc).)*
 - scanner-side ephemeral-PR ignore rule (the closed validation-PR
   series is benign and self-cleaned; the repo's closed-PR list is
   the live count)
+
+## Cycle-12 (2026-10-16..17, README docs-truth reconciliation)
+
+*(Appended 2026-10-17 (UTC) by conductor run
+`7b571b61badb4c49b45bdfe59064f5c1`; § Cycle-11 discipline —
+re-derivable citations only, engine records engine-store-scoped.
+Docs-only batch (README.md + this file) in two dispatches: odd
+units U1/U3 attempt 9cc1858c; even unit U2 (README Layout bullet)
+separate.)*
+
+### Drift inventory (verified live 2026-10-17 at run base a75a525)
+
+- **PR-series re-staleness.** § Cycle-11 refreshed the enumeration to
+  "#5 and #7-#17 as of 2026-10-15"; the next full_tests gate minted
+  #18 — stale one gate later, rot by design. Evidence (read-only
+  `gh api`): #18 `Conductor CI validation 7f8df4555214`, created
+  2026-10-16T01:23:04Z, closed.
+- **Layout gap (even unit U2).** README Layout had zero coverage of
+  the fleet-consumed reusable sentinel
+  `.github/workflows/private-leak-sentinel.yaml`.
+- **Sentinel hardening on origin/main after the run base**
+  (origin/main-scoped; run base a75a525 carries only the
+  runner-labels input): `fbc8cfc` callers grant `pull-requests:
+  read`; `fd802b9`/`3d2afed` clear a stale gitleaks download left
+  by persistent self-hosted RUNNER_TEMP. Evidence: `git log
+  a75a525..origin/main`; the workflow file on origin/main.
+
+### Batch and decisions
+
+- README enumeration REMOVED (U1; de-anchor, don't re-anchor — the
+  endpoint of § Cycle-11's live-count doctrine :973-978, not a new
+  convention): one-PR-per-gate, the closed-PR-list pointer, and the
+  ledger + `docs/lessons.md` L31 pointers retained; "all closed with
+  their refs deleted" dropped as already verbatim earlier in the
+  paragraph. Evidence: the README hunk.
+- README Layout gains the reusable-sentinel bullet (U2, even unit):
+  BEHAVIOR not VALUES — no SHAs or version pins in prose; the
+  workflow file is the value source.
+- ROADMAP.md untouched BY DESIGN — render-managed, two destructions
+  on record (865477f, d8c1b2d; rm-052). Evidence: ROADMAP.md:133-157;
+  `git diff --numstat -- ROADMAP.md` empty at this batch.
+- Renovate as-of clause (README:118) KEPT — historical evidence, not
+  a live counter; it does not rot. 77-test anchor verified current
+  and unmoved. Evidence: `pytest tests/ --collect-only -q` -> 77
+  tests collected before and after.
+
+### Owner-gated residuals
+
+- Unchanged — § Cycle-11's list stands (gateway ingestion rm-052,
+  re-pin rider, stale run refs, scanner-side ephemeral-PR ignore
+  rule).

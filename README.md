@@ -48,6 +48,18 @@ repo daily, instead of per-repo manual clicking.
   own GitHub Environment with approval gates and scoped secrets. Actions come
   pre-pinned to verified commit SHAs (actions/checkout, dorny/paths-filter) —
   keep them pinned when adopting.
+- `.github/workflows/private-leak-sentinel.yaml` — the reusable gitleaks
+  scan fleet repos consume via `workflow_call` (this repo's
+  `leak-sentinel-self.yaml` is the first caller and pins `config-ref` to
+  `github.sha`). Supply chain is pinned end-to-end: actions at commit
+  SHAs, scanner version pinned (the action's installer fetches
+  releases/latest unchecked without it), fleet `gitleaks.toml` checked
+  out at a pinned default ref. `runner-labels` input: the hosted
+  `ubuntu-latest` default stays free on public repos; PRIVATE callers
+  must pass self-hosted labels — hosted minutes are billed on private
+  repos. Callers must also grant `pull-requests: read` (PR-event scans
+  list PR commits) and the job clears a stale gitleaks download left by
+  persistent self-hosted RUNNER_TEMP.
 - `docs/lessons.md` — evidence-derived prevention rules from the maintenance
   cycles; extend per cycle instead of re-learning.
 - `SECURITY.md`, `PULL_REQUEST_TEMPLATE.md`, `ISSUE_TEMPLATE/` — community
@@ -94,10 +106,10 @@ script in this repo) open a short-lived draft PR titled
 head refs, run the repo's `leak-sentinel-self` workflow as the only
 check, then close the PR and delete both refs automatically — everything
 happens in a temp clone, the run worktree is never touched, and no
-maintainer action is needed (one such PR per validation gate — #5 and
-#7-#17 as of 2026-10-15, all closed with their refs deleted; the
-closed-PR list is the live count; evidence in `docs/roadmap-ledger.md`
-and `docs/lessons.md` L31).
+maintainer action is needed (one such PR per validation gate; the
+closed-PR list is the live count — the series is deliberately not
+enumerated here because it grows with every gate; per-cycle history in
+`docs/roadmap-ledger.md`, mechanism in `docs/lessons.md` L31).
 
 Per-item roadmap evidence and campaign history live in
 `docs/roadmap-ledger.md`; the rendered `ROADMAP.md` is a live-status view
