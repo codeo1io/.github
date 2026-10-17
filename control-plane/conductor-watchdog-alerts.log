@@ -1,41 +1,3 @@
-2026-09-15T14:30:02Z conductor-watchdog[autonomy-prop_3d4c276ce8d54f16]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_3d4c276ce8d54f16-relaunch-20260915-143002.log
-2026-09-15T14:30:03Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_37126eeabea04b5b-relaunch-20260915-143003.log
-2026-09-15T14:30:03Z conductor-watchdog[autonomy-prop_5281b2215ee24a51]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_5281b2215ee24a51-relaunch-20260915-143003.log
-2026-09-15T14:30:04Z conductor-watchdog[autonomy-prop_c8b40cc58d164e8e]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_c8b40cc58d164e8e-relaunch-20260915-143004.log
-2026-09-15T14:30:04Z conductor-watchdog[autonomy-prop_27e34533a3db4593]: supervisor dead (run status=running) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_27e34533a3db4593-relaunch-20260915-143004.log
-2026-09-15T14:30:05Z conductor-watchdog[autonomy-prop_bf959992e0304898]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_bf959992e0304898-relaunch-20260915-143005.log
-2026-09-15T14:30:05Z conductor-watchdog[autonomy-prop_82a9e8d9893d478b]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_82a9e8d9893d478b-relaunch-20260915-143005.log
-2026-09-15T14:30:06Z conductor-watchdog[autonomy-prop_1183135ab98843d6]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_1183135ab98843d6-relaunch-20260915-143006.log
-2026-09-15T14:30:07Z conductor-watchdog[autonomy-prop_01b52e00dbce46d6]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_01b52e00dbce46d6-relaunch-20260915-143007.log
-2026-09-15T14:30:12Z conductor-watchdog[autonomy-prop_a9630aba58334018]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_a9630aba58334018-relaunch-20260915-143012.log
-2026-09-15T14:30:53Z gateway-drain-watchdog: systemctl --user restart hermes-gateway.service issued (class marker)
-2026-09-15T14:30:53Z gateway-drain-watchdog: stale planned-stop marker (stopper_pid=2272 dead, age 1305s > TTL 60s, gateway_state=draining) — quarantined to /home/agent/.hermes/state/watchdog/gateway-planned-stop.quarantine.20260915T143019Z.json + gateway unit restarted
-2026-09-15T14:55:41Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T15:00:00Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-15T11:07:28.742428+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260915-150000.log
-2026-09-15T15:07:12Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T15:18:48Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T15:30:03Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-15T11:07:28.742428+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260915-153003.log
-2026-09-15T15:30:04Z conductor-watchdog[autonomy-prop_9a7a25b233ca4eff]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_9a7a25b233ca4eff-relaunch-20260915-153004.log
-2026-09-15T15:30:04Z conductor-watchdog[autonomy-prop_3d4c276ce8d54f16]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_3d4c276ce8d54f16-relaunch-20260915-153004.log
-2026-09-15T15:30:05Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: supervisor dead (run status=running) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_37126eeabea04b5b-relaunch-20260915-153005.log
-2026-09-15T15:30:06Z conductor-watchdog[autonomy-prop_c8b40cc58d164e8e]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_c8b40cc58d164e8e-relaunch-20260915-153006.log
-2026-09-15T15:30:06Z conductor-watchdog[autonomy-prop_27e34533a3db4593]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-15T15:08:50.104993+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_27e34533a3db4593-relaunch-20260915-153006.log
-2026-09-15T15:30:06Z conductor-watchdog[autonomy-prop_bf959992e0304898]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_bf959992e0304898-relaunch-20260915-153006.log
-2026-09-15T15:30:07Z conductor-watchdog[autonomy-prop_82a9e8d9893d478b]: supervisor dead (run status=running) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_82a9e8d9893d478b-relaunch-20260915-153007.log
-2026-09-15T15:30:07Z conductor-watchdog[autonomy-prop_1183135ab98843d6]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_1183135ab98843d6-relaunch-20260915-153007.log
-2026-09-15T15:30:09Z conductor-watchdog[autonomy-prop_01b52e00dbce46d6]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_01b52e00dbce46d6-relaunch-20260915-153009.log
-2026-09-15T15:30:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_a9630aba58334018-relaunch-20260915-153013.log
-2026-09-15T15:30:19Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T15:41:31Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T15:53:17Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T16:00:05Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-15T11:07:28.742428+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260915-160005.log
-2026-09-15T16:00:10Z conductor-watchdog[autonomy-prop_5281b2215ee24a51]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-15T15:30:40.468373+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_5281b2215ee24a51-relaunch-20260915-160010.log
-2026-09-15T16:06:21Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T16:18:12Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-15T16:30:05Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-15T11:07:28.742428+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260915-163005.log
-2026-09-15T16:30:06Z conductor-watchdog[autonomy-prop_9a7a25b233ca4eff]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_9a7a25b233ca4eff-relaunch-20260915-163006.log
-2026-09-15T16:30:07Z conductor-watchdog[autonomy-prop_3d4c276ce8d54f16]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_3d4c276ce8d54f16-relaunch-20260915-163007.log
-2026-09-15T16:30:08Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_37126eeabea04b5b-relaunch-20260915-163008.log
 2026-09-15T16:30:09Z conductor-watchdog[autonomy-prop_5281b2215ee24a51]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-15T15:30:40.468373+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_5281b2215ee24a51-relaunch-20260915-163009.log
 2026-09-15T16:30:09Z conductor-watchdog[autonomy-prop_c8b40cc58d164e8e]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_c8b40cc58d164e8e-relaunch-20260915-163009.log
 2026-09-15T16:30:10Z conductor-watchdog[autonomy-prop_27e34533a3db4593]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-15T15:08:50.104993+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_27e34533a3db4593-relaunch-20260915-163010.log
@@ -4998,3 +4960,41 @@ outcome-loop monitor: supervisor DEAD for run 8e48e148c2774a1cb89e43c87b957a14 �
 2026-10-16T05:32:00Z failed-unit-janitor: FAILED-UNIT hermes-db-continuity-backup.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=timeout) — a real defect, needs a human
 2026-10-16T08:14:15Z auto-ship-lane: checkout DIRTY (2 paths; foreign: docs/host-constraints.md tests/db-continuity-backup-contract.bats ) - manual look required
 2026-10-16T08:22:00Z failed-unit-janitor: FAILED-UNIT hermes-dashboard.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=start-limit-hit) — a real defect, needs a human
+2026-10-16T15:51:59Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 279feac34d2bbfa2768717eb59b1af10fec75326 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-16T16:05:35Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-10-16T16:08:00Z failed-unit-janitor: FAILED-UNIT hermes-watchdog-sweep.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-10-16T16:15:34Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-10-16T16:25:32Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-10-16T16:35:33Z auto-ship-lane: ff-only to origin/main failed at 69a17c9661b5 - manual look required
+2026-10-16T16:45:34Z auto-ship-lane: ff-only to origin/main failed at 69a17c9661b5 - manual look required
+2026-10-16T16:55:35Z auto-ship-lane: ff-only to origin/main failed at 69a17c9661b5 - manual look required
+2026-10-16T17:05:33Z auto-ship-lane: ff-only to origin/main failed at 69a17c9661b5 - manual look required
+2026-10-16T17:15:33Z auto-ship-lane: ff-only to origin/main failed at 69a17c9661b5 - manual look required
+2026-10-16T17:23:11Z autonomy-deploy-sync: REFUSED main-mismatch — on pr175-v2 at 5474495 but main is not tree-identical — re-pin would change content (/work/projects/hermes-autonomy; once per episode)
+2026-10-16T17:25:33Z auto-ship-lane: ff-only to origin/main failed at 69a17c9661b5 - manual look required
+2026-10-16T17:35:35Z auto-ship-lane: ff-only to origin/main failed at 69a17c9661b5 - manual look required
+2026-10-16T17:45:37Z auto-ship-lane: ff-only to origin/main failed at 69a17c9661b5 - manual look required
+2026-10-16T17:55:38Z auto-ship-lane: ff-only to origin/main failed at 69a17c9661b5 - manual look required
+2026-10-16T18:05:43Z auto-ship-lane: ff-only to origin/main failed at 69a17c9661b5 - manual look required
+2026-10-16T18:15:39Z auto-ship-lane: ff-only to origin/main failed at 26211913bd1f - manual look required
+2026-10-16T18:25:37Z auto-ship-lane: ff-only to origin/main failed at 26211913bd1f - manual look required
+2026-10-16T18:35:39Z auto-ship-lane: ff-only to origin/main failed at 26211913bd1f - manual look required
+2026-10-16T18:45:40Z auto-ship-lane: ff-only to origin/main failed at 26211913bd1f - manual look required
+2026-10-16T18:55:39Z auto-ship-lane: ff-only to origin/main failed at 26211913bd1f - manual look required
+2026-10-16T19:05:41Z auto-ship-lane: ff-only to origin/main failed at 26211913bd1f - manual look required
+2026-10-16T19:15:50Z auto-ship-lane: ff-only to origin/main failed at 26211913bd1f - manual look required
+2026-10-16T19:25:41Z auto-ship-lane: ff-only to origin/main failed at 26211913bd1f - manual look required
+2026-10-16T19:35:57Z auto-ship-lane: ff-only to origin/main failed at 26211913bd1f - manual look required
+2026-10-16T19:45:41Z auto-ship-lane: ff-only to origin/main failed at 26211913bd1f - manual look required
+2026-10-16T19:55:48Z auto-ship-lane: ff-only to origin/main failed at 26211913bd1f - manual look required
+2026-10-16T20:05:42Z auto-ship-lane: ff-only to origin/main failed at 26211913bd1f - manual look required
+2026-10-17T00:25:15Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 01d80a427ec3e1fc6ba35a43e9c2e4392e9057dc but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-17T00:56:12Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-10-17T01:06:17Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-10-17T07:05:34Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 70360ce5267d97b650e7f3f55d280aee638133a6 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-17T07:06:51Z auto-ship-lane: ff-only to origin/main failed at ca36b88a2351 - manual look required
+2026-10-17T07:16:54Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-10-17T07:27:15Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-10-17T07:36:56Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-10-17T07:47:10Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-10-17T07:57:08Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.register-repin.bak ) - manual look required

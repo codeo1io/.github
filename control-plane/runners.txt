@@ -1,15 +1,21 @@
-# generated 2026-10-16T08:40:28Z
+# generated 2026-10-17T08:40:40Z
 ChadGPT
 agent
 agent-reach-harness-integration
+agenttrace
+butterfly
 discord-turbo
+einstein
 fleet-status
 glmplus
+hermes-agent
 hermes-autonomy
 hermes-chat-journal
 hermes-config
 hermes-control-ui
+hermes-gpt
 hermes-infra
+hermes-stewardship-dashboard
 magic-mcp
 stonks
 stonks-2

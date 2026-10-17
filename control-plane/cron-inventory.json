@@ -1,5 +1,5 @@
-# generated 2026-10-16T08:40:28Z
-# 70 jobs
+# generated 2026-10-17T08:40:40Z
+# 72 jobs
 {
   "04999fd7525c": {
     "enabled": true,
@@ -172,6 +172,15 @@
       "minutes": 30
     }
   },
+  "50c2d1411603": {
+    "enabled": true,
+    "name": "native-rails-campaign-heartbeat",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
   "52e4d96deaa8": {
     "enabled": true,
     "name": "spool-server-respawn-watchdog",
@@ -188,6 +197,15 @@
       "display": "0 3 * * *",
       "expr": "0 3 * * *",
       "kind": "cron"
+    }
+  },
+  "58262d5817be": {
+    "enabled": true,
+    "name": "autonomy-deploy-sync-active",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
     }
   },
   "588a07ae076e": {
@@ -272,7 +290,7 @@
     }
   },
   "6efb35c775b8": {
-    "enabled": true,
+    "enabled": false,
     "name": "pr33-merge-watch",
     "schedule": {
       "display": "every 10m",
@@ -551,7 +569,7 @@
     }
   },
   "e1f07c71d184": {
-    "enabled": true,
+    "enabled": false,
     "name": "infra-pr34-merge-watcher",
     "schedule": {
       "display": "every 10m",
