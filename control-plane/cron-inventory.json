@@ -1,5 +1,5 @@
-# generated 2026-10-17T08:40:40Z
-# 72 jobs
+# generated 2026-10-18T08:41:00Z
+# 73 jobs
 {
   "04999fd7525c": {
     "enabled": true,
@@ -125,6 +125,15 @@
       "display": "every 15m",
       "kind": "interval",
       "minutes": 15
+    }
+  },
+  "35978cccc04f": {
+    "enabled": true,
+    "name": "native-rails-campaign-executor",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
     }
   },
   "3a9350ba7e17": {

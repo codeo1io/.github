@@ -1,4 +1,4 @@
-# generated 2026-10-17T08:40:40Z
+# generated 2026-10-18T08:41:00Z
 ChadGPT
 agent
 agent-reach-harness-integration
@@ -8,7 +8,6 @@ discord-turbo
 einstein
 fleet-status
 glmplus
-hermes-agent
 hermes-autonomy
 hermes-chat-journal
 hermes-config
