@@ -1,41 +1,3 @@
-2026-09-16T03:54:50Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T03:54:50Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T04:00:00Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-15T11:07:28.742428+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260916-040000.log
-2026-09-16T04:00:00Z conductor-watchdog[autonomy-prop_9a7a25b233ca4eff]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_9a7a25b233ca4eff-relaunch-20260916-040000.log
-2026-09-16T04:00:00Z conductor-watchdog[autonomy-prop_3d4c276ce8d54f16]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_3d4c276ce8d54f16-relaunch-20260916-040000.log
-2026-09-16T04:00:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-16T03:51:57.762783+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_37126eeabea04b5b-relaunch-20260916-040000.log
-2026-09-16T04:00:00Z conductor-watchdog[autonomy-prop_c8b40cc58d164e8e]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_c8b40cc58d164e8e-relaunch-20260916-040000.log
-2026-09-16T04:00:00Z conductor-watchdog[autonomy-prop_bf959992e0304898]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_bf959992e0304898-relaunch-20260916-040000.log
-2026-09-16T04:00:00Z conductor-watchdog[autonomy-prop_1183135ab98843d6]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_1183135ab98843d6-relaunch-20260916-040000.log
-2026-09-16T04:00:01Z conductor-watchdog[autonomy-prop_01b52e00dbce46d6]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_01b52e00dbce46d6-relaunch-20260916-040001.log
-2026-09-16T04:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: supervisor dead (run status=recoverable) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/autonomy-prop_a9630aba58334018-relaunch-20260916-040002.log
-2026-09-16T04:06:06Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T04:06:06Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T04:17:31Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T04:17:31Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T04:28:56Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T04:28:56Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T04:30:00Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-15T11:07:28.742428+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260916-043000.log
-2026-09-16T04:40:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T04:40:21Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T04:51:42Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T04:51:42Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T05:00:00Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-15T11:07:28.742428+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260916-050000.log
-2026-09-16T05:02:06Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T05:02:06Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T05:13:21Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T05:13:21Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T05:24:44Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T05:24:44Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T05:30:01Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-15T11:07:28.742428+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260916-053001.log
-2026-09-16T05:30:13Z orphan-gateway-sweep: reaping pid 1998471 (age 3s, HERMES_HOME=/tmp/tmp.svm4gfegKn/live-root/hermes-pytest-tmproot-z3/.hermes) — no live owner process references /tmp/tmp.svm4gfegKn/live-root/hermes-pytest-tmproot-z3 (SIGTERM)
-2026-09-16T05:35:58Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T05:35:58Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T05:47:30Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T05:47:30Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T05:58:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T05:58:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-16T06:00:00Z conductor-watchdog[infra-deploy]: supervisor dead (no current run but campaign is due (next_cycle_at=2026-09-15T11:07:28.742428+00:00)) — RELAUNCHED, log /home/agent/.hermes/conductor-supervisors/infra-deploy-relaunch-20260916-060000.log
 2026-09-16T06:09:53Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
 2026-09-16T06:09:53Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
 2026-09-16T06:21:11Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
@@ -4998,3 +4960,41 @@ outcome-loop monitor: supervisor DEAD for run 8e48e148c2774a1cb89e43c87b957a14 �
 2026-10-19T08:15:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 329m (last_run_at=2026-10-19T02:46:28.118664+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
 2026-10-19T08:26:59Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 201m (bound 150m) without end marker (last: progress 2026-10-19T05:05:26Z types-lint-green) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
 2026-10-19T08:26:59Z fix-driver-watch: driver has no fire-completion bookkeeping in 340m (last_run_at=2026-10-19T02:46:28.118664+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-19T13:00:35Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 4dc682d07811ddc820a9882c0995c74b5b32aba6 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-19T14:02:00Z failed-unit-janitor: FAILED-UNIT hermes-check-truth.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-10-19T17:30:00Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-19T17:41:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-19T17:52:15Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-19T17:54:39Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted ac0fbb6a65c805cb1146441b635142547a1f2d9a but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-19T18:03:25Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-19T18:14:23Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-19T18:25:25Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-19T18:36:29Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-19T18:47:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-19T22:16:00Z failed-unit-janitor: FAILED-UNIT hermes-watchdog-sweep.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-10-19T22:24:00Z failed-unit-janitor: FAILED-UNIT hermes-model-policy-guard.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=resources) — a real defect, needs a human
+2026-10-19T22:24:00Z failed-unit-janitor: FAILED-UNIT hermes-watchdog-sweep.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-10-19T22:26:04Z failed-unit-janitor: FAILED-UNIT hermes-watchdog-sweep.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-10-19T23:32:23Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 6b625c9abbe4bd7490ef23fc2023adc323ee8863 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-20T00:56:38Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted c7d88d9c992bb8e47750ea556606df621c7f1841 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-20T01:06:56Z fix-driver-watch: driver has no fire-completion bookkeeping in 284m (last_run_at=2026-10-19T20:22:39.218173+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-20T01:12:20Z auto-ship-lane: deploy plan would PROMOTE/REPOINT release current (9942c57d3870): plan: promote release hermes-conductor: current c7d88d9c992bb8e47750ea556606df621c7f1841 -> intended 6b625c9abbe4bd7490ef23fc2023adc323ee8863 (populate from /work/projects/hermes-conductor at 6b625c9abbe4bd7490ef23fc2023adc323ee8863 via git archive; flip current; install wiring; daemon-reload + restart hermes-conductor-fleet hermes-conductor-gateway hermes-conductor-integration-fleet; prune beyond 3) - register repin lane owns that; holding (item 265)
+2026-10-20T03:23:44Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted b772fd51ebc679be842334dc10d3aa9cd0acd554 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-20T04:12:34Z auto-ship-lane: ff-only to origin/main failed at f6e89754d42f - manual look required
+2026-10-20T04:22:35Z auto-ship-lane: ff-only to origin/main failed at f6e89754d42f - manual look required
+2026-10-20T04:32:40Z auto-ship-lane: ff-only to origin/main failed at f6e89754d42f - manual look required
+2026-10-20T04:42:45Z auto-ship-lane: ff-only to origin/main failed at f6e89754d42f - manual look required
+2026-10-20T04:52:45Z auto-ship-lane: ff-only to origin/main failed at f6e89754d42f - manual look required
+2026-10-20T05:02:53Z auto-ship-lane: ff-only to origin/main failed at f6e89754d42f - manual look required
+2026-10-20T05:12:49Z auto-ship-lane: ff-only to origin/main failed at f6e89754d42f - manual look required
+2026-10-20T06:36:33Z fix-driver-watch: driver has no fire-completion bookkeeping in 100m (last_run_at=2026-10-20T04:56:18.905980+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-20T06:47:32Z fix-driver-watch: driver has no fire-completion bookkeeping in 111m (last_run_at=2026-10-20T04:56:18.905980+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-20T06:58:52Z fix-driver-watch: driver has no fire-completion bookkeeping in 122m (last_run_at=2026-10-20T04:56:18.905980+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-20T07:28:10Z failed-unit-janitor: healed 4 foreign-transient residues within the last 1800s window (>= 4 heals — sustained rotating-producer burst; per-id audit in failed-unit-janitor.log)
+2026-10-20T07:30:06Z failed-unit-janitor: healed 5 foreign-transient residues within the last 1800s window (>= 4 heals — sustained rotating-producer burst; per-id audit in failed-unit-janitor.log)
+2026-10-20T07:32:00Z failed-unit-janitor: healed 8 foreign-transient residues within the last 1800s window (>= 4 heals — sustained rotating-producer burst; per-id audit in failed-unit-janitor.log)
+2026-10-20T07:38:10Z failed-unit-janitor: healed 7 foreign-transient residues within the last 1800s window (>= 4 heals — sustained rotating-producer burst; per-id audit in failed-unit-janitor.log)
+2026-10-20T07:56:00Z failed-unit-janitor: healed 8 foreign-transient residues within the last 1800s window (>= 4 heals — sustained rotating-producer burst; per-id audit in failed-unit-janitor.log)
+2026-10-20T07:58:00Z failed-unit-janitor: healed 6 foreign-transient residues within the last 1800s window (>= 4 heals — sustained rotating-producer burst; per-id audit in failed-unit-janitor.log)
+2026-10-20T08:00:00Z failed-unit-janitor: healed 5 foreign-transient residues within the last 1800s window (>= 4 heals — sustained rotating-producer burst; per-id audit in failed-unit-janitor.log)
+2026-10-20T08:02:00Z failed-unit-janitor: healed 4 foreign-transient residues within the last 1800s window (>= 4 heals — sustained rotating-producer burst; per-id audit in failed-unit-janitor.log)
