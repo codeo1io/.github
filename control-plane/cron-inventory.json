@@ -1,5 +1,5 @@
-# generated 2026-10-21T08:40:53Z
-# 73 jobs
+# generated 2026-10-22T08:40:55Z
+# 74 jobs
 {
   "04999fd7525c": {
     "enabled": true,
@@ -611,6 +611,15 @@
       "display": "every 20m",
       "kind": "interval",
       "minutes": 20
+    }
+  },
+  "e586f06117eb": {
+    "enabled": true,
+    "name": "dep-cve-watch",
+    "schedule": {
+      "display": "25 6 * * *",
+      "expr": "25 6 * * *",
+      "kind": "cron"
     }
   },
   "eadcf8bc6412": {
