@@ -1,4 +1,4 @@
-# generated 2026-10-23T08:40:50Z
+# generated 2026-10-24T08:40:55Z
 # 74 jobs
 {
   "04999fd7525c": {
@@ -596,7 +596,7 @@
     }
   },
   "e409464d74b4": {
-    "enabled": true,
+    "enabled": false,
     "name": "fix-queue work driver safe",
     "schedule": {
       "display": "every 30m",
