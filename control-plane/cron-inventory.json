@@ -1,4 +1,4 @@
-# generated 2026-10-24T08:40:55Z
+# generated 2026-10-25T08:41:05Z
 # 74 jobs
 {
   "04999fd7525c": {
@@ -92,7 +92,7 @@
     }
   },
   "189f2ac35fbc": {
-    "enabled": true,
+    "enabled": false,
     "name": "ci-health-digest",
     "schedule": {
       "display": "every day 09:00",
@@ -128,7 +128,7 @@
     }
   },
   "35978cccc04f": {
-    "enabled": true,
+    "enabled": false,
     "name": "native-rails-campaign-executor",
     "schedule": {
       "display": "every 30m",
@@ -389,7 +389,7 @@
     }
   },
   "a747bb443951": {
-    "enabled": true,
+    "enabled": false,
     "name": "conductor-auto-promote",
     "schedule": {
       "display": "every 20m",
