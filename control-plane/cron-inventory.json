@@ -1,5 +1,5 @@
-# generated 2026-10-25T08:41:05Z
-# 74 jobs
+# generated 2026-10-26T08:40:26Z
+# 75 jobs
 {
   "04999fd7525c": {
     "enabled": true,
@@ -128,7 +128,7 @@
     }
   },
   "35978cccc04f": {
-    "enabled": false,
+    "enabled": true,
     "name": "native-rails-campaign-executor",
     "schedule": {
       "display": "every 30m",
@@ -425,7 +425,7 @@
     }
   },
   "b6ebb9c0f5cc": {
-    "enabled": true,
+    "enabled": false,
     "name": "maestro-strategy-lane-watch",
     "schedule": {
       "display": "every 60m",
@@ -577,6 +577,15 @@
       "minutes": 10
     }
   },
+  "de931f955d8d": {
+    "enabled": true,
+    "name": "tailscale-version-watch",
+    "schedule": {
+      "display": "40 6 * * *",
+      "expr": "40 6 * * *",
+      "kind": "cron"
+    }
+  },
   "e1f07c71d184": {
     "enabled": false,
     "name": "infra-pr34-merge-watcher",
@@ -596,7 +605,7 @@
     }
   },
   "e409464d74b4": {
-    "enabled": false,
+    "enabled": true,
     "name": "fix-queue work driver safe",
     "schedule": {
       "display": "every 30m",
