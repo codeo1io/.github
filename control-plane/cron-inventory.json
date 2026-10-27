@@ -1,5 +1,5 @@
-# generated 2026-10-26T08:40:26Z
-# 75 jobs
+# generated 2026-10-27T08:40:24Z
+# 76 jobs
 {
   "04999fd7525c": {
     "enabled": true,
@@ -92,7 +92,7 @@
     }
   },
   "189f2ac35fbc": {
-    "enabled": false,
+    "enabled": true,
     "name": "ci-health-digest",
     "schedule": {
       "display": "every day 09:00",
@@ -134,6 +134,15 @@
       "display": "every 30m",
       "kind": "interval",
       "minutes": 30
+    }
+  },
+  "3795ab1d970d": {
+    "enabled": true,
+    "name": "egress-leak-baseline-watch",
+    "schedule": {
+      "display": "50 6 * * *",
+      "expr": "50 6 * * *",
+      "kind": "cron"
     }
   },
   "3a9350ba7e17": {
@@ -389,7 +398,7 @@
     }
   },
   "a747bb443951": {
-    "enabled": false,
+    "enabled": true,
     "name": "conductor-auto-promote",
     "schedule": {
       "display": "every 20m",
@@ -425,7 +434,7 @@
     }
   },
   "b6ebb9c0f5cc": {
-    "enabled": false,
+    "enabled": true,
     "name": "maestro-strategy-lane-watch",
     "schedule": {
       "display": "every 60m",
@@ -605,7 +614,7 @@
     }
   },
   "e409464d74b4": {
-    "enabled": true,
+    "enabled": false,
     "name": "fix-queue work driver safe",
     "schedule": {
       "display": "every 30m",

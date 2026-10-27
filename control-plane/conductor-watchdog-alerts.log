@@ -1,190 +1,3 @@
-2026-09-22T04:23:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T04:23:50Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T04:22:57.675493+00:00 — operator attention needed
-2026-09-22T04:30:07Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T04:27:41.756625+00:00 — operator attention needed
-2026-09-22T04:34:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T04:34:52Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T04:33:06.987724+00:00 — operator attention needed
-2026-09-22T04:45:46Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T04:45:52Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T04:44:59.133357+00:00 — operator attention needed
-2026-09-22T04:56:49Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 53m without end marker (last: start 2026-09-22T04:03:13Z item-79 hermes-gpt test_operator_* flake family triage) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T04:56:52Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T04:57:15Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T04:51:02.886687+00:00 — operator attention needed
-2026-09-22T05:00:11Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T04:57:17.732544+00:00 — operator attention needed
-2026-09-22T04:26:44Z conductor-auto-promote: promote of 846dc5f failed rc=3 — promoter log tail: timeout after 40min without a quiet boundary — giving up
-2026-09-22T05:07:49Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T05:08:00Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T05:05:16.337859+00:00 — operator attention needed
-2026-09-22T05:18:49Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T05:19:09Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T05:12:39.985401+00:00 — operator attention needed
-2026-09-22T05:29:57Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T05:29:58Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T05:30:21Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T05:23:45.852064+00:00 — operator attention needed
-2026-09-22T05:30:25Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T05:23:45.852064+00:00 — operator attention needed
-2026-09-22T05:41:01Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T05:41:01Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T05:41:22Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T05:40:28.952670+00:00 — operator attention needed
-2026-09-22T05:51:49Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T05:51:50Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T05:52:08Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T05:49:08.617613+00:00 — operator attention needed
-2026-09-22T06:00:14Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T05:57:22.796731+00:00 — operator attention needed
-2026-09-22T06:02:53Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T06:02:53Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T06:02:59Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T05:57:22.796731+00:00 — operator attention needed
-2026-09-22T06:13:54Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T06:13:59Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T06:13:24.130698+00:00 — operator attention needed
-2026-09-22T06:24:46Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T06:24:49Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T06:22:38.081811+00:00 — operator attention needed
-2026-09-22T06:30:06Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T06:28:31.114586+00:00 — operator attention needed
-2026-09-22T06:35:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T06:35:51Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T06:34:16.714393+00:00 — operator attention needed
-2026-09-22T06:45:39Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T06:43:59.347250+00:00 — operator attention needed
-2026-09-22T06:46:46Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T06:46:51Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T06:43:59.347250+00:00 — operator attention needed
-2026-09-22T06:57:46Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T06:57:54Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T06:56:41.437752+00:00 — operator attention needed
-2026-09-22T07:00:12Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T06:59:57.173299+00:00 — operator attention needed
-2026-09-22T07:08:46Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T07:08:49Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T07:06:40.232840+00:00 — operator attention needed
-2026-09-22T07:19:48Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T07:19:54Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T07:19:06.463632+00:00 — operator attention needed
-2026-09-22T07:30:14Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T07:26:47.184009+00:00 — operator attention needed
-2026-09-22T07:30:48Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T07:31:02Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T07:26:47.184009+00:00 — operator attention needed
-2026-09-22T07:41:49Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T07:42:07Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T07:40:40.323996+00:00 — operator attention needed
-2026-09-22T07:52:51Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T07:53:05Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T07:47:38.629694+00:00 — operator attention needed
-2026-09-22T08:00:21Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T07:53:22.024069+00:00 — operator attention needed
-2026-09-22T08:03:51Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T08:04:24Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T08:02:39.737612+00:00 — operator attention needed
-2026-09-22T08:14:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T08:14:50Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T08:14:11.561014+00:00 — operator attention needed
-2026-09-22T08:25:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T08:25:49Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T08:23:05.681808+00:00 — operator attention needed
-2026-09-22T08:30:14Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T08:29:02.611323+00:00 — operator attention needed
-2026-09-22T08:36:50Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 45m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T08:36:50Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T08:36:50Z fix-driver-watch: driver has no fire-completion bookkeeping in 93m (last_run_at=2026-09-22T07:03:02.616171+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-22T08:36:55Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T08:35:25.349142+00:00 — operator attention needed
-2026-09-22T08:47:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 56m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T08:47:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T08:47:45Z fix-driver-watch: driver has no fire-completion bookkeeping in 104m (last_run_at=2026-09-22T07:03:02.616171+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-22T08:47:47Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T08:45:33.187827+00:00 — operator attention needed
-2026-09-22T08:58:45Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 67m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T08:58:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T08:58:46Z fix-driver-watch: driver has no fire-completion bookkeeping in 115m (last_run_at=2026-09-22T07:03:02.616171+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-22T08:58:50Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T08:57:59.391345+00:00 — operator attention needed
-2026-09-22T09:00:11Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T08:57:59.391345+00:00 — operator attention needed
-2026-09-22T09:09:53Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 78m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T09:09:54Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T09:09:54Z fix-driver-watch: driver has no fire-completion bookkeeping in 126m (last_run_at=2026-09-22T07:03:02.616171+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-22T09:10:00Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T09:08:29.052199+00:00 — operator attention needed
-2026-09-22T09:20:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 89m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T09:20:57Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T09:20:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 137m (last_run_at=2026-09-22T07:03:02.616171+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-22T09:21:02Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T09:18:53.458040+00:00 — operator attention needed
-2026-09-22T09:30:12Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T09:26:36.469584+00:00 — operator attention needed
-2026-09-22T09:31:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 100m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T09:31:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T09:31:45Z fix-driver-watch: driver has no fire-completion bookkeeping in 148m (last_run_at=2026-09-22T07:03:02.616171+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-22T09:31:53Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T09:30:32.853006+00:00 — operator attention needed
-2026-09-22T09:42:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 111m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T09:42:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T09:42:45Z fix-driver-watch: driver has no fire-completion bookkeeping in 159m (last_run_at=2026-09-22T07:03:02.616171+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-22T09:42:52Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T09:42:40.062618+00:00 — operator attention needed
-2026-09-22T09:53:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 122m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T09:53:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T09:53:45Z fix-driver-watch: driver has no fire-completion bookkeeping in 170m (last_run_at=2026-09-22T07:03:02.616171+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-22T09:53:48Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T09:52:07.335121+00:00 — operator attention needed
-2026-09-22T10:00:07Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T09:59:11.664464+00:00 — operator attention needed
-2026-09-22T10:04:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 133m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T10:04:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T10:04:45Z fix-driver-watch: driver has no fire-completion bookkeeping in 181m (last_run_at=2026-09-22T07:03:02.616171+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-22T10:04:47Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T10:02:20.099405+00:00 — operator attention needed
-2026-09-22T10:15:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 144m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T10:15:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T10:15:45Z fix-driver-watch: driver has no fire-completion bookkeeping in 192m (last_run_at=2026-09-22T07:03:02.616171+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-09-22T10:15:48Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T10:13:32.112815+00:00 — operator attention needed
-2026-09-22T10:26:47Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 155m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T10:26:48Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T10:26:48Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T10:26:51Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T10:24:17.097489+00:00 — operator attention needed
-2026-09-22T10:30:05Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T10:27:15.525786+00:00 — operator attention needed
-2026-09-22T10:37:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 166m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T10:37:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T10:37:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T10:37:50Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T10:36:43.292969+00:00 — operator attention needed
-2026-09-22T10:48:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 177m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T10:48:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T10:48:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T10:48:48Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T10:46:50.023313+00:00 — operator attention needed
-2026-09-22T10:59:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 188m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T10:59:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T10:59:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T10:59:47Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T10:57:10.542136+00:00 — operator attention needed
-2026-09-22T11:00:09Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T11:00:09.810657+00:00 — operator attention needed
-2026-09-22T11:10:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 199m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T11:10:44Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T11:10:44Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T11:10:49Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T11:09:20.395895+00:00 — operator attention needed
-2026-09-22T11:21:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 210m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T11:21:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T11:21:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T11:21:49Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T11:21:44.252296+00:00 — operator attention needed
-2026-09-22T11:30:05Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T11:28:31.539353+00:00 — operator attention needed
-2026-09-22T11:32:52Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 221m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T11:32:53Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T11:32:53Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T11:32:57Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T11:31:44.808320+00:00 — operator attention needed
-2026-09-22T11:43:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 232m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T11:43:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T11:43:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T11:43:47Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T11:41:38.338574+00:00 — operator attention needed
-2026-09-22T11:54:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 243m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T11:54:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T11:54:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T11:54:49Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T11:54:15.080312+00:00 — operator attention needed
-2026-09-22T12:00:04Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T11:59:50.619186+00:00 — operator attention needed
-2026-09-22T12:05:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 254m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T12:05:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T12:05:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T12:05:49Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T12:05:38.256531+00:00 — operator attention needed
-2026-09-22T12:16:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 265m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T12:16:44Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T12:16:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T12:16:49Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T12:14:08.729685+00:00 — operator attention needed
-2026-09-22T12:27:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 276m without end marker (last: progress 2026-09-22T07:51:40Z sweeper-designed) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-09-22T12:27:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T12:27:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T12:27:47Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T12:26:36.418369+00:00 — operator attention needed
-2026-09-22T12:30:12Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T12:29:28.331813+00:00 — operator attention needed
-2026-09-22T12:38:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T12:38:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T12:38:47Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T12:36:01.669076+00:00 — operator attention needed
-2026-09-22T12:49:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T12:49:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T12:49:50Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T12:48:31.021779+00:00 — operator attention needed
-2026-09-22T13:00:08Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T12:59:10.299178+00:00 — operator attention needed
-2026-09-22T13:00:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T13:00:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T13:00:52Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T12:59:10.299178+00:00 — operator attention needed
-2026-09-22T13:11:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T13:11:47Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T13:08:59.203285+00:00 — operator attention needed
-2026-09-22T13:22:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T13:22:50Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T13:21:57.094181+00:00 — operator attention needed
-2026-09-22T13:30:07Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T13:28:26.932716+00:00 — operator attention needed
-2026-09-22T13:33:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T13:33:46Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T13:31:50.779665+00:00 — operator attention needed
-2026-09-22T13:44:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T13:44:50Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T13:43:56.572301+00:00 — operator attention needed
-2026-09-22T13:55:44Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T13:55:48Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T13:52:59.268967+00:00 — operator attention needed
-2026-09-22T14:00:05Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T13:58:57.923321+00:00 — operator attention needed
-2026-09-22T14:06:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T14:06:47Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T14:05:03.085918+00:00 — operator attention needed
-2026-09-22T14:17:45Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T14:17:49Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T14:17:06.033453+00:00 — operator attention needed
-2026-09-22T14:28:44Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
-2026-09-22T14:28:48Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T14:26:04.443925+00:00 — operator attention needed
-2026-09-22T14:30:10Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T14:28:58.583531+00:00 — operator attention needed
 2026-09-22T14:36:06Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
 2026-09-22T14:39:47Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T14:37:38.615953+00:00 — operator attention needed
 2026-09-22T14:50:50Z conductor-watchdog[hermes-intent-routing]: run PARKED status=awaiting_evidence phase=reconcile updated=2026-09-22T14:50:43.771733+00:00 — operator attention needed
@@ -4998,3 +4811,190 @@ outcome-loop monitor: supervisor DEAD for run 8e48e148c2774a1cb89e43c87b957a14 �
 2026-10-26T08:17:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
 2026-10-26T08:28:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
 2026-10-26T08:39:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T08:50:26Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T09:01:22Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T09:12:25Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T09:23:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T10:18:18Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T10:29:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T10:40:26Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T10:51:22Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T11:02:30Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T11:13:23Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T11:24:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T11:35:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T11:46:22Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T11:57:27Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T12:08:29Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T12:19:21Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T12:30:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T12:41:18Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 157m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T12:41:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T12:41:19Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 123m ago, no claim in 761m — scheduler wedge, not a fire problem
+2026-10-26T12:41:19Z fix-driver-watch: driver has no fire-completion bookkeeping in 153m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T12:52:18Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 168m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T12:52:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T12:52:19Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 134m ago, no claim in 772m — scheduler wedge, not a fire problem
+2026-10-26T12:52:19Z fix-driver-watch: driver has no fire-completion bookkeeping in 164m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T13:03:22Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 179m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T13:03:23Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T13:03:23Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 145m ago, no claim in 783m — scheduler wedge, not a fire problem
+2026-10-26T13:03:23Z fix-driver-watch: driver has no fire-completion bookkeeping in 175m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T13:14:30Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 190m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T13:14:30Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T13:14:31Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 156m ago, no claim in 794m — scheduler wedge, not a fire problem
+2026-10-26T13:14:31Z fix-driver-watch: driver has no fire-completion bookkeeping in 186m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T13:25:25Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 201m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T13:25:26Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T13:25:26Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 167m ago, no claim in 805m — scheduler wedge, not a fire problem
+2026-10-26T13:25:26Z fix-driver-watch: driver has no fire-completion bookkeeping in 197m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T13:36:19Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 212m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T13:36:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T13:36:20Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 178m ago, no claim in 816m — scheduler wedge, not a fire problem
+2026-10-26T13:36:20Z fix-driver-watch: driver has no fire-completion bookkeeping in 208m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T13:47:20Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 223m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T13:47:21Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T13:47:21Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 189m ago, no claim in 827m — scheduler wedge, not a fire problem
+2026-10-26T13:47:21Z fix-driver-watch: driver has no fire-completion bookkeeping in 219m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T13:58:24Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 234m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T13:58:25Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T13:58:25Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 200m ago, no claim in 838m — scheduler wedge, not a fire problem
+2026-10-26T13:58:25Z fix-driver-watch: driver has no fire-completion bookkeeping in 230m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T14:09:20Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 245m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T14:09:21Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T14:09:21Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 211m ago, no claim in 849m — scheduler wedge, not a fire problem
+2026-10-26T14:09:21Z fix-driver-watch: driver has no fire-completion bookkeeping in 241m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T14:20:20Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 256m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T14:20:21Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T14:20:21Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 222m ago, no claim in 860m — scheduler wedge, not a fire problem
+2026-10-26T14:20:21Z fix-driver-watch: driver has no fire-completion bookkeeping in 252m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T14:31:32Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 267m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T14:31:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T14:31:34Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 233m ago, no claim in 871m — scheduler wedge, not a fire problem
+2026-10-26T14:31:34Z fix-driver-watch: driver has no fire-completion bookkeeping in 263m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T14:42:29Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 278m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T14:42:30Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T14:42:30Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 244m ago, no claim in 882m — scheduler wedge, not a fire problem
+2026-10-26T14:42:30Z fix-driver-watch: driver has no fire-completion bookkeeping in 274m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T14:53:31Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 289m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T14:53:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T14:53:32Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 255m ago, no claim in 893m — scheduler wedge, not a fire problem
+2026-10-26T14:53:32Z fix-driver-watch: driver has no fire-completion bookkeeping in 285m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T15:04:34Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 301m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T15:04:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T15:04:35Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 266m ago, no claim in 904m — scheduler wedge, not a fire problem
+2026-10-26T15:04:35Z fix-driver-watch: driver has no fire-completion bookkeeping in 296m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T15:15:31Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 311m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T15:15:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T15:15:33Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 277m ago, no claim in 915m — scheduler wedge, not a fire problem
+2026-10-26T15:15:33Z fix-driver-watch: driver has no fire-completion bookkeeping in 307m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T15:26:20Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 322m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T15:26:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T15:26:20Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 288m ago, no claim in 926m — scheduler wedge, not a fire problem
+2026-10-26T15:26:20Z fix-driver-watch: driver has no fire-completion bookkeeping in 318m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T15:37:19Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 333m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T15:37:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T15:37:20Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 299m ago, no claim in 937m — scheduler wedge, not a fire problem
+2026-10-26T15:37:20Z fix-driver-watch: driver has no fire-completion bookkeeping in 329m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T15:48:18Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 344m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T15:48:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T15:48:19Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 310m ago, no claim in 948m — scheduler wedge, not a fire problem
+2026-10-26T15:48:19Z fix-driver-watch: driver has no fire-completion bookkeeping in 340m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T15:59:19Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 355m (bound 150m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T15:59:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T15:59:19Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 321m ago, no claim in 959m — scheduler wedge, not a fire problem
+2026-10-26T15:59:19Z fix-driver-watch: driver has no fire-completion bookkeeping in 351m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T16:10:18Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 366m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T16:10:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T16:10:19Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 332m ago, no claim in 970m — scheduler wedge, not a fire problem
+2026-10-26T16:10:19Z fix-driver-watch: driver has no fire-completion bookkeeping in 362m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T16:21:22Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 377m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T16:21:23Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T16:21:23Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 343m ago, no claim in 981m — scheduler wedge, not a fire problem
+2026-10-26T16:21:23Z fix-driver-watch: driver has no fire-completion bookkeeping in 373m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T16:32:17Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 388m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T16:32:18Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T16:32:18Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 354m ago, no claim in 992m — scheduler wedge, not a fire problem
+2026-10-26T16:32:18Z fix-driver-watch: driver has no fire-completion bookkeeping in 384m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T16:43:19Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 399m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T16:43:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T16:43:20Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 365m ago, no claim in 1003m — scheduler wedge, not a fire problem
+2026-10-26T16:43:20Z fix-driver-watch: driver has no fire-completion bookkeeping in 395m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T16:54:22Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 410m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T16:54:23Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T16:54:23Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 376m ago, no claim in 1014m — scheduler wedge, not a fire problem
+2026-10-26T16:54:23Z fix-driver-watch: driver has no fire-completion bookkeeping in 406m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T17:05:21Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 421m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T17:05:21Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T17:05:21Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 387m ago, no claim in 1025m — scheduler wedge, not a fire problem
+2026-10-26T17:05:21Z fix-driver-watch: driver has no fire-completion bookkeeping in 417m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T17:16:19Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 432m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T17:16:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T17:16:20Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 398m ago, no claim in 1036m — scheduler wedge, not a fire problem
+2026-10-26T17:16:20Z fix-driver-watch: driver has no fire-completion bookkeeping in 428m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T17:27:23Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 443m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T17:27:24Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T17:27:24Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 409m ago, no claim in 1047m — scheduler wedge, not a fire problem
+2026-10-26T17:27:24Z fix-driver-watch: driver has no fire-completion bookkeeping in 439m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T17:38:22Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 454m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T17:38:22Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T17:38:22Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 420m ago, no claim in 1058m — scheduler wedge, not a fire problem
+2026-10-26T17:38:22Z fix-driver-watch: driver has no fire-completion bookkeeping in 450m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T17:49:20Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 465m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T17:49:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T17:49:20Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 431m ago, no claim in 1069m — scheduler wedge, not a fire problem
+2026-10-26T17:49:21Z fix-driver-watch: driver has no fire-completion bookkeeping in 461m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T18:00:23Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 476m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T18:00:23Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T18:00:24Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 442m ago, no claim in 1080m — scheduler wedge, not a fire problem
+2026-10-26T18:00:24Z fix-driver-watch: driver has no fire-completion bookkeeping in 472m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T18:11:20Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 487m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T18:11:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T18:11:21Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 453m ago, no claim in 1091m — scheduler wedge, not a fire problem
+2026-10-26T18:11:21Z fix-driver-watch: driver has no fire-completion bookkeeping in 483m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T18:22:19Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 498m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T18:22:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T18:22:20Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 464m ago, no claim in 1102m — scheduler wedge, not a fire problem
+2026-10-26T18:22:20Z fix-driver-watch: driver has no fire-completion bookkeeping in 494m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T18:33:20Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 509m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T18:33:21Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T18:33:21Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 475m ago, no claim in 1113m — scheduler wedge, not a fire problem
+2026-10-26T18:33:21Z fix-driver-watch: driver has no fire-completion bookkeeping in 505m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T18:44:19Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 520m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T18:44:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T18:44:20Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 486m ago, no claim in 1124m — scheduler wedge, not a fire problem
+2026-10-26T18:44:20Z fix-driver-watch: driver has no fire-completion bookkeeping in 516m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T18:55:19Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 531m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T18:55:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T18:55:20Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 497m ago, no claim in 1135m — scheduler wedge, not a fire problem
+2026-10-26T18:55:20Z fix-driver-watch: driver has no fire-completion bookkeeping in 527m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T19:06:23Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 542m (bound 45m) without end marker (last: start 2026-10-26T10:03:34Z 343) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-10-26T19:06:23Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T19:06:24Z fix-driver-watch: driver has no fire-completion bookkeeping in 538m (last_run_at=2026-10-26T10:07:42.818526+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-10-26T19:17:21Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T19:28:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T19:39:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T19:50:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T20:01:23Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T20:12:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T20:23:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T20:34:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T20:45:22Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T20:56:29Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T21:07:21Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T21:18:18Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-26T22:24:27Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 6efbaef189b4e60b76d84d71a0df21861fe25dad but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-27T01:33:23Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 94781d22c2b9df770fb51ac6c4782301976a31ba but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-27T01:51:22Z autonomy-deploy-sync: REFUSED dirty — dirty working tree — stranded operator WIP left untouched (/work/projects/hermes-autonomy; once per episode)
+2026-10-27T03:18:24Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted defb4492cd94a45d8063e865a55b237bb0efa4d8 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-27T07:30:24Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 9e1bd6c5b8b2a6f359844027a5e73d309b091e3a but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-27T07:56:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-27T08:07:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-27T08:12:25Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted c94acdf7111aa0dd79fc4974b011abec7ff48bdc but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-10-27T08:16:25Z auto-ship-lane: deploy plan would PROMOTE/REPOINT release current (f06c4f30706b): plan: promote release hermes-conductor: current c94acdf7111aa0dd79fc4974b011abec7ff48bdc -> intended 9e1bd6c5b8b2a6f359844027a5e73d309b091e3a (populate from /work/projects/hermes-conductor at 9e1bd6c5b8b2a6f359844027a5e73d309b091e3a via git archive; flip current; install wiring; daemon-reload + restart hermes-conductor-fleet hermes-conductor-gateway hermes-conductor-integration-fleet; prune beyond 3) - register repin lane owns that; holding (item 265)
+2026-10-27T08:18:20Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-27T08:26:15Z auto-ship-lane: deploy plan would PROMOTE/REPOINT release current (f06c4f30706b): plan: promote release hermes-conductor: current c94acdf7111aa0dd79fc4974b011abec7ff48bdc -> intended 9e1bd6c5b8b2a6f359844027a5e73d309b091e3a (populate from /work/projects/hermes-conductor at 9e1bd6c5b8b2a6f359844027a5e73d309b091e3a via git archive; flip current; install wiring; daemon-reload + restart hermes-conductor-fleet hermes-conductor-gateway hermes-conductor-integration-fleet; prune beyond 3) - register repin lane owns that; holding (item 265)
+2026-10-27T08:29:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-27T08:36:20Z auto-ship-lane: deploy plan would PROMOTE/REPOINT release current (f06c4f30706b): plan: promote release hermes-conductor: current c94acdf7111aa0dd79fc4974b011abec7ff48bdc -> intended 9e1bd6c5b8b2a6f359844027a5e73d309b091e3a (populate from /work/projects/hermes-conductor at 9e1bd6c5b8b2a6f359844027a5e73d309b091e3a via git archive; flip current; install wiring; daemon-reload + restart hermes-conductor-fleet hermes-conductor-gateway hermes-conductor-integration-fleet; prune beyond 3) - register repin lane owns that; holding (item 265)
+2026-10-27T08:40:21Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-10-27T08:40:21Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 20m ago, no claim in 520m — scheduler wedge, not a fire problem
