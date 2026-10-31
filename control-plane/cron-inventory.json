@@ -1,5 +1,5 @@
-# generated 2026-10-30T08:40:41Z
-# 76 jobs
+# generated 2026-10-31T08:40:21Z
+# 78 jobs
 {
   "04999fd7525c": {
     "enabled": true,
@@ -109,6 +109,15 @@
       "minutes": 5
     }
   },
+  "2d2c05c0e6f6": {
+    "enabled": false,
+    "name": "glmplus-safe-streaming-deploy",
+    "schedule": {
+      "display": "* * * * *",
+      "expr": "* * * * *",
+      "kind": "cron"
+    }
+  },
   "2fe402f35f63": {
     "enabled": true,
     "name": "gh-autoprune",
@@ -190,6 +199,15 @@
       "minutes": 30
     }
   },
+  "4c04943b5a50": {
+    "enabled": false,
+    "name": "glmplus-incremental-streaming-safe-deploy",
+    "schedule": {
+      "display": "* * * * *",
+      "expr": "* * * * *",
+      "kind": "cron"
+    }
+  },
   "50c2d1411603": {
     "enabled": true,
     "name": "native-rails-campaign-heartbeat",
@@ -245,7 +263,7 @@
     }
   },
   "596d302e78eb": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-fork-maintenance-active",
     "schedule": {
       "display": "every 30m",
