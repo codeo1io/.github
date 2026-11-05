@@ -8,7 +8,7 @@
 
 ## Fleet context
 
-- dependents (changes here affect): dashboard, fleet-status, hermes-agent
+- dependents (changes here affect): (host), dashboard, fleet-status, hermes-agent, hermes-gpt, hermes-stewardship-dashboard, magic-hermes
 - graph: evidence-derived (imports/refs/deploy surfaces); advisory
 
 ## Open items
