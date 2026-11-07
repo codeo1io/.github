@@ -1,5 +1,5 @@
-# generated 2026-11-06T08:40:54Z
-# 78 jobs
+# generated 2026-11-07T08:40:57Z
+# 79 jobs
 {
   "04999fd7525c": {
     "enabled": true,
@@ -161,6 +161,15 @@
       "display": "daily at 08:00",
       "expr": "0 8 * * *",
       "kind": "cron"
+    }
+  },
+  "3b25c2c11948": {
+    "enabled": true,
+    "name": "autonomy-adapter-repair-active",
+    "schedule": {
+      "display": "every 10m",
+      "kind": "interval",
+      "minutes": 10
     }
   },
   "416985a5f808": {

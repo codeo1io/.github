@@ -1,390 +1,3 @@
-2026-10-06T14:30:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T14:21:18.882028+00:00 — operator attention needed
-2026-10-06T14:32:24Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 512m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T14:32:25Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T14:35:27Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T14:21:18.882028+00:00 — operator attention needed
-2026-10-06T14:43:25Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 523m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T14:43:26Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T14:46:27Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T14:21:18.882028+00:00 — operator attention needed
-2026-10-06T14:54:25Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 534m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T14:54:25Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T14:57:28Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T14:57:21.290285+00:00 — operator attention needed
-2026-10-06T15:00:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T14:58:00.237023+00:00 — operator attention needed
-2026-10-06T15:05:25Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 545m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T15:05:26Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T15:08:31Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T14:58:00.237023+00:00 — operator attention needed
-2026-10-06T15:16:25Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 556m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T15:16:26Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T15:19:46Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T14:58:00.237023+00:00 — operator attention needed
-2026-10-06T15:27:24Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 567m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T15:27:25Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T15:30:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T14:58:00.237023+00:00 — operator attention needed
-2026-10-06T15:30:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T14:58:00.237023+00:00 — operator attention needed
-2026-10-06T15:38:26Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 578m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T15:38:26Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T15:41:34Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T14:58:00.237023+00:00 — operator attention needed
-2026-10-06T15:49:26Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 589m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T15:49:28Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T15:52:28Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T15:47:07.267269+00:00 — operator attention needed
-2026-10-06T16:00:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T15:47:07.267269+00:00 — operator attention needed
-2026-10-06T16:00:26Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 600m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T16:00:28Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T16:03:30Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T15:47:07.267269+00:00 — operator attention needed
-2026-10-06T16:11:29Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 611m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T16:11:31Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T16:14:29Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T15:47:07.267269+00:00 — operator attention needed
-2026-10-06T16:22:25Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 622m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T16:22:25Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T16:25:27Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T15:47:07.267269+00:00 — operator attention needed
-2026-10-06T16:30:20Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T16:26:47.873142+00:00 — operator attention needed
-2026-10-06T16:33:26Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 633m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T16:33:26Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T16:36:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T16:26:47.873142+00:00 — operator attention needed
-2026-10-06T16:44:24Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 644m without end marker (last: start 2026-10-06T05:59:36Z item208-pr-merge-sequence) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T16:44:25Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T16:47:33Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T16:26:47.873142+00:00 — operator attention needed
-2026-10-06T16:55:25Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T16:58:34Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T16:26:47.873142+00:00 — operator attention needed
-2026-10-06T17:00:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T16:26:47.873142+00:00 — operator attention needed
-2026-10-06T17:06:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-06T17:09:38Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T17:03:02.286120+00:00 — operator attention needed
-2026-10-06T17:21:01Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T17:03:02.286120+00:00 — operator attention needed
-2026-10-06T17:30:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T17:03:02.286120+00:00 — operator attention needed
-2026-10-06T17:32:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T17:03:02.286120+00:00 — operator attention needed
-2026-10-06T17:42:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T17:03:02.286120+00:00 — operator attention needed
-2026-10-06T17:53:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T17:46:08.807512+00:00 — operator attention needed
-2026-10-06T18:00:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T17:46:08.807512+00:00 — operator attention needed
-2026-10-06T18:00:24Z failed-unit-janitor: FAILED-UNIT codeo1io-butterfly.service — foreign persistent unit (fragment=/home/agent/.config/systemd/user/codeo1io-butterfly.service; active=failed sub=failed result=exit-code) — a lane's declared unit file
-2026-10-06T18:05:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T17:46:08.807512+00:00 — operator attention needed
-2026-10-06T18:15:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T17:46:08.807512+00:00 — operator attention needed
-2026-10-06T18:27:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T18:25:31.465798+00:00 — operator attention needed
-2026-10-06T18:30:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T18:25:31.465798+00:00 — operator attention needed
-2026-10-06T18:38:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T18:25:31.465798+00:00 — operator attention needed
-2026-10-06T18:48:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T18:25:31.465798+00:00 — operator attention needed
-2026-10-06T19:00:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T18:25:31.465798+00:00 — operator attention needed
-2026-10-06T19:00:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T18:25:31.465798+00:00 — operator attention needed
-2026-10-06T19:11:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T19:05:35.978565+00:00 — operator attention needed
-2026-10-06T19:21:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T19:05:35.978565+00:00 — operator attention needed
-2026-10-06T19:28:58Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 47m without end marker (last: progress 2026-10-06T18:41:10Z item210: reaper 18:09Z freed 14.2GB (candidates=0); worktrees 115G = growth driver; per-lineage du running; CI 37498743304 recheck pending) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T19:29:00Z fix-driver-watch: driver has no fire-completion bookkeeping in 138m (last_run_at=2026-10-06T17:10:36.191847+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-06T19:30:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T19:05:35.978565+00:00 — operator attention needed
-2026-10-06T19:33:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T19:05:35.978565+00:00 — operator attention needed
-2026-10-06T19:39:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 58m without end marker (last: progress 2026-10-06T18:41:10Z item210: reaper 18:09Z freed 14.2GB (candidates=0); worktrees 115G = growth driver; per-lineage du running; CI 37498743304 recheck pending) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-06T19:39:58Z fix-driver-watch: driver has no fire-completion bookkeeping in 149m (last_run_at=2026-10-06T17:10:36.191847+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-06T19:43:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T19:05:35.978565+00:00 — operator attention needed
-2026-10-06T19:55:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T19:49:03.075959+00:00 — operator attention needed
-2026-10-06T20:00:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T19:49:03.075959+00:00 — operator attention needed
-2026-10-06T20:05:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T19:49:03.075959+00:00 — operator attention needed
-2026-10-06T20:17:12Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T19:49:03.075959+00:00 — operator attention needed
-2026-10-06T20:28:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T20:26:08.927211+00:00 — operator attention needed
-2026-10-06T20:30:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T20:26:08.927211+00:00 — operator attention needed
-2026-10-06T20:39:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T20:26:08.927211+00:00 — operator attention needed
-2026-10-06T20:50:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T20:26:08.927211+00:00 — operator attention needed
-2026-10-06T21:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T20:26:08.927211+00:00 — operator attention needed
-2026-10-06T21:01:01Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T20:26:08.927211+00:00 — operator attention needed
-2026-10-06T21:11:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T21:03:44.256038+00:00 — operator attention needed
-2026-10-06T21:22:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T21:03:44.256038+00:00 — operator attention needed
-2026-10-06T21:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T21:03:44.256038+00:00 — operator attention needed
-2026-10-06T21:34:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T21:03:44.256038+00:00 — operator attention needed
-2026-10-06T21:44:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T21:40:05.993212+00:00 — operator attention needed
-2026-10-06T21:56:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T21:40:05.993212+00:00 — operator attention needed
-2026-10-06T22:00:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T21:40:05.993212+00:00 — operator attention needed
-2026-10-06T22:06:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T21:40:05.993212+00:00 — operator attention needed
-2026-10-06T22:17:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T22:16:21.210071+00:00 — operator attention needed
-2026-10-06T22:29:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T22:16:21.210071+00:00 — operator attention needed
-2026-10-06T22:30:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T22:16:21.210071+00:00 — operator attention needed
-2026-10-06T22:39:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T22:16:21.210071+00:00 — operator attention needed
-2026-10-06T22:51:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T22:16:21.210071+00:00 — operator attention needed
-2026-10-06T23:00:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T22:56:46.975882+00:00 — operator attention needed
-2026-10-06T23:02:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T22:56:46.975882+00:00 — operator attention needed
-2026-10-06T23:12:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T22:56:46.975882+00:00 — operator attention needed
-2026-10-06T23:24:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T22:56:46.975882+00:00 — operator attention needed
-2026-10-06T23:30:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T22:56:46.975882+00:00 — operator attention needed
-2026-10-06T23:34:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T22:56:46.975882+00:00 — operator attention needed
-2026-10-06T23:45:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T23:38:28.225307+00:00 — operator attention needed
-2026-10-06T23:57:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T23:38:28.225307+00:00 — operator attention needed
-2026-10-06T23:57:11Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 1b48b746acfa8905a9d5a256515a6bb8c58477a6 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-07T00:00:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T23:58:32.479371+00:00 — operator attention needed
-2026-10-07T00:08:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T23:58:32.479371+00:00 — operator attention needed
-2026-10-07T00:14:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 46m without end marker (last: progress 2026-10-06T23:28:05Z sweep-probe-disk-growth) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T00:14:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 90m (last_run_at=2026-10-06T22:44:19.720583+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-07T00:19:01Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T23:58:32.479371+00:00 — operator attention needed
-2026-10-07T00:29:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T23:58:32.479371+00:00 — operator attention needed
-2026-10-07T00:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-06T23:58:32.479371+00:00 — operator attention needed
-2026-10-07T00:40:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T00:34:07.256795+00:00 — operator attention needed
-2026-10-07T00:52:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T00:34:07.256795+00:00 — operator attention needed
-2026-10-07T01:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T00:34:07.256795+00:00 — operator attention needed
-2026-10-07T01:02:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T00:34:07.256795+00:00 — operator attention needed
-2026-10-07T01:13:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T01:09:18.183391+00:00 — operator attention needed
-2026-10-07T01:21:49Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted d2ea4b1c01637a3451dfffe1d53233158f8ad596 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-07T01:24:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T01:23:26.691095+00:00 — operator attention needed
-2026-10-07T01:30:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T01:23:26.691095+00:00 — operator attention needed
-2026-10-07T01:36:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T01:23:26.691095+00:00 — operator attention needed
-2026-10-07T01:47:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T01:23:26.691095+00:00 — operator attention needed
-2026-10-07T01:58:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T01:23:26.691095+00:00 — operator attention needed
-2026-10-07T02:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T01:23:26.691095+00:00 — operator attention needed
-2026-10-07T02:08:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T02:04:32.905581+00:00 — operator attention needed
-2026-10-07T02:20:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T02:04:32.905581+00:00 — operator attention needed
-2026-10-07T02:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T02:04:32.905581+00:00 — operator attention needed
-2026-10-07T02:30:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T02:04:32.905581+00:00 — operator attention needed
-2026-10-07T02:41:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T02:40:30.084333+00:00 — operator attention needed
-2026-10-07T02:53:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T02:40:30.084333+00:00 — operator attention needed
-2026-10-07T03:00:14Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T02:40:30.084333+00:00 — operator attention needed
-2026-10-07T03:04:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T02:40:30.084333+00:00 — operator attention needed
-2026-10-07T03:15:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T02:40:30.084333+00:00 — operator attention needed
-2026-10-07T03:26:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T02:40:30.084333+00:00 — operator attention needed
-2026-10-07T03:30:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T02:40:30.084333+00:00 — operator attention needed
-2026-10-07T03:37:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T03:32:44.367139+00:00 — operator attention needed
-2026-10-07T03:47:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T03:32:44.367139+00:00 — operator attention needed
-2026-10-07T03:54:55Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 7cc76f587aaa436109c57d64333b9ea7c003326b but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-07T03:59:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T03:56:36.410593+00:00 — operator attention needed
-2026-10-07T04:00:11Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T03:56:36.410593+00:00 — operator attention needed
-2026-10-07T04:09:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T03:56:36.410593+00:00 — operator attention needed
-2026-10-07T04:21:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T03:56:36.410593+00:00 — operator attention needed
-2026-10-07T04:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T03:56:36.410593+00:00 — operator attention needed
-2026-10-07T04:31:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T03:56:36.410593+00:00 — operator attention needed
-2026-10-07T04:43:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T04:33:05.577013+00:00 — operator attention needed
-2026-10-07T04:54:10Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T04:33:05.577013+00:00 — operator attention needed
-2026-10-07T05:00:11Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T04:33:05.577013+00:00 — operator attention needed
-2026-10-07T05:04:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T04:33:05.577013+00:00 — operator attention needed
-2026-10-07T05:15:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T04:33:05.577013+00:00 — operator attention needed
-2026-10-07T05:27:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T05:16:39.879697+00:00 — operator attention needed
-2026-10-07T05:30:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T05:16:39.879697+00:00 — operator attention needed
-2026-10-07T05:38:19Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T05:16:39.879697+00:00 — operator attention needed
-2026-10-07T05:49:23Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T05:16:39.879697+00:00 — operator attention needed
-2026-10-07T06:00:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T05:16:39.879697+00:00 — operator attention needed
-2026-10-07T06:00:16Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T05:16:39.879697+00:00 — operator attention needed
-2026-10-07T06:11:21Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T06:09:37.084011+00:00 — operator attention needed
-2026-10-07T06:22:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T06:09:37.084011+00:00 — operator attention needed
-2026-10-07T06:30:24Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T06:09:37.084011+00:00 — operator attention needed
-2026-10-07T06:33:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T06:09:37.084011+00:00 — operator attention needed
-2026-10-07T06:44:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T06:09:37.084011+00:00 — operator attention needed
-2026-10-07T06:54:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T06:54:21.496931+00:00 — operator attention needed
-2026-10-07T07:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T06:55:14.727217+00:00 — operator attention needed
-2026-10-07T07:05:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T06:55:14.727217+00:00 — operator attention needed
-2026-10-07T07:17:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T06:55:14.727217+00:00 — operator attention needed
-2026-10-07T07:27:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T06:55:14.727217+00:00 — operator attention needed
-2026-10-07T07:30:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T06:55:14.727217+00:00 — operator attention needed
-2026-10-07T07:34:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 46m without end marker (last: start 2026-10-07T06:48:46Z 219) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T07:38:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T07:32:04.549299+00:00 — operator attention needed
-2026-10-07T07:49:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T07:32:04.549299+00:00 — operator attention needed
-2026-10-07T08:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T07:32:04.549299+00:00 — operator attention needed
-2026-10-07T08:00:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T07:32:04.549299+00:00 — operator attention needed
-2026-10-07T08:12:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T08:10:10.887390+00:00 — operator attention needed
-2026-10-07T08:22:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T08:10:10.887390+00:00 — operator attention needed
-2026-10-07T08:30:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T08:10:10.887390+00:00 — operator attention needed
-2026-10-07T08:33:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T08:10:10.887390+00:00 — operator attention needed
-2026-10-07T08:45:01Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T08:10:10.887390+00:00 — operator attention needed
-2026-10-07T08:55:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T08:47:47.688650+00:00 — operator attention needed
-2026-10-07T09:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T08:47:47.688650+00:00 — operator attention needed
-2026-10-07T09:06:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T08:47:47.688650+00:00 — operator attention needed
-2026-10-07T09:17:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T08:47:47.688650+00:00 — operator attention needed
-2026-10-07T09:28:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T09:27:06.025550+00:00 — operator attention needed
-2026-10-07T09:30:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T09:27:06.025550+00:00 — operator attention needed
-2026-10-07T09:35:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 46m without end marker (last: start 2026-10-07T08:49:36Z 220) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T09:39:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T09:27:06.025550+00:00 — operator attention needed
-2026-10-07T09:46:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 57m without end marker (last: start 2026-10-07T08:49:36Z 220) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T09:51:01Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T09:27:06.025550+00:00 — operator attention needed
-2026-10-07T09:57:57Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 68m without end marker (last: start 2026-10-07T08:49:36Z 220) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T09:57:58Z fix-driver-watch: driver has no fire-completion bookkeeping in 100m (last_run_at=2026-10-07T08:17:12.351802+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-07T10:00:17Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T09:27:06.025550+00:00 — operator attention needed
-2026-10-07T10:02:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T09:27:06.025550+00:00 — operator attention needed
-2026-10-07T10:09:08Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 79m without end marker (last: start 2026-10-07T08:49:36Z 220) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T10:09:10Z fix-driver-watch: driver has no fire-completion bookkeeping in 111m (last_run_at=2026-10-07T08:17:12.351802+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-07T10:13:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T10:03:33.002409+00:00 — operator attention needed
-2026-10-07T10:19:57Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 90m without end marker (last: start 2026-10-07T08:49:36Z 220) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T10:19:59Z fix-driver-watch: driver has no fire-completion bookkeeping in 122m (last_run_at=2026-10-07T08:17:12.351802+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-07T10:24:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T10:03:33.002409+00:00 — operator attention needed
-2026-10-07T10:30:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T10:03:33.002409+00:00 — operator attention needed
-2026-10-07T10:31:06Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 101m without end marker (last: start 2026-10-07T08:49:36Z 220) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T10:31:08Z fix-driver-watch: driver has no fire-completion bookkeeping in 133m (last_run_at=2026-10-07T08:17:12.351802+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-07T10:35:10Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T10:03:33.002409+00:00 — operator attention needed
-2026-10-07T10:41:58Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 112m without end marker (last: start 2026-10-07T08:49:36Z 220) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T10:42:00Z fix-driver-watch: driver has no fire-completion bookkeeping in 144m (last_run_at=2026-10-07T08:17:12.351802+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-07T10:46:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T10:03:33.002409+00:00 — operator attention needed
-2026-10-07T10:56:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T10:48:29.552172+00:00 — operator attention needed
-2026-10-07T11:00:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T10:48:29.552172+00:00 — operator attention needed
-2026-10-07T11:08:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T10:48:29.552172+00:00 — operator attention needed
-2026-10-07T11:18:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T10:48:29.552172+00:00 — operator attention needed
-2026-10-07T11:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T11:29:49.393287+00:00 — operator attention needed
-2026-10-07T11:30:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T11:29:49.393287+00:00 — operator attention needed
-2026-10-07T11:40:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T11:29:49.393287+00:00 — operator attention needed
-2026-10-07T11:52:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T11:29:49.393287+00:00 — operator attention needed
-2026-10-07T12:00:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T11:29:49.393287+00:00 — operator attention needed
-2026-10-07T12:02:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T11:29:49.393287+00:00 — operator attention needed
-2026-10-07T12:13:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T12:07:33.730775+00:00 — operator attention needed
-2026-10-07T12:20:57Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 50m without end marker (last: progress 2026-10-07T11:30:36Z 220: PR #122 open, CI tree-battery in flight) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T12:20:58Z fix-driver-watch: driver has no fire-completion bookkeeping in 243m (last_run_at=2026-10-07T08:17:12.351802+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-07T12:25:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T12:07:33.730775+00:00 — operator attention needed
-2026-10-07T12:30:11Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T12:07:33.730775+00:00 — operator attention needed
-2026-10-07T12:32:01Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 61m without end marker (last: progress 2026-10-07T11:30:36Z 220: PR #122 open, CI tree-battery in flight) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T12:32:02Z fix-driver-watch: driver has no fire-completion bookkeeping in 254m (last_run_at=2026-10-07T08:17:12.351802+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-07T12:36:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T12:07:33.730775+00:00 — operator attention needed
-2026-10-07T12:42:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 72m without end marker (last: progress 2026-10-07T11:30:36Z 220: PR #122 open, CI tree-battery in flight) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T12:42:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 265m (last_run_at=2026-10-07T08:17:12.351802+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-07T12:47:01Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T12:46:16.242888+00:00 — operator attention needed
-2026-10-07T12:53:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 83m without end marker (last: progress 2026-10-07T11:30:36Z 220: PR #122 open, CI tree-battery in flight) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T12:53:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 276m (last_run_at=2026-10-07T08:17:12.351802+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-07T12:58:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T12:46:16.242888+00:00 — operator attention needed
-2026-10-07T13:00:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T12:46:16.242888+00:00 — operator attention needed
-2026-10-07T13:04:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 94m without end marker (last: progress 2026-10-07T11:30:36Z 220: PR #122 open, CI tree-battery in flight) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T13:04:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 287m (last_run_at=2026-10-07T08:17:12.351802+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-07T13:08:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T12:46:16.242888+00:00 — operator attention needed
-2026-10-07T13:15:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 105m without end marker (last: progress 2026-10-07T11:30:36Z 220: PR #122 open, CI tree-battery in flight) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T13:15:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 298m (last_run_at=2026-10-07T08:17:12.351802+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-07T13:20:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T12:46:16.242888+00:00 — operator attention needed
-2026-10-07T13:26:57Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 116m without end marker (last: progress 2026-10-07T11:30:36Z 220: PR #122 open, CI tree-battery in flight) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T13:26:59Z fix-driver-watch: driver has no fire-completion bookkeeping in 309m (last_run_at=2026-10-07T08:17:12.351802+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-07T13:30:10Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T13:26:07.016774+00:00 — operator attention needed
-2026-10-07T13:30:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T13:26:07.016774+00:00 — operator attention needed
-2026-10-07T13:37:57Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 127m without end marker (last: progress 2026-10-07T11:30:36Z 220: PR #122 open, CI tree-battery in flight) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-07T13:37:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 320m (last_run_at=2026-10-07T08:17:12.351802+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-07T13:42:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T13:26:07.016774+00:00 — operator attention needed
-2026-10-07T13:53:01Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T13:26:07.016774+00:00 — operator attention needed
-2026-10-07T14:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T13:26:07.016774+00:00 — operator attention needed
-2026-10-07T14:03:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T14:03:53.835082+00:00 — operator attention needed
-2026-10-07T14:14:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T14:03:53.835082+00:00 — operator attention needed
-2026-10-07T14:25:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T14:03:53.835082+00:00 — operator attention needed
-2026-10-07T14:30:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run PARKED status=awaiting_evidence phase=compound updated=2026-10-07T14:03:53.835082+00:00 — operator attention needed
-2026-10-07T15:30:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: run 9e7e512edbbb44409570828505e1ed2e TERMINAL status=failed — cycle finished (updated 2026-10-07T15:23:51.260793+00:00)
-2026-10-07T16:06:05Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 82f2a2e18638a20cd11a1b55ae059fef327db381 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-07T17:31:02Z failed-unit-janitor: healed run-u1758684.service (stale foreign transient residue cleared after 1402s)
-2026-10-07T18:15:21Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted a7826236c49f77457d92ae3e5eefefcc16bc59ae but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-07T21:30:27Z failed-unit-janitor: healed run-u1769271.service (stale foreign transient residue cleared after 1088s)
-2026-10-08T00:05:19Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted a3d6aa7fcf12ebcc513a98b8f55825f79d2f078d but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-08T04:37:53Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted f3373bea6764bca8881aba63a050e2a0577ee701 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-08T07:30:33Z failed-unit-janitor: healed run-u1798608.service (stale foreign transient residue cleared after 1659s)
-2026-10-08T09:12:39Z fix-driver-watch: driver has no fire-completion bookkeeping in 97m (last_run_at=2026-10-08T07:35:12.085617+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-08T09:57:48Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted d893f8ae51c12b49f459d3f4f065bd906086b1ba but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-08T11:57:56Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 0a4b2d5ab5a6c7ad12d3e996f93da7bb2f783837 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-08T16:30:37Z failed-unit-janitor: healed run-u1824397.service (stale foreign transient residue cleared after 1242s)
-2026-10-08T16:30:37Z failed-unit-janitor: healed run-u1824398.service (stale foreign transient residue cleared after 1235s)
-2026-10-08T16:30:37Z failed-unit-janitor: healed run-u1824404.service (stale foreign transient residue cleared after 1227s)
-2026-10-08T16:30:37Z failed-unit-janitor: healed run-u1824415.service (stale foreign transient residue cleared after 1221s)
-2026-10-08T16:30:37Z failed-unit-janitor: healed run-u1824423.service (stale foreign transient residue cleared after 1211s)
-2026-10-08T19:30:31Z orphan-gateway-sweep: reaping pid 3359962 (age 3s, HERMES_HOME=/work/projects/.tmp/hermes-conductor-integration-fleet/tmp.NugESRJ4DF/live-root/hermes-pytest-tmproot-z3/.hermes) — no live owner process references /work/projects/.tmp/hermes-conductor-integration-fleet/tmp.NugESRJ4DF/live-root/hermes-pytest-tmproot-z3 (SIGTERM)
-2026-10-09T00:25:02Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 158m (bound 150m) without end marker (last: progress 2026-10-08T21:46:05Z 226 PR #477 open: 3 pre-pm known-failure rules + classifier generalization + 3-driver wiring + workflow receipts; both-ways 4fail-old/16pass-new; CI waiting) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-09T00:25:03Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T00:33:09Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 435d7defa44276d16edb97edcbc516d2dd398d6c but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-09T00:36:03Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 169m (bound 150m) without end marker (last: progress 2026-10-08T21:46:05Z 226 PR #477 open: 3 pre-pm known-failure rules + classifier generalization + 3-driver wiring + workflow receipts; both-ways 4fail-old/16pass-new; CI waiting) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-09T00:36:05Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T00:47:02Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 180m (bound 150m) without end marker (last: progress 2026-10-08T21:46:05Z 226 PR #477 open: 3 pre-pm known-failure rules + classifier generalization + 3-driver wiring + workflow receipts; both-ways 4fail-old/16pass-new; CI waiting) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-09T00:47:03Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T00:58:03Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T01:09:02Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T01:20:03Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T01:30:52Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T01:41:50Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T01:52:49Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T02:03:59Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T02:14:50Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T02:25:50Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T02:36:50Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T02:47:49Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T02:58:49Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T03:00:08Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 689daffa3b6c498d262bfe91110086fff66b5b8e but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-09T03:10:00Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T03:20:49Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T03:31:49Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T03:42:49Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T03:53:53Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-09T08:39:49Z fix-driver-watch: driver has no fire-completion bookkeeping in 90m (last_run_at=2026-10-09T07:09:45.644011+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-09T08:50:49Z fix-driver-watch: driver has no fire-completion bookkeeping in 101m (last_run_at=2026-10-09T07:09:45.644011+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-09T09:01:49Z fix-driver-watch: driver has no fire-completion bookkeeping in 112m (last_run_at=2026-10-09T07:09:45.644011+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-09T09:12:35Z fix-driver-watch: driver has no fire-completion bookkeeping in 122m (last_run_at=2026-10-09T07:09:45.644011+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-09T09:23:35Z fix-driver-watch: driver has no fire-completion bookkeeping in 133m (last_run_at=2026-10-09T07:09:45.644011+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-09T09:34:35Z fix-driver-watch: driver has no fire-completion bookkeeping in 144m (last_run_at=2026-10-09T07:09:45.644011+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-09T09:45:35Z fix-driver-watch: driver has no fire-completion bookkeeping in 155m (last_run_at=2026-10-09T07:09:45.644011+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-09T09:56:35Z fix-driver-watch: driver has no fire-completion bookkeeping in 166m (last_run_at=2026-10-09T07:09:45.644011+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-09T10:07:35Z fix-driver-watch: driver has no fire-completion bookkeeping in 177m (last_run_at=2026-10-09T07:09:45.644011+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-09T11:21:09Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted f1a77a087895a0538a40a5832dc62e1da71a9b18 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-09T13:00:26Z failed-unit-janitor: FAILED-UNIT auto-repin-lane.service — foreign persistent unit (fragment=/home/agent/.config/systemd/user/auto-repin-lane.service; active=failed sub=failed result=signal) — a lane's declared unit file
-2026-10-09T18:21:35Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 60m (bound 45m) without end marker (last: progress 2026-10-09T17:21:13Z item231-pr132-merged-13022fd-verb-running-repin-mint) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-09T18:21:36Z fix-driver-watch: driver has no fire-completion bookkeeping in 411m (last_run_at=2026-10-09T11:30:30.637541+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-09T21:53:48Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 8678da8fa5f64e36d3574175998dd539f422af4f but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-09T23:38:35Z conductor-auto-promote: promote of b8feae9 failed rc=1 — promoter log tail: release dir exists for b8feae94e97c85792728605e8d184c1ab3fcf8d6 — refusing
-2026-10-09T23:38:38Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted b8feae94e97c85792728605e8d184c1ab3fcf8d6 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-10T02:05:47Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted e4f2ed66c72c39e1dc70a1e259e7f55f3fa2575f but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-10T09:47:23Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 62d9b0238f84201d20b36036a0f1027a129704b5 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-10T16:32:18Z fix-driver-watch: driver has no fire-completion bookkeeping in 94m (last_run_at=2026-10-10T14:57:37.613349+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-10T17:01:51Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 1225cda1395795e511e1639faa28f89c5b800315 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-10T19:52:54Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 041690b37e202f78e31db6b65455dc0b552d2962 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-10T20:30:57Z failed-unit-janitor: FAILED-UNIT conductor-targeted-f5cebbcf-803952c7.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
-2026-10-10T21:24:21Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 12c74be1fbef407bc359f8d8e41bdaf0943f6160 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-10T21:30:59Z failed-unit-janitor: FAILED-UNIT conductor-targeted-f5cebbcf-803952c7.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
-2026-10-10T21:30:59Z failed-unit-janitor: FAILED-UNIT conductor-targeted-f5cebbcf-a326fc8b.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
-2026-10-10T22:34:19Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 610063ed964f95dcc49c2cd8be5039238bbe6fda but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-10T23:34:09Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 8cd8e6325e4e9fb1dac5a13099bfbee21c13b6c8 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-11T00:00:31Z orphan-gateway-sweep: reaping pid 2034899 (age 3s, HERMES_HOME=/home/agent/.hermes/cache/scratch/tmp.IwuwfwqFUv/gone-root/hermes-pytest-tmproot-x1/.hermes) — no live owner process references /home/agent/.hermes/cache/scratch/tmp.IwuwfwqFUv/gone-root/hermes-pytest-tmproot-x1 (SIGTERM)
-2026-10-11T00:00:33Z orphan-gateway-sweep: pid 2034918 already gone — no live owner process references /home/agent/.hermes/cache/scratch/tmp.IwuwfwqFUv/live-root/hermes-pytest-tmproot-y2
-2026-10-11T00:31:38Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 4bfba8f276639aa8731d4d17fe6023931a518d60 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-11T03:44:04Z failed-unit-janitor: FAILED-UNIT auto-ship-lane.service — foreign persistent unit (fragment=/home/agent/.config/systemd/user/auto-ship-lane.service; active=failed sub=failed result=exit-code) — a lane's declared unit file
-2026-10-11T04:02:00Z failed-unit-janitor: FAILED-UNIT hermes-check-truth.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
-2026-10-11T05:49:07Z auto-ship-lane: ff-only to origin/main failed at 492f5b7c124a - manual look required
-2026-10-11T05:59:14Z auto-ship-lane: ff-only to origin/main failed at 492f5b7c124a - manual look required
-2026-10-11T06:09:14Z auto-ship-lane: ff-only to origin/main failed at 492f5b7c124a - manual look required
-2026-10-11T06:19:15Z auto-ship-lane: ff-only to origin/main failed at 492f5b7c124a - manual look required
-2026-10-11T06:29:16Z auto-ship-lane: ff-only to origin/main failed at 492f5b7c124a - manual look required
-2026-10-11T06:39:21Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T06:49:21Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T06:59:31Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T07:09:31Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T07:19:31Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T07:29:31Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T07:39:31Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T07:49:32Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T07:59:53Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T08:09:53Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T08:19:54Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T08:29:58Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T08:40:02Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T08:50:01Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T09:00:01Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T09:10:09Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T09:20:11Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T09:30:02Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T09:40:02Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T09:50:11Z auto-ship-lane: ff-only to origin/main failed at 8be25749de09 - manual look required
-2026-10-11T10:00:14Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T10:10:12Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T10:20:12Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T10:30:16Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T10:40:13Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T10:50:13Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T11:00:13Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T11:10:16Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T11:20:22Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T11:30:16Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T11:40:16Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T11:50:19Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T12:00:20Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T12:10:18Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T12:20:19Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T12:30:18Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T12:40:21Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T12:50:21Z auto-ship-lane: ff-only to origin/main failed at 420afb1f08eb - manual look required
-2026-10-11T13:00:21Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
-2026-10-11T13:10:24Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
-2026-10-11T13:20:24Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
-2026-10-11T13:30:25Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
-2026-10-11T13:40:26Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
-2026-10-11T13:50:31Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
-2026-10-11T14:00:32Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
-2026-10-11T14:10:32Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
-2026-10-11T14:20:33Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
-2026-10-11T14:30:33Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
-2026-10-11T14:40:33Z auto-ship-lane: ff-only to origin/main failed at b1c73d894a09 - manual look required
-2026-10-11T14:43:51Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted f633e95d3d0f243add107dfef9019975ca9b8281 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
-2026-10-11T14:50:33Z auto-ship-lane: checkout DIRTY (1 paths) - manual look required
-2026-10-11T15:00:35Z auto-ship-lane: checkout DIRTY (1 paths) - manual look required
-2026-10-11T15:04:00Z failed-unit-janitor: FAILED-UNIT hermes-watchdog-sweep.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
-2026-10-11T15:10:34Z auto-ship-lane: checkout DIRTY (1 paths) - manual look required
-2026-10-11T18:24:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-11T18:35:38Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-11T18:46:40Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-11T18:57:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-11T19:08:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-11T19:19:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
-2026-10-11T19:30:37Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
 2026-10-11T19:41:40Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
 2026-10-11T19:52:54Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
 2026-10-11T20:03:39Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
@@ -4998,3 +4611,390 @@
 2026-11-06T08:30:12Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
 2026-11-06T08:38:58Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
 2026-11-06T08:39:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T08:49:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T08:49:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T09:00:02Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T09:00:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T09:00:59Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T09:01:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T09:11:58Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T09:12:01Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T09:22:58Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T09:23:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T09:30:02Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T09:30:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T09:33:59Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T09:34:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T09:44:58Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T09:45:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T09:55:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T09:55:56Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T10:00:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T10:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T10:06:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T10:06:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T10:16:02Z failed-unit-janitor: MARKER-ADMITTED set page — nrm-soak-tick.service codes=1 owner=hermes-gpt/native-rails-migration heals_in_hold=64 (producer-consented expected-fail rail; re-pages on membership/owner/codes change, heal-count band transitions, and once per 86400s hold window; dormant members age out silently)
+2026-11-06T10:17:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T10:17:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T10:28:57Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T10:28:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T10:30:02Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T10:30:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T10:40:02Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T10:40:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T10:51:09Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T10:51:11Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T11:00:04Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T11:00:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T11:01:57Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T11:02:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T11:12:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T11:12:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T11:21:57Z conductor-auto-promote: promote of 463183e failed rc=3 — promoter log tail: unsafe promote: live quiesce-aware spool needs same-owner promotion nonce
+2026-11-06T11:23:58Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T11:24:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T11:30:02Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T11:30:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T11:31:55Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 463183e1c13901fe29614141416451ce9591acea but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-11-06T11:34:57Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T11:35:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T11:45:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T11:45:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T11:57:02Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T11:57:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T12:00:01Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T12:00:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T12:08:06Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T12:08:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T12:18:53Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T12:18:55Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T12:30:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T12:30:04Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T12:30:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T12:30:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T12:40:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T12:40:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T12:51:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T12:51:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T13:00:09Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T13:00:10Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T13:02:57Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T13:02:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T13:13:58Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T13:14:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T13:24:53Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T13:24:55Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T13:30:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T13:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T13:36:03Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T13:36:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T13:47:05Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T13:47:08Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T13:58:02Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T13:58:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T14:00:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T14:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T14:08:58Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T14:09:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T14:20:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T14:20:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T14:30:01Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T14:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T14:31:03Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T14:31:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T14:42:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T14:42:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T14:52:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T14:52:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T15:00:02Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T15:00:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T15:03:59Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T15:04:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T15:14:53Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T15:14:55Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T15:26:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T15:26:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T15:30:03Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T15:30:10Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T15:36:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T15:36:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T15:48:01Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T15:48:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T15:58:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T15:59:01Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T16:00:11Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T16:00:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T16:10:06Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T16:10:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T16:20:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T16:20:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T16:30:04Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T16:30:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T16:32:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T16:32:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T16:42:59Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T16:43:01Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T16:53:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T16:54:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T17:00:06Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T17:00:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T17:04:58Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T17:05:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T17:15:54Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T17:15:55Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T17:26:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T17:26:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T17:30:02Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T17:30:09Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T17:37:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T17:37:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T17:45:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 117m (bound 45m) without end marker (last: progress 2026-11-06T15:48:01Z 392 fix commit 12949626 pushed; CI wave 2) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-06T17:45:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 402m (last_run_at=2026-11-06T11:03:29.861254+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-06T17:48:54Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T17:48:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T17:56:58Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 128m (bound 45m) without end marker (last: progress 2026-11-06T15:48:01Z 392 fix commit 12949626 pushed; CI wave 2) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-06T17:56:58Z fix-driver-watch: driver has no fire-completion bookkeeping in 413m (last_run_at=2026-11-06T11:03:29.861254+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-06T17:59:54Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T17:59:56Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T18:00:09Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T18:00:11Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T18:07:53Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 139m (bound 45m) without end marker (last: progress 2026-11-06T15:48:01Z 392 fix commit 12949626 pushed; CI wave 2) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-06T18:07:54Z fix-driver-watch: driver has no fire-completion bookkeeping in 424m (last_run_at=2026-11-06T11:03:29.861254+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-06T18:10:53Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T18:10:55Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T18:18:57Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 150m (bound 45m) without end marker (last: progress 2026-11-06T15:48:01Z 392 fix commit 12949626 pushed; CI wave 2) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-06T18:18:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 435m (last_run_at=2026-11-06T11:03:29.861254+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-06T18:21:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T18:21:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T18:30:01Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T18:30:02Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 162m (bound 45m) without end marker (last: progress 2026-11-06T15:48:01Z 392 fix commit 12949626 pushed; CI wave 2) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-06T18:30:03Z fix-driver-watch: driver has no fire-completion bookkeeping in 446m (last_run_at=2026-11-06T11:03:29.861254+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-06T18:30:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T18:33:03Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T18:33:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T18:43:54Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T18:43:56Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T18:54:57Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T18:55:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T19:00:08Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T19:00:12Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T19:05:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T19:05:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T19:17:05Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T19:17:15Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T19:24:55Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 49m (bound 45m) without end marker (last: progress 2026-11-06T18:35:03Z 392 CI: code lanes green; macOS-arm64 capacity queue rerunning) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-06T19:24:56Z fix-driver-watch: driver has no fire-completion bookkeeping in 501m (last_run_at=2026-11-06T11:03:29.861254+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-06T19:27:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T19:27:56Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T19:30:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T19:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T19:35:55Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 60m (bound 45m) without end marker (last: progress 2026-11-06T18:35:03Z 392 CI: code lanes green; macOS-arm64 capacity queue rerunning) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-06T19:35:56Z fix-driver-watch: driver has no fire-completion bookkeeping in 512m (last_run_at=2026-11-06T11:03:29.861254+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-06T19:38:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T19:38:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T19:46:57Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 71m (bound 45m) without end marker (last: progress 2026-11-06T18:35:03Z 392 CI: code lanes green; macOS-arm64 capacity queue rerunning) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-06T19:46:58Z fix-driver-watch: driver has no fire-completion bookkeeping in 523m (last_run_at=2026-11-06T11:03:29.861254+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-06T19:49:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T19:49:56Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T19:58:01Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 82m (bound 45m) without end marker (last: progress 2026-11-06T18:35:03Z 392 CI: code lanes green; macOS-arm64 capacity queue rerunning) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-06T19:58:02Z fix-driver-watch: driver has no fire-completion bookkeeping in 534m (last_run_at=2026-11-06T11:03:29.861254+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-06T20:00:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T20:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T20:01:04Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T20:01:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T20:09:08Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 94m (bound 45m) without end marker (last: progress 2026-11-06T18:35:03Z 392 CI: code lanes green; macOS-arm64 capacity queue rerunning) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-06T20:09:09Z fix-driver-watch: driver has no fire-completion bookkeeping in 545m (last_run_at=2026-11-06T11:03:29.861254+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-06T20:11:58Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T20:12:01Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T20:19:59Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 104m (bound 45m) without end marker (last: progress 2026-11-06T18:35:03Z 392 CI: code lanes green; macOS-arm64 capacity queue rerunning) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-06T20:20:01Z fix-driver-watch: driver has no fire-completion bookkeeping in 556m (last_run_at=2026-11-06T11:03:29.861254+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-06T20:23:20Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T20:23:22Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T20:30:03Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T20:30:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T20:34:03Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T20:34:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T20:44:58Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T20:45:01Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T20:55:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T20:55:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T21:00:01Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T21:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T21:07:08Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T21:07:10Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T21:17:54Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T21:17:56Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T21:28:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T21:28:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T21:30:05Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T21:30:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T21:39:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T21:39:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T21:51:10Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T21:51:13Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T22:00:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T22:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T22:01:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T22:01:59Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T22:12:59Z autonomy-deploy-sync: REFUSED dirty — dirty working tree — stranded operator WIP left untouched (/work/projects/hermes-autonomy; once per episode)
+2026-11-06T22:13:01Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T22:13:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T22:23:58Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T22:24:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T22:30:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T22:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T22:32:58Z deploy-checkout-sync: CHRONIC jarvis failed 3 consecutive passes (fetch) — checkout stuck behind origin, needs eyes
+2026-11-06T22:32:59Z deploy-checkout-sync: CHRONIC llm-wiki-cli failed 3 consecutive passes (fetch) — checkout stuck behind origin, needs eyes
+2026-11-06T22:34:53Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T22:34:55Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T22:45:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T22:45:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T22:56:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T22:57:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T23:00:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T23:00:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T23:07:54Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T23:07:56Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T23:18:53Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T23:18:54Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T23:29:54Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T23:29:56Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T23:30:02Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T23:30:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T23:38:05Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 153m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-06T23:38:06Z fix-driver-watch: driver has no fire-completion bookkeeping in 187m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-06T23:40:53Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T23:40:54Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T23:48:55Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 164m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-06T23:48:56Z fix-driver-watch: driver has no fire-completion bookkeeping in 198m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-06T23:51:53Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-06T23:51:56Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-06T23:59:54Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 175m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-06T23:59:55Z fix-driver-watch: driver has no fire-completion bookkeeping in 209m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T00:00:06Z failed-unit-janitor: MARKER-ADMITTED set page — nrm-soak-tick.service codes=1 owner=hermes-gpt/native-rails-migration heals_in_hold=94 (producer-consented expected-fail rail; re-pages on membership/owner/codes change, heal-count band transitions, and once per 86400s hold window; dormant members age out silently)
+2026-11-07T00:00:06Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T00:00:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T00:02:53Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T00:02:55Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T00:10:55Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 186m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T00:10:56Z fix-driver-watch: driver has no fire-completion bookkeeping in 220m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T00:13:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T00:13:56Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T00:21:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 197m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T00:21:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 231m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T00:24:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T00:24:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T00:30:01Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T00:30:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T00:32:57Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 208m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T00:32:58Z fix-driver-watch: driver has no fire-completion bookkeeping in 242m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T00:33:57Z deploy-checkout-sync: CHRONIC hermes-control-ui failed 3 consecutive passes (fetch) — checkout stuck behind origin, needs eyes
+2026-11-07T00:33:57Z deploy-checkout-sync: CHRONIC hermes-stewardship-dashboard failed 3 consecutive passes (fetch) — checkout stuck behind origin, needs eyes
+2026-11-07T00:33:58Z deploy-checkout-sync: CHRONIC hermes-conductor failed 3 consecutive passes (fetch) — checkout stuck behind origin, needs eyes
+2026-11-07T00:33:58Z deploy-checkout-sync: CHRONIC maestro failed 3 consecutive passes (fetch) — checkout stuck behind origin, needs eyes
+2026-11-07T00:35:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T00:35:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T00:43:55Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 219m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T00:43:56Z fix-driver-watch: driver has no fire-completion bookkeeping in 253m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T00:46:59Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T00:47:01Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T00:55:09Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 230m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T00:55:10Z fix-driver-watch: driver has no fire-completion bookkeeping in 264m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T00:57:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T00:57:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T01:00:01Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T01:00:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T01:06:05Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 241m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T01:06:07Z fix-driver-watch: driver has no fire-completion bookkeeping in 275m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T01:09:03Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T01:09:07Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T01:16:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 252m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T01:16:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 286m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T01:19:58Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T01:20:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T01:28:03Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 263m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T01:28:04Z fix-driver-watch: driver has no fire-completion bookkeeping in 297m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T01:30:01Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T01:30:04Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T01:30:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T01:31:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T01:38:57Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 274m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T01:38:58Z fix-driver-watch: driver has no fire-completion bookkeeping in 308m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T01:41:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T01:41:56Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T01:49:57Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 285m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T01:49:58Z fix-driver-watch: driver has no fire-completion bookkeeping in 319m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T01:52:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T01:52:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T02:00:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T02:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T02:01:01Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 296m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T02:01:02Z fix-driver-watch: driver has no fire-completion bookkeeping in 330m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T02:03:59Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T02:04:01Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T02:11:54Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 307m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T02:11:54Z fix-driver-watch: driver has no fire-completion bookkeeping in 341m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T02:14:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T02:14:56Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T02:22:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 318m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T02:22:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 352m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T02:25:53Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T02:25:55Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T02:30:01Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T02:30:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T02:33:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 329m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T02:33:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 363m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T02:36:54Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T02:36:56Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T02:44:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 340m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T02:44:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 374m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T02:47:59Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T02:48:00Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T02:55:56Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 351m (bound 150m) without end marker (last: start 2026-11-06T21:04:27Z 392) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
+2026-11-07T02:55:56Z fix-driver-watch: driver has no fire-completion bookkeeping in 385m (last_run_at=2026-11-06T20:30:30.261536+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
+2026-11-07T02:59:04Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T02:59:06Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T03:00:05Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T03:00:21Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T03:10:01Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T03:10:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T03:20:55Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T03:20:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T03:30:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T03:30:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T03:31:54Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T03:31:56Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T03:42:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T03:42:58Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T03:54:00Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T03:54:02Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T04:00:02Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T04:00:03Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T04:04:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T04:04:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T04:15:53Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T04:15:55Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T04:26:56Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T04:26:57Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T04:30:02Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T04:30:05Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T04:36:03Z deploy-checkout-sync: CHRONIC hermes-agent failed 3 consecutive passes (fetch) — checkout stuck behind origin, needs eyes
+2026-11-07T04:36:06Z deploy-checkout-sync: CHRONIC m3u-editor-src failed 3 consecutive passes (fetch) — checkout stuck behind origin, needs eyes
+2026-11-07T04:38:10Z conductor-watchdog[autonomy-prop_37126eeabea04b5b]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_37126eeabea04b5b/conductor.db) — check track registry
+2026-11-07T04:38:12Z conductor-watchdog[autonomy-prop_a9630aba58334018]: db missing (/work/projects/hermes-autonomy/runtime/campaigns/prop_a9630aba58334018/conductor.db) — check track registry
+2026-11-07T05:12:59Z conductor-auto-promote: promote of c5ee31d starved: claimed envelopes held continuously for 480s (release frozen at 463183e1c13901fe29614141416451ce9591acea; item 412)
+2026-11-07T06:02:57Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-11-07T06:14:02Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-11-07T06:24:54Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-11-07T06:35:56Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-11-07T06:47:00Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-11-07T06:57:55Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-11-07T07:08:56Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-11-07T07:19:55Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-11-07T07:30:58Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-11-07T07:41:56Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-11-07T07:52:56Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-11-07T08:03:58Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-11-07T08:14:58Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-11-07T08:26:03Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
+2026-11-07T08:37:00Z fix-driver-watch: cron job ee8385a26887 last_status=error — driver/status machinery failing, needs eyes
