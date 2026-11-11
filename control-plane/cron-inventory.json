@@ -1,4 +1,4 @@
-# generated 2026-11-10T08:40:24Z
+# generated 2026-11-11T08:40:28Z
 # 79 jobs
 {
   "04999fd7525c": {
@@ -272,7 +272,7 @@
     }
   },
   "596d302e78eb": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-fork-maintenance-active",
     "schedule": {
       "display": "every 30m",
