@@ -20,6 +20,7 @@ import argparse
 import json
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 import yaml
@@ -28,6 +29,30 @@ ROOT = Path(__file__).resolve().parent.parent
 
 # A stuck gh/network call must never hang the 08:30 cron (rm-017).
 GH_TIMEOUT = 60.0
+
+# Transient egress retries (rm-034 class): the ops host's route to
+# api.github.com flaps for seconds at a time (observed 2026-10-30, 11-07,
+# 11-11, 11-12: "dial tcp ... no route to host" bursts killing 4 of 15
+# daily syncs). gh itself has no retry; one failed call used to hard-fail
+# that repo (or the whole pass at list_repos). Retry ONLY transient shapes
+# a retry cannot fix: auth failures, 4xx, DNS NXDOMAIN, and timeouts stay
+# single-shot — a timeout is a hung call, not a flap, and retrying it
+# doubles the stall against the 08:30 cron budget.
+GH_TRANSIENT_RETRIES = 3
+GH_RETRY_BACKOFF_S = 5.0
+_TRANSIENT_NET_MARKERS = (
+    "no route to host",
+    "connection refused",
+    "connection reset",
+    "connection closed",
+    "broken pipe",
+    "i/o timeout",
+    "EOF",  # gh api graphql: EOF on empty reply mid-flap
+    "temporary failure in name resolution",
+    "network is unreachable",
+    "bad gateway",  # 502 from the API edge
+    "service unavailable",  # 503
+)
 
 MERGE_KEYS = (
     "allow_squash_merge",
@@ -41,19 +66,39 @@ MERGE_KEYS = (
 # invariants; auto-merge is a plan-gated convenience, not a fleet rule.
 
 
+def _is_transient_gh_failure(stderr_text: str) -> bool:
+    """True only for network-transient gh failures (case-insensitive marker
+    match on the stderr tail). Auth ('Bad credentials', 401/403), 404, and
+    other API verdicts return False — a retry cannot fix them and would
+    just burn the cron budget."""
+    tail = (stderr_text or "")[-600:].lower()
+    return any(marker.lower() in tail for marker in _TRANSIENT_NET_MARKERS)
+
+
 def gh(*args: str, input: str | None = None) -> subprocess.CompletedProcess:
-    try:
-        return subprocess.run(
-            ["gh", *args], capture_output=True, text=True, input=input,
-            timeout=GH_TIMEOUT,
-        )
-    except subprocess.TimeoutExpired:
-        # Uniform with gh failures: rc != 0 flows through the existing
-        # allow_fail / FATAL paths instead of hanging the daily cron.
-        return subprocess.CompletedProcess(
-            ["gh", *args], returncode=124, stdout="",
-            stderr=f"gh {' '.join(args)} timed out after {GH_TIMEOUT:.0f}s",
-        )
+    attempts = GH_TRANSIENT_RETRIES + 1
+    r = subprocess.CompletedProcess(  # bound up-front: analyzer + explicit
+        ["gh", *args], returncode=1, stdout="", stderr="gh: not attempted"
+    )
+    for attempt in range(attempts):
+        try:
+            r = subprocess.run(
+                ["gh", *args], capture_output=True, text=True, input=input,
+                timeout=GH_TIMEOUT,
+            )
+        except subprocess.TimeoutExpired:
+            # Uniform with gh failures: rc != 0 flows through the existing
+            # allow_fail / FATAL paths instead of hanging the daily cron.
+            # NOT retried: a timeout is a hung call, not a flap.
+            return subprocess.CompletedProcess(
+                ["gh", *args], returncode=124, stdout="",
+                stderr=f"gh {' '.join(args)} timed out after {GH_TIMEOUT:.0f}s",
+            )
+        if r.returncode == 0 or not _is_transient_gh_failure(r.stderr):
+            return r
+        if attempt < GH_TRANSIENT_RETRIES:
+            time.sleep(GH_RETRY_BACKOFF_S * (attempt + 1))
+    return r
 
 
 def gh_json(*args: str, input: str | None = None, allow_fail: bool = False):

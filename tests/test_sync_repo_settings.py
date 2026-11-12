@@ -80,6 +80,125 @@ def test_gh_timeout_synthesizes_rc124(monkeypatch):
     assert "timed out" in r.stderr
 
 
+# --- gh seam: transient-egress retry (rm-034 class, 2026-11-12) ------------
+# Observed live: "dial tcp ...: no route to host" flaps killed 4 of 15 daily
+# syncs (2026-10-30, 11-07, 11-11, 11-12). gh() must retry ONLY transient
+# network shapes; auth verdicts and timeouts stay single-shot.
+
+
+def test_is_transient_gh_failure_classifies():
+    flap = (
+        'gh: Put "https://api.github.com/repos/codeo1io/x/branches/main/protection": '
+        "dial tcp 172.182.252.137:443: connect: no route to host"
+    )
+    assert srs._is_transient_gh_failure(flap) is True
+    assert srs._is_transient_gh_failure("gh: EOF") is True
+    assert srs._is_transient_gh_failure("gh: server returned 503 Service Unavailable") is True
+    # Non-transient: retry cannot fix these
+    assert srs._is_transient_gh_failure("gh: Bad credentials (HTTP 401)") is False
+    assert srs._is_transient_gh_failure("gh: Not Found (HTTP 404)") is False
+    assert srs._is_transient_gh_failure("") is False
+    assert srs._is_transient_gh_failure("gh: Resource not accessible (HTTP 403)") is False
+
+
+def _cp(rc, stderr=""):
+    return subprocess.CompletedProcess(["gh"], rc, stdout="", stderr=stderr)
+
+
+def test_gh_retries_transient_flap_then_succeeds(monkeypatch):
+    # The live 2026-11-12 shape: one flap call, then the route returns.
+    monkeypatch.setattr(srs.time, "sleep", lambda _s: None)
+    calls = {"n": 0}
+
+    def flaky(*_a, **_k):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            return _cp(1, "dial tcp 172.182.252.137:443: connect: no route to host")
+        return _cp(0, "")
+
+    monkeypatch.setattr(srs.subprocess, "run", flaky)
+    r = srs.gh("api", "user")
+    assert r.returncode == 0
+    assert calls["n"] == 2  # retried exactly once, then succeeded
+
+
+def test_gh_persistent_flap_exhausts_retries(monkeypatch):
+    monkeypatch.setattr(srs.time, "sleep", lambda _s: None)
+    calls = {"n": 0}
+
+    def always_flap(*_a, **_k):
+        calls["n"] += 1
+        return _cp(1, "dial tcp 172.182.252.137:443: connect: no route to host")
+
+    monkeypatch.setattr(srs.subprocess, "run", always_flap)
+    r = srs.gh("api", "user")
+    assert r.returncode == 1
+    assert calls["n"] == srs.GH_TRANSIENT_RETRIES + 1  # bounded, not infinite
+
+
+def test_gh_does_not_retry_auth_failure(monkeypatch):
+    monkeypatch.setattr(srs.time, "sleep", lambda _s: None)
+    calls = {"n": 0}
+
+    def denied(*_a, **_k):
+        calls["n"] += 1
+        return _cp(1, "gh: Bad credentials (HTTP 401)")
+
+    monkeypatch.setattr(srs.subprocess, "run", denied)
+    r = srs.gh("api", "user")
+    assert r.returncode == 1
+    assert calls["n"] == 1  # single-shot: a retry cannot fix auth
+
+
+def test_gh_does_not_retry_timeout(monkeypatch):
+    monkeypatch.setattr(srs.time, "sleep", lambda _s: None)
+    calls = {"n": 0}
+
+    def expired(*_a, **_k):
+        calls["n"] += 1
+        raise subprocess.TimeoutExpired(cmd=["gh"], timeout=srs.GH_TIMEOUT)
+
+    monkeypatch.setattr(srs.subprocess, "run", expired)
+    r = srs.gh("api", "user")
+    assert r.returncode == 124
+    assert calls["n"] == 1  # timeout is a hang, not a flap: no retry
+
+
+def test_gh_json_flap_does_not_raise_when_retry_recovers(monkeypatch):
+    # End-to-end seam check: a flap under gh_json must not surface as a
+    # RuntimeError (which at list_repos is a whole-pass FATAL).
+    monkeypatch.setattr(srs.time, "sleep", lambda _s: None)
+    calls = {"n": 0}
+
+    def flaky(*_a, **_k):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            return _cp(1, "gh: Put https://api.github.com: dial tcp: no route to host")
+        import json as _json
+        ok = subprocess.CompletedProcess(
+            ["gh"], 0, stdout=_json.dumps({"data": {}}), stderr=""
+        )
+        return ok
+
+    monkeypatch.setattr(srs.subprocess, "run", flaky)
+    out = srs.gh_json("api", "graphql", "-f", "query=q")
+    assert out == {"data": {}}
+
+
+def test_gh_retry_backoff_is_linear_not_zero(monkeypatch):
+    sleeps: list[float] = []
+    monkeypatch.setattr(srs.time, "sleep", sleeps.append)
+    calls = {"n": 0}
+
+    def always_flap(*_a, **_k):
+        calls["n"] += 1
+        return _cp(1, "dial tcp: connection refused")
+
+    monkeypatch.setattr(srs.subprocess, "run", always_flap)
+    srs.gh("api", "user")
+    assert sleeps == [5.0, 10.0, 15.0]  # linear backoff across 3 retries
+
+
 def test_gh_json_timeout_raises_with_rc124(monkeypatch):
     monkeypatch.setattr(srs, "gh", lambda *a, **k: subprocess.CompletedProcess(
         ["gh"], returncode=124, stdout="", stderr="timed out"))
