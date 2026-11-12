@@ -1049,3 +1049,88 @@ separate.)*
 - Unchanged — § Cycle-11's list stands (gateway ingestion rm-052,
   re-pin rider, stale run refs, scanner-side ephemeral-PR ignore
   rule).
+
+## Cycle-13 (2026-11-12, docs-truth reconciliation)
+
+*(Appended 2026-11-12 (UTC) by conductor run
+`df3273c7cc884da0871d79bddfe66a73`; § Cycle-11 discipline —
+re-derivable citations only, engine records engine-store-scoped.
+Docs-only batch (README.md + this file) in two dispatches, house
+odd/even split: odd unit U1 (README gate-regime sentence) +
+odd-scope battery, attempt 265bd2c6; even unit U2 (this section) +
+full-batch battery, attempt 8149c91f. U1's content was re-applied
+into the even worktree byte-identical from engine checkpoint
+`20fe4ce` so the complete batch assembles here (cycle-11/12
+pattern).)*
+
+### Drift inventory (verified live 2026-11-12 at origin/main 20c63ff)
+
+- **Render flap — third sanctioned-block destruction unreversed
+  (rm-052 sub-symptom: evidence-set flap).** Ten render commits
+  `5448e60` (2026-10-18) .. `20c63ff` (2026-11-06), each
+  `ROADMAP.md` 1/1 flipping the :11 dependents line between the
+  3-repo set (dashboard, fleet-status, hermes-agent) and the 7-repo
+  set ((host), those three, hermes-gpt, hermes-stewardship-dashboard,
+  magic-hermes); both range ends carry the 3-repo set, so the net
+  tree diff vs cycle-12 ship `2f93f298` is empty. Recorded, not
+  fixed (render-owned). Evidence: `git log --oneline
+  2f93f298..20c63ff`; `git show <sha>:ROADMAP.md | sed -n 11p` per
+  commit; `git diff --stat 2f93f298..20c63ff` (empty).
+- **Grant-parity closure — the cycle-12-review caller-clamp finding
+  was run-base-scoped.** Run base `a75a525` predated the fix:
+  `fbc8cfc` declared the reusable grant and `3d2afed` (2026-10-16,
+  self-hosted fixes) added the caller grant, so `pull-requests:
+  read` is present at `15251a7`/`2f93f298`/HEAD, matching the
+  reusable declaration. Evidence: `git show 3d2afed --stat`;
+  permissions block of `.github/workflows/leak-sentinel-self.yaml`
+  at HEAD (`pull-requests: read` at :21).
+- **Dormant ephemeral-PR gate regime.** The conductor's eligibility
+  guard still resolves only bare `${{ inputs.X }}`/`${{ matrix.X }}`
+  runner shapes — no `fromJSON` support (checked 2026-11-12 in both
+  the canonical and release `github_ci.py`,
+  `_dynamic_runner_is_proven_cloud`), so full-validation gates on
+  this repo record local suites and the PR series is frozen at #18
+  since 2026-10-16 (live `gh pr list --state all` 2026-11-12: tops
+  #18 `Conductor CI validation 7f8df4555214`, created
+  2026-10-16T01:23:04Z, closed). This batch's README clause
+  (validation-gates paragraph, the `Since 2026-10-16` sentence)
+  states the regime with its retirement trigger; the clause flips
+  historical when the guard learns that input shape — no date
+  estimate.
+- **Trust-chain journal red, drift set grown.** rc=1 drift lines
+  2026-10-15 .. 2026-11-06 (six deduped journal states): beyond the
+  five pinned entrypoint scripts, the drift set includes
+  `resource-governor.sh` (states since 2026-10-15) and
+  `hosted-runner-audit.sh` (since 2026-11-06). Evidence: `git show
+  origin/data:control-plane/manifest-verify.log` (tail).
+
+### Batch and decisions
+
+- Docs-only: exactly README.md + this file; no executable surface;
+  `ROADMAP.md` untouched BY DESIGN (render-owned; the flap above is
+  recorded, not fixed). Evidence: `git diff --numstat -- ROADMAP.md`
+  empty at this batch; porcelain exactly README.md + this file.
+- Suite invariant: 77 tests collected before and after the batch;
+  full run 77 passed in the even dispatch (battery E2). Evidence:
+  `pytest tests/ --collect-only -q`; dispatch PhaseResults.
+- Anchor correction, recorded de-anchored: § Cycle-12's `README:118`
+  citation for the Renovate as-of clause was correct at that
+  section's append; the same batch's Layout insertion moved it
+  (`:130` at base `20c63ff`; this batch's U1 sentence moves it
+  again — it moves with ANY insertion above it). Cite the clause by
+  its section name ("Inert until Renovate is installed") + `grep -n
+  "as of 2026-09-20" README.md`, never by bare line number, per the
+  de-anchor doctrine. Prior sections remain byte-identical
+  (append-only).
+
+### Owner-gated residuals
+
+- Gateway ingestion rm-052 — now including the evidence-set-flap
+  sub-symptom recorded above.
+- Re-pin rider with the fresh journal evidence above; re-pin after
+  landing and confirm rc=0 (rm-042 rider, lesson L33).
+- Stale `conductor/run-*` refs on origin — live `git ls-remote
+  --heads origin` (2026-11-12, reachable): `conductor/run-12a4e0ab6833`
+  and `conductor/run-92e960046f14` remain (this run's branch is not
+  yet pushed; it lands at the push gate).
+- Scanner-side ephemeral-PR ignore rule — unchanged.
