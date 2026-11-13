@@ -1134,3 +1134,94 @@ pattern).)*
   and `conductor/run-92e960046f14` remain (this run's branch is not
   yet pushed; it lands at the push gate).
 - Scanner-side ephemeral-PR ignore rule — unchanged.
+
+## Cycle-14 (2026-11-13, test-count truth + cycle-13 landing record)
+
+*(Appended 2026-11-13 (UTC) by conductor run
+`4289b0eb0be34649a3267c0cb27ed103`; § Cycle-11 discipline —
+re-derivable citations only, engine records engine-store-scoped.
+Docs-only batch (README.md + this file), house odd/even split: odd
+unit U1 (README test-count correction), even unit U2 (this
+section).)*
+
+### Drift inventory (verified live 2026-11-13 at origin/main dbd1545)
+
+- **Cycle-13 landed late — integration merge `dbd1545`** (created
+  2026-11-13T00:29:27Z; parents `f8c2112` + `2b9a198`; house
+  integration-merge pattern; reached origin between the 01:13Z and
+  02:01Z fetches of this run's dispatches). § Cycle-13's residual
+  bullet "not yet pushed; it lands at the push gate" resolves: the
+  branch `conductor/run-df3273c7cc88` is on origin now. Evidence:
+  `git log -1 --format='%p %cI' dbd1545`; `gh api
+  repos/codeo1io/.github/git/matching-refs/heads/conductor`.
+- **Test-count anchor uncorrected at integration — corrected by this
+  batch.** PR #19 (merged 2026-11-12T17:19:08Z; +7 hermetic defs in
+  `tests/test_sync_repo_settings.py`) moved the true count to 84
+  mid-cycle-13; the integration merged the gated batch verbatim, so
+  the Manual-use line still read 77 at `dbd1545`. This batch changes
+  exactly that count (77 → 84; same-width digits). Evidence: `git
+  show dbd1545:README.md | grep -n "tests: hermetic"`; `pytest
+  tests/ --collect-only -q` → 84 (hermes-agent venv, 2026-11-13;
+  `dbd1545` differs from `f8c2112` only in README.md + this file);
+  the +7 defs are hermetic (monkeypatch on `time.sleep` /
+  `subprocess.run`), and the gitleaks live-binary count stays 7
+  (`grep -rn skipif tests/`).
+- **Dormant gate regime persists.** Release `github_ci.py` still has
+  zero `fromJSON` matches (checked 2026-11-13T02:02Z), so gates keep
+  recording local suites; the validation-PR series stays frozen at
+  #18 (2026-10-16) while the raw PR list tops #19 — a real merge,
+  not a validation PR. The README `Since 2026-10-16` clause stays
+  current. Evidence: `grep -c fromJSON` over the release source;
+  `gh pr list --state all --limit 3`.
+- **Trust-chain journal steady-red.** Latest journal state 2026-11-06
+  (rc=1; drift set: the five pinned entrypoints +
+  `resource-governor.sh` + `hosted-runner-audit.sh`), deduped
+  steady-state through the 2026-11-12 mirror commit `1735ece`.
+  Evidence: `git show origin/data:control-plane/manifest-verify.log`
+  (tail).
+- **Render flap quiet in the landing range.** No render commits in
+  `f8c2112..dbd1545` (merge-only); the flap record stands at eleven
+  commits `2f93f298..f8c2112`, net-zero (rm-052 sub-symptom).
+  Evidence: `git log --oneline f8c2112..dbd1545`.
+- **Egress flap liveness (rm-034 class, post-#19).** `git
+  ls-remote` was refused (`ssh.github.com:443` no-route) live during
+  this run's brainstorm dispatch while `gh` API worked; the route
+  recovered by the 02:01Z fetch. Process note: during such windows
+  local `origin/*` refs can lag origin truth — this run's brainstorm
+  briefly recorded cycle-13 as unlanded from pre-push local state.
+  Corroborates #19's premise with post-merge evidence.
+
+### Batch and decisions
+
+- Docs-only: exactly `README.md` (one line: the Manual-use count) +
+  this file (this section); no executable surface; `ROADMAP.md`
+  untouched BY DESIGN. Evidence: `git diff --numstat -- ROADMAP.md`
+  empty; porcelain exactly the two paths.
+- README isolation proof: `git diff dbd1545 -- README.md` is exactly
+  one hunk changing one line (`# 77 tests:` → `# 84 tests:`); every
+  other README byte — incl. the `Since 2026-10-16` clause and the
+  Renovate as-of clause ("Inert until Renovate is installed"
+  section) — is preserved.
+- Suite invariant: 84 collected before and after the batch; full run
+  84 passed expected (docs cannot change behavior). Evidence:
+  `pytest tests/ --collect-only -q`; dispatch PhaseResults.
+- Enumerated-count de-anchor alternative considered again — NOT
+  taken (cycle-12 owner decision stands); owner-gated below with its
+  trigger.
+
+### Owner-gated residuals
+
+- De-anchor the enumerated test count: trigger = the corrected 84
+  goes stale at a future gate (two mid-run world changes on record:
+  PR #19's mid-cycle-13 landing; the cycle-13 landing-sequencing
+  gap).
+- Re-pin rider — journal evidence above; re-pin after landing and
+  confirm rc=0 (rm-042 rider, lesson L33).
+- Gateway ingestion rm-052, incl. the evidence-set-flap sub-symptom.
+- Stale `conductor/run-*` refs on origin (gh api 2026-11-13):
+  `run-12a4e0ab6833`, `run-92e960046f14`, and now
+  `run-df3273c7cc88` (the just-landed run's branch); cleanup
+  owner-gated — this run's branch joins them at its push gate.
+- Scanner-side ephemeral-PR ignore rule — unchanged.
+- Engine-side `fromJSON` support — out of repo scope; the README
+  clause flips historical when the guard learns that input shape.
