@@ -110,6 +110,11 @@ maintainer action is needed (one such PR per validation gate; the
 closed-PR list is the live count — the series is deliberately not
 enumerated here because it grows with every gate; per-cycle history in
 `docs/roadmap-ledger.md`, mechanism in `docs/lessons.md` L31).
+Since 2026-10-16 this repository's full-validation gates have recorded
+local suite runs instead — the sentinel's dynamic `runner-labels` input
+cannot be statically proven cloud-hosted by the conductor's eligibility
+guard, so the ephemeral-PR series is dormant (it resumes when the guard
+learns that input shape; tracked in `docs/roadmap-ledger.md`).
 
 Per-item roadmap evidence and campaign history live in
 `docs/roadmap-ledger.md`; the rendered `ROADMAP.md` is a live-status view
