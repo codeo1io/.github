@@ -1,21 +1,3 @@
-2026-10-22T18:22:00Z auto-ship-lane: deploy plan would PROMOTE/REPOINT release current (cacf92568743): plan: promote release hermes-conductor: current 7f24dc5a2242d983c33d7a69dbd41fa25ec34801 -> intended 8483f119358cf35be56a8b66b4539464ee48a185 (populate from /work/projects/hermes-conductor at 8483f119358cf35be56a8b66b4539464ee48a185 via git archive; flip current; install wiring; daemon-reload + restart hermes-conductor-fleet hermes-conductor-gateway hermes-conductor-integration-fleet; prune beyond 3) - register repin lane owns that; holding (item 265)
-2026-10-22T18:32:03Z auto-ship-lane: deploy plan would PROMOTE/REPOINT release current (cacf92568743): plan: promote release hermes-conductor: current 7f24dc5a2242d983c33d7a69dbd41fa25ec34801 -> intended 8483f119358cf35be56a8b66b4539464ee48a185 (populate from /work/projects/hermes-conductor at 8483f119358cf35be56a8b66b4539464ee48a185 via git archive; flip current; install wiring; daemon-reload + restart hermes-conductor-fleet hermes-conductor-gateway hermes-conductor-integration-fleet; prune beyond 3) - register repin lane owns that; holding (item 265)
-2026-10-22T18:42:03Z auto-ship-lane: deploy plan would PROMOTE/REPOINT release current (cacf92568743): plan: promote release hermes-conductor: current 7f24dc5a2242d983c33d7a69dbd41fa25ec34801 -> intended 8483f119358cf35be56a8b66b4539464ee48a185 (populate from /work/projects/hermes-conductor at 8483f119358cf35be56a8b66b4539464ee48a185 via git archive; flip current; install wiring; daemon-reload + restart hermes-conductor-fleet hermes-conductor-gateway hermes-conductor-integration-fleet; prune beyond 3) - register repin lane owns that; holding (item 265)
-2026-10-22T19:42:18Z auto-ship-lane: ff-only to origin/main failed at b7141fd0c121 - manual look required
-2026-10-22T19:52:09Z auto-ship-lane: ff-only to origin/main failed at b7141fd0c121 - manual look required
-2026-10-22T20:02:09Z auto-ship-lane: ff-only to origin/main failed at b7141fd0c121 - manual look required
-2026-10-22T20:12:09Z auto-ship-lane: ff-only to origin/main failed at b7141fd0c121 - manual look required
-2026-10-22T20:22:11Z auto-ship-lane: ff-only to origin/main failed at b7141fd0c121 - manual look required
-2026-10-22T20:32:11Z auto-ship-lane: ff-only to origin/main failed at b7141fd0c121 - manual look required
-2026-10-22T20:42:11Z auto-ship-lane: ff-only to origin/main failed at b7141fd0c121 - manual look required
-2026-10-22T20:52:11Z auto-ship-lane: ff-only to origin/main failed at b7141fd0c121 - manual look required
-2026-10-22T21:02:14Z auto-ship-lane: ff-only to origin/main failed at b7141fd0c121 - manual look required
-2026-10-22T22:14:41Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 116m (bound 45m) without end marker (last: progress 2026-10-22T20:17:47Z adoption-provenance committed 57dcba8273; full ratchet re-measure in flight (CI-shaped merge + branch tip)) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-22T22:14:42Z fix-driver-watch: driver has no fire-completion bookkeeping in 886m (last_run_at=2026-10-22T07:28:30.227213+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-22T22:25:38Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 127m (bound 45m) without end marker (last: progress 2026-10-22T20:17:47Z adoption-provenance committed 57dcba8273; full ratchet re-measure in flight (CI-shaped merge + branch tip)) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-22T22:25:39Z fix-driver-watch: driver has no fire-completion bookkeeping in 897m (last_run_at=2026-10-22T07:28:30.227213+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
-2026-10-22T22:36:42Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 138m (bound 45m) without end marker (last: progress 2026-10-22T20:17:47Z adoption-provenance committed 57dcba8273; full ratchet re-measure in flight (CI-shaped merge + branch tip)) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
-2026-10-22T22:36:43Z fix-driver-watch: driver has no fire-completion bookkeeping in 908m (last_run_at=2026-10-22T07:28:30.227213+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
 2026-10-22T22:47:45Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 149m (bound 45m) without end marker (last: progress 2026-10-22T20:17:47Z adoption-provenance committed 57dcba8273; full ratchet re-measure in flight (CI-shaped merge + branch tip)) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
 2026-10-22T22:47:46Z fix-driver-watch: driver has no fire-completion bookkeeping in 919m (last_run_at=2026-10-22T07:28:30.227213+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session and take the item manually
 2026-10-22T22:58:38Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 160m (bound 45m) without end marker (last: progress 2026-10-22T20:17:47Z adoption-provenance committed 57dcba8273; full ratchet re-measure in flight (CI-shaped merge + branch tip)) — 09:42Z silent-death pattern; inspect the fire's session or take the item manually
@@ -4998,3 +4980,21 @@
 2026-11-12T08:14:09Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
 2026-11-12T08:25:19Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
 2026-11-12T08:36:17Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-12T08:47:15Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-12T08:58:10Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-12T09:09:18Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-12T09:20:15Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-12T09:31:09Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-12T09:42:12Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-12T09:53:10Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-12T10:04:13Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-12T10:15:16Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-12T13:10:16Z deploy-checkout-sync: CHRONIC hermes-conductor failed 3 consecutive passes (fetch) — checkout stuck behind origin, needs eyes
+2026-11-12T14:56:14Z conductor-auto-promote: promote of e4221bb starved: claimed envelopes held continuously for 480s (release frozen at a3a8c28105f900b71e3b2d7f92c78611d5b4e45e; item 412)
+2026-11-12T19:51:06Z conductor-auto-promote: promote of c18e04b starved: claimed envelopes held continuously for 480s (release frozen at a3a8c28105f900b71e3b2d7f92c78611d5b4e45e; item 412)
+2026-11-12T22:50:08Z conductor-auto-promote: promote of 8a8d762 starved: claimed envelopes held continuously for 480s (release frozen at a3a8c28105f900b71e3b2d7f92c78611d5b4e45e; item 412)
+2026-11-12T23:19:13Z conductor-auto-promote: promote of 8a8d762 starved: claimed envelopes held continuously for 480s (release frozen at a3a8c28105f900b71e3b2d7f92c78611d5b4e45e; item 412)
+2026-11-13T03:17:12Z deploy-checkout-sync: CHRONIC discord-turbo failed 3 consecutive passes (fetch) — checkout stuck behind origin, needs eyes
+2026-11-13T04:50:13Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted bc4dfb87b88a8e3a47115888eb990be0fa4abc31 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-11-13T05:18:07Z deploy-checkout-sync: CHRONIC hermes-agent failed 3 consecutive passes (fetch) — checkout stuck behind origin, needs eyes
+2026-11-13T05:18:09Z deploy-checkout-sync: CHRONIC m3u-editor-src failed 3 consecutive passes (fetch) — checkout stuck behind origin, needs eyes
