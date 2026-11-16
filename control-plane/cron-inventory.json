@@ -1,5 +1,5 @@
-# generated 2026-11-15T08:40:17Z
-# 79 jobs
+# generated 2026-11-16T12:22:24Z
+# 80 jobs
 {
   "04999fd7525c": {
     "enabled": true,
@@ -164,7 +164,7 @@
     }
   },
   "3b25c2c11948": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-adapter-repair-active",
     "schedule": {
       "display": "every 10m",
@@ -191,7 +191,7 @@
     }
   },
   "47d67a92dbb7": {
-    "enabled": true,
+    "enabled": false,
     "name": "hermes-config-version",
     "schedule": {
       "display": "10 3 * * *",
@@ -245,7 +245,7 @@
     }
   },
   "58262d5817be": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-deploy-sync-active",
     "schedule": {
       "display": "every 30m",
@@ -281,7 +281,7 @@
     }
   },
   "5c5214622927": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomous-steward-discovery-active",
     "schedule": {
       "display": "every 360m",
@@ -386,6 +386,15 @@
       "display": "every 5m",
       "kind": "interval",
       "minutes": 5
+    }
+  },
+  "9817d7ce4a90": {
+    "enabled": false,
+    "name": "post-migration-reliability-hardening",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
     }
   },
   "9acfb691823d": {
@@ -614,7 +623,7 @@
     }
   },
   "de931f955d8d": {
-    "enabled": true,
+    "enabled": false,
     "name": "tailscale-version-watch",
     "schedule": {
       "display": "40 6 * * *",
@@ -659,7 +668,7 @@
     }
   },
   "e586f06117eb": {
-    "enabled": true,
+    "enabled": false,
     "name": "dep-cve-watch",
     "schedule": {
       "display": "25 6 * * *",
