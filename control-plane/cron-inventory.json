@@ -1,4 +1,4 @@
-# generated 2026-11-16T12:22:24Z
+# generated 2026-11-17T08:40:10Z
 # 80 jobs
 {
   "04999fd7525c": {
@@ -164,7 +164,7 @@
     }
   },
   "3b25c2c11948": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-adapter-repair-active",
     "schedule": {
       "display": "every 10m",
@@ -191,7 +191,7 @@
     }
   },
   "47d67a92dbb7": {
-    "enabled": false,
+    "enabled": true,
     "name": "hermes-config-version",
     "schedule": {
       "display": "10 3 * * *",
@@ -245,7 +245,7 @@
     }
   },
   "58262d5817be": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-deploy-sync-active",
     "schedule": {
       "display": "every 30m",
@@ -281,7 +281,7 @@
     }
   },
   "5c5214622927": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomous-steward-discovery-active",
     "schedule": {
       "display": "every 360m",
@@ -623,7 +623,7 @@
     }
   },
   "de931f955d8d": {
-    "enabled": false,
+    "enabled": true,
     "name": "tailscale-version-watch",
     "schedule": {
       "display": "40 6 * * *",
@@ -668,7 +668,7 @@
     }
   },
   "e586f06117eb": {
-    "enabled": false,
+    "enabled": true,
     "name": "dep-cve-watch",
     "schedule": {
       "display": "25 6 * * *",
