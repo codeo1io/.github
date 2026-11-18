@@ -1,8 +1,8 @@
-# generated 2026-11-17T08:40:10Z
-# 80 jobs
+# generated 2026-11-18T08:40:32Z
+# 81 jobs
 {
   "04999fd7525c": {
-    "enabled": true,
+    "enabled": false,
     "name": "deploy-checkout-sync",
     "schedule": {
       "display": "every 120m",
@@ -20,7 +20,7 @@
     }
   },
   "0b90b83c3012": {
-    "enabled": true,
+    "enabled": false,
     "name": "convergence-scoreboard",
     "schedule": {
       "display": "every day at 06:00",
@@ -29,7 +29,7 @@
     }
   },
   "0e203084675e": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-roadmap-sync-daily-active",
     "schedule": {
       "display": "every 30m",
@@ -38,7 +38,7 @@
     }
   },
   "0f00397711e3": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-adoption-tick",
     "schedule": {
       "display": "every 30m",
@@ -56,7 +56,7 @@
     }
   },
   "151234d520a0": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-monthly-retrospective-active",
     "schedule": {
       "display": "0 5 1 * *",
@@ -74,7 +74,7 @@
     }
   },
   "1717e8211eec": {
-    "enabled": true,
+    "enabled": false,
     "name": "pi+opencode+omo CLI & plugin pin updater",
     "schedule": {
       "display": "every day at 09:00",
@@ -92,7 +92,7 @@
     }
   },
   "189f2ac35fbc": {
-    "enabled": true,
+    "enabled": false,
     "name": "ci-health-digest",
     "schedule": {
       "display": "every day 09:00",
@@ -118,8 +118,17 @@
       "kind": "cron"
     }
   },
-  "2fe402f35f63": {
+  "2e96f6516e4f": {
     "enabled": true,
+    "name": "owner-exclusive-mission-cutover-guard-20261117",
+    "schedule": {
+      "display": "every 2m",
+      "kind": "interval",
+      "minutes": 2
+    }
+  },
+  "2fe402f35f63": {
+    "enabled": false,
     "name": "gh-autoprune",
     "schedule": {
       "display": "every 360m",
@@ -128,7 +137,7 @@
     }
   },
   "34afa0792c2d": {
-    "enabled": true,
+    "enabled": false,
     "name": "green-pr-merge hermes-gpt",
     "schedule": {
       "display": "every 15m",
@@ -137,7 +146,7 @@
     }
   },
   "35978cccc04f": {
-    "enabled": true,
+    "enabled": false,
     "name": "native-rails-campaign-executor",
     "schedule": {
       "display": "every 30m",
@@ -155,7 +164,7 @@
     }
   },
   "3a9350ba7e17": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-portfolio-review-active",
     "schedule": {
       "display": "daily at 08:00",
@@ -164,7 +173,7 @@
     }
   },
   "3b25c2c11948": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-adapter-repair-active",
     "schedule": {
       "display": "every 10m",
@@ -173,7 +182,7 @@
     }
   },
   "416985a5f808": {
-    "enabled": true,
+    "enabled": false,
     "name": "hermes-self-improvement-review-active",
     "schedule": {
       "display": "every day at 04:30",
@@ -191,7 +200,7 @@
     }
   },
   "47d67a92dbb7": {
-    "enabled": true,
+    "enabled": false,
     "name": "hermes-config-version",
     "schedule": {
       "display": "10 3 * * *",
@@ -200,7 +209,7 @@
     }
   },
   "492f412709e0": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-schedules-register-active",
     "schedule": {
       "display": "every 30m",
@@ -245,7 +254,7 @@
     }
   },
   "58262d5817be": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-deploy-sync-active",
     "schedule": {
       "display": "every 30m",
@@ -272,7 +281,7 @@
     }
   },
   "596d302e78eb": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-fork-maintenance-active",
     "schedule": {
       "display": "every 30m",
@@ -281,7 +290,7 @@
     }
   },
   "5c5214622927": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomous-steward-discovery-active",
     "schedule": {
       "display": "every 360m",
@@ -299,7 +308,7 @@
     }
   },
   "63577dc18518": {
-    "enabled": true,
+    "enabled": false,
     "name": "reland-r65-gatekeeper",
     "schedule": {
       "display": "every 20m",
@@ -308,7 +317,7 @@
     }
   },
   "64b9e8a6f7d0": {
-    "enabled": true,
+    "enabled": false,
     "name": "kanban-fixture-debris-sentinel",
     "schedule": {
       "display": "every 5m",
@@ -353,7 +362,7 @@
     }
   },
   "87b92274d24d": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-ecosystem-research-daily-active",
     "schedule": {
       "display": "every day at 02:15",
@@ -380,7 +389,7 @@
     }
   },
   "97d5ecc738fa": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-github-sync-active",
     "schedule": {
       "display": "every 5m",
@@ -425,7 +434,7 @@
     }
   },
   "a72aa4b99458": {
-    "enabled": true,
+    "enabled": false,
     "name": "subreddit-threads-watch",
     "schedule": {
       "display": "0 */2 * * *",
@@ -434,7 +443,7 @@
     }
   },
   "a747bb443951": {
-    "enabled": true,
+    "enabled": false,
     "name": "conductor-auto-promote",
     "schedule": {
       "display": "every 20m",
@@ -452,7 +461,7 @@
     }
   },
   "af8a292d3f55": {
-    "enabled": true,
+    "enabled": false,
     "name": "reland-r65-terminal-watch",
     "schedule": {
       "display": "every 15m",
@@ -488,7 +497,7 @@
     }
   },
   "bd9ac6752b9d": {
-    "enabled": true,
+    "enabled": false,
     "name": "discord-backfill-drain",
     "schedule": {
       "display": "every 30m",
@@ -515,7 +524,7 @@
     }
   },
   "c811531dfe03": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-deep-strategy-scan-active",
     "schedule": {
       "display": "every sunday at 03:30",
@@ -524,7 +533,7 @@
     }
   },
   "c834209a5856": {
-    "enabled": true,
+    "enabled": false,
     "name": "fork-divergence-audit",
     "schedule": {
       "display": "every day at 07:00",
@@ -542,7 +551,7 @@
     }
   },
   "cd6ef4c02342": {
-    "enabled": true,
+    "enabled": false,
     "name": "vetted-proposals-digest",
     "schedule": {
       "display": "every 15m",
@@ -551,7 +560,7 @@
     }
   },
   "d14739cb234a": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-execution-tick-active",
     "schedule": {
       "display": "every 5m",
@@ -560,7 +569,7 @@
     }
   },
   "d1c3751fb37a": {
-    "enabled": true,
+    "enabled": false,
     "name": "item125 spool-script keeper (retire after PR 274 deploys)",
     "schedule": {
       "display": "every 2m",
@@ -569,7 +578,7 @@
     }
   },
   "d2f8251b93a9": {
-    "enabled": true,
+    "enabled": false,
     "name": "ven-deletion-audit-watch",
     "schedule": {
       "display": "every 30m",
@@ -605,7 +614,7 @@
     }
   },
   "d63b0ca24b6f": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-green-pr-merger",
     "schedule": {
       "display": "every 10m",
@@ -623,7 +632,7 @@
     }
   },
   "de931f955d8d": {
-    "enabled": true,
+    "enabled": false,
     "name": "tailscale-version-watch",
     "schedule": {
       "display": "40 6 * * *",
@@ -641,7 +650,7 @@
     }
   },
   "e27a40be1634": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-retention-active",
     "schedule": {
       "display": "daily at 04:05",
@@ -650,7 +659,7 @@
     }
   },
   "e409464d74b4": {
-    "enabled": true,
+    "enabled": false,
     "name": "fix-queue work driver safe",
     "schedule": {
       "display": "every 30m",
@@ -686,7 +695,7 @@
     }
   },
   "ee8385a26887": {
-    "enabled": true,
+    "enabled": false,
     "name": "fold-family-soak-watch",
     "schedule": {
       "display": "every 360m",
@@ -695,7 +704,7 @@
     }
   },
   "f56ce6c17354": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-ecosystem-research-weekly-active",
     "schedule": {
       "display": "every sunday at 02:45",
@@ -713,7 +722,7 @@
     }
   },
   "fefedca6eb1d": {
-    "enabled": true,
+    "enabled": false,
     "name": "autonomy-outcome-remeasure-active",
     "schedule": {
       "display": "every 360m",
