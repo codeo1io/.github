@@ -825,3 +825,116 @@
 2026-11-18T08:38:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
 2026-11-18T08:38:36Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 826m ago, no claim in 518m — scheduler wedge, not a fire problem
 2026-11-18T08:38:36Z fix-driver-watch: driver has no fire-completion bookkeeping in 856m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T08:49:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T08:49:34Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 837m ago, no claim in 529m — scheduler wedge, not a fire problem
+2026-11-18T08:49:34Z fix-driver-watch: driver has no fire-completion bookkeeping in 867m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T09:00:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T09:00:33Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 848m ago, no claim in 540m — scheduler wedge, not a fire problem
+2026-11-18T09:00:33Z fix-driver-watch: driver has no fire-completion bookkeeping in 878m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T09:11:30Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T09:11:31Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 858m ago, no claim in 551m — scheduler wedge, not a fire problem
+2026-11-18T09:11:31Z fix-driver-watch: driver has no fire-completion bookkeeping in 888m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T09:22:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T09:22:36Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 870m ago, no claim in 562m — scheduler wedge, not a fire problem
+2026-11-18T09:22:36Z fix-driver-watch: driver has no fire-completion bookkeeping in 900m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T09:33:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T09:33:33Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 881m ago, no claim in 573m — scheduler wedge, not a fire problem
+2026-11-18T09:33:33Z fix-driver-watch: driver has no fire-completion bookkeeping in 911m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T09:44:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T09:44:35Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 892m ago, no claim in 584m — scheduler wedge, not a fire problem
+2026-11-18T09:44:35Z fix-driver-watch: driver has no fire-completion bookkeeping in 922m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T09:55:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T09:55:34Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 903m ago, no claim in 595m — scheduler wedge, not a fire problem
+2026-11-18T09:55:34Z fix-driver-watch: driver has no fire-completion bookkeeping in 933m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T10:06:42Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T10:06:43Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 914m ago, no claim in 606m — scheduler wedge, not a fire problem
+2026-11-18T10:06:43Z fix-driver-watch: driver has no fire-completion bookkeeping in 944m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T10:17:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T10:17:36Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 925m ago, no claim in 617m — scheduler wedge, not a fire problem
+2026-11-18T10:17:36Z fix-driver-watch: driver has no fire-completion bookkeeping in 955m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T10:28:31Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T10:28:31Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 935m ago, no claim in 628m — scheduler wedge, not a fire problem
+2026-11-18T10:28:31Z fix-driver-watch: driver has no fire-completion bookkeeping in 965m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T10:39:31Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T10:39:31Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 946m ago, no claim in 639m — scheduler wedge, not a fire problem
+2026-11-18T10:39:31Z fix-driver-watch: driver has no fire-completion bookkeeping in 976m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T10:50:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T10:50:36Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 958m ago, no claim in 650m — scheduler wedge, not a fire problem
+2026-11-18T10:50:36Z fix-driver-watch: driver has no fire-completion bookkeeping in 988m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T11:01:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T11:01:33Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 969m ago, no claim in 661m — scheduler wedge, not a fire problem
+2026-11-18T11:01:33Z fix-driver-watch: driver has no fire-completion bookkeeping in 999m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T11:12:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T11:12:34Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 980m ago, no claim in 672m — scheduler wedge, not a fire problem
+2026-11-18T11:12:34Z fix-driver-watch: driver has no fire-completion bookkeeping in 1010m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T11:23:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T11:23:36Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 991m ago, no claim in 683m — scheduler wedge, not a fire problem
+2026-11-18T11:23:36Z fix-driver-watch: driver has no fire-completion bookkeeping in 1021m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T11:34:39Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T11:34:39Z fix-driver-watch: cron scheduler NOT firing the driver: next_run_at was 1002m ago, no claim in 694m — scheduler wedge, not a fire problem
+2026-11-18T11:34:39Z fix-driver-watch: driver has no fire-completion bookkeeping in 1032m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T11:38:08Z failed-unit-janitor: FAILED-UNIT hermes-watchdog-sweep.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-11-18T11:45:46Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T11:45:47Z fix-driver-watch: driver has no fire-completion bookkeeping in 1043m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T11:56:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T12:07:46Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T12:18:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T12:29:39Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T12:40:40Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T12:51:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T13:02:34Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T13:13:37Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T13:24:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T13:35:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T13:40:50Z deploy-checkout-sync: CHRONIC hermes-autonomy failed 3 consecutive passes (dirty worktree) — checkout stuck behind origin, needs eyes
+2026-11-18T13:46:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T13:57:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T14:08:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T14:08:33Z fix-driver-watch: driver has no fire-completion bookkeeping in 1186m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T14:19:40Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T14:19:41Z fix-driver-watch: driver has no fire-completion bookkeeping in 1197m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T14:30:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T14:30:36Z fix-driver-watch: driver has no fire-completion bookkeeping in 1208m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T14:41:31Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T14:41:31Z fix-driver-watch: driver has no fire-completion bookkeeping in 1218m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T14:52:34Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T14:52:34Z fix-driver-watch: driver has no fire-completion bookkeeping in 1230m (last_run_at=2026-11-17T18:22:32.914908+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T15:03:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T15:14:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T15:25:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T15:36:44Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T15:47:34Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T15:48:01Z failed-unit-janitor: FAILED-UNIT nrm-venv-interpreter-sentinel.service — foreign persistent unit (fragment=/home/agent/.config/systemd/user/nrm-venv-interpreter-sentinel.service; active=failed sub=failed result=exit-code) — a lane's declared unit file
+2026-11-18T15:58:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T16:09:37Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T16:20:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T16:31:39Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T16:42:43Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T16:53:33Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T17:04:31Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T17:15:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T17:26:41Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T17:37:39Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T17:48:40Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-18T21:06:37Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 160m (bound 150m) without end marker (last: start 2026-11-18T18:26:14Z ITEM-454) — silence past the bound means the fire died OR is in a deep phase it forgot to heartbeat; DO NOT work the queue concurrently (item-417 data-loss class) — inspect the fire's session first, heartbeat progress if alive, end it if not
+2026-11-18T23:18:43Z fix-driver-watch: driver has no fire-completion bookkeeping in 323m (last_run_at=2026-11-18T17:54:54.580034+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T23:29:35Z fix-driver-watch: driver has no fire-completion bookkeeping in 334m (last_run_at=2026-11-18T17:54:54.580034+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T23:40:33Z fix-driver-watch: driver has no fire-completion bookkeeping in 345m (last_run_at=2026-11-18T17:54:54.580034+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-18T23:51:35Z fix-driver-watch: driver has no fire-completion bookkeeping in 356m (last_run_at=2026-11-18T17:54:54.580034+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-19T00:02:37Z fix-driver-watch: driver has no fire-completion bookkeeping in 367m (last_run_at=2026-11-18T17:54:54.580034+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-19T00:13:57Z fix-driver-watch: driver has no fire-completion bookkeeping in 379m (last_run_at=2026-11-18T17:54:54.580034+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-19T00:24:53Z fix-driver-watch: driver has no fire-completion bookkeeping in 389m (last_run_at=2026-11-18T17:54:54.580034+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-19T01:46:37Z deploy-checkout-sync: CHRONIC hermes-conductor failed 3 consecutive passes (dirty worktree) — checkout stuck behind origin, needs eyes
+2026-11-19T03:09:43Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 159m (bound 150m) without end marker (last: progress 2026-11-19T00:30:03Z ITEM-446-attempt3-shard1-green-shard2-rerun-failed) — silence past the bound means the fire died OR is in a deep phase it forgot to heartbeat; DO NOT work the queue concurrently (item-417 data-loss class) — inspect the fire's session first, heartbeat progress if alive, end it if not
+2026-11-19T05:54:39Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 98m (bound 45m) without end marker (last: progress 2026-11-19T04:15:49Z attempt6-CI-live-on-535625c165e-bounds-fixed) — silence past the bound means the fire died OR is in a deep phase it forgot to heartbeat; DO NOT work the queue concurrently (item-417 data-loss class) — inspect the fire's session first, heartbeat progress if alive, end it if not
+2026-11-19T06:32:02Z failed-unit-janitor: MARKER-ADMITTED set page — nrm-soak-tick.service codes=1 owner=hermes-gpt/native-rails-migration heals_in_hold=1 (producer-consented expected-fail rail; re-pages on membership/owner/codes change, heal-count band transitions, and once per 86400s hold window; dormant members age out silently)
+2026-11-19T07:02:09Z failed-unit-janitor: MARKER-ADMITTED set page — nrm-soak-tick.service codes=1 owner=hermes-gpt/native-rails-migration heals_in_hold=3 (producer-consented expected-fail rail; re-pages on membership/owner/codes change, heal-count band transitions, and once per 86400s hold window; dormant members age out silently)
+2026-11-19T07:18:00Z failed-unit-janitor: MARKER-ADMITTED set page — nrm-soak-tick.service codes=1 owner=hermes-gpt/native-rails-migration heals_in_hold=4 (producer-consented expected-fail rail; re-pages on membership/owner/codes change, heal-count band transitions, and once per 86400s hold window; dormant members age out silently)
+2026-11-19T07:33:40Z fix-driver-watch: driver has no fire-completion bookkeeping in 818m (last_run_at=2026-11-18T17:54:54.580034+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-19T07:44:40Z fix-driver-watch: driver has no fire-completion bookkeeping in 829m (last_run_at=2026-11-18T17:54:54.580034+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-19T07:55:42Z fix-driver-watch: driver has no fire-completion bookkeeping in 840m (last_run_at=2026-11-18T17:54:54.580034+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-19T08:06:46Z fix-driver-watch: driver has no fire-completion bookkeeping in 851m (last_run_at=2026-11-18T17:54:54.580034+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-19T08:17:43Z fix-driver-watch: driver has no fire-completion bookkeeping in 862m (last_run_at=2026-11-18T17:54:54.580034+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-19T08:18:05Z failed-unit-janitor: MARKER-ADMITTED set page — nrm-soak-tick.service codes=1 owner=hermes-gpt/native-rails-migration heals_in_hold=8 (producer-consented expected-fail rail; re-pages on membership/owner/codes change, heal-count band transitions, and once per 86400s hold window; dormant members age out silently)
+2026-11-19T08:28:38Z fix-driver-watch: driver has no fire-completion bookkeeping in 873m (last_run_at=2026-11-18T17:54:54.580034+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
+2026-11-19T08:39:34Z fix-driver-watch: driver has no fire-completion bookkeeping in 884m (last_run_at=2026-11-18T17:54:54.580034+00:00) while enabled — in-flight fire wedged/died silently; check the gateway cron session
