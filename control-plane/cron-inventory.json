@@ -1,8 +1,8 @@
-# generated 2026-11-21T08:40:30Z
+# generated 2026-11-24T08:40:54Z
 # 81 jobs
 {
   "04999fd7525c": {
-    "enabled": false,
+    "enabled": true,
     "name": "deploy-checkout-sync",
     "schedule": {
       "display": "every 120m",
@@ -20,7 +20,7 @@
     }
   },
   "0b90b83c3012": {
-    "enabled": false,
+    "enabled": true,
     "name": "convergence-scoreboard",
     "schedule": {
       "display": "every day at 06:00",
@@ -29,7 +29,7 @@
     }
   },
   "0e203084675e": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-roadmap-sync-daily-active",
     "schedule": {
       "display": "every 30m",
@@ -38,7 +38,7 @@
     }
   },
   "0f00397711e3": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-adoption-tick",
     "schedule": {
       "display": "every 30m",
@@ -56,7 +56,7 @@
     }
   },
   "151234d520a0": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-monthly-retrospective-active",
     "schedule": {
       "display": "0 5 1 * *",
@@ -65,7 +65,7 @@
     }
   },
   "15cb1c293376": {
-    "enabled": false,
+    "enabled": true,
     "name": "repo-settings-sync",
     "schedule": {
       "display": "every day at 08:30",
@@ -74,7 +74,7 @@
     }
   },
   "1717e8211eec": {
-    "enabled": false,
+    "enabled": true,
     "name": "pi+opencode+omo CLI & plugin pin updater",
     "schedule": {
       "display": "every day at 09:00",
@@ -92,7 +92,7 @@
     }
   },
   "189f2ac35fbc": {
-    "enabled": false,
+    "enabled": true,
     "name": "ci-health-digest",
     "schedule": {
       "display": "every day 09:00",
@@ -119,7 +119,7 @@
     }
   },
   "2e96f6516e4f": {
-    "enabled": true,
+    "enabled": false,
     "name": "owner-exclusive-mission-cutover-guard-20261117",
     "schedule": {
       "display": "every 2m",
@@ -128,7 +128,7 @@
     }
   },
   "2fe402f35f63": {
-    "enabled": false,
+    "enabled": true,
     "name": "gh-autoprune",
     "schedule": {
       "display": "every 360m",
@@ -137,7 +137,7 @@
     }
   },
   "34afa0792c2d": {
-    "enabled": false,
+    "enabled": true,
     "name": "green-pr-merge hermes-gpt",
     "schedule": {
       "display": "every 15m",
@@ -146,7 +146,7 @@
     }
   },
   "35978cccc04f": {
-    "enabled": false,
+    "enabled": true,
     "name": "native-rails-campaign-executor",
     "schedule": {
       "display": "every 30m",
@@ -164,7 +164,7 @@
     }
   },
   "3a9350ba7e17": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-portfolio-review-active",
     "schedule": {
       "display": "daily at 08:00",
@@ -173,7 +173,7 @@
     }
   },
   "3b25c2c11948": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-adapter-repair-active",
     "schedule": {
       "display": "every 10m",
@@ -182,7 +182,7 @@
     }
   },
   "416985a5f808": {
-    "enabled": false,
+    "enabled": true,
     "name": "hermes-self-improvement-review-active",
     "schedule": {
       "display": "every day at 04:30",
@@ -191,7 +191,7 @@
     }
   },
   "469ed56c3815": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-reliability-reconcile-active",
     "schedule": {
       "display": "every 5m",
@@ -200,7 +200,7 @@
     }
   },
   "47d67a92dbb7": {
-    "enabled": false,
+    "enabled": true,
     "name": "hermes-config-version",
     "schedule": {
       "display": "10 3 * * *",
@@ -209,7 +209,7 @@
     }
   },
   "492f412709e0": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-schedules-register-active",
     "schedule": {
       "display": "every 30m",
@@ -227,7 +227,7 @@
     }
   },
   "50c2d1411603": {
-    "enabled": false,
+    "enabled": true,
     "name": "native-rails-campaign-heartbeat",
     "schedule": {
       "display": "every 30m",
@@ -254,7 +254,7 @@
     }
   },
   "58262d5817be": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-deploy-sync-active",
     "schedule": {
       "display": "every 30m",
@@ -281,7 +281,7 @@
     }
   },
   "596d302e78eb": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-fork-maintenance-active",
     "schedule": {
       "display": "every 30m",
@@ -290,7 +290,7 @@
     }
   },
   "5c5214622927": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomous-steward-discovery-active",
     "schedule": {
       "display": "every 360m",
@@ -308,7 +308,7 @@
     }
   },
   "63577dc18518": {
-    "enabled": false,
+    "enabled": true,
     "name": "reland-r65-gatekeeper",
     "schedule": {
       "display": "every 20m",
@@ -317,7 +317,7 @@
     }
   },
   "64b9e8a6f7d0": {
-    "enabled": false,
+    "enabled": true,
     "name": "kanban-fixture-debris-sentinel",
     "schedule": {
       "display": "every 5m",
@@ -362,7 +362,7 @@
     }
   },
   "87b92274d24d": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-ecosystem-research-daily-active",
     "schedule": {
       "display": "every day at 02:15",
@@ -371,7 +371,7 @@
     }
   },
   "9165051f6a49": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-reliability-agentic-active",
     "schedule": {
       "display": "every 10m",
@@ -389,7 +389,7 @@
     }
   },
   "97d5ecc738fa": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-github-sync-active",
     "schedule": {
       "display": "every 5m",
@@ -398,7 +398,7 @@
     }
   },
   "9817d7ce4a90": {
-    "enabled": false,
+    "enabled": true,
     "name": "post-migration-reliability-hardening",
     "schedule": {
       "display": "every 30m",
@@ -434,7 +434,7 @@
     }
   },
   "a72aa4b99458": {
-    "enabled": false,
+    "enabled": true,
     "name": "subreddit-threads-watch",
     "schedule": {
       "display": "0 */2 * * *",
@@ -443,7 +443,7 @@
     }
   },
   "a747bb443951": {
-    "enabled": false,
+    "enabled": true,
     "name": "conductor-auto-promote",
     "schedule": {
       "display": "every 20m",
@@ -461,7 +461,7 @@
     }
   },
   "af8a292d3f55": {
-    "enabled": false,
+    "enabled": true,
     "name": "reland-r65-terminal-watch",
     "schedule": {
       "display": "every 15m",
@@ -479,7 +479,7 @@
     }
   },
   "b6ebb9c0f5cc": {
-    "enabled": false,
+    "enabled": true,
     "name": "maestro-strategy-lane-watch",
     "schedule": {
       "display": "every 60m",
@@ -497,7 +497,7 @@
     }
   },
   "bd9ac6752b9d": {
-    "enabled": false,
+    "enabled": true,
     "name": "discord-backfill-drain",
     "schedule": {
       "display": "every 30m",
@@ -524,7 +524,7 @@
     }
   },
   "c811531dfe03": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-deep-strategy-scan-active",
     "schedule": {
       "display": "every sunday at 03:30",
@@ -533,7 +533,7 @@
     }
   },
   "c834209a5856": {
-    "enabled": false,
+    "enabled": true,
     "name": "fork-divergence-audit",
     "schedule": {
       "display": "every day at 07:00",
@@ -551,7 +551,7 @@
     }
   },
   "cd6ef4c02342": {
-    "enabled": false,
+    "enabled": true,
     "name": "vetted-proposals-digest",
     "schedule": {
       "display": "every 15m",
@@ -560,7 +560,7 @@
     }
   },
   "d14739cb234a": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-execution-tick-active",
     "schedule": {
       "display": "every 5m",
@@ -569,7 +569,7 @@
     }
   },
   "d1c3751fb37a": {
-    "enabled": false,
+    "enabled": true,
     "name": "item125 spool-script keeper (retire after PR 274 deploys)",
     "schedule": {
       "display": "every 2m",
@@ -578,7 +578,7 @@
     }
   },
   "d2f8251b93a9": {
-    "enabled": false,
+    "enabled": true,
     "name": "ven-deletion-audit-watch",
     "schedule": {
       "display": "every 30m",
@@ -614,7 +614,7 @@
     }
   },
   "d63b0ca24b6f": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-green-pr-merger",
     "schedule": {
       "display": "every 10m",
@@ -623,7 +623,7 @@
     }
   },
   "dc44096b0059": {
-    "enabled": false,
+    "enabled": true,
     "name": "fix-driver health watch (item 20)",
     "schedule": {
       "display": "every 10m",
@@ -632,7 +632,7 @@
     }
   },
   "de931f955d8d": {
-    "enabled": false,
+    "enabled": true,
     "name": "tailscale-version-watch",
     "schedule": {
       "display": "40 6 * * *",
@@ -650,7 +650,7 @@
     }
   },
   "e27a40be1634": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-retention-active",
     "schedule": {
       "display": "daily at 04:05",
@@ -659,7 +659,7 @@
     }
   },
   "e409464d74b4": {
-    "enabled": false,
+    "enabled": true,
     "name": "fix-queue work driver safe",
     "schedule": {
       "display": "every 30m",
@@ -677,7 +677,7 @@
     }
   },
   "e586f06117eb": {
-    "enabled": false,
+    "enabled": true,
     "name": "dep-cve-watch",
     "schedule": {
       "display": "25 6 * * *",
@@ -695,7 +695,7 @@
     }
   },
   "ee8385a26887": {
-    "enabled": false,
+    "enabled": true,
     "name": "fold-family-soak-watch",
     "schedule": {
       "display": "every 360m",
@@ -704,7 +704,7 @@
     }
   },
   "f56ce6c17354": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-ecosystem-research-weekly-active",
     "schedule": {
       "display": "every sunday at 02:45",
@@ -722,7 +722,7 @@
     }
   },
   "fefedca6eb1d": {
-    "enabled": false,
+    "enabled": true,
     "name": "autonomy-outcome-remeasure-active",
     "schedule": {
       "display": "every 360m",
