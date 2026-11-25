@@ -1,5 +1,5 @@
-# generated 2026-11-24T08:40:54Z
-# 81 jobs
+# generated 2026-11-25T08:40:41Z
+# 82 jobs
 {
   "04999fd7525c": {
     "enabled": true,
@@ -211,6 +211,15 @@
   "492f412709e0": {
     "enabled": true,
     "name": "autonomy-schedules-register-active",
+    "schedule": {
+      "display": "every 30m",
+      "kind": "interval",
+      "minutes": 30
+    }
+  },
+  "4b463135e90c": {
+    "enabled": false,
+    "name": "maestro-census-process-leak-repair",
     "schedule": {
       "display": "every 30m",
       "kind": "interval",

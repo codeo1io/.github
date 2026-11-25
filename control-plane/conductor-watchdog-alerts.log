@@ -1049,3 +1049,62 @@
 2026-11-24T04:02:01Z failed-unit-janitor: MARKER-ADMITTED set page — nrm-soak-tick.service codes=1 owner=hermes-gpt/native-rails-migration heals_in_hold=16 (producer-consented expected-fail rail; re-pages on membership/owner/codes change, heal-count band transitions, and once per 86400s hold window; dormant members age out silently)
 2026-11-24T05:12:04Z failed-unit-janitor: FAILED-UNIT nrm-venv-interpreter-sentinel.service — foreign persistent unit (fragment=/home/agent/.config/systemd/user/nrm-venv-interpreter-sentinel.service; active=failed sub=failed result=timeout) — a lane's declared unit file
 2026-11-24T08:02:07Z failed-unit-janitor: MARKER-ADMITTED set page — nrm-soak-tick.service codes=1 owner=hermes-gpt/native-rails-migration heals_in_hold=32 (producer-consented expected-fail rail; re-pages on membership/owner/codes change, heal-count band transitions, and once per 86400s hold window; dormant members age out silently)
+2026-11-24T10:02:02Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 153m (bound 150m) without end marker (last: start 2026-11-24T07:28:09Z HEALTH-issue-magic-hermes-119) — silence past the bound means the fire died OR is in a deep phase it forgot to heartbeat; DO NOT work the queue concurrently (item-417 data-loss class) — inspect the fire's session first, heartbeat progress if alive, end it if not
+2026-11-24T12:15:43Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted bac8950adb324d42b0b625fc719587d18c47cd62 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-11-24T13:29:28Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 5aa8435ab8549b698bced28720023764fab86405 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-11-24T14:30:10Z failed-unit-janitor: FAILED-UNIT maestro-meta-watchdog.service — foreign persistent unit (fragment=/home/agent/.config/systemd/user/maestro-meta-watchdog.service; active=failed sub=failed result=exit-code) — a lane's declared unit file
+2026-11-24T15:45:22Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 152m (bound 150m) without end marker (last: progress 2026-11-24T13:13:12Z MERGE-COMPLETE-88-FILES-LOCKFILE-REGEN) — silence past the bound means the fire died OR is in a deep phase it forgot to heartbeat; DO NOT work the queue concurrently (item-417 data-loss class) — inspect the fire's session first, heartbeat progress if alive, end it if not
+2026-11-24T15:59:52Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T16:02:07Z failed-unit-janitor: MARKER-ADMITTED set page — nrm-soak-tick.service codes=1 owner=hermes-gpt/native-rails-migration heals_in_hold=64 (producer-consented expected-fail rail; re-pages on membership/owner/codes change, heal-count band transitions, and once per 86400s hold window; dormant members age out silently)
+2026-11-24T16:10:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T16:21:39Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T16:32:54Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T16:43:37Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T16:54:46Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T17:05:53Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T17:16:44Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T17:27:42Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T17:38:56Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T17:49:57Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T18:00:55Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T18:11:55Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T18:22:59Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T18:33:54Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T18:44:55Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T18:46:08Z failed-unit-janitor: FAILED-UNIT hermes-watchdog-sweep.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-11-24T18:55:48Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T19:06:40Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T19:17:53Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T19:28:41Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T19:39:52Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T19:50:54Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T20:01:47Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T20:12:44Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T20:23:50Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T20:34:53Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T20:45:43Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T20:46:01Z failed-unit-janitor: FAILED-UNIT nrm-venv-interpreter-sentinel.service — foreign persistent unit (fragment=/home/agent/.config/systemd/user/nrm-venv-interpreter-sentinel.service; active=failed sub=failed result=exit-code) — a lane's declared unit file
+2026-11-24T20:56:55Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-24T21:22:08Z failed-unit-janitor: FAILED-UNIT maestro-meta-watchdog.service — foreign persistent unit (fragment=/home/agent/.config/systemd/user/maestro-meta-watchdog.service; active=failed sub=failed result=exit-code) — a lane's declared unit file
+2026-11-24T21:40:05Z auto-ship-lane: register-family dirt STALE 2397s > 1800s (register-repin verb wedged, not in flight; mtime 2026-11-24 21:00:07.453533483 +0000) - manual look required (item-448)
+2026-11-24T22:04:07Z failed-unit-janitor: FAILED-UNIT nrm-venv-interpreter-sentinel.service — foreign persistent unit (fragment=/home/agent/.config/systemd/user/nrm-venv-interpreter-sentinel.service; active=failed sub=failed result=exit-code) — a lane's declared unit file
+2026-11-24T22:40:08Z auto-ship-lane: register-family dirt STALE 6000s > 1800s (register-repin verb wedged, not in flight; mtime 2026-11-24 21:00:07.453533483 +0000) - manual look required (item-448)
+2026-11-25T00:00:06Z failed-unit-janitor: MARKER-ADMITTED set page — nrm-soak-tick.service codes=1 owner=hermes-gpt/native-rails-migration heals_in_hold=84 (producer-consented expected-fail rail; re-pages on membership/owner/codes change, heal-count band transitions, and once per 86400s hold window; dormant members age out silently)
+2026-11-25T00:06:07Z failed-unit-janitor: FAILED-UNIT hermes-tmp-cleanup.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-11-25T00:15:26Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted e7fde67df61ba8dd2f364ba914a053727ba13138 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-11-25T01:36:51Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted be925caf32de50f679f0d9a7a91bbcb90562c7fe but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-11-25T01:46:01Z failed-unit-janitor: FAILED-UNIT hermes-watchdog-sweep.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-11-25T03:10:36Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 150m (bound 150m) without end marker (last: progress 2026-11-25T00:40:21Z 481-followup-mid-sweep-checkpoint-89-green) — silence past the bound means the fire died OR is in a deep phase it forgot to heartbeat; DO NOT work the queue concurrently (item-417 data-loss class) — inspect the fire's session first, heartbeat progress if alive, end it if not
+2026-11-25T03:31:29Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 8a39d6f39d291fb0a7ea0f5a94612fce0845edbc but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-11-25T06:50:02Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-11-25T07:00:02Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-11-25T07:10:01Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-11-25T07:20:01Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-11-25T07:30:02Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 ) - manual look required
+2026-11-25T07:40:03Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 ) - manual look required
+2026-11-25T07:50:01Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 ) - manual look required
+2026-11-25T08:00:03Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 ) - manual look required
+2026-11-25T08:10:01Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 ) - manual look required
+2026-11-25T08:20:03Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 ) - manual look required
+2026-11-25T08:30:04Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 ) - manual look required
+2026-11-25T08:40:04Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 ) - manual look required
