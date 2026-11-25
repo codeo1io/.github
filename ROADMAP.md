@@ -21,7 +21,7 @@
 ### Add test coverage for 5 untested module(s)
 - id: `rm-036` | track: reliability | priority: 95.0 | status: in_progress
 - signals: reliability.no_tests:scripts/check_known_hosts.py, reliability.no_tests:scripts/solutions-lint.py, reliability.no_tests:scripts/sync_data_branch.py, reliability.no_tests:scripts/sync_repo_settings.py, reliability.no_tests:scripts/verify_deployed_artifacts.py
-- acceptance: Every module in ['scripts/check_known_hosts.py', 'scripts/solutions-lint.py', 'scripts/sync_data_branch.py', 'scripts/sync_repo_settings.py', 'scripts/verify_deployed_artifacts.py'] has a corresponding test file with at least one passing test
+- acceptance: Every module in `['scripts/check_known_hosts.py', 'scripts/solutions-lint.py', 'scripts/sync_data_branch.py', 'scripts/sync_repo_settings.py', 'scripts/verify_deployed_artifacts.py']` has a corresponding test file with at least one passing test
 - evidence: full suite green (python -m pytest -q) at HEAD; conductor validation digest validation:v1:<sha> recorded in the shipping PR
 
 ### Deployed-artifact verification: pin the cron-wired scripts in MANIFEST.sha256
@@ -41,52 +41,52 @@
 - evidence: campaign-recorded in .github ROADMAP.md
 
 ### Cycle-7 maintenance batch (assess P2 + P3 sweep)
-- id: `rm-045` | track: reliability | priority: 88.0 | status: in_progress
+- id: `rm-045` | track: security | priority: 88.0 | status: in_progress
 - acceptance: every sub-fix lands with a locking test where applicable (a: wrapper-present/manifest-missing graded drift rc=1 + delegation parse for the repo-settings wrapper; b: allowlist test; c: entry-branch restore on success; e: unique-repo count test; f: env override test; h: parity decision recorded — mirror claims.yaml or document main-only); full suite green and README test count updated; scripts/build_control_plane.py absent from scripts/; grep finds no dangling docs/SECRETS.md reference
 - evidence: campaign-recorded in .github ROADMAP.md
 
 ### Daily enforcement of the deployed-artifact contract
-- id: `rm-048` | track: reliability | priority: 88.0 | status: candidate
+- id: `rm-048` | track: docs | priority: 88.0 | status: candidate
 - acceptance: a report-only daily verify step (jobs.json entry or a wrapper pre-step) runs scripts/verify_deployed_artifacts.py against canonical and journals rc + drift names (log line survives); the immediate rm-042 rider executes as part of this item (re-pin the three delegates from canonical, re-prove rc=0); a shim/monitor test locks the journaling path; AGENTS.md documents the daily expectation
 - evidence: campaign-recorded in .github ROADMAP.md
 
 ### Enforce action SHA pinning fleet-wide via sha_pinning_required
-- id: `rm-043` | track: reliability | priority: 86.0 | status: in_progress
+- id: `rm-043` | track: docs | priority: 86.0 | status: in_progress
 - acceptance: one-repo probe result recorded (PUT sha_pinning_required=true on .github, capture rc + revert path) BEFORE any fleet attempt; if accepted: common-settings.yaml gains the key, sync --dry-run shows per-repo drift lines, --apply sets it fleet-wide; private-repo/plan-gated behavior documented; README/AGENTS note the enforcement
 - evidence: campaign-recorded in .github ROADMAP.md
 
 ### Sentinel self-scan + fleet adoption: close the owner-repo blind spot
-- id: `rm-038` | track: reliability | priority: 84.0 | status: candidate
+- id: `rm-038` | track: security | priority: 84.0 | status: candidate
 - acceptance: a sentinel caller workflow (push/PR) lands in codeo1io/.github and runs green; openai-embedding-proxy gains the caller (post rm-036); SECURITY.md wording matches actual coverage; corrections.yaml inventory reflects the added caller
 - evidence: campaign-recorded in .github ROADMAP.md
 
 ### Enable private vulnerability reporting on the public repos
-- id: `rm-049` | track: reliability | priority: 84.0 | status: in_progress
+- id: `rm-049` | track: security | priority: 84.0 | status: in_progress
 - acceptance: probe-first (PUT on .github, capture rc + revert path) before any fleet attempt; then enabled:true on all 3 public repos; SECURITY.md notes the channel is live; convention recorded for future public repos (enable at creation)
 - evidence: campaign-recorded in .github ROADMAP.md
 
 ### Workflow static-analysis gate (zizmor + optional actionlint)
-- id: `rm-044` | track: reliability | priority: 82.0 | status: candidate
+- id: `rm-044` | track: docs | priority: 82.0 | status: candidate
 - acceptance: pinned, no-network-trust invocation (version-locked install or SHA-pinned action) runs over all 3 workflow surfaces in the repo's validation path (full_tests command or a workflow gate); initial findings triaged — fixed or documented-with-reason; README documents the convention; no unpinned execution introduced (rm-031 lesson)
 - evidence: campaign-recorded in .github ROADMAP.md
 
 ### Preserve sanctioned ledger extensions across roadmap renders
-- id: `rm-052` | track: reliability | priority: 80.0 | status: in_progress
+- id: `rm-052` | track: docs | priority: 80.0 | status: in_progress
 - acceptance: the roadmap-sync render either preserves sanctioned extension blocks + addenda byte-exact or ingests status flips/evidence into the gateway DB so renders carry them; a landed cycle extension survives ≥1 render cycle verbatim; `docs/roadmap-ledger.md` remains untouched by renders.
 - evidence: campaign-recorded in .github ROADMAP.md
 
 ### Native Dependabot version updates for github-actions pins
-- id: `rm-039` | track: reliability | priority: 78.0 | status: candidate
+- id: `rm-039` | track: docs | priority: 78.0 | status: candidate
 - acceptance: canonical dependabot.yml (github-actions ecosystem, weekly, scoped) shipped as a template and adopted in codeo1io/.github; README documents the convention; a Dependabot PR observed on a drifted pin or a no-drift API check
 - evidence: campaign-recorded in .github ROADMAP.md
 
 ### Anchor the gitleaks dist/ allowlist to a path boundary
-- id: `rm-047` | track: reliability | priority: 78.0 | status: in_progress
+- id: `rm-047` | track: security | priority: 78.0 | status: in_progress
 - acceptance: allowlist entry anchored to a component boundary (`'''(^|/)dist/'''` or equivalent); live-binary A/B re-run shows the planted token detected under mydist/ AND, if a true vendored dist/ exemption is intended, that it still matches (decision recorded either way); tests/test_gitleaks_config.py extended to lock the anchored pattern against the live binary
 - evidence: campaign-recorded in .github ROADMAP.md
 
 ### Security-posture convergence: report-only drift lanes need an actor
-- id: `rm-050` | track: reliability | priority: 74.0 | status: in_progress
+- id: `rm-050` | track: security | priority: 74.0 | status: in_progress
 - acceptance: a recorded decision (README + corrections.yaml); if apply-path: one-repo enablement + revert-capture experiment first, then expect-list-driven fleet apply; if manual-by-decision: drift rows re-graded INFO (not DRIFT) and corrections.yaml names the posture owner; either way the daily output stops asserting a want nobody acts on
 - evidence: campaign-recorded in .github ROADMAP.md
 
@@ -96,7 +96,7 @@
 - evidence: campaign-recorded in .github ROADMAP.md
 
 ### Sync/docs micro-corrections
-- id: `rm-041` | track: reliability | priority: 55.0 | status: in_progress
+- id: `rm-041` | track: docs | priority: 55.0 | status: in_progress
 - acceptance: drift message derives from the actual desired value; README test count matches live pytest output
 - evidence: campaign-recorded in .github ROADMAP.md
 
