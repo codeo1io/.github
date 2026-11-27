@@ -1181,3 +1181,57 @@
 2026-11-26T20:33:58Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
 2026-11-26T20:36:01Z failed-unit-janitor: MARKER-ADMITTED set page — nrm-soak-tick.service codes=1 owner=hermes-gpt/native-rails-migration heals_in_hold=1 (producer-consented expected-fail rail; re-pages on membership/owner/codes change, heal-count band transitions, and once per 86400s hold window; dormant members age out silently)
 2026-11-26T20:36:01Z failed-unit-janitor: FAILED-UNIT nrm-venv-interpreter-sentinel.service — foreign persistent unit (fragment=/home/agent/.config/systemd/user/nrm-venv-interpreter-sentinel.service; active=failed sub=failed result=exit-code) — a lane's declared unit file
+2026-11-26T20:40:15Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T20:46:04Z failed-unit-janitor: FAILED-UNIT hermes-watchdog-sweep.service — owned unit (hermes-/conductor- namespace; active=failed sub=failed result=exit-code) — a real defect, needs a human
+2026-11-26T20:48:30Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T20:50:06Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T20:59:27Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T21:00:06Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T21:10:03Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T21:10:36Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T21:20:01Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T21:21:27Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T21:30:02Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T21:32:19Z release-promote-boundary: REGISTER-REPIN-REQUIRED: promoted 6e1df6f566a3cd516cef31b7d10cd417e07a1057 but hermes-infra register /work/projects/hermes-infra/hosts/agent-runner/policy.json does not intend it for all conductor units — update intended_sha (infra PR from the promoter fire) or the next infra deploy convergence will roll the units back (item-101 war shape, fix-queue item 106)
+2026-11-26T21:32:34Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T21:40:01Z auto-ship-lane: checkout DIRTY (4 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-11-26T21:43:40Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T21:50:01Z auto-ship-lane: checkout DIRTY (4 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-11-26T21:54:26Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T22:00:02Z auto-ship-lane: checkout DIRTY (4 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-11-26T22:05:29Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T22:10:01Z auto-ship-lane: checkout DIRTY (4 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 hosts/agent-runner/policy.json.register-repin.bak ) - manual look required
+2026-11-26T22:16:25Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T22:20:03Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T22:27:27Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T22:30:01Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T22:38:30Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T22:40:03Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T22:49:28Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T22:50:01Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T23:00:05Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T23:00:28Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T23:10:01Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T23:11:28Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T23:20:01Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T23:22:26Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T23:30:05Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T23:33:32Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T23:40:01Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T23:44:30Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-26T23:50:01Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-26T23:55:29Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-27T00:00:00Z failed-unit-janitor: MARKER-ADMITTED set page — nrm-soak-tick.service codes=1 owner=hermes-gpt/native-rails-migration heals_in_hold=2 (producer-consented expected-fail rail; re-pages on membership/owner/codes change, heal-count band transitions, and once per 86400s hold window; dormant members age out silently)
+2026-11-27T00:00:02Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-27T00:08:51Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-27T00:10:02Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-27T00:19:44Z fix-driver-watch: driver fire HUNG/DEAD: heartbeat stale 158m (bound 150m) without end marker (last: progress 2026-11-26T21:41:35Z ITEM487-PR486-opened) — silence past the bound means the fire died OR is in a deep phase it forgot to heartbeat; DO NOT work the queue concurrently (item-417 data-loss class) — inspect the fire's session first, heartbeat progress if alive, end it if not
+2026-11-27T00:19:45Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-27T00:20:01Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-27T00:30:01Z auto-ship-lane: checkout DIRTY (2 paths; foreign: hosts/agent-runner/policy.json.bak.20261125-062610 hosts/agent-runner/policy.json.bak.20261125-135331 ) - manual look required
+2026-11-27T00:30:59Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-27T05:17:03Z conductor-watchdog[autonomy-prop_af3398202b85483d]: shared conductor checkout is on 'fix/orphaned-quiesce-lease-promoter-liveness' (not main) — NOT relaunching supervisors from it (item 58 v39 incident family); restore main or install the checkout guard
+2026-11-27T06:45:21Z deploy-checkout-sync: CHRONIC hermes-conductor failed 3 consecutive passes (on fix/orphaned-quiesce-lease-promoter-liveness not main) — checkout stuck behind origin, needs eyes
+2026-11-27T06:45:39Z deploy-checkout-sync: CHRONIC hermes-autonomy failed 3 consecutive passes (dirty worktree) — checkout stuck behind origin, needs eyes
+2026-11-27T08:20:03Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
+2026-11-27T08:32:35Z fix-driver-watch: cron job e409464d74b4 last_status=error — driver/status machinery failing, needs eyes
